@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/repos33/!svn/ver/1129/DailyPlanner/trunk/DailyPlanner/lib/ZipArchive-1.2.0/MiniZip
+END
+ioapi.c
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/repos33/!svn/ver/1129/DailyPlanner/trunk/DailyPlanner/lib/ZipArchive-1.2.0/MiniZip/ioapi.c
+END
+zip.c
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/repos33/!svn/ver/1129/DailyPlanner/trunk/DailyPlanner/lib/ZipArchive-1.2.0/MiniZip/zip.c
+END
+unzip.c
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/repos33/!svn/ver/1129/DailyPlanner/trunk/DailyPlanner/lib/ZipArchive-1.2.0/MiniZip/unzip.c
+END
+crypt.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/repos33/!svn/ver/1129/DailyPlanner/trunk/DailyPlanner/lib/ZipArchive-1.2.0/MiniZip/crypt.h
+END
+ioapi.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/repos33/!svn/ver/1129/DailyPlanner/trunk/DailyPlanner/lib/ZipArchive-1.2.0/MiniZip/ioapi.h
+END
+zip.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/repos33/!svn/ver/1129/DailyPlanner/trunk/DailyPlanner/lib/ZipArchive-1.2.0/MiniZip/zip.h
+END
+unzip.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/repos33/!svn/ver/1129/DailyPlanner/trunk/DailyPlanner/lib/ZipArchive-1.2.0/MiniZip/unzip.h
+END
