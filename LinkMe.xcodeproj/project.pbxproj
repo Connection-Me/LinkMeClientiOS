@@ -814,6 +814,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D8F2AD7E19A8EC44009554A5 /* databean */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = databean;
+			sourceTree = "<group>";
+		};
+		D8F2AD7F19A8EC44009554A5 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		D8F2AD8019A8EC44009554A5 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				D8F2AD8119A8EC44009554A5 /* impl */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		D8F2AD8119A8EC44009554A5 /* impl */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = impl;
+			sourceTree = "<group>";
+		};
+		D8F2AD8219A8EC44009554A5 /* common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		D8F2AD8319A8EC44009554A5 /* event */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = event;
+			sourceTree = "<group>";
+		};
+		D8F2AD8419A8EC44009554A5 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		E161262719A7E5F90012834A = {
 			isa = PBXGroup;
 			children = (
@@ -893,64 +943,14 @@
 		E17AC4A719A7F0DF008CF3FC /* classes */ = {
 			isa = PBXGroup;
 			children = (
-				E17AC4A819A7F0DF008CF3FC /* common */,
-				E17AC4A919A7F0DF008CF3FC /* databean */,
-				E17AC4AA19A7F0DF008CF3FC /* event */,
-				E17AC4AB19A7F0DF008CF3FC /* model */,
-				E17AC4AC19A7F0DF008CF3FC /* service */,
-				E17AC4AE19A7F0DF008CF3FC /* views */,
+				D8F2AD7E19A8EC44009554A5 /* databean */,
+				D8F2AD7F19A8EC44009554A5 /* model */,
+				D8F2AD8019A8EC44009554A5 /* service */,
+				D8F2AD8219A8EC44009554A5 /* common */,
+				D8F2AD8319A8EC44009554A5 /* event */,
+				D8F2AD8419A8EC44009554A5 /* views */,
 			);
 			path = classes;
-			sourceTree = "<group>";
-		};
-		E17AC4A819A7F0DF008CF3FC /* common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = common;
-			sourceTree = "<group>";
-		};
-		E17AC4A919A7F0DF008CF3FC /* databean */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = databean;
-			sourceTree = "<group>";
-		};
-		E17AC4AA19A7F0DF008CF3FC /* event */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = event;
-			sourceTree = "<group>";
-		};
-		E17AC4AB19A7F0DF008CF3FC /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		E17AC4AC19A7F0DF008CF3FC /* service */ = {
-			isa = PBXGroup;
-			children = (
-				E17AC4AD19A7F0DF008CF3FC /* impl */,
-			);
-			path = service;
-			sourceTree = "<group>";
-		};
-		E17AC4AD19A7F0DF008CF3FC /* impl */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = impl;
-			sourceTree = "<group>";
-		};
-		E17AC4AE19A7F0DF008CF3FC /* views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = views;
 			sourceTree = "<group>";
 		};
 		E17AC4AF19A7F0DF008CF3FC /* lib */ = {
