@@ -10,6 +10,7 @@
 #import "LoginEvent.h"
 #import "NetWorkEvent.h"
 #import "CoreModel.h"
+#import "RequestMethod.h"
 
 @implementation UserRemoteServiceImpl
 DEF_SINGLETON(UserRemoteServiceImpl)
@@ -43,6 +44,7 @@ methodName
         [postParams setObject:methodName forKey:@"methodName"];
         NSString * jsonString = [postParams JSONString];
         [request appendPostData:[jsonString dataUsingEncoding:NSUTF8StringEncoding]];
+        request.requestMethod = RequestMethod.POST;
         __block ASIHTTPRequest * blockRequest = request;
         request.delegate = self;
         [request setCompletionBlock:^{
