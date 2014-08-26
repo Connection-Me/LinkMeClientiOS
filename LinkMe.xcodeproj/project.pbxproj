@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D87DF00E19ACE1BB0010BEE9 /* LoginPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DF00C19ACE1BB0010BEE9 /* LoginPageViewController.m */; };
+		D87DF00F19ACE1BB0010BEE9 /* LoginPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DF00C19ACE1BB0010BEE9 /* LoginPageViewController.m */; };
+		D87DF01019ACE1BB0010BEE9 /* LoginPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87DF00D19ACE1BB0010BEE9 /* LoginPageViewController.xib */; };
+		D87DF01119ACE1BB0010BEE9 /* LoginPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87DF00D19ACE1BB0010BEE9 /* LoginPageViewController.xib */; };
+		D87DF01A19ACE1C50010BEE9 /* CollapseClick.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DF01419ACE1C50010BEE9 /* CollapseClick.m */; };
+		D87DF01B19ACE1C50010BEE9 /* CollapseClick.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DF01419ACE1C50010BEE9 /* CollapseClick.m */; };
+		D87DF01C19ACE1C50010BEE9 /* CollapseClickArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DF01619ACE1C50010BEE9 /* CollapseClickArrow.m */; };
+		D87DF01D19ACE1C50010BEE9 /* CollapseClickArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DF01619ACE1C50010BEE9 /* CollapseClickArrow.m */; };
+		D87DF01E19ACE1C50010BEE9 /* CollapseClickCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DF01819ACE1C50010BEE9 /* CollapseClickCell.m */; };
+		D87DF01F19ACE1C50010BEE9 /* CollapseClickCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DF01819ACE1C50010BEE9 /* CollapseClickCell.m */; };
+		D87DF02019ACE1C50010BEE9 /* CollapseClickCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87DF01919ACE1C50010BEE9 /* CollapseClickCell.xib */; };
+		D87DF02119ACE1C50010BEE9 /* CollapseClickCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87DF01919ACE1C50010BEE9 /* CollapseClickCell.xib */; };
 		E161263419A7E5F90012834A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E161263319A7E5F90012834A /* Foundation.framework */; };
 		E161263619A7E5F90012834A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E161263519A7E5F90012834A /* CoreGraphics.framework */; };
 		E161263819A7E5F90012834A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E161263719A7E5F90012834A /* UIKit.framework */; };
@@ -286,6 +298,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D87DF00B19ACE1BB0010BEE9 /* LoginPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginPageViewController.h; sourceTree = "<group>"; };
+		D87DF00C19ACE1BB0010BEE9 /* LoginPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginPageViewController.m; sourceTree = "<group>"; };
+		D87DF00D19ACE1BB0010BEE9 /* LoginPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginPageViewController.xib; sourceTree = "<group>"; };
+		D87DF01319ACE1C50010BEE9 /* CollapseClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapseClick.h; sourceTree = "<group>"; };
+		D87DF01419ACE1C50010BEE9 /* CollapseClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapseClick.m; sourceTree = "<group>"; };
+		D87DF01519ACE1C50010BEE9 /* CollapseClickArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapseClickArrow.h; sourceTree = "<group>"; };
+		D87DF01619ACE1C50010BEE9 /* CollapseClickArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapseClickArrow.m; sourceTree = "<group>"; };
+		D87DF01719ACE1C50010BEE9 /* CollapseClickCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapseClickCell.h; sourceTree = "<group>"; };
+		D87DF01819ACE1C50010BEE9 /* CollapseClickCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapseClickCell.m; sourceTree = "<group>"; };
+		D87DF01919ACE1C50010BEE9 /* CollapseClickCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollapseClickCell.xib; sourceTree = "<group>"; };
 		E161263019A7E5F90012834A /* LinkMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinkMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E161263319A7E5F90012834A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E161263519A7E5F90012834A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -847,6 +869,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D87DF01219ACE1C50010BEE9 /* CollapseClick */ = {
+			isa = PBXGroup;
+			children = (
+				D87DF01319ACE1C50010BEE9 /* CollapseClick.h */,
+				D87DF01419ACE1C50010BEE9 /* CollapseClick.m */,
+				D87DF01519ACE1C50010BEE9 /* CollapseClickArrow.h */,
+				D87DF01619ACE1C50010BEE9 /* CollapseClickArrow.m */,
+				D87DF01719ACE1C50010BEE9 /* CollapseClickCell.h */,
+				D87DF01819ACE1C50010BEE9 /* CollapseClickCell.m */,
+				D87DF01919ACE1C50010BEE9 /* CollapseClickCell.xib */,
+			);
+			path = CollapseClick;
+			sourceTree = "<group>";
+		};
 		D8F2AD8419A8EC44009554A5 /* views */ = {
 			isa = PBXGroup;
 			children = (
@@ -1943,6 +1979,9 @@
 		E1E2C3D319AC397D004C3F57 /* login */ = {
 			isa = PBXGroup;
 			children = (
+				D87DF00B19ACE1BB0010BEE9 /* LoginPageViewController.h */,
+				D87DF00C19ACE1BB0010BEE9 /* LoginPageViewController.m */,
+				D87DF00D19ACE1BB0010BEE9 /* LoginPageViewController.xib */,
 				E1E2C3D619AC39CB004C3F57 /* LoginVC.h */,
 				E1E2C3D719AC39CB004C3F57 /* LoginVC.m */,
 				E1E2C3D819AC39CB004C3F57 /* LoginVC.xib */,
@@ -2027,6 +2066,7 @@
 		E1F3503819AC912000317104 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				D87DF01219ACE1C50010BEE9 /* CollapseClick */,
 				E1F3503919AC913300317104 /* TCMessageBox.h */,
 				E1F3503A19AC913300317104 /* TCMessageBox.m */,
 			);
@@ -2111,12 +2151,14 @@
 			files = (
 				E1E2C3E019AC3A11004C3F57 /* RootVC.xib in Resources */,
 				E1E2C3DA19AC39CB004C3F57 /* LoginVC.xib in Resources */,
+				D87DF01019ACE1BB0010BEE9 /* LoginPageViewController.xib in Resources */,
 				E17AC6DA19A7F0E0008CF3FC /* left_arrow.png in Resources */,
 				E161263E19A7E5F90012834A /* InfoPlist.strings in Resources */,
 				E161264619A7E5F90012834A /* Images.xcassets in Resources */,
 				E17AC6DC19A7F0E0008CF3FC /* right_arrow.png in Resources */,
 				E17AC6DB19A7F0E0008CF3FC /* left_arrow@2x.png in Resources */,
 				E17AC6DD19A7F0E0008CF3FC /* right_arrow@2x.png in Resources */,
+				D87DF02019ACE1C50010BEE9 /* CollapseClickCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2125,6 +2167,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E161265719A7E5F90012834A /* InfoPlist.strings in Resources */,
+				D87DF02119ACE1C50010BEE9 /* CollapseClickCell.xib in Resources */,
+				D87DF01119ACE1BB0010BEE9 /* LoginPageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2188,6 +2232,7 @@
 				E17AC75D19A7F0E0008CF3FC /* BeeUIQuery+Dimensions.m in Sources */,
 				E17AC70719A7F0E0008CF3FC /* UITextView+BeeUIStyle.m in Sources */,
 				E17AC78719A7F0E0008CF3FC /* Bee_Assertion.mm in Sources */,
+				D87DF01E19ACE1C50010BEE9 /* CollapseClickCell.m in Sources */,
 				E17AC7B519A7F0E0008CF3FC /* JSONKit.m in Sources */,
 				E17AC70A19A7F0E0008CF3FC /* Bee_UIAnimationAlpha.m in Sources */,
 				E17AC74519A7F0E0008CF3FC /* Bee_UICell.m in Sources */,
@@ -2227,6 +2272,7 @@
 				E17AC79D19A7F0E0008CF3FC /* NSObject+BeeTypeConversion.mm in Sources */,
 				E17AC7B419A7F0E0008CF3FC /* FMResultSet.m in Sources */,
 				E17AC71C19A7F0E0008CF3FC /* Bee_UIActivity.m in Sources */,
+				D87DF01A19ACE1C50010BEE9 /* CollapseClick.m in Sources */,
 				E17AC7A719A7F0E0008CF3FC /* NSObject+Resource.mm in Sources */,
 				E17AC7B119A7F0E0008CF3FC /* FMDatabaseAdditions.m in Sources */,
 				E17AC73F19A7F0E0008CF3FC /* UIView+Tag.m in Sources */,
@@ -2333,6 +2379,7 @@
 				E17AC77B19A7F0E0008CF3FC /* Bee_ActiveObject.m in Sources */,
 				E17AC72519A7F0E0008CF3FC /* Bee_UIMenuController.m in Sources */,
 				E17AC73919A7F0E0008CF3FC /* UIView+HoldGesture.m in Sources */,
+				D87DF01C19ACE1C50010BEE9 /* CollapseClickArrow.m in Sources */,
 				E17AC7B919A7F0E0008CF3FC /* CXHTMLDocument.m in Sources */,
 				E1E2C3EA19AC6350004C3F57 /* LoginEvent.m in Sources */,
 				E17AC70119A7F0E0008CF3FC /* UIButton+BeeUIStyle.m in Sources */,
@@ -2368,6 +2415,7 @@
 				E17AC74119A7F0E0008CF3FC /* UIView+Traversing.m in Sources */,
 				E17AC79219A7F0E0008CF3FC /* NSArray+BeeExtension.mm in Sources */,
 				E17AC75219A7F0E0008CF3FC /* UIButton+BeeUILayout.m in Sources */,
+				D87DF00E19ACE1BB0010BEE9 /* LoginPageViewController.m in Sources */,
 				E17AC71319A7F0E0008CF3FC /* UIButton+UIDataBinding.m in Sources */,
 				E17AC6ED19A7F0E0008CF3FC /* Bee_UIBoard.m in Sources */,
 				E17AC72419A7F0E0008CF3FC /* Bee_UILabel.m in Sources */,
@@ -2390,6 +2438,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E161265919A7E5F90012834A /* LinkMeTests.m in Sources */,
+				D87DF00F19ACE1BB0010BEE9 /* LoginPageViewController.m in Sources */,
+				D87DF01B19ACE1C50010BEE9 /* CollapseClick.m in Sources */,
+				D87DF01F19ACE1C50010BEE9 /* CollapseClickCell.m in Sources */,
+				D87DF01D19ACE1C50010BEE9 /* CollapseClickArrow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
