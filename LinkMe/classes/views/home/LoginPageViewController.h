@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CollapseClick.h"
 
-@interface ViewController : UIViewController <CollapseClickDelegate,UITextFieldDelegate> {
+@interface LoginPageViewController : UIViewController <CollapseClickDelegate,UITextFieldDelegate> {
     IBOutlet UIView *test1View;
     IBOutlet UIView *test2View;
     IBOutlet UIView *test3View;
@@ -18,8 +18,6 @@
     
     __weak IBOutlet UIImageView *galleryImage;
 }
-- (IBAction)nameTextField_DidEndOnExit:(id)sender;
-- (IBAction)passTextField_DidEndOnExit:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *loginNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *loginPwdTextField;
 @property (weak, nonatomic) IBOutlet UITextField *registerNameTextField;

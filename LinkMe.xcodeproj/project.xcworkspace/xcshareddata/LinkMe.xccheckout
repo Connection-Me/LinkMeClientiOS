@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>313205DB-98F4-44D2-B0CE-12DD96C9A72D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LinkMe</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>54C93E48-FD9D-4082-A4D2-E1E2851B487E</key>
+		<string>https://github.com/Connection-Me/LinkMeClientiOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>LinkMe.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>54C93E48-FD9D-4082-A4D2-E1E2851B487E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Connection-Me/LinkMeClientiOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>54C93E48-FD9D-4082-A4D2-E1E2851B487E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>54C93E48-FD9D-4082-A4D2-E1E2851B487E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LinkMeClientiOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>

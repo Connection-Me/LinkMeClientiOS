@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D87DEF7C19ACCB320010BEE9 /* galleryImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D87DEF7B19ACCB320010BEE9 /* galleryImage.jpg */; };
+		D87DEF7D19ACCB320010BEE9 /* galleryImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D87DEF7B19ACCB320010BEE9 /* galleryImage.jpg */; };
+		D87DEF8119ACCB380010BEE9 /* qqLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D87DEF7E19ACCB380010BEE9 /* qqLogo.png */; };
+		D87DEF8219ACCB380010BEE9 /* qqLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D87DEF7E19ACCB380010BEE9 /* qqLogo.png */; };
+		D87DEF8319ACCB380010BEE9 /* weiboLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D87DEF7F19ACCB380010BEE9 /* weiboLogo.png */; };
+		D87DEF8419ACCB380010BEE9 /* weiboLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D87DEF7F19ACCB380010BEE9 /* weiboLogo.png */; };
+		D87DEF8519ACCB380010BEE9 /* weixinLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D87DEF8019ACCB380010BEE9 /* weixinLogo.png */; };
+		D87DEF8619ACCB380010BEE9 /* weixinLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D87DEF8019ACCB380010BEE9 /* weixinLogo.png */; };
+		D87DEF9019ACCBB70010BEE9 /* CollapseClick.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DEF8A19ACCBB70010BEE9 /* CollapseClick.m */; };
+		D87DEF9119ACCBB70010BEE9 /* CollapseClick.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DEF8A19ACCBB70010BEE9 /* CollapseClick.m */; };
+		D87DEF9219ACCBB70010BEE9 /* CollapseClickArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DEF8C19ACCBB70010BEE9 /* CollapseClickArrow.m */; };
+		D87DEF9319ACCBB70010BEE9 /* CollapseClickArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DEF8C19ACCBB70010BEE9 /* CollapseClickArrow.m */; };
+		D87DEF9419ACCBB70010BEE9 /* CollapseClickCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DEF8E19ACCBB70010BEE9 /* CollapseClickCell.m */; };
+		D87DEF9519ACCBB70010BEE9 /* CollapseClickCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DEF8E19ACCBB70010BEE9 /* CollapseClickCell.m */; };
+		D87DEF9619ACCBB70010BEE9 /* CollapseClickCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87DEF8F19ACCBB70010BEE9 /* CollapseClickCell.xib */; };
+		D87DEF9719ACCBB70010BEE9 /* CollapseClickCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87DEF8F19ACCBB70010BEE9 /* CollapseClickCell.xib */; };
+		D87DEFA219ACCDE60010BEE9 /* LoginPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DEFA019ACCDE60010BEE9 /* LoginPageViewController.m */; };
+		D87DEFA319ACCDE60010BEE9 /* LoginPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DEFA019ACCDE60010BEE9 /* LoginPageViewController.m */; };
+		D87DEFA419ACCDE60010BEE9 /* LoginPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87DEFA119ACCDE60010BEE9 /* LoginPageViewController.xib */; };
+		D87DEFA519ACCDE60010BEE9 /* LoginPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87DEFA119ACCDE60010BEE9 /* LoginPageViewController.xib */; };
 		E161263419A7E5F90012834A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E161263319A7E5F90012834A /* Foundation.framework */; };
 		E161263619A7E5F90012834A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E161263519A7E5F90012834A /* CoreGraphics.framework */; };
 		E161263819A7E5F90012834A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E161263719A7E5F90012834A /* UIKit.framework */; };
@@ -275,6 +295,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D87DEF7B19ACCB320010BEE9 /* galleryImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = galleryImage.jpg; sourceTree = "<group>"; };
+		D87DEF7E19ACCB380010BEE9 /* qqLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qqLogo.png; sourceTree = "<group>"; };
+		D87DEF7F19ACCB380010BEE9 /* weiboLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weiboLogo.png; sourceTree = "<group>"; };
+		D87DEF8019ACCB380010BEE9 /* weixinLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weixinLogo.png; sourceTree = "<group>"; };
+		D87DEF8919ACCBB70010BEE9 /* CollapseClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapseClick.h; sourceTree = "<group>"; };
+		D87DEF8A19ACCBB70010BEE9 /* CollapseClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapseClick.m; sourceTree = "<group>"; };
+		D87DEF8B19ACCBB70010BEE9 /* CollapseClickArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapseClickArrow.h; sourceTree = "<group>"; };
+		D87DEF8C19ACCBB70010BEE9 /* CollapseClickArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapseClickArrow.m; sourceTree = "<group>"; };
+		D87DEF8D19ACCBB70010BEE9 /* CollapseClickCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapseClickCell.h; sourceTree = "<group>"; };
+		D87DEF8E19ACCBB70010BEE9 /* CollapseClickCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapseClickCell.m; sourceTree = "<group>"; };
+		D87DEF8F19ACCBB70010BEE9 /* CollapseClickCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollapseClickCell.xib; sourceTree = "<group>"; };
+		D87DEF9F19ACCDE60010BEE9 /* LoginPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginPageViewController.h; sourceTree = "<group>"; };
+		D87DEFA019ACCDE60010BEE9 /* LoginPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginPageViewController.m; sourceTree = "<group>"; };
+		D87DEFA119ACCDE60010BEE9 /* LoginPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginPageViewController.xib; sourceTree = "<group>"; };
 		E161263019A7E5F90012834A /* LinkMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinkMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E161263319A7E5F90012834A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E161263519A7E5F90012834A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -814,6 +848,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D87DEF6119ACC9B50010BEE9 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				D87DEF8819ACCBB70010BEE9 /* CollapseClick */,
+				D87DEF9F19ACCDE60010BEE9 /* LoginPageViewController.h */,
+				D87DEFA019ACCDE60010BEE9 /* LoginPageViewController.m */,
+				D87DEFA119ACCDE60010BEE9 /* LoginPageViewController.xib */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		D87DEF8819ACCBB70010BEE9 /* CollapseClick */ = {
+			isa = PBXGroup;
+			children = (
+				D87DEF8919ACCBB70010BEE9 /* CollapseClick.h */,
+				D87DEF8A19ACCBB70010BEE9 /* CollapseClick.m */,
+				D87DEF8B19ACCBB70010BEE9 /* CollapseClickArrow.h */,
+				D87DEF8C19ACCBB70010BEE9 /* CollapseClickArrow.m */,
+				D87DEF8D19ACCBB70010BEE9 /* CollapseClickCell.h */,
+				D87DEF8E19ACCBB70010BEE9 /* CollapseClickCell.m */,
+				D87DEF8F19ACCBB70010BEE9 /* CollapseClickCell.xib */,
+			);
+			path = CollapseClick;
+			sourceTree = "<group>";
+		};
 		D8F2AD7E19A8EC44009554A5 /* databean */ = {
 			isa = PBXGroup;
 			children = (
@@ -860,6 +919,7 @@
 		D8F2AD8419A8EC44009554A5 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				D87DEF6119ACC9B50010BEE9 /* home */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -1935,6 +1995,9 @@
 		E17AC6D719A7F0E0008CF3FC /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				D87DEF7E19ACCB380010BEE9 /* qqLogo.png */,
+				D87DEF7F19ACCB380010BEE9 /* weiboLogo.png */,
+				D87DEF8019ACCB380010BEE9 /* weixinLogo.png */,
 			);
 			path = icons;
 			sourceTree = "<group>";
@@ -1942,6 +2005,7 @@
 		E17AC6D819A7F0E0008CF3FC /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D87DEF7B19ACCB320010BEE9 /* galleryImage.jpg */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -2022,11 +2086,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D87DEF8119ACCB380010BEE9 /* qqLogo.png in Resources */,
 				E17AC6DA19A7F0E0008CF3FC /* left_arrow.png in Resources */,
 				E161263E19A7E5F90012834A /* InfoPlist.strings in Resources */,
+				D87DEF8319ACCB380010BEE9 /* weiboLogo.png in Resources */,
+				D87DEF7C19ACCB320010BEE9 /* galleryImage.jpg in Resources */,
+				D87DEF8519ACCB380010BEE9 /* weixinLogo.png in Resources */,
+				D87DEF9619ACCBB70010BEE9 /* CollapseClickCell.xib in Resources */,
 				E161264619A7E5F90012834A /* Images.xcassets in Resources */,
 				E17AC6DC19A7F0E0008CF3FC /* right_arrow.png in Resources */,
 				E17AC6DB19A7F0E0008CF3FC /* left_arrow@2x.png in Resources */,
+				D87DEFA419ACCDE60010BEE9 /* LoginPageViewController.xib in Resources */,
 				E17AC6DD19A7F0E0008CF3FC /* right_arrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2035,7 +2105,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D87DEFA519ACCDE60010BEE9 /* LoginPageViewController.xib in Resources */,
+				D87DEF8219ACCB380010BEE9 /* qqLogo.png in Resources */,
 				E161265719A7E5F90012834A /* InfoPlist.strings in Resources */,
+				D87DEF7D19ACCB320010BEE9 /* galleryImage.jpg in Resources */,
+				D87DEF9719ACCBB70010BEE9 /* CollapseClickCell.xib in Resources */,
+				D87DEF8619ACCB380010BEE9 /* weixinLogo.png in Resources */,
+				D87DEF8419ACCB380010BEE9 /* weiboLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2105,6 +2181,7 @@
 				E17AC70419A7F0E0008CF3FC /* UILabel+BeeUIStyle.m in Sources */,
 				E17AC75B19A7F0E0008CF3FC /* BeeUIQuery+AJAX.m in Sources */,
 				E17AC70B19A7F0E0008CF3FC /* Bee_UIAnimationBounce.m in Sources */,
+				D87DEF9219ACCBB70010BEE9 /* CollapseClickArrow.m in Sources */,
 				E17AC74F19A7F0E0008CF3FC /* UIView+BeeUISignal.m in Sources */,
 				E17AC7B019A7F0E0008CF3FC /* FMDatabase.m in Sources */,
 				E17AC77919A7F0E0008CF3FC /* NSObject+BeeUserDefaults.mm in Sources */,
@@ -2190,6 +2267,7 @@
 				E17AC77119A7F0E0008CF3FC /* Bee_Service.m in Sources */,
 				E17AC79A19A7F0E0008CF3FC /* NSObject+BeeProperty.mm in Sources */,
 				E17AC6EC19A7F0E0008CF3FC /* Bee_UIMetrics.m in Sources */,
+				D87DEF9419ACCBB70010BEE9 /* CollapseClickCell.m in Sources */,
 				E17AC6EE19A7F0E0008CF3FC /* Bee_UIRouter.m in Sources */,
 				E17AC7C219A7F0E1008CF3FC /* CXMLNode_CreationExtensions.m in Sources */,
 				E17AC6F619A7F0E0008CF3FC /* BeeUIStack+BackwardCompatible.m in Sources */,
@@ -2225,6 +2303,7 @@
 				E17AC76119A7F0E0008CF3FC /* BeeUIQuery+Miscellaneous.m in Sources */,
 				E17AC71A19A7F0E0008CF3FC /* Bee_UIAccelerometer.m in Sources */,
 				E17AC77519A7F0E0008CF3FC /* Bee_Keychain.mm in Sources */,
+				D87DEF9019ACCBB70010BEE9 /* CollapseClick.m in Sources */,
 				E17AC6E519A7F0E0008CF3FC /* BeeMessage+BeeJSON.mm in Sources */,
 				E17AC7B719A7F0E0008CF3FC /* Reachability.m in Sources */,
 				E17AC70619A7F0E0008CF3FC /* UITextField+BeeUIStyle.m in Sources */,
@@ -2235,6 +2314,7 @@
 				E17AC72919A7F0E0008CF3FC /* Bee_UIPickerView.m in Sources */,
 				E17AC77B19A7F0E0008CF3FC /* Bee_ActiveObject.m in Sources */,
 				E17AC72519A7F0E0008CF3FC /* Bee_UIMenuController.m in Sources */,
+				D87DEFA219ACCDE60010BEE9 /* LoginPageViewController.m in Sources */,
 				E17AC73919A7F0E0008CF3FC /* UIView+HoldGesture.m in Sources */,
 				E17AC7B919A7F0E0008CF3FC /* CXHTMLDocument.m in Sources */,
 				E17AC70119A7F0E0008CF3FC /* UIButton+BeeUIStyle.m in Sources */,
@@ -2292,6 +2372,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E161265919A7E5F90012834A /* LinkMeTests.m in Sources */,
+				D87DEF9119ACCBB70010BEE9 /* CollapseClick.m in Sources */,
+				D87DEF9519ACCBB70010BEE9 /* CollapseClickCell.m in Sources */,
+				D87DEF9319ACCBB70010BEE9 /* CollapseClickArrow.m in Sources */,
+				D87DEFA319ACCDE60010BEE9 /* LoginPageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

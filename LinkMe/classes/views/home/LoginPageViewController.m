@@ -6,35 +6,28 @@
 //  Copyright (c) 2013 Ben Gordon. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "LoginPageViewController.h"
 
-@interface ViewController ()
+@interface LoginPageViewController ()
 
 @end
 
-@implementation ViewController
+@implementation LoginPageViewController
 
 #define PULL_TOP_TO_GALLERY 110
+#define GALLERY_IMAGE_HEIGHT (ISIPHONE5 ? 230:140)
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     myCollapseClick.CollapseClickDelegate = self;
     [myCollapseClick reloadCollapseClick];
     
     // If you want a cell open on load, run this method:
     [myCollapseClick openCollapseClickCellAtIndex:0 animated:NO];
-    [myCollapseClick setFrame:CGRectMake(0, 140, myCollapseClick.frame.size.width, myCollapseClick.frame.size.height)];
-    NSInteger heigth = myCollapseClick.frame.size.height;
+    [myCollapseClick setFrame:CGRectMake(0, GALLERY_IMAGE_HEIGHT, myCollapseClick.frame.size.width, myCollapseClick.frame.size.height)];
+    
     [galleryImage setImage:[UIImage imageNamed:@"galleryImage.jpg"]];
-    /*
-     // If you'd like multiple cells open on load, create an NSArray of NSNumbers
-     // with each NSNumber corresponding to the index you'd like to open.
-     // - This will open Cells at indexes 0,2 automatically
-     
-     NSArray *indexArray = @[[NSNumber numberWithInt:0],[NSNumber numberWithInt:2]];
-     [myCollapseClick openCollapseClickCellsWithIndexes:indexArray animated:NO];
-     */
+    
     [self setTextFieldStyle];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:)name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
@@ -42,8 +35,8 @@
 }
 -(void)keyboardWillShow:(int)index{
     
-    [myCollapseClick setFrame:CGRectMake(0, 140-PULL_TOP_TO_GALLERY, myCollapseClick.frame.size.width, myCollapseClick.frame.size.height)];
-    [galleryImage setFrame:CGRectMake(0,0,galleryImage.frame.size.width,galleryImage.frame.size.height-PULL_TOP_TO_GALLERY)];
+    [myCollapseClick setFrame:CGRectMake(0, GALLERY_IMAGE_HEIGHT-PULL_TOP_TO_GALLERY, myCollapseClick.frame.size.width, myCollapseClick.frame.size.height)];
+    [galleryImage setFrame:CGRectMake(0,0,galleryImage.frame.size.width,GALLERY_IMAGE_HEIGHT-PULL_TOP_TO_GALLERY)];
     
 }
 -(void)keyboardWillHide:(int)index{
