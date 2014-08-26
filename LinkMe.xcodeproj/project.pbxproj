@@ -7,26 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D87DEF7C19ACCB320010BEE9 /* galleryImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D87DEF7B19ACCB320010BEE9 /* galleryImage.jpg */; };
-		D87DEF7D19ACCB320010BEE9 /* galleryImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D87DEF7B19ACCB320010BEE9 /* galleryImage.jpg */; };
-		D87DEF8119ACCB380010BEE9 /* qqLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D87DEF7E19ACCB380010BEE9 /* qqLogo.png */; };
-		D87DEF8219ACCB380010BEE9 /* qqLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D87DEF7E19ACCB380010BEE9 /* qqLogo.png */; };
-		D87DEF8319ACCB380010BEE9 /* weiboLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D87DEF7F19ACCB380010BEE9 /* weiboLogo.png */; };
-		D87DEF8419ACCB380010BEE9 /* weiboLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D87DEF7F19ACCB380010BEE9 /* weiboLogo.png */; };
-		D87DEF8519ACCB380010BEE9 /* weixinLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D87DEF8019ACCB380010BEE9 /* weixinLogo.png */; };
-		D87DEF8619ACCB380010BEE9 /* weixinLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D87DEF8019ACCB380010BEE9 /* weixinLogo.png */; };
-		D87DEF9019ACCBB70010BEE9 /* CollapseClick.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DEF8A19ACCBB70010BEE9 /* CollapseClick.m */; };
-		D87DEF9119ACCBB70010BEE9 /* CollapseClick.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DEF8A19ACCBB70010BEE9 /* CollapseClick.m */; };
-		D87DEF9219ACCBB70010BEE9 /* CollapseClickArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DEF8C19ACCBB70010BEE9 /* CollapseClickArrow.m */; };
-		D87DEF9319ACCBB70010BEE9 /* CollapseClickArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DEF8C19ACCBB70010BEE9 /* CollapseClickArrow.m */; };
-		D87DEF9419ACCBB70010BEE9 /* CollapseClickCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DEF8E19ACCBB70010BEE9 /* CollapseClickCell.m */; };
-		D87DEF9519ACCBB70010BEE9 /* CollapseClickCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DEF8E19ACCBB70010BEE9 /* CollapseClickCell.m */; };
-		D87DEF9619ACCBB70010BEE9 /* CollapseClickCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87DEF8F19ACCBB70010BEE9 /* CollapseClickCell.xib */; };
-		D87DEF9719ACCBB70010BEE9 /* CollapseClickCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87DEF8F19ACCBB70010BEE9 /* CollapseClickCell.xib */; };
-		D87DEFA219ACCDE60010BEE9 /* LoginPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DEFA019ACCDE60010BEE9 /* LoginPageViewController.m */; };
-		D87DEFA319ACCDE60010BEE9 /* LoginPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DEFA019ACCDE60010BEE9 /* LoginPageViewController.m */; };
-		D87DEFA419ACCDE60010BEE9 /* LoginPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87DEFA119ACCDE60010BEE9 /* LoginPageViewController.xib */; };
-		D87DEFA519ACCDE60010BEE9 /* LoginPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87DEFA119ACCDE60010BEE9 /* LoginPageViewController.xib */; };
 		E161263419A7E5F90012834A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E161263319A7E5F90012834A /* Foundation.framework */; };
 		E161263619A7E5F90012834A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E161263519A7E5F90012834A /* CoreGraphics.framework */; };
 		E161263819A7E5F90012834A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E161263719A7E5F90012834A /* UIKit.framework */; };
@@ -282,6 +262,17 @@
 		E17AC7C619A7F0E1008CF3FC /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = E17AC6CE19A7F0E0008CF3FC /* unzip.c */; };
 		E17AC7C719A7F0E1008CF3FC /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = E17AC6D019A7F0E0008CF3FC /* zip.c */; };
 		E17AC7C819A7F0E1008CF3FC /* ZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = E17AC6D519A7F0E0008CF3FC /* ZipArchive.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E1E2C3D919AC39CB004C3F57 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E2C3D719AC39CB004C3F57 /* LoginVC.m */; };
+		E1E2C3DA19AC39CB004C3F57 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E2C3D819AC39CB004C3F57 /* LoginVC.xib */; };
+		E1E2C3DF19AC3A11004C3F57 /* RootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E2C3DD19AC3A11004C3F57 /* RootVC.m */; };
+		E1E2C3E019AC3A11004C3F57 /* RootVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E2C3DE19AC3A11004C3F57 /* RootVC.xib */; };
+		E1E2C3EA19AC6350004C3F57 /* LoginEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E2C3E919AC6350004C3F57 /* LoginEvent.m */; };
+		E1E2C3ED19AC7139004C3F57 /* CoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E2C3EC19AC7139004C3F57 /* CoreModel.m */; };
+		E1E2C3F019AC7311004C3F57 /* CoreService.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E2C3EF19AC7311004C3F57 /* CoreService.m */; };
+		E1E2C3F519AC74C5004C3F57 /* UserRemoteServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E2C3F419AC74C5004C3F57 /* UserRemoteServiceImpl.m */; };
+		E1E2C3F919AC78B4004C3F57 /* BaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E2C3F819AC78B4004C3F57 /* BaseService.m */; };
+		E1F3503519AC8CF500317104 /* NetWorkEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F3503419AC8CF500317104 /* NetWorkEvent.m */; };
+		E1F3503B19AC913300317104 /* TCMessageBox.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F3503A19AC913300317104 /* TCMessageBox.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -295,20 +286,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D87DEF7B19ACCB320010BEE9 /* galleryImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = galleryImage.jpg; sourceTree = "<group>"; };
-		D87DEF7E19ACCB380010BEE9 /* qqLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qqLogo.png; sourceTree = "<group>"; };
-		D87DEF7F19ACCB380010BEE9 /* weiboLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weiboLogo.png; sourceTree = "<group>"; };
-		D87DEF8019ACCB380010BEE9 /* weixinLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weixinLogo.png; sourceTree = "<group>"; };
-		D87DEF8919ACCBB70010BEE9 /* CollapseClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapseClick.h; sourceTree = "<group>"; };
-		D87DEF8A19ACCBB70010BEE9 /* CollapseClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapseClick.m; sourceTree = "<group>"; };
-		D87DEF8B19ACCBB70010BEE9 /* CollapseClickArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapseClickArrow.h; sourceTree = "<group>"; };
-		D87DEF8C19ACCBB70010BEE9 /* CollapseClickArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapseClickArrow.m; sourceTree = "<group>"; };
-		D87DEF8D19ACCBB70010BEE9 /* CollapseClickCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapseClickCell.h; sourceTree = "<group>"; };
-		D87DEF8E19ACCBB70010BEE9 /* CollapseClickCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapseClickCell.m; sourceTree = "<group>"; };
-		D87DEF8F19ACCBB70010BEE9 /* CollapseClickCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollapseClickCell.xib; sourceTree = "<group>"; };
-		D87DEF9F19ACCDE60010BEE9 /* LoginPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginPageViewController.h; sourceTree = "<group>"; };
-		D87DEFA019ACCDE60010BEE9 /* LoginPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginPageViewController.m; sourceTree = "<group>"; };
-		D87DEFA119ACCDE60010BEE9 /* LoginPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginPageViewController.xib; sourceTree = "<group>"; };
 		E161263019A7E5F90012834A /* LinkMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinkMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E161263319A7E5F90012834A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E161263519A7E5F90012834A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -819,6 +796,28 @@
 		E17AC6D119A7F0E0008CF3FC /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
 		E17AC6D419A7F0E0008CF3FC /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
 		E17AC6D519A7F0E0008CF3FC /* ZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipArchive.m; sourceTree = "<group>"; };
+		E1E2C3D619AC39CB004C3F57 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		E1E2C3D719AC39CB004C3F57 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		E1E2C3D819AC39CB004C3F57 /* LoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		E1E2C3DC19AC3A11004C3F57 /* RootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootVC.h; sourceTree = "<group>"; };
+		E1E2C3DD19AC3A11004C3F57 /* RootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootVC.m; sourceTree = "<group>"; };
+		E1E2C3DE19AC3A11004C3F57 /* RootVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootVC.xib; sourceTree = "<group>"; };
+		E1E2C3E219AC5BFC004C3F57 /* summer_extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = summer_extend.h; sourceTree = "<group>"; };
+		E1E2C3E819AC6350004C3F57 /* LoginEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginEvent.h; sourceTree = "<group>"; };
+		E1E2C3E919AC6350004C3F57 /* LoginEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginEvent.m; sourceTree = "<group>"; };
+		E1E2C3EB19AC7139004C3F57 /* CoreModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreModel.h; sourceTree = "<group>"; };
+		E1E2C3EC19AC7139004C3F57 /* CoreModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreModel.m; sourceTree = "<group>"; };
+		E1E2C3EE19AC7311004C3F57 /* CoreService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreService.h; path = ../CoreService.h; sourceTree = "<group>"; };
+		E1E2C3EF19AC7311004C3F57 /* CoreService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreService.m; path = ../CoreService.m; sourceTree = "<group>"; };
+		E1E2C3F219AC740C004C3F57 /* IUserRemoteService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IUserRemoteService.h; sourceTree = "<group>"; };
+		E1E2C3F319AC74C5004C3F57 /* UserRemoteServiceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserRemoteServiceImpl.h; sourceTree = "<group>"; };
+		E1E2C3F419AC74C5004C3F57 /* UserRemoteServiceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRemoteServiceImpl.m; sourceTree = "<group>"; };
+		E1E2C3F719AC78B4004C3F57 /* BaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseService.h; sourceTree = "<group>"; };
+		E1E2C3F819AC78B4004C3F57 /* BaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseService.m; sourceTree = "<group>"; };
+		E1F3503319AC8CF500317104 /* NetWorkEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkEvent.h; sourceTree = "<group>"; };
+		E1F3503419AC8CF500317104 /* NetWorkEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkEvent.m; sourceTree = "<group>"; };
+		E1F3503919AC913300317104 /* TCMessageBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCMessageBox.h; sourceTree = "<group>"; };
+		E1F3503A19AC913300317104 /* TCMessageBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCMessageBox.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -848,78 +847,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D87DEF6119ACC9B50010BEE9 /* home */ = {
-			isa = PBXGroup;
-			children = (
-				D87DEF8819ACCBB70010BEE9 /* CollapseClick */,
-				D87DEF9F19ACCDE60010BEE9 /* LoginPageViewController.h */,
-				D87DEFA019ACCDE60010BEE9 /* LoginPageViewController.m */,
-				D87DEFA119ACCDE60010BEE9 /* LoginPageViewController.xib */,
-			);
-			path = home;
-			sourceTree = "<group>";
-		};
-		D87DEF8819ACCBB70010BEE9 /* CollapseClick */ = {
-			isa = PBXGroup;
-			children = (
-				D87DEF8919ACCBB70010BEE9 /* CollapseClick.h */,
-				D87DEF8A19ACCBB70010BEE9 /* CollapseClick.m */,
-				D87DEF8B19ACCBB70010BEE9 /* CollapseClickArrow.h */,
-				D87DEF8C19ACCBB70010BEE9 /* CollapseClickArrow.m */,
-				D87DEF8D19ACCBB70010BEE9 /* CollapseClickCell.h */,
-				D87DEF8E19ACCBB70010BEE9 /* CollapseClickCell.m */,
-				D87DEF8F19ACCBB70010BEE9 /* CollapseClickCell.xib */,
-			);
-			path = CollapseClick;
-			sourceTree = "<group>";
-		};
-		D8F2AD7E19A8EC44009554A5 /* databean */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = databean;
-			sourceTree = "<group>";
-		};
-		D8F2AD7F19A8EC44009554A5 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		D8F2AD8019A8EC44009554A5 /* service */ = {
-			isa = PBXGroup;
-			children = (
-				D8F2AD8119A8EC44009554A5 /* impl */,
-			);
-			path = service;
-			sourceTree = "<group>";
-		};
-		D8F2AD8119A8EC44009554A5 /* impl */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = impl;
-			sourceTree = "<group>";
-		};
-		D8F2AD8219A8EC44009554A5 /* common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = common;
-			sourceTree = "<group>";
-		};
-		D8F2AD8319A8EC44009554A5 /* event */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = event;
-			sourceTree = "<group>";
-		};
 		D8F2AD8419A8EC44009554A5 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				D87DEF6119ACC9B50010BEE9 /* home */,
+				E1F3503819AC912000317104 /* common */,
+				E1E2C3DB19AC39F0004C3F57 /* root */,
+				E1E2C3D319AC397D004C3F57 /* login */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -1003,11 +936,11 @@
 		E17AC4A719A7F0DF008CF3FC /* classes */ = {
 			isa = PBXGroup;
 			children = (
-				D8F2AD7E19A8EC44009554A5 /* databean */,
-				D8F2AD7F19A8EC44009554A5 /* model */,
-				D8F2AD8019A8EC44009554A5 /* service */,
-				D8F2AD8219A8EC44009554A5 /* common */,
-				D8F2AD8319A8EC44009554A5 /* event */,
+				E1E2C3E319AC6315004C3F57 /* common */,
+				E1E2C3E419AC6315004C3F57 /* databean */,
+				E1E2C3E519AC6315004C3F57 /* event */,
+				E1E2C3E619AC6315004C3F57 /* model */,
+				E1E2C3E719AC6315004C3F57 /* service */,
 				D8F2AD8419A8EC44009554A5 /* views */,
 			);
 			path = classes;
@@ -1047,6 +980,7 @@
 		E17AC4B819A7F0DF008CF3FC /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				E1E2C3E119AC5A8D004C3F57 /* summer_extend */,
 				E17AC4B919A7F0DF008CF3FC /* application */,
 				E17AC5FE19A7F0DF008CF3FC /* Bee.h */,
 				E17AC5FF19A7F0DF008CF3FC /* Bee.mm */,
@@ -1995,9 +1929,6 @@
 		E17AC6D719A7F0E0008CF3FC /* icons */ = {
 			isa = PBXGroup;
 			children = (
-				D87DEF7E19ACCB380010BEE9 /* qqLogo.png */,
-				D87DEF7F19ACCB380010BEE9 /* weiboLogo.png */,
-				D87DEF8019ACCB380010BEE9 /* weixinLogo.png */,
 			);
 			path = icons;
 			sourceTree = "<group>";
@@ -2005,9 +1936,101 @@
 		E17AC6D819A7F0E0008CF3FC /* images */ = {
 			isa = PBXGroup;
 			children = (
-				D87DEF7B19ACCB320010BEE9 /* galleryImage.jpg */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		E1E2C3D319AC397D004C3F57 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				E1E2C3D619AC39CB004C3F57 /* LoginVC.h */,
+				E1E2C3D719AC39CB004C3F57 /* LoginVC.m */,
+				E1E2C3D819AC39CB004C3F57 /* LoginVC.xib */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		E1E2C3DB19AC39F0004C3F57 /* root */ = {
+			isa = PBXGroup;
+			children = (
+				E1E2C3DC19AC3A11004C3F57 /* RootVC.h */,
+				E1E2C3DD19AC3A11004C3F57 /* RootVC.m */,
+				E1E2C3DE19AC3A11004C3F57 /* RootVC.xib */,
+			);
+			path = root;
+			sourceTree = "<group>";
+		};
+		E1E2C3E119AC5A8D004C3F57 /* summer_extend */ = {
+			isa = PBXGroup;
+			children = (
+				E1E2C3E219AC5BFC004C3F57 /* summer_extend.h */,
+			);
+			path = summer_extend;
+			sourceTree = "<group>";
+		};
+		E1E2C3E319AC6315004C3F57 /* common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		E1E2C3E419AC6315004C3F57 /* databean */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = databean;
+			sourceTree = "<group>";
+		};
+		E1E2C3E519AC6315004C3F57 /* event */ = {
+			isa = PBXGroup;
+			children = (
+				E1E2C3E819AC6350004C3F57 /* LoginEvent.h */,
+				E1E2C3E919AC6350004C3F57 /* LoginEvent.m */,
+				E1F3503319AC8CF500317104 /* NetWorkEvent.h */,
+				E1F3503419AC8CF500317104 /* NetWorkEvent.m */,
+			);
+			path = event;
+			sourceTree = "<group>";
+		};
+		E1E2C3E619AC6315004C3F57 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				E1E2C3EB19AC7139004C3F57 /* CoreModel.h */,
+				E1E2C3EC19AC7139004C3F57 /* CoreModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		E1E2C3E719AC6315004C3F57 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				E1E2C3F119AC73CF004C3F57 /* impl */,
+				E1E2C3F219AC740C004C3F57 /* IUserRemoteService.h */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		E1E2C3F119AC73CF004C3F57 /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				E1E2C3EE19AC7311004C3F57 /* CoreService.h */,
+				E1E2C3EF19AC7311004C3F57 /* CoreService.m */,
+				E1E2C3F319AC74C5004C3F57 /* UserRemoteServiceImpl.h */,
+				E1E2C3F419AC74C5004C3F57 /* UserRemoteServiceImpl.m */,
+				E1E2C3F719AC78B4004C3F57 /* BaseService.h */,
+				E1E2C3F819AC78B4004C3F57 /* BaseService.m */,
+			);
+			path = impl;
+			sourceTree = "<group>";
+		};
+		E1F3503819AC912000317104 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				E1F3503919AC913300317104 /* TCMessageBox.h */,
+				E1F3503A19AC913300317104 /* TCMessageBox.m */,
+			);
+			path = common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2086,17 +2109,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D87DEF8119ACCB380010BEE9 /* qqLogo.png in Resources */,
+				E1E2C3E019AC3A11004C3F57 /* RootVC.xib in Resources */,
+				E1E2C3DA19AC39CB004C3F57 /* LoginVC.xib in Resources */,
 				E17AC6DA19A7F0E0008CF3FC /* left_arrow.png in Resources */,
 				E161263E19A7E5F90012834A /* InfoPlist.strings in Resources */,
-				D87DEF8319ACCB380010BEE9 /* weiboLogo.png in Resources */,
-				D87DEF7C19ACCB320010BEE9 /* galleryImage.jpg in Resources */,
-				D87DEF8519ACCB380010BEE9 /* weixinLogo.png in Resources */,
-				D87DEF9619ACCBB70010BEE9 /* CollapseClickCell.xib in Resources */,
 				E161264619A7E5F90012834A /* Images.xcassets in Resources */,
 				E17AC6DC19A7F0E0008CF3FC /* right_arrow.png in Resources */,
 				E17AC6DB19A7F0E0008CF3FC /* left_arrow@2x.png in Resources */,
-				D87DEFA419ACCDE60010BEE9 /* LoginPageViewController.xib in Resources */,
 				E17AC6DD19A7F0E0008CF3FC /* right_arrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2105,13 +2124,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D87DEFA519ACCDE60010BEE9 /* LoginPageViewController.xib in Resources */,
-				D87DEF8219ACCB380010BEE9 /* qqLogo.png in Resources */,
 				E161265719A7E5F90012834A /* InfoPlist.strings in Resources */,
-				D87DEF7D19ACCB320010BEE9 /* galleryImage.jpg in Resources */,
-				D87DEF9719ACCBB70010BEE9 /* CollapseClickCell.xib in Resources */,
-				D87DEF8619ACCB380010BEE9 /* weixinLogo.png in Resources */,
-				D87DEF8419ACCB380010BEE9 /* weiboLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2147,6 +2160,7 @@
 				E17AC78819A7F0E0008CF3FC /* Bee_Foundation.mm in Sources */,
 				E17AC6E619A7F0E0008CF3FC /* BeeMessage+BeeNetwork.mm in Sources */,
 				E17AC74D19A7F0E0008CF3FC /* Bee_UISignalBus.m in Sources */,
+				E1E2C3D919AC39CB004C3F57 /* LoginVC.m in Sources */,
 				E17AC6F819A7F0E0008CF3FC /* UIView+UIViewController.m in Sources */,
 				E17AC7A519A7F0E0008CF3FC /* NSObject+BeeHTTPRequest.m in Sources */,
 				E17AC70219A7F0E0008CF3FC /* UIControl+BeeUIStyle.m in Sources */,
@@ -2165,10 +2179,12 @@
 				E17AC6D919A7F0E0008CF3FC /* CKCalendarView.m in Sources */,
 				E17AC6E819A7F0E0008CF3FC /* NSObject+BeeMessage.mm in Sources */,
 				E17AC72019A7F0E0008CF3FC /* Bee_UIDatePicker.m in Sources */,
+				E1E2C3F919AC78B4004C3F57 /* BaseService.m in Sources */,
 				E17AC6FE19A7F0E0008CF3FC /* UIViewController+UINavigationController.m in Sources */,
 				E17AC74219A7F0E0008CF3FC /* UIView+Visibility.m in Sources */,
 				E17AC79619A7F0E0008CF3FC /* NSDictionary+BeeExtension.mm in Sources */,
 				E17AC6E919A7F0E0008CF3FC /* Bee_Model.mm in Sources */,
+				E1E2C3DF19AC3A11004C3F57 /* RootVC.m in Sources */,
 				E17AC75D19A7F0E0008CF3FC /* BeeUIQuery+Dimensions.m in Sources */,
 				E17AC70719A7F0E0008CF3FC /* UITextView+BeeUIStyle.m in Sources */,
 				E17AC78719A7F0E0008CF3FC /* Bee_Assertion.mm in Sources */,
@@ -2176,12 +2192,12 @@
 				E17AC70A19A7F0E0008CF3FC /* Bee_UIAnimationAlpha.m in Sources */,
 				E17AC74519A7F0E0008CF3FC /* Bee_UICell.m in Sources */,
 				E17AC6F919A7F0E0008CF3FC /* UIViewController+LifeCycle.m in Sources */,
+				E1E2C3ED19AC7139004C3F57 /* CoreModel.m in Sources */,
 				E17AC76519A7F0E0008CF3FC /* BeeUIQuery+Value.m in Sources */,
 				E17AC76A19A7F0E0008CF3FC /* Bee_UITemplateHTML.m in Sources */,
 				E17AC70419A7F0E0008CF3FC /* UILabel+BeeUIStyle.m in Sources */,
 				E17AC75B19A7F0E0008CF3FC /* BeeUIQuery+AJAX.m in Sources */,
 				E17AC70B19A7F0E0008CF3FC /* Bee_UIAnimationBounce.m in Sources */,
-				D87DEF9219ACCBB70010BEE9 /* CollapseClickArrow.m in Sources */,
 				E17AC74F19A7F0E0008CF3FC /* UIView+BeeUISignal.m in Sources */,
 				E17AC7B019A7F0E0008CF3FC /* FMDatabase.m in Sources */,
 				E17AC77919A7F0E0008CF3FC /* NSObject+BeeUserDefaults.mm in Sources */,
@@ -2199,10 +2215,12 @@
 				E17AC72819A7F0E0008CF3FC /* Bee_UIPageViewController.m in Sources */,
 				E17AC79F19A7F0E0008CF3FC /* NSTimer+BeeExtension.mm in Sources */,
 				E17AC70D19A7F0E0008CF3FC /* Bee_UIAnimationStyling.m in Sources */,
+				E1F3503B19AC913300317104 /* TCMessageBox.m in Sources */,
 				E17AC73719A7F0E0008CF3FC /* Bee_UIWebView.m in Sources */,
 				E17AC72319A7F0E0008CF3FC /* Bee_UIKeyboard.m in Sources */,
 				E17AC70E19A7F0E0008CF3FC /* Bee_UIAnimationZoom.m in Sources */,
 				E17AC7B819A7F0E0008CF3FC /* CTidy.m in Sources */,
+				E1E2C3F519AC74C5004C3F57 /* UserRemoteServiceImpl.m in Sources */,
 				E17AC77A19A7F0E0008CF3FC /* Bee_ActiveBuilder.m in Sources */,
 				E17AC72C19A7F0E0008CF3FC /* Bee_UISearchBar.m in Sources */,
 				E17AC72719A7F0E0008CF3FC /* Bee_UIPageControl.m in Sources */,
@@ -2237,6 +2255,7 @@
 				E17AC7C719A7F0E1008CF3FC /* zip.c in Sources */,
 				E17AC76019A7F0E0008CF3FC /* BeeUIQuery+Manipulation.m in Sources */,
 				E17AC74C19A7F0E0008CF3FC /* Bee_UISignal.m in Sources */,
+				E1F3503519AC8CF500317104 /* NetWorkEvent.m in Sources */,
 				E17AC72B19A7F0E0008CF3FC /* Bee_UIScrollView.m in Sources */,
 				E17AC79C19A7F0E0008CF3FC /* NSObject+BeeTimer.mm in Sources */,
 				E17AC7A319A7F0E0008CF3FC /* Bee_HTTPRequestQueue.m in Sources */,
@@ -2267,7 +2286,6 @@
 				E17AC77119A7F0E0008CF3FC /* Bee_Service.m in Sources */,
 				E17AC79A19A7F0E0008CF3FC /* NSObject+BeeProperty.mm in Sources */,
 				E17AC6EC19A7F0E0008CF3FC /* Bee_UIMetrics.m in Sources */,
-				D87DEF9419ACCBB70010BEE9 /* CollapseClickCell.m in Sources */,
 				E17AC6EE19A7F0E0008CF3FC /* Bee_UIRouter.m in Sources */,
 				E17AC7C219A7F0E1008CF3FC /* CXMLNode_CreationExtensions.m in Sources */,
 				E17AC6F619A7F0E0008CF3FC /* BeeUIStack+BackwardCompatible.m in Sources */,
@@ -2303,10 +2321,10 @@
 				E17AC76119A7F0E0008CF3FC /* BeeUIQuery+Miscellaneous.m in Sources */,
 				E17AC71A19A7F0E0008CF3FC /* Bee_UIAccelerometer.m in Sources */,
 				E17AC77519A7F0E0008CF3FC /* Bee_Keychain.mm in Sources */,
-				D87DEF9019ACCBB70010BEE9 /* CollapseClick.m in Sources */,
 				E17AC6E519A7F0E0008CF3FC /* BeeMessage+BeeJSON.mm in Sources */,
 				E17AC7B719A7F0E0008CF3FC /* Reachability.m in Sources */,
 				E17AC70619A7F0E0008CF3FC /* UITextField+BeeUIStyle.m in Sources */,
+				E1E2C3F019AC7311004C3F57 /* CoreService.m in Sources */,
 				E17AC77419A7F0E0008CF3FC /* Bee_FileCache.mm in Sources */,
 				E17AC76919A7F0E0008CF3FC /* Bee_UITemplateAndroid.m in Sources */,
 				E17AC76F19A7F0E0008CF3FC /* Bee_Skeleton.m in Sources */,
@@ -2314,9 +2332,9 @@
 				E17AC72919A7F0E0008CF3FC /* Bee_UIPickerView.m in Sources */,
 				E17AC77B19A7F0E0008CF3FC /* Bee_ActiveObject.m in Sources */,
 				E17AC72519A7F0E0008CF3FC /* Bee_UIMenuController.m in Sources */,
-				D87DEFA219ACCDE60010BEE9 /* LoginPageViewController.m in Sources */,
 				E17AC73919A7F0E0008CF3FC /* UIView+HoldGesture.m in Sources */,
 				E17AC7B919A7F0E0008CF3FC /* CXHTMLDocument.m in Sources */,
+				E1E2C3EA19AC6350004C3F57 /* LoginEvent.m in Sources */,
 				E17AC70119A7F0E0008CF3FC /* UIButton+BeeUIStyle.m in Sources */,
 				E17AC7C819A7F0E1008CF3FC /* ZipArchive.m in Sources */,
 				E17AC76819A7F0E0008CF3FC /* UIViewController+BeeUITemplate.m in Sources */,
@@ -2372,10 +2390,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E161265919A7E5F90012834A /* LinkMeTests.m in Sources */,
-				D87DEF9119ACCBB70010BEE9 /* CollapseClick.m in Sources */,
-				D87DEF9519ACCBB70010BEE9 /* CollapseClickCell.m in Sources */,
-				D87DEF9319ACCBB70010BEE9 /* CollapseClickArrow.m in Sources */,
-				D87DEFA319ACCDE60010BEE9 /* LoginPageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

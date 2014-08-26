@@ -7,7 +7,7 @@
 //
 
 #import "HAppDelegate.h"
-
+#import "RootVC.h"
 
 @implementation HAppDelegate
 
@@ -15,11 +15,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[LoginPageViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [RootVC sharedInstance];
     [self.window makeKeyAndVisible];
     return YES;
-
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
