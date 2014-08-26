@@ -16,22 +16,7 @@
 
 @implementation LoginVC
 
-//SUMMER_DEF_XIB(LoginVC, YES, NO)
--(id) init
-{
-    static NSString * __local = nil;
-    if ( nil == __local )
-    {
-        __local = [NSString stringWithFormat:@"%@", @"LoginVC"];
-    }
-    self = [self initWithNibName:__local bundle:nil];
-    if(self)
-    {
-        self.allowedPortrait = YES;
-        self.allowedLandscape = NO;
-    }
-    return self;
-}
+SUMMER_DEF_XIB(LoginVC, YES, NO)
 
 ON_SIGNAL2(BeeUIBoard, signal)
 {
