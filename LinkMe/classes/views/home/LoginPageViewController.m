@@ -25,7 +25,10 @@
     // If you want a cell open on load, run this method:
     [myCollapseClick openCollapseClickCellAtIndex:0 animated:NO];
     [myCollapseClick setFrame:CGRectMake(0, GALLERY_IMAGE_HEIGHT, myCollapseClick.frame.size.width, myCollapseClick.frame.size.height)];
-    
+    [galleryImage setFrame:CGRectMake(galleryImage.frame.origin.x
+                                      , galleryImage.frame.origin.x
+                                      , galleryImage.frame.size.width
+                                      , GALLERY_IMAGE_HEIGHT)];
     [galleryImage setImage:[UIImage imageNamed:@"galleryImage.jpg"]];
     
     [self setTextFieldStyle];
@@ -41,7 +44,7 @@
 }
 -(void)keyboardWillHide:(int)index{
     [myCollapseClick setFrame:CGRectMake(0, 140, myCollapseClick.frame.size.width, myCollapseClick.frame.size.height)];
-    [galleryImage setFrame:CGRectMake(0,0,galleryImage.frame.size.width,galleryImage.frame.size.height+PULL_TOP_TO_GALLERY)];
+    [galleryImage setFrame:CGRectMake(0,0,galleryImage.frame.size.width,GALLERY_IMAGE_HEIGHT+PULL_TOP_TO_GALLERY)];
     
 }
 
