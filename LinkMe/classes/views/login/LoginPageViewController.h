@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "CollapseClick.h"
+#import "Bee.h"
 
-@interface LoginPageViewController : UIViewController <CollapseClickDelegate,UITextFieldDelegate> {
+@interface LoginPageViewController : BeeUIBoard <CollapseClickDelegate,UITextFieldDelegate> {
     IBOutlet UIView *test1View;
     IBOutlet UIView *test2View;
     IBOutlet UIView *test3View;

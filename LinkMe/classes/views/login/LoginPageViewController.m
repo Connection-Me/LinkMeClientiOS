@@ -7,12 +7,14 @@
 //
 
 #import "LoginPageViewController.h"
+#import "summer_extend.h"
 
 @interface LoginPageViewController ()
 
 @end
 
 @implementation LoginPageViewController
+SUMMER_DEF_XIB(LoginPageViewController, YES, NO)
 
 #define PULL_TOP_TO_GALLERY 110
 #define GALLERY_IMAGE_HEIGHT (ISIPHONE5 ? 230:140)
