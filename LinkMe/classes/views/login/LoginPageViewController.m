@@ -8,6 +8,7 @@
 
 #import "LoginPageViewController.h"
 #import "summer_extend.h"
+#import "CoreService.h"
 
 @interface LoginPageViewController ()
 
@@ -45,8 +46,9 @@ SUMMER_DEF_XIB(LoginPageViewController, YES, NO)
     
 }
 -(void)keyboardWillHide:(int)index{
-    [myCollapseClick setFrame:CGRectMake(0, 140, myCollapseClick.frame.size.width, myCollapseClick.frame.size.height)];
-    [galleryImage setFrame:CGRectMake(0,0,galleryImage.frame.size.width,GALLERY_IMAGE_HEIGHT+PULL_TOP_TO_GALLERY)];
+    NSLog(@"GALLERY_IMAGE_HEIGHT  === %d",GALLERY_IMAGE_HEIGHT+PULL_TOP_TO_GALLERY);
+    [myCollapseClick setFrame:CGRectMake(0, GALLERY_IMAGE_HEIGHT, myCollapseClick.frame.size.width, myCollapseClick.frame.size.height)];
+    [galleryImage setFrame:CGRectMake(0,0,galleryImage.frame.size.width,GALLERY_IMAGE_HEIGHT)];
     
 }
 
@@ -147,6 +149,7 @@ SUMMER_DEF_XIB(LoginPageViewController, YES, NO)
         
         if(textField.returnKeyType == UIReturnKeyDone){
             //TODO Login
+             [[CoreService sharedInstance].userRemoteService queryLoginByUsername:@"summer" andPassWord:@"123456" andController:@"user" andMethodName:@"login"];
         }
     }
     
