@@ -149,7 +149,9 @@ SUMMER_DEF_XIB(LoginPageViewController, YES, NO)
         
         if(textField.returnKeyType == UIReturnKeyDone){
             //TODO Login
-             [[CoreService sharedInstance].userRemoteService queryLoginByUsername:@"summer" andPassWord:@"123456" andController:@"user" andMethodName:@"login"];
+            NSString *loginName = _loginNameTextField.text;
+            NSString *loginPwd = _loginPwdTextField.text;
+             [[CoreService sharedInstance].userRemoteService queryLoginByUsername:loginName andPassWord:loginPwd andController:CONTROLLER_NAME andMethodName:METHOD_NAME];
         }
     }
     

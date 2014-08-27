@@ -10,6 +10,8 @@
 #import "CollapseClick.h"
 #import "Bee.h"
 
+#define CONTROLLER_NAME @"user"
+#define METHOD_NAME @"login"
 @interface LoginPageViewController : BeeUIBoard <CollapseClickDelegate,UITextFieldDelegate> {
     IBOutlet UIView *test1View;
     IBOutlet UIView *test2View;
