@@ -15,4 +15,6 @@ static NSString *url = @"http://";//根路径
 DEF_SINGLETON(CoreModel)
 DEF_STATIC_PROPERTY_STRING(serverURL,url);
 
+
+
 @end

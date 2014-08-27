@@ -81,6 +81,10 @@ ON_SIGNAL2(BeeUIBoard, signal)
     [self observeNotification:LoginEvent.LOGIN];
     [self observeNotification:LoginEvent.LOGIN_SUCCESS];
     [self observeNotification:LoginEvent.LOGIN_FAILED];
+    
+    [self observeNotification:LoginEvent.REGISTER];
+    [self observeNotification:LoginEvent.REGISTER_SUCCESS];
+    [self observeNotification:LoginEvent.REGISTER_FAILED];
 }
 
 -(void)initializeRouterMapClass
@@ -119,6 +123,24 @@ ON_NOTIFICATION3(LoginEvent, LOGIN_FAILED, notification)
 {
     [TCMessageBox hide];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"登录失败" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+}
+
+ON_NOTIFICATION3(LoginEvent, REGISTER_SUCCESS, notification)
+{
+    [TCMessageBox hide];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"注册失败" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+    
+    //请求服务器返回的json
+     NSString * data = (NSString*)notification.object;
+    //TODO 处理返回json
+}
+
+ON_NOTIFICATION3(LoginEvent, REGISTER_FAILED, notification)
+{
+    [TCMessageBox hide];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"注册失败" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
 }
 

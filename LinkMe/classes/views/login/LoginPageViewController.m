@@ -9,7 +9,7 @@
 #import "LoginPageViewController.h"
 #import "summer_extend.h"
 #import "CoreService.h"
-
+#import "CoreModel.h"
 @interface LoginPageViewController ()
 
 @end
@@ -137,14 +137,16 @@ SUMMER_DEF_XIB(LoginPageViewController, YES, NO)
 
 #pragma mark - TextField Delegate for Demo
 #define TAG_LOGIN_NAME 10001
+#define TAG_LOGIN_PWD 10002
 #define TAG_REGISTER_NAME 20001
+#define TAG_REGISTER_PWD 20002
 #define TAG_REFIND_NAME 30001
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
    
     
     if(textField.tag == TAG_LOGIN_NAME){
         [_loginPwdTextField becomeFirstResponder];
-    }else{
+    }else if(textField.tag == TAG_LOGIN_PWD){
         [_loginPwdTextField resignFirstResponder];
         
         if(textField.returnKeyType == UIReturnKeyDone){
@@ -157,11 +159,14 @@ SUMMER_DEF_XIB(LoginPageViewController, YES, NO)
     
     if(textField.tag == TAG_REGISTER_NAME){
        [_registerPwdTextField becomeFirstResponder];
-    }else{
+    }else if(textField.tag == TAG_REGISTER_PWD){
        [_registerPwdTextField resignFirstResponder];
         
         if(textField.returnKeyType == UIReturnKeyDone){
             //TODO Register
+            NSString *registerName = _registerNameTextField.text;
+            NSString *registerPwd = _registerPwdTextField.text;
+            [[CoreService sharedInstance].userRemoteService queryRegisterByUserName:registerName andPassWord:registerPwd andController:CONTROLLER_NAME andMethodName:METHOD_NAME];
         }
     }
     

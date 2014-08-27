@@ -15,4 +15,6 @@
 -(void)queryLoginByUsername:(NSString*)username andPassWord:(NSString*)passWord andController:(NSString*)c andMethodName:(NSString*)
 methodName;
 
+-(void)queryRegisterByUserName:(NSString*)username andPassWord:(NSString*)passWord andController:(NSString*)c andMethodName:(NSString*)methodName;
+
 @end
