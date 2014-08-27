@@ -11,6 +11,7 @@
 #import "LoginVC.h"
 #import "LoginEvent.h"
 #import "TCMessageBox.h"
+#import "LoginPageViewController.h"
 
 @interface RootVC ()
 
@@ -84,7 +85,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
 
 -(void)initializeRouterMapClass
 {
-    [_router map:@"login" toClass:[LoginVC class]];
+    [_router map:@"login" toClass:[LoginPageViewController class]];
 }
 
 -(void)testOpenScreen:(NSString*)name
