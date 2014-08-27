@@ -2,8 +2,8 @@
 //  ViewController.h
 //  CollapseClick
 //
-//  Created by Ben Gordon on 2/28/13.
-//  Copyright (c) 2013 Ben Gordon. All rights reserved.
+//  Created by ChaoSo on 08/26/14.
+
 //
 
 #import <UIKit/UIKit.h>
