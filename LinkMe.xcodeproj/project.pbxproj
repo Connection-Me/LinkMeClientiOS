@@ -285,6 +285,7 @@
 		E1E2C3F919AC78B4004C3F57 /* BaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E2C3F819AC78B4004C3F57 /* BaseService.m */; };
 		E1F3503519AC8CF500317104 /* NetWorkEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F3503419AC8CF500317104 /* NetWorkEvent.m */; };
 		E1F3503B19AC913300317104 /* TCMessageBox.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F3503A19AC913300317104 /* TCMessageBox.m */; };
+		E1F3503F19AD09AF00317104 /* RequestMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F3503E19AD09AF00317104 /* RequestMethod.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -840,6 +841,8 @@
 		E1F3503419AC8CF500317104 /* NetWorkEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkEvent.m; sourceTree = "<group>"; };
 		E1F3503919AC913300317104 /* TCMessageBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCMessageBox.h; sourceTree = "<group>"; };
 		E1F3503A19AC913300317104 /* TCMessageBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCMessageBox.m; sourceTree = "<group>"; };
+		E1F3503D19AD09AF00317104 /* RequestMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestMethod.h; sourceTree = "<group>"; };
+		E1F3503E19AD09AF00317104 /* RequestMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestMethod.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -972,7 +975,7 @@
 		E17AC4A719A7F0DF008CF3FC /* classes */ = {
 			isa = PBXGroup;
 			children = (
-				E1E2C3E319AC6315004C3F57 /* common */,
+				E1F3503C19AD098E00317104 /* common */,
 				E1E2C3E419AC6315004C3F57 /* databean */,
 				E1E2C3E519AC6315004C3F57 /* event */,
 				E1E2C3E619AC6315004C3F57 /* model */,
@@ -2007,13 +2010,6 @@
 			path = summer_extend;
 			sourceTree = "<group>";
 		};
-		E1E2C3E319AC6315004C3F57 /* common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = common;
-			sourceTree = "<group>";
-		};
 		E1E2C3E419AC6315004C3F57 /* databean */ = {
 			isa = PBXGroup;
 			children = (
@@ -2069,6 +2065,15 @@
 				D87DF01219ACE1C50010BEE9 /* CollapseClick */,
 				E1F3503919AC913300317104 /* TCMessageBox.h */,
 				E1F3503A19AC913300317104 /* TCMessageBox.m */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		E1F3503C19AD098E00317104 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				E1F3503D19AD09AF00317104 /* RequestMethod.h */,
+				E1F3503E19AD09AF00317104 /* RequestMethod.m */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -2215,6 +2220,7 @@
 				E17AC75819A7F0E0008CF3FC /* UIView+BeeUILayout.m in Sources */,
 				E17AC74919A7F0E0008CF3FC /* Bee_UIZoomView.m in Sources */,
 				E17AC78B19A7F0E0008CF3FC /* Bee_Runtime.mm in Sources */,
+				E1F3503F19AD09AF00317104 /* RequestMethod.m in Sources */,
 				E17AC72119A7F0E0008CF3FC /* Bee_UIImagePickerController.m in Sources */,
 				E17AC71619A7F0E0008CF3FC /* UITextField+UIDataBinding.m in Sources */,
 				E17AC6FD19A7F0E0008CF3FC /* UIViewController+UINavigationBar.m in Sources */,
