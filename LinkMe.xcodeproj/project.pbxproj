@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D85DE5B619B3604C00A906E7 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D85DE5B419B3604C00A906E7 /* HomeVC.m */; };
+		D85DE5B719B3604C00A906E7 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D85DE5B419B3604C00A906E7 /* HomeVC.m */; };
+		D85DE5B819B3604C00A906E7 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D85DE5B519B3604C00A906E7 /* HomeVC.xib */; };
+		D85DE5B919B3604C00A906E7 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D85DE5B519B3604C00A906E7 /* HomeVC.xib */; };
+		D85DE5BC19B3609000A906E7 /* HomeCollectionVCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D85DE5BB19B3609000A906E7 /* HomeCollectionVCCell.m */; };
+		D85DE5BD19B3609000A906E7 /* HomeCollectionVCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D85DE5BB19B3609000A906E7 /* HomeCollectionVCCell.m */; };
+		D85DE5BF19B360A200A906E7 /* HomeCollectionVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D85DE5BE19B360A200A906E7 /* HomeCollectionVCCell.xib */; };
+		D85DE5C019B360A200A906E7 /* HomeCollectionVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D85DE5BE19B360A200A906E7 /* HomeCollectionVCCell.xib */; };
 		D87DF00E19ACE1BB0010BEE9 /* LoginPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DF00C19ACE1BB0010BEE9 /* LoginPageViewController.m */; };
 		D87DF00F19ACE1BB0010BEE9 /* LoginPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DF00C19ACE1BB0010BEE9 /* LoginPageViewController.m */; };
 		D87DF01019ACE1BB0010BEE9 /* LoginPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87DF00D19ACE1BB0010BEE9 /* LoginPageViewController.xib */; };
@@ -299,6 +307,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D85DE5B319B3604C00A906E7 /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
+		D85DE5B419B3604C00A906E7 /* HomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
+		D85DE5B519B3604C00A906E7 /* HomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		D85DE5BA19B3609000A906E7 /* HomeCollectionVCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionVCCell.h; sourceTree = "<group>"; };
+		D85DE5BB19B3609000A906E7 /* HomeCollectionVCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionVCCell.m; sourceTree = "<group>"; };
+		D85DE5BE19B360A200A906E7 /* HomeCollectionVCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionVCCell.xib; sourceTree = "<group>"; };
 		D87DF00B19ACE1BB0010BEE9 /* LoginPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginPageViewController.h; sourceTree = "<group>"; };
 		D87DF00C19ACE1BB0010BEE9 /* LoginPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginPageViewController.m; sourceTree = "<group>"; };
 		D87DF00D19ACE1BB0010BEE9 /* LoginPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginPageViewController.xib; sourceTree = "<group>"; };
@@ -872,6 +886,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D85DE5B219B3601300A906E7 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				D85DE5B319B3604C00A906E7 /* HomeVC.h */,
+				D85DE5B419B3604C00A906E7 /* HomeVC.m */,
+				D85DE5B519B3604C00A906E7 /* HomeVC.xib */,
+				D85DE5BA19B3609000A906E7 /* HomeCollectionVCCell.h */,
+				D85DE5BB19B3609000A906E7 /* HomeCollectionVCCell.m */,
+				D85DE5BE19B360A200A906E7 /* HomeCollectionVCCell.xib */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
 		D87DF01219ACE1C50010BEE9 /* CollapseClick */ = {
 			isa = PBXGroup;
 			children = (
@@ -889,6 +916,7 @@
 		D8F2AD8419A8EC44009554A5 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				D85DE5B219B3601300A906E7 /* home */,
 				E1F3503819AC912000317104 /* common */,
 				E1E2C3DB19AC39F0004C3F57 /* root */,
 				E1E2C3D319AC397D004C3F57 /* login */,
@@ -2159,9 +2187,11 @@
 				D87DF01019ACE1BB0010BEE9 /* LoginPageViewController.xib in Resources */,
 				E17AC6DA19A7F0E0008CF3FC /* left_arrow.png in Resources */,
 				E161263E19A7E5F90012834A /* InfoPlist.strings in Resources */,
+				D85DE5B819B3604C00A906E7 /* HomeVC.xib in Resources */,
 				E161264619A7E5F90012834A /* Images.xcassets in Resources */,
 				E17AC6DC19A7F0E0008CF3FC /* right_arrow.png in Resources */,
 				E17AC6DB19A7F0E0008CF3FC /* left_arrow@2x.png in Resources */,
+				D85DE5BF19B360A200A906E7 /* HomeCollectionVCCell.xib in Resources */,
 				E17AC6DD19A7F0E0008CF3FC /* right_arrow@2x.png in Resources */,
 				D87DF02019ACE1C50010BEE9 /* CollapseClickCell.xib in Resources */,
 			);
@@ -2171,7 +2201,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D85DE5C019B360A200A906E7 /* HomeCollectionVCCell.xib in Resources */,
 				E161265719A7E5F90012834A /* InfoPlist.strings in Resources */,
+				D85DE5B919B3604C00A906E7 /* HomeVC.xib in Resources */,
 				D87DF02119ACE1C50010BEE9 /* CollapseClickCell.xib in Resources */,
 				D87DF01119ACE1BB0010BEE9 /* LoginPageViewController.xib in Resources */,
 			);
@@ -2234,6 +2266,7 @@
 				E17AC74219A7F0E0008CF3FC /* UIView+Visibility.m in Sources */,
 				E17AC79619A7F0E0008CF3FC /* NSDictionary+BeeExtension.mm in Sources */,
 				E17AC6E919A7F0E0008CF3FC /* Bee_Model.mm in Sources */,
+				D85DE5B619B3604C00A906E7 /* HomeVC.m in Sources */,
 				E1E2C3DF19AC3A11004C3F57 /* RootVC.m in Sources */,
 				E17AC75D19A7F0E0008CF3FC /* BeeUIQuery+Dimensions.m in Sources */,
 				E17AC70719A7F0E0008CF3FC /* UITextView+BeeUIStyle.m in Sources */,
@@ -2404,6 +2437,7 @@
 				E17AC77319A7F0E0008CF3FC /* Bee_CacheProtocol.mm in Sources */,
 				E17AC6DE19A7F0E0008CF3FC /* Bee_MVC.mm in Sources */,
 				E17AC7B619A7F0E0008CF3FC /* OpenUDID.m in Sources */,
+				D85DE5BC19B3609000A906E7 /* HomeCollectionVCCell.m in Sources */,
 				E17AC6E419A7F0E0008CF3FC /* BeeMessage+BeeActiveRecord.mm in Sources */,
 				E17AC73D19A7F0E0008CF3FC /* UIView+PanGesture.m in Sources */,
 				E17AC7C319A7F0E1008CF3FC /* CXMLNode_PrivateExtensions.m in Sources */,
@@ -2445,7 +2479,9 @@
 			files = (
 				E161265919A7E5F90012834A /* LinkMeTests.m in Sources */,
 				D87DF00F19ACE1BB0010BEE9 /* LoginPageViewController.m in Sources */,
+				D85DE5BD19B3609000A906E7 /* HomeCollectionVCCell.m in Sources */,
 				D87DF01B19ACE1C50010BEE9 /* CollapseClick.m in Sources */,
+				D85DE5B719B3604C00A906E7 /* HomeVC.m in Sources */,
 				D87DF01F19ACE1C50010BEE9 /* CollapseClickCell.m in Sources */,
 				D87DF01D19ACE1C50010BEE9 /* CollapseClickArrow.m in Sources */,
 			);
