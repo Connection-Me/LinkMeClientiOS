@@ -199,14 +199,14 @@ static NSString const *CLASS_KEY = @"__class";
 
 @implementation NSArray (LibModel)
 
-//-(NSString*) libJSON{
-//    NSMutableArray *list = [NSMutableArray array];
-//    for (id obj in self) {
-//        if ([obj isKindOfClass:[LibModel class]]) {
-//            LibModel *model = obj;
-//            [list addObject:[model json]];
-//        }
-//    }
-//    return [list JSONString];
-//}
+-(NSString*) libJSON{
+    NSMutableArray *list = [NSMutableArray array];
+    for (id obj in self) {
+        if ([obj isKindOfClass:[LibModel class]]) {
+            LibModel *model = obj;
+            [list addObject:[model json]];
+        }
+    }
+    return [list JSONString];
+}
 @end

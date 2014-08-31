@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Bee.h"
 
 @interface LibModel : NSObject
 
