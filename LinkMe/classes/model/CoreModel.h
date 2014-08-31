@@ -11,6 +11,8 @@
 
 @interface CoreModel : NSObject
 
+@property(strong,nonatomic) NSString * token;
+
 AS_SINGLETON(CoreModel)
 AS_STATIC_PROPERTY(serverURL)
 
