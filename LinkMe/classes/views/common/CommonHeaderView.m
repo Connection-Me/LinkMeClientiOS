@@ -47,7 +47,7 @@
     }
     else{
         if (view != nil){
-            
+            NSLog(@"the view is not nil");
         }
         return nil;
     }
@@ -58,11 +58,6 @@
     if(style==1){
         
         //位置
-        if(ISIOS7){
-            self.frame = CGRectMake(0, 0, self.window.frame.size.width,55);
-        }else{
-            self.frame = CGRectMake(0, 0, self.window.frame.size.width,35);
-        }
         [self setBackgroundColor:[UIColor colorWithRed:92/255.0f green:92/255.0f blue:92/255.0f alpha:1.0f]];
         
         

@@ -86,8 +86,6 @@ ON_SIGNAL2(BeeUIBoard, signal)
 }
 -(void)setHeaderView{
     [CommonHeaderView createHeaderView:self.view AndStyle:1 AndTitle:@"首页"];
-    
-
 }
 
 
