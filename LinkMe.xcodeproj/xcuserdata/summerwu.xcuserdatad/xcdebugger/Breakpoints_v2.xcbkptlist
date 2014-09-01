@@ -15,8 +15,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "91"
             endingLineNumber = "91"
-            landmarkName = "@implementation RootVC"
-            landmarkType = "3">
+            landmarkName = "-initializeRouterMapClass"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -102,10 +102,10 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__86-[UserRemoteServiceImpl queryLoginByUsername:andPassWord:andController:andMethodName:]_block_invoke86"
+                  symbolName = "__86-[UserRemoteServiceImpl queryLoginByUsername:andPassWord:andController:andMethodName:]_block_invoke88"
                   moduleName = "LinkMe"
                   urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
-                  timestampString = "430846548.755615"
+                  timestampString = "430847337.421495"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "71"
@@ -116,10 +116,10 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__86-[UserRemoteServiceImpl queryLoginByUsername:andPassWord:andController:andMethodName:]_block_invoke_289"
+                  symbolName = "__86-[UserRemoteServiceImpl queryLoginByUsername:andPassWord:andController:andMethodName:]_block_invoke_291"
                   moduleName = "LinkMe"
                   urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
-                  timestampString = "430846548.755988"
+                  timestampString = "430847337.421716"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "71"

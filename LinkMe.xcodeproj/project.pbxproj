@@ -27,6 +27,10 @@
 		D87DF01F19ACE1C50010BEE9 /* CollapseClickCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DF01819ACE1C50010BEE9 /* CollapseClickCell.m */; };
 		D87DF02019ACE1C50010BEE9 /* CollapseClickCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87DF01919ACE1C50010BEE9 /* CollapseClickCell.xib */; };
 		D87DF02119ACE1C50010BEE9 /* CollapseClickCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87DF01919ACE1C50010BEE9 /* CollapseClickCell.xib */; };
+		E117D32D19B3882B00411512 /* LibModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E117D32C19B3882B00411512 /* LibModel.m */; };
+		E117D32F19B3955F00411512 /* BeeMessage+BeeJSON.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17AC4CE19A7F0DF008CF3FC /* BeeMessage+BeeJSON.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E117D33019B3956300411512 /* NSObject+BeeJSON.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17AC65C19A7F0E0008CF3FC /* NSObject+BeeJSON.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E117D33119B3958100411512 /* Bee_ActiveProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E17AC62019A7F0E0008CF3FC /* Bee_ActiveProtocol.m */; };
 		E161263419A7E5F90012834A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E161263319A7E5F90012834A /* Foundation.framework */; };
 		E161263619A7E5F90012834A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E161263519A7E5F90012834A /* CoreGraphics.framework */; };
 		E161263819A7E5F90012834A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E161263719A7E5F90012834A /* UIKit.framework */; };
@@ -54,7 +58,6 @@
 		E17AC6E219A7F0E0008CF3FC /* Bee_Routine.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17AC4C719A7F0DF008CF3FC /* Bee_Routine.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E17AC6E319A7F0E0008CF3FC /* BeeMessage+BackwardCompatible.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17AC4CA19A7F0DF008CF3FC /* BeeMessage+BackwardCompatible.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E17AC6E419A7F0E0008CF3FC /* BeeMessage+BeeActiveRecord.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17AC4CC19A7F0DF008CF3FC /* BeeMessage+BeeActiveRecord.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E17AC6E519A7F0E0008CF3FC /* BeeMessage+BeeJSON.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17AC4CE19A7F0DF008CF3FC /* BeeMessage+BeeJSON.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E17AC6E619A7F0E0008CF3FC /* BeeMessage+BeeNetwork.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17AC4D019A7F0DF008CF3FC /* BeeMessage+BeeNetwork.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E17AC6E719A7F0E0008CF3FC /* BeeMessage+BeeXML.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17AC4D219A7F0DF008CF3FC /* BeeMessage+BeeXML.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E17AC6E819A7F0E0008CF3FC /* NSObject+BeeMessage.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17AC4D419A7F0DF008CF3FC /* NSObject+BeeMessage.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -205,7 +208,6 @@
 		E17AC77919A7F0E0008CF3FC /* NSObject+BeeUserDefaults.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17AC61919A7F0E0008CF3FC /* NSObject+BeeUserDefaults.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E17AC77A19A7F0E0008CF3FC /* Bee_ActiveBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E17AC61C19A7F0E0008CF3FC /* Bee_ActiveBuilder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E17AC77B19A7F0E0008CF3FC /* Bee_ActiveObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E17AC61E19A7F0E0008CF3FC /* Bee_ActiveObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E17AC77C19A7F0E0008CF3FC /* Bee_ActiveProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E17AC62019A7F0E0008CF3FC /* Bee_ActiveProtocol.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E17AC77D19A7F0E0008CF3FC /* Bee_ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = E17AC62219A7F0E0008CF3FC /* Bee_ActiveRecord.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E17AC77E19A7F0E0008CF3FC /* Bee_Database.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17AC62419A7F0E0008CF3FC /* Bee_Database.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E17AC77F19A7F0E0008CF3FC /* Bee_Storage.m in Sources */ = {isa = PBXBuildFile; fileRef = E17AC62619A7F0E0008CF3FC /* Bee_Storage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -233,7 +235,6 @@
 		E17AC79519A7F0E0008CF3FC /* NSDate+BeeExtension.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17AC65619A7F0E0008CF3FC /* NSDate+BeeExtension.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E17AC79619A7F0E0008CF3FC /* NSDictionary+BeeExtension.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17AC65819A7F0E0008CF3FC /* NSDictionary+BeeExtension.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E17AC79719A7F0E0008CF3FC /* NSNumber+BeeExtension.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17AC65A19A7F0E0008CF3FC /* NSNumber+BeeExtension.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E17AC79819A7F0E0008CF3FC /* NSObject+BeeJSON.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17AC65C19A7F0E0008CF3FC /* NSObject+BeeJSON.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E17AC79919A7F0E0008CF3FC /* NSObject+BeeNotification.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17AC65E19A7F0E0008CF3FC /* NSObject+BeeNotification.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E17AC79A19A7F0E0008CF3FC /* NSObject+BeeProperty.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17AC66019A7F0E0008CF3FC /* NSObject+BeeProperty.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E17AC79B19A7F0E0008CF3FC /* NSObject+BeeTicker.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17AC66219A7F0E0008CF3FC /* NSObject+BeeTicker.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -323,6 +324,8 @@
 		D87DF01719ACE1C50010BEE9 /* CollapseClickCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapseClickCell.h; sourceTree = "<group>"; };
 		D87DF01819ACE1C50010BEE9 /* CollapseClickCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapseClickCell.m; sourceTree = "<group>"; };
 		D87DF01919ACE1C50010BEE9 /* CollapseClickCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollapseClickCell.xib; sourceTree = "<group>"; };
+		E117D32B19B3882B00411512 /* LibModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibModel.h; sourceTree = "<group>"; };
+		E117D32C19B3882B00411512 /* LibModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibModel.m; sourceTree = "<group>"; };
 		E161263019A7E5F90012834A /* LinkMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinkMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E161263319A7E5F90012834A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E161263519A7E5F90012834A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -924,6 +927,15 @@
 			path = views;
 			sourceTree = "<group>";
 		};
+		E117D32A19B37C5300411512 /* databean */ = {
+			isa = PBXGroup;
+			children = (
+				E117D32B19B3882B00411512 /* LibModel.h */,
+				E117D32C19B3882B00411512 /* LibModel.m */,
+			);
+			path = databean;
+			sourceTree = "<group>";
+		};
 		E161262719A7E5F90012834A = {
 			isa = PBXGroup;
 			children = (
@@ -1003,8 +1015,8 @@
 		E17AC4A719A7F0DF008CF3FC /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				E117D32A19B37C5300411512 /* databean */,
 				E1F3503C19AD098E00317104 /* common */,
-				E1E2C3E419AC6315004C3F57 /* databean */,
 				E1E2C3E519AC6315004C3F57 /* event */,
 				E1E2C3E619AC6315004C3F57 /* model */,
 				E1E2C3E719AC6315004C3F57 /* service */,
@@ -2038,13 +2050,6 @@
 			path = summer_extend;
 			sourceTree = "<group>";
 		};
-		E1E2C3E419AC6315004C3F57 /* databean */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = databean;
-			sourceTree = "<group>";
-		};
 		E1E2C3E519AC6315004C3F57 /* event */ = {
 			isa = PBXGroup;
 			children = (
@@ -2216,7 +2221,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E17AC77C19A7F0E0008CF3FC /* Bee_ActiveProtocol.m in Sources */,
 				E17AC76419A7F0E0008CF3FC /* BeeUIQuery+Traversing.m in Sources */,
 				E17AC6E119A7F0E0008CF3FC /* Bee_MessageQueue.mm in Sources */,
 				E17AC77F19A7F0E0008CF3FC /* Bee_Storage.m in Sources */,
@@ -2321,10 +2325,10 @@
 				E17AC6DF19A7F0E0008CF3FC /* Bee_Controller.mm in Sources */,
 				E17AC72219A7F0E0008CF3FC /* Bee_UIImageView.m in Sources */,
 				E161264019A7E5F90012834A /* main.m in Sources */,
-				E17AC79819A7F0E0008CF3FC /* NSObject+BeeJSON.mm in Sources */,
 				E17AC7BB19A7F0E0008CF3FC /* CXMLDocument_CreationExtensions.m in Sources */,
 				E17AC76719A7F0E0008CF3FC /* UIView+BeeUITemplate.m in Sources */,
 				E17AC73E19A7F0E0008CF3FC /* UIView+SwipeGesture.m in Sources */,
+				E117D32D19B3882B00411512 /* LibModel.m in Sources */,
 				E17AC79E19A7F0E0008CF3FC /* NSString+BeeExtension.mm in Sources */,
 				E17AC71119A7F0E0008CF3FC /* UIViewController+Transition.m in Sources */,
 				E17AC79319A7F0E0008CF3FC /* NSBundle+BeeExtension.m in Sources */,
@@ -2349,6 +2353,7 @@
 				E17AC73119A7F0E0008CF3FC /* Bee_UITableView.m in Sources */,
 				E17AC77019A7F0E0008CF3FC /* Bee.mm in Sources */,
 				E17AC77819A7F0E0008CF3FC /* NSObject+BeeKeychain.mm in Sources */,
+				E117D33119B3958100411512 /* Bee_ActiveProtocol.m in Sources */,
 				E17AC72D19A7F0E0008CF3FC /* Bee_UISegmentedControl.m in Sources */,
 				E17AC78619A7F0E0008CF3FC /* NSObject+BeeDatabase.m in Sources */,
 				E17AC78019A7F0E0008CF3FC /* Bee_MYSQL.m in Sources */,
@@ -2356,6 +2361,7 @@
 				E17AC75A19A7F0E0008CF3FC /* Bee_UIQuery.m in Sources */,
 				E17AC74A19A7F0E0008CF3FC /* BeeUISignal+BeeUICell.m in Sources */,
 				E17AC70C19A7F0E0008CF3FC /* Bee_UIAnimationFade.m in Sources */,
+				E117D32F19B3955F00411512 /* BeeMessage+BeeJSON.mm in Sources */,
 				E17AC73C19A7F0E0008CF3FC /* UIView+Metrics.m in Sources */,
 				E17AC73319A7F0E0008CF3FC /* Bee_UITextView.m in Sources */,
 				E17AC7A419A7F0E0008CF3FC /* Bee_Network.m in Sources */,
@@ -2406,7 +2412,6 @@
 				E17AC76119A7F0E0008CF3FC /* BeeUIQuery+Miscellaneous.m in Sources */,
 				E17AC71A19A7F0E0008CF3FC /* Bee_UIAccelerometer.m in Sources */,
 				E17AC77519A7F0E0008CF3FC /* Bee_Keychain.mm in Sources */,
-				E17AC6E519A7F0E0008CF3FC /* BeeMessage+BeeJSON.mm in Sources */,
 				E17AC7B719A7F0E0008CF3FC /* Reachability.m in Sources */,
 				E17AC70619A7F0E0008CF3FC /* UITextField+BeeUIStyle.m in Sources */,
 				E1E2C3F019AC7311004C3F57 /* CoreService.m in Sources */,
@@ -2421,6 +2426,7 @@
 				D87DF01C19ACE1C50010BEE9 /* CollapseClickArrow.m in Sources */,
 				E17AC7B919A7F0E0008CF3FC /* CXHTMLDocument.m in Sources */,
 				E1E2C3EA19AC6350004C3F57 /* LoginEvent.m in Sources */,
+				E117D33019B3956300411512 /* NSObject+BeeJSON.mm in Sources */,
 				E17AC70119A7F0E0008CF3FC /* UIButton+BeeUIStyle.m in Sources */,
 				E17AC7C819A7F0E1008CF3FC /* ZipArchive.m in Sources */,
 				E17AC76819A7F0E0008CF3FC /* UIViewController+BeeUITemplate.m in Sources */,
