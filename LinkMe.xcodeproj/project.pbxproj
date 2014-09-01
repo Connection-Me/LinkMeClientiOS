@@ -43,6 +43,9 @@
 		E117D32F19B3955F00411512 /* BeeMessage+BeeJSON.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17AC4CE19A7F0DF008CF3FC /* BeeMessage+BeeJSON.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E117D33019B3956300411512 /* NSObject+BeeJSON.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17AC65C19A7F0E0008CF3FC /* NSObject+BeeJSON.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E117D33119B3958100411512 /* Bee_ActiveProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E17AC62019A7F0E0008CF3FC /* Bee_ActiveProtocol.m */; };
+		E117D33C19B4B43100411512 /* ActivityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E117D33B19B4B43100411512 /* ActivityModel.m */; };
+		E117D34019B4B8CC00411512 /* HomeRemoteServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E117D33F19B4B8CC00411512 /* HomeRemoteServiceImpl.m */; };
+		E117D34319B4B93A00411512 /* HomeEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E117D34219B4B93A00411512 /* HomeEvent.m */; };
 		E161263419A7E5F90012834A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E161263319A7E5F90012834A /* Foundation.framework */; };
 		E161263619A7E5F90012834A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E161263519A7E5F90012834A /* CoreGraphics.framework */; };
 		E161263819A7E5F90012834A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E161263719A7E5F90012834A /* UIKit.framework */; };
@@ -345,6 +348,13 @@
 		D8D5511C19B4BD3F0020DB8B /* CommonHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonHeaderView.m; sourceTree = "<group>"; };
 		E117D32B19B3882B00411512 /* LibModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibModel.h; sourceTree = "<group>"; };
 		E117D32C19B3882B00411512 /* LibModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibModel.m; sourceTree = "<group>"; };
+		E117D33919B4B38E00411512 /* IHomeRemoteService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IHomeRemoteService.h; sourceTree = "<group>"; };
+		E117D33A19B4B43100411512 /* ActivityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityModel.h; sourceTree = "<group>"; };
+		E117D33B19B4B43100411512 /* ActivityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityModel.m; sourceTree = "<group>"; };
+		E117D33E19B4B8CC00411512 /* HomeRemoteServiceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeRemoteServiceImpl.h; sourceTree = "<group>"; };
+		E117D33F19B4B8CC00411512 /* HomeRemoteServiceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeRemoteServiceImpl.m; sourceTree = "<group>"; };
+		E117D34119B4B93A00411512 /* HomeEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeEvent.h; sourceTree = "<group>"; };
+		E117D34219B4B93A00411512 /* HomeEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeEvent.m; sourceTree = "<group>"; };
 		E161263019A7E5F90012834A /* LinkMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinkMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E161263319A7E5F90012834A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E161263519A7E5F90012834A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -951,6 +961,8 @@
 			children = (
 				E117D32B19B3882B00411512 /* LibModel.h */,
 				E117D32C19B3882B00411512 /* LibModel.m */,
+				E117D33A19B4B43100411512 /* ActivityModel.h */,
+				E117D33B19B4B43100411512 /* ActivityModel.m */,
 			);
 			path = databean;
 			sourceTree = "<group>";
@@ -2081,6 +2093,8 @@
 				E1E2C3E919AC6350004C3F57 /* LoginEvent.m */,
 				E1F3503319AC8CF500317104 /* NetWorkEvent.h */,
 				E1F3503419AC8CF500317104 /* NetWorkEvent.m */,
+				E117D34119B4B93A00411512 /* HomeEvent.h */,
+				E117D34219B4B93A00411512 /* HomeEvent.m */,
 			);
 			path = event;
 			sourceTree = "<group>";
@@ -2099,6 +2113,7 @@
 			children = (
 				E1E2C3F119AC73CF004C3F57 /* impl */,
 				E1E2C3F219AC740C004C3F57 /* IUserRemoteService.h */,
+				E117D33919B4B38E00411512 /* IHomeRemoteService.h */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -2112,6 +2127,8 @@
 				E1E2C3F419AC74C5004C3F57 /* UserRemoteServiceImpl.m */,
 				E1E2C3F719AC78B4004C3F57 /* BaseService.h */,
 				E1E2C3F819AC78B4004C3F57 /* BaseService.m */,
+				E117D33E19B4B8CC00411512 /* HomeRemoteServiceImpl.h */,
+				E117D33F19B4B8CC00411512 /* HomeRemoteServiceImpl.m */,
 			);
 			path = impl;
 			sourceTree = "<group>";
@@ -2407,6 +2424,7 @@
 				E17AC7C519A7F0E1008CF3FC /* ioapi.c in Sources */,
 				E17AC78119A7F0E0008CF3FC /* Bee_SQLITE.m in Sources */,
 				E17AC78F19A7F0E0008CF3FC /* Bee_Thread.mm in Sources */,
+				E117D34019B4B8CC00411512 /* HomeRemoteServiceImpl.m in Sources */,
 				E17AC70319A7F0E0008CF3FC /* UIImageView+BeeUIStyle.m in Sources */,
 				E17AC6EA19A7F0E0008CF3FC /* Bee_View.mm in Sources */,
 				E17AC7A619A7F0E0008CF3FC /* Bee_Resource.mm in Sources */,
@@ -2435,6 +2453,7 @@
 				E17AC76219A7F0E0008CF3FC /* BeeUIQuery+Offset.m in Sources */,
 				E17AC6F519A7F0E0008CF3FC /* BeeUIBoard+Traversing.m in Sources */,
 				E17AC75719A7F0E0008CF3FC /* UITextView+BeeUILayout.m in Sources */,
+				E117D34319B4B93A00411512 /* HomeEvent.m in Sources */,
 				E17AC79B19A7F0E0008CF3FC /* NSObject+BeeTicker.mm in Sources */,
 				E17AC6E719A7F0E0008CF3FC /* BeeMessage+BeeXML.mm in Sources */,
 				E17AC78519A7F0E0008CF3FC /* NSObject+BeeActiveRecord.m in Sources */,
@@ -2489,6 +2508,7 @@
 				E17AC7A019A7F0E0008CF3FC /* Bee_HTTPConfig.m in Sources */,
 				E17AC72A19A7F0E0008CF3FC /* Bee_UIProgressView.m in Sources */,
 				E17AC79919A7F0E0008CF3FC /* NSObject+BeeNotification.mm in Sources */,
+				E117D33C19B4B43100411512 /* ActivityModel.m in Sources */,
 				E17AC7A119A7F0E0008CF3FC /* Bee_HTTPMockServer.m in Sources */,
 				E17AC70519A7F0E0008CF3FC /* UIScrollView+BeeUIStyle.m in Sources */,
 				E17AC7AF19A7F0E0008CF3FC /* ASINetworkQueue.m in Sources */,
