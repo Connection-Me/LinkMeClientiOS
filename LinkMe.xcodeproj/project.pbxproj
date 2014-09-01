@@ -15,6 +15,16 @@
 		D85DE5BD19B3609000A906E7 /* HomeCollectionVCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D85DE5BB19B3609000A906E7 /* HomeCollectionVCCell.m */; };
 		D85DE5BF19B360A200A906E7 /* HomeCollectionVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D85DE5BE19B360A200A906E7 /* HomeCollectionVCCell.xib */; };
 		D85DE5C019B360A200A906E7 /* HomeCollectionVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D85DE5BE19B360A200A906E7 /* HomeCollectionVCCell.xib */; };
+		D86791A519B42B9200630891 /* galleryImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D86791A019B42B9200630891 /* galleryImage.jpg */; };
+		D86791A619B42B9200630891 /* galleryImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D86791A019B42B9200630891 /* galleryImage.jpg */; };
+		D86791A719B42B9200630891 /* pic5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D86791A119B42B9200630891 /* pic5.jpg */; };
+		D86791A819B42B9200630891 /* pic5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D86791A119B42B9200630891 /* pic5.jpg */; };
+		D86791A919B42B9200630891 /* pic1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D86791A219B42B9200630891 /* pic1.jpg */; };
+		D86791AA19B42B9200630891 /* pic1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D86791A219B42B9200630891 /* pic1.jpg */; };
+		D86791AB19B42B9200630891 /* pic2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D86791A319B42B9200630891 /* pic2.jpg */; };
+		D86791AC19B42B9200630891 /* pic2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D86791A319B42B9200630891 /* pic2.jpg */; };
+		D86791AD19B42B9200630891 /* pic4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D86791A419B42B9200630891 /* pic4.jpg */; };
+		D86791AE19B42B9200630891 /* pic4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D86791A419B42B9200630891 /* pic4.jpg */; };
 		D87DF00E19ACE1BB0010BEE9 /* LoginPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DF00C19ACE1BB0010BEE9 /* LoginPageViewController.m */; };
 		D87DF00F19ACE1BB0010BEE9 /* LoginPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DF00C19ACE1BB0010BEE9 /* LoginPageViewController.m */; };
 		D87DF01019ACE1BB0010BEE9 /* LoginPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87DF00D19ACE1BB0010BEE9 /* LoginPageViewController.xib */; };
@@ -314,6 +324,11 @@
 		D85DE5BA19B3609000A906E7 /* HomeCollectionVCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionVCCell.h; sourceTree = "<group>"; };
 		D85DE5BB19B3609000A906E7 /* HomeCollectionVCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionVCCell.m; sourceTree = "<group>"; };
 		D85DE5BE19B360A200A906E7 /* HomeCollectionVCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionVCCell.xib; sourceTree = "<group>"; };
+		D86791A019B42B9200630891 /* galleryImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = galleryImage.jpg; sourceTree = "<group>"; };
+		D86791A119B42B9200630891 /* pic5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic5.jpg; sourceTree = "<group>"; };
+		D86791A219B42B9200630891 /* pic1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic1.jpg; sourceTree = "<group>"; };
+		D86791A319B42B9200630891 /* pic2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic2.jpg; sourceTree = "<group>"; };
+		D86791A419B42B9200630891 /* pic4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic4.jpg; sourceTree = "<group>"; };
 		D87DF00B19ACE1BB0010BEE9 /* LoginPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginPageViewController.h; sourceTree = "<group>"; };
 		D87DF00C19ACE1BB0010BEE9 /* LoginPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginPageViewController.m; sourceTree = "<group>"; };
 		D87DF00D19ACE1BB0010BEE9 /* LoginPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginPageViewController.xib; sourceTree = "<group>"; };
@@ -2015,6 +2030,11 @@
 		E17AC6D819A7F0E0008CF3FC /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D86791A019B42B9200630891 /* galleryImage.jpg */,
+				D86791A119B42B9200630891 /* pic5.jpg */,
+				D86791A219B42B9200630891 /* pic1.jpg */,
+				D86791A319B42B9200630891 /* pic2.jpg */,
+				D86791A419B42B9200630891 /* pic4.jpg */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -2187,16 +2207,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D86791A719B42B9200630891 /* pic5.jpg in Resources */,
+				D86791A919B42B9200630891 /* pic1.jpg in Resources */,
 				E1E2C3E019AC3A11004C3F57 /* RootVC.xib in Resources */,
 				E1E2C3DA19AC39CB004C3F57 /* LoginVC.xib in Resources */,
 				D87DF01019ACE1BB0010BEE9 /* LoginPageViewController.xib in Resources */,
+				D86791AB19B42B9200630891 /* pic2.jpg in Resources */,
 				E17AC6DA19A7F0E0008CF3FC /* left_arrow.png in Resources */,
 				E161263E19A7E5F90012834A /* InfoPlist.strings in Resources */,
 				D85DE5B819B3604C00A906E7 /* HomeVC.xib in Resources */,
+				D86791A519B42B9200630891 /* galleryImage.jpg in Resources */,
 				E161264619A7E5F90012834A /* Images.xcassets in Resources */,
 				E17AC6DC19A7F0E0008CF3FC /* right_arrow.png in Resources */,
 				E17AC6DB19A7F0E0008CF3FC /* left_arrow@2x.png in Resources */,
 				D85DE5BF19B360A200A906E7 /* HomeCollectionVCCell.xib in Resources */,
+				D86791AD19B42B9200630891 /* pic4.jpg in Resources */,
 				E17AC6DD19A7F0E0008CF3FC /* right_arrow@2x.png in Resources */,
 				D87DF02019ACE1C50010BEE9 /* CollapseClickCell.xib in Resources */,
 			);
@@ -2206,8 +2231,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D86791A819B42B9200630891 /* pic5.jpg in Resources */,
+				D86791AE19B42B9200630891 /* pic4.jpg in Resources */,
+				D86791A619B42B9200630891 /* galleryImage.jpg in Resources */,
 				D85DE5C019B360A200A906E7 /* HomeCollectionVCCell.xib in Resources */,
 				E161265719A7E5F90012834A /* InfoPlist.strings in Resources */,
+				D86791AC19B42B9200630891 /* pic2.jpg in Resources */,
+				D86791AA19B42B9200630891 /* pic1.jpg in Resources */,
 				D85DE5B919B3604C00A906E7 /* HomeVC.xib in Resources */,
 				D87DF02119ACE1C50010BEE9 /* CollapseClickCell.xib in Resources */,
 				D87DF01119ACE1BB0010BEE9 /* LoginPageViewController.xib in Resources */,

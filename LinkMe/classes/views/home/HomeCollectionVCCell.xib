@@ -6,22 +6,26 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeCollectionVCCell"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCollectionVCCell" id="aqi-Jp-Og3">
-            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCollectionVCCell" id="aqi-Jp-Og3" customClass="HomeCollectionVCCell">
+            <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4pN-X5-CHb">
-                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hPX-jc-CPj">
+                        <rect key="frame" x="3" y="4" width="149" height="131"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.23529411759999999" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <size key="customSize" width="50" height="60"/>
+            <connections>
+                <outlet property="imageView" destination="hPX-jc-CPj" id="dag-5U-DVl"/>
+            </connections>
         </collectionViewCell>
     </objects>
 </document>

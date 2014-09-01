@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "Bee.h"
 @interface HomeCollectionVCCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+
+
+-(void)updateCell:(NSInteger)index;
 
 @end

@@ -21,13 +21,20 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
+-(void)updateCell:(NSInteger)index{
+    if(index%1==0){
+        [self.imageView setImage:[UIImage imageNamed:@"pic1.jpg"]];
+    }
+    if(index%2==0){
+        [self.imageView setImage:[UIImage imageNamed:@"pic2.jpg"]];
+    }
+    if(index%3==0){
+        [self.imageView setImage:[UIImage imageNamed:@"pic3.jpg"]];
+    }
+    if(index%4==0){
+        [self.imageView setImage:[UIImage imageNamed:@"pic4.jpg"]];
+    }
+    
 }
-*/
 
 @end
