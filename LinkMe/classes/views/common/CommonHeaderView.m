@@ -19,9 +19,9 @@
     }
     return self;
 }
--(id)initWithSytle:(NSInteger)style AndTitle:(NSString *)title{
+-(id)initWithSytle:(NSInteger)style AndTitle:(NSString *)title AndFrame:(CGRect)frame{
     self = [super init];
-    [self initData:style AndTitle:title];
+    [self initData:style AndTitle:title AndFrame:frame];
     return self;
 }
 
@@ -33,7 +33,7 @@
         return titleView;
     }
     
-    titleView = [[CommonHeaderView alloc] initWithSytle:style AndTitle:title];
+    titleView = [[CommonHeaderView alloc] initWithSytle:style AndTitle:title AndFrame:superView.frame];
     [superView addSubview:titleView];
     return titleView;
     
@@ -53,18 +53,28 @@
     }
 }
 
--(void)initData:(NSInteger)style AndTitle:(NSString *)title{
+-(void)initData:(NSInteger)style AndTitle:(NSString *)title AndFrame:(CGRect)frame{
 
     if(style==1){
         
-        //位置
+          //位置
+        if(ISIOS7){
+
+            self.frame = CGRectMake(0, 0, frame.size.width,55);
+        }else{
+            self.frame = CGRectMake(0, 0, frame.size.width,35);
+        }
         [self setBackgroundColor:[UIColor colorWithRed:92/255.0f green:92/255.0f blue:92/255.0f alpha:1.0f]];
+//        [self setBackgroundColor:[UIColor redColor]];
         
+      
+
         
         //标题
         [self.label setText:title];
-        [self.label setFrame:CGRectMake(self.center.x-(100/2), 20, 100, 35)];
-        [self addSubview:self.label];
+        [self.label setFrame:CGRectMake(0, 0, 100, 35)];
+        [self.label setBackgroundColor:[UIColor redColor]];
+        [self insertSubview:self.label atIndex:0];
         
         //左边按钮
         [self.leftButton setTitle:@"菜单" forState:UIControlStateNormal];
