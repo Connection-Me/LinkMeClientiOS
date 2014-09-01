@@ -12,6 +12,7 @@
 #import "LoginEvent.h"
 #import "TCMessageBox.h"
 #import "LoginPageViewController.h"
+#import "HomeVC.h"
 
 @interface RootVC ()
 
@@ -90,7 +91,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
 -(void)initializeRouterMapClass
 {
    // [_router map:@"login" toClass:[LoginVC class]];
-    [_router map:@"login" toClass:[LoginPageViewController class]];
+    [_router map:@"home" toClass:[HomeVC class]];
 }
 
 -(void)testOpenScreen:(NSString*)name
@@ -105,7 +106,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
 -(void)autoLogin
 {
     //先直接打开login界面
-    [self testOpenScreen:@"login"];
+    [self testOpenScreen:@"home"];
 }
 
 #pragma mark - Notification

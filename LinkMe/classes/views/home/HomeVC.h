@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface HomeVC : UICollectionViewController
+#import "BEE.h"
+@interface HomeVC : BeeUIBoard<UICollectionViewDataSource,UICollectionViewDelegate>
+@property (strong, nonatomic) IBOutlet UIView *headerView;
+@property (strong, nonatomic) IBOutlet UICollectionView *mainView;
 
 @end

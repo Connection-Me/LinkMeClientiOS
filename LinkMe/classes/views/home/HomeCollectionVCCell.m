@@ -8,8 +8,9 @@
 //
 
 #import "HomeCollectionVCCell.h"
-
+#import "summer_extend.h"
 @implementation HomeCollectionVCCell
+
 
 - (id)initWithFrame:(CGRect)frame
 {

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Bee.h"
 @interface HomeCollectionVCCell : UICollectionViewCell
 
 @end
