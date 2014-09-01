@@ -9,7 +9,7 @@
 #import "HomeVC.h"
 #import "summer_extend.h"
 #import "HomeCollectionVCCell.h"
-
+#import "CommonHeaderView.h"
 @interface HomeVC ()
 
 @end
@@ -56,6 +56,9 @@ ON_SIGNAL2(BeeUIBoard, signal)
         self.mainView.delegate = self;
         UINib *nib = [UINib nibWithNibName:@"HomeCollectionVCCell" bundle:nil];
         [self.mainView registerNib:nib forCellWithReuseIdentifier:@"HomeCollectionVCCell"];
+        
+        //设置title
+        [self setHeaderView];
 
     }
     else if([signal isKindOf:BeeUIBoard.LAYOUT_VIEWS])
@@ -80,6 +83,11 @@ ON_SIGNAL2(BeeUIBoard, signal)
 	else if ( [signal is:BeeUIBoard.DID_DISAPPEAR] )
 	{
 	}
+}
+-(void)setHeaderView{
+    [CommonHeaderView createHeaderView:self.view AndStyle:1 AndTitle:@"首页"];
+    
+
 }
 
 
