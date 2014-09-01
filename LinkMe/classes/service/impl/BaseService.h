@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Bee.h"
 
 typedef void (^SuccessFunction)(id data);
 typedef void (^FailFunction)(id data);
 
 @interface BaseService : NSObject
 
+//检测网络是否可用
+-(BOOL)isConnectionAvailable;
 @end
