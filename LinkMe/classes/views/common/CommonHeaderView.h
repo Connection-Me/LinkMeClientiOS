@@ -10,7 +10,7 @@
 
 @interface CommonHeaderView : UIView
 
-@property (nonatomic,weak)UILabel *label;
+@property (nonatomic,strong)UILabel *label;
 @property (nonatomic,strong)UIButton *leftButton;
 @property (nonatomic,strong)UIButton *rightButton;
 

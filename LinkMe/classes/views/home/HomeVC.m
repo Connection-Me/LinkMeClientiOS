@@ -9,9 +9,10 @@
 #import "HomeVC.h"
 #import "summer_extend.h"
 #import "HomeCollectionVCCell.h"
-#import "CommonHeaderView.h"
-@interface HomeVC ()
 
+
+@interface HomeVC ()
+@property (nonatomic, strong) NSMutableIndexSet *optionIndices;
 @end
 
 @implementation HomeVC
@@ -88,7 +89,10 @@ ON_SIGNAL2(BeeUIBoard, signal)
 	}
 }
 -(void)setHeaderView{
-    self.headerView = [CommonHeaderView createHeaderView:self.view AndStyle:1 AndTitle:@"首页"];
+    self.headerView = [CommonHeaderView createHeaderView:self.view AndStyle:1 AndTitle:@"首 页"];
+    
+    
+    [self.headerView.leftButton addTarget:self action:@selector(onBurger:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 
@@ -143,6 +147,28 @@ ON_SIGNAL2(BeeUIBoard, signal)
     }
     
 }
+
+#pragma mark - click button
+- (IBAction)onBurger:(id)sender {
+    NSArray *images = @[
+                        [UIImage imageNamed:@"globe"],
+                        [UIImage imageNamed:@"profile"],
+                        [UIImage imageNamed:@"star"],
+                      
+                    ];
+    NSArray *colors = @[
+                        [UIColor colorWithRed:119/255.f green:152/255.f blue:255/255.f alpha:1],
+                        [UIColor colorWithRed:240/255.f green:159/255.f blue:254/255.f alpha:1],
+                        [UIColor colorWithRed:255/255.f green:137/255.f blue:167/255.f alpha:1],
+                        ];
+    
+    RNFrostedSidebar *callout = [[RNFrostedSidebar alloc] initWithImages:images selectedIndices:self.optionIndices borderColors:colors];
+    //    RNFrostedSidebar *callout = [[RNFrostedSidebar alloc] initWithImages:images];
+    callout.delegate = self;
+    //    callout.showFromRight = YES;
+    [callout show];
+}
+
 
 
 @end

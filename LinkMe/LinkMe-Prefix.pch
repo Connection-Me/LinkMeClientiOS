@@ -17,6 +17,8 @@
     #define ISIPHONE5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
     #define ISIOS7 [[[UIDevice currentDevice]systemVersion] floatValue] >= 7.0
     #define STATUSBAR_DELTA (ISIOS7 ? 20 : 0)
-    #define THE_FONT(X)  [UIFont systemFontOfSize:X];
-    #define AD_FONT(x,y) (ISIPAD?(FONT(x)):(FONT(y)));
+    #define THE_FONT(X)  [UIFont systemFontOfSize:X]
+    #define BOLD_FONT(x) [UIFont boldSystemFontOfSize:x]
+    #define AD_FONT(x,y) (ISIPAD?(THE_FONT(x)):(THE_FONT(y)))
+    #define AD_BOLD_FONT(x,y) (ISIPAD?(BOLD_FONT(x)):(BOLD_FONT(y)))
 #endif

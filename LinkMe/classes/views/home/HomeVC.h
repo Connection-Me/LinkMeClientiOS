@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "BEE.h"
-@interface HomeVC : BeeUIBoard<UICollectionViewDataSource,UICollectionViewDelegate>
-@property (strong, nonatomic) IBOutlet UIView *headerView;
+#import "RNFrostedSidebar.h"
+#import "CommonHeaderView.h"
+@interface HomeVC : BeeUIBoard<UICollectionViewDataSource,UICollectionViewDelegate,RNFrostedSidebarDelegate>
+@property (strong, nonatomic) IBOutlet CommonHeaderView *headerView;
 @property (strong, nonatomic) IBOutlet UICollectionView *mainView;
 
 @end
