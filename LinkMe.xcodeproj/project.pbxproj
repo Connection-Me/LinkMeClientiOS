@@ -360,7 +360,7 @@
 
 /* Begin PBXFileReference section */
 		D85DE5B319B3604C00A906E7 /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
-		D85DE5B419B3604C00A906E7 /* HomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
+		D85DE5B419B3604C00A906E7 /* HomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; wrapsLines = 1; };
 		D85DE5B519B3604C00A906E7 /* HomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		D85DE5BA19B3609000A906E7 /* HomeCollectionVCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionVCCell.h; sourceTree = "<group>"; };
 		D85DE5BB19B3609000A906E7 /* HomeCollectionVCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionVCCell.m; sourceTree = "<group>"; };

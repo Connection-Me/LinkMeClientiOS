@@ -84,7 +84,7 @@
         UIImage *leftImage = [UIImage imageNamed:@"menu"];
         [self.leftButton setFrame:CGRectMake(0, leftButton_Y, 100, 30)];
         [self.leftButton setImage:leftImage forState:UIControlStateNormal];
-        [self.leftButton setImageEdgeInsets:UIEdgeInsetsMake(5, 10, 5, 60)];
+        [self.leftButton setImageEdgeInsets:UIEdgeInsetsMake(5, 10, 5, 65)];
         [self.leftButton setBackgroundColor:[UIColor clearColor]];
 //        [_leftButton setFont:THE_FONT(20)];
         [self insertSubview:_leftButton atIndex:0];
@@ -93,7 +93,7 @@
         UIImage *rightImage = [UIImage imageNamed:@"add"];
         [self.rightButton setFrame:CGRectMake(self.frame.size.width-10-90, 20, 100, 35)];
         [self.rightButton setImage:rightImage forState:UIControlStateNormal];
-        [self.rightButton setImageEdgeInsets:UIEdgeInsetsMake(5, 60, 5, 15)];
+        [self.rightButton setImageEdgeInsets:UIEdgeInsetsMake(9, 70, 5, 10)];
 //        [_rightButton setFont:THE_FONT(20)];
         [self.rightButton setBackgroundColor:[UIColor clearColor]];
         [self addSubview:self.rightButton];

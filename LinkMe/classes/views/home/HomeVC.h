@@ -14,4 +14,5 @@
 @property (strong, nonatomic) IBOutlet CommonHeaderView *headerView;
 @property (strong, nonatomic) IBOutlet UICollectionView *mainView;
 
+
 @end

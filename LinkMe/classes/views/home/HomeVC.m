@@ -61,8 +61,10 @@ ON_SIGNAL2(BeeUIBoard, signal)
         self.mainView.delegate = self;
         UINib *nib = [UINib nibWithNibName:@"HomeCollectionVCCell" bundle:nil];
         [self.mainView registerNib:nib forCellWithReuseIdentifier:@"HomeCollectionVCCell"];
-        
-
+//        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 510, 320, 59)];
+//        [view setBackgroundColor:[UIColor redColor]];
+//        [self.view addSubview:view
+//         ];
 
     }
     else if([signal isKindOf:BeeUIBoard.LAYOUT_VIEWS])
