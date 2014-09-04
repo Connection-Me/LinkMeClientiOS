@@ -17,16 +17,18 @@
 
 -(void)queryActivityByUserName:(NSString *)username andController:(NSString *)c andMethodName:(NSString *)methodName
 {
-    FOREGROUND_BEGIN
-    [self postNotification:HomeEvent.LOAD_ACTIVITY_START withObject:nil];
-    FOREGROUND_COMMIT
-    BOOL isConnectAvailable = [self isConnectionAvailable];
-    if (!isConnectAvailable)
-    {
-        FOREGROUND_BEGIN
-        [self postNotification:NetWorkEvent.NEWWORK_UNREACHABLE];
-        FOREGROUND_COMMIT
-    }else{
+//    FOREGROUND_BEGIN
+//    [self postNotification:HomeEvent.LOAD_ACTIVITY_START withObject:nil];
+//    FOREGROUND_COMMIT
+//    BOOL isConnectAvailable = [self isConnectionAvailable];
+//    if (!isConnectAvailable)
+//    {
+//        FOREGROUND_BEGIN
+//        [self postNotification:NetWorkEvent.NEWWORK_UNREACHABLE];
+//        FOREGROUND_COMMIT
+//    }else
+    CHECK_NETWORK_AND_SEND_START_BEE(HomeEvent.LOAD_ACTIVITY_START){
+        //TODO
         NSString *urlString = [[CoreModel sharedInstance].serverURL stringByAppendingString:@""];//拼接请求路径
         NSURL *url = [NSURL URLWithString:urlString];
         
@@ -38,6 +40,7 @@
         [postParams setObject:methodName forKey:@"methodName"];
         NSString * jsonString = [postParams JSONString];
         NSLog(@"the request jsonString == %@",jsonString);
+        
         [request appendPostData:[jsonString dataUsingEncoding:NSUTF8StringEncoding]];
         request.requestMethod = RequestMethod.POST;
         __block ASIHTTPRequest * blockRequest = request;
@@ -89,6 +92,77 @@
         }];
         [request startAsynchronous];
     }
+}
+
+//新建活动
+-(void)addActivityByActivityModel:(ActivityModel *)activityModel{
+    
+    CHECK_NETWORK_AND_SEND_START_BEE(HomeEvent.ADD_ACTIVITY_START){
+        //TODO
+        NSString *urlString = [[CoreModel sharedInstance].serverURL stringByAppendingString:@""];//拼接请求路径
+        NSURL *url = [NSURL URLWithString:urlString];
+        
+        ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+        NSSet *jsonSet = [activityModel propertiesForJson];
+        NSString *jsonString = [NSString stringWithFormat:@"%@",jsonSet];
+        NSLog(@"jsonString == %@",jsonString);
+        
+        [request appendPostData:[jsonString dataUsingEncoding:NSUTF8StringEncoding]];
+        request.requestMethod = RequestMethod.POST;
+        __block ASIHTTPRequest * blockRequest = request;
+        request.delegate = self;
+        [request setCompletionBlock:^{
+            //tips:use [request responseString] and [request responseData] to fetch the responseString/responseData
+            NSInteger code = blockRequest.responseStatusCode;
+            //responseString 是服务器返回的数据
+            NSString * responseString = blockRequest.responseString;
+            
+            //成功
+            if (code == 200) {
+                FOREGROUND_BEGIN
+                [self postNotification:HomeEvent.ADD_ACTIVITY_SUCCESS];
+                FOREGROUND_COMMIT
+            }
+            else
+            {
+                FOREGROUND_BEGIN
+                [self postNotification:HomeEvent.ADD_ACTIVITY_FAILED];
+                FOREGROUND_COMMIT
+            }
+            
+        }];
+        //请求失败
+        [request setFailedBlock:^{
+            NSError *error = [blockRequest error];
+            FOREGROUND_BEGIN
+            [self postNotification:HomeEvent.ADD_ACTIVITY_FAILED];
+            FOREGROUND_COMMIT
+            NSLog(@"error = %@",error);
+        }];
+        
+        [request setBytesSentBlock:^(unsigned long long size, unsigned long long total)
+         {
+             if(total>0 && size>0)
+             {
+                 NSNumber * progress = @(0);
+                 unsigned long long sentBytes = [blockRequest totalBytesSent];
+                 progress = [NSNumber numberWithFloat: ((double)sentBytes)/ total];
+             }
+         }];
+        [request setBytesReceivedBlock:^(unsigned long long size, unsigned long long total) {
+            if(total>0 && size>0)
+            {
+                NSNumber * progress = @(0);
+                unsigned long long sentBytes = [blockRequest totalBytesSent];
+                progress = [NSNumber numberWithFloat: ((double)sentBytes)/ total];
+            }
+            
+        }];
+        [request startAsynchronous];
+    }
+    
+    
+    
 }
 
 @end

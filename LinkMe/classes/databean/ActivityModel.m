@@ -13,9 +13,15 @@
 -(NSSet *)propertiesForJson
 {
     return [NSSet setWithObjects:
-            @"joinPeople",
-            @"imagePath",
-            @"startTime",
+            @"token",
+            @"name",
+            @"type",
+            @"desc",
+            @"imageURL",
+            @"openTime",
+            @"closeTime",
+            @"lowerLimit",
+            @"upperLimit",
             nil];
 }
 

@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class ActivityModel;
 @protocol IHomeRemoteService <NSObject>
 
 -(void)queryActivityByUserName:(NSString*)username andController:(NSString*)c andMethodName:(NSString*)methodName;
-
+-(void)addActivityByActivityModel:(ActivityModel *)activityModel;
 @end

@@ -11,8 +11,16 @@
 
 @interface ActivityModel :LibModel
 
-@property(nonatomic) NSInteger           joinPeople;
-@property(strong,nonatomic) NSString   * imagePath;
-@property(strong,nonatomic) NSDate     * startTime;
+@property (nonatomic,strong) NSString* token;
+@property (nonatomic,strong) NSString* name;
+@property (nonatomic,strong) NSString* type;
+@property (nonatomic,strong) NSString* desc;
+@property (nonatomic,strong) NSString* imageURL;
+@property (nonatomic,strong) NSDate *openTime;
+@property (nonatomic,strong) NSDate *closeTime;
+@property  NSInteger lowerLimit;
+@property  NSInteger upperLimit;
+
+
 
 @end

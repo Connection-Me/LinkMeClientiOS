@@ -13,6 +13,7 @@
 @interface HomeVC : BeeUIBoard<UICollectionViewDataSource,UICollectionViewDelegate,RNFrostedSidebarDelegate>
 @property (strong, nonatomic) IBOutlet CommonHeaderView *headerView;
 @property (strong, nonatomic) IBOutlet UICollectionView *mainView;
+@property (weak, nonatomic) IBOutlet UIView *footerView;
 
 
 @end

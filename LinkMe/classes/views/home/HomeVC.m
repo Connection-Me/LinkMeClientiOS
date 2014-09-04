@@ -36,6 +36,7 @@ SUPPORT_AUTOMATIC_LAYOUT(YES)
 //    
 //}
 
+#define WINDOW_BOUNDS [UIScreen mainScreen ].bounds
 ON_SIGNAL2(BeeUIBoard, signal)
 {
     [super handleUISignal:signal];
@@ -53,19 +54,16 @@ ON_SIGNAL2(BeeUIBoard, signal)
 //        [self  setAutoLayoutLocation];
 //        [self.mainView setBackgroundColor:[UIColor whiteColor]];
 
+        UINib *nib = [UINib nibWithNibName:@"HomeCollectionVCCell" bundle:nil];
+        [self.mainView registerNib:nib forCellWithReuseIdentifier:@"HomeCollectionVCCell"];
         //设置title
         [self setHeaderView];
         
         //指定xib文件
         self.mainView.dataSource = self;
         self.mainView.delegate = self;
-        UINib *nib = [UINib nibWithNibName:@"HomeCollectionVCCell" bundle:nil];
-        [self.mainView registerNib:nib forCellWithReuseIdentifier:@"HomeCollectionVCCell"];
-//        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 510, 320, 59)];
-//        [view setBackgroundColor:[UIColor redColor]];
-//        [self.view addSubview:view
-//         ];
-
+        
+        
     }
     else if([signal isKindOf:BeeUIBoard.LAYOUT_VIEWS])
     {
@@ -76,6 +74,8 @@ ON_SIGNAL2(BeeUIBoard, signal)
     }
     else if ( [signal is:BeeUIBoard.WILL_APPEAR] )
 	{
+      
+        
         
 	}
 	else if ( [signal is:BeeUIBoard.DID_APPEAR] )

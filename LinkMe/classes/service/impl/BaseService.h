@@ -11,6 +11,20 @@
 
 typedef void (^SuccessFunction)(id data);
 typedef void (^FailFunction)(id data);
+#define CHECK_NETWORK_AND_SEND_START_BEE(event) \
+FOREGROUND_BEGIN \
+[self postNotification:event withObject:nil];\
+FOREGROUND_COMMIT \
+BOOL isConnectAvailable = [self isConnectionAvailable];\
+if (!isConnectAvailable) \
+{\
+    FOREGROUND_BEGIN \
+    [self postNotification:NetWorkEvent.NEWWORK_UNREACHABLE];\
+    FOREGROUND_COMMIT \
+}else\
+
+
+
 
 @interface BaseService : NSObject
 
