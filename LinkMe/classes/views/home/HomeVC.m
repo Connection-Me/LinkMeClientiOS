@@ -9,9 +9,15 @@
 #import "HomeVC.h"
 #import "summer_extend.h"
 #import "HomeCollectionVCCell.h"
+#import "HomeEvent.h"
+#import "TCMessageBox.h"
+#import "CoreService.h"
 
 
 @interface HomeVC ()
+{
+    NSArray    *activityList;
+}
 @property (nonatomic, strong) NSMutableIndexSet *optionIndices;
 @end
 
@@ -43,7 +49,8 @@ ON_SIGNAL2(BeeUIBoard, signal)
     
     if([signal isKindOf:BeeUIBoard.CREATE_VIEWS])
     {
-
+        [self initializeRouterObserveEvents];
+        
 //        //流布局
 //        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
 //        [flowLayout setItemSize:CGSizeMake(COLLECTION_CELL_WIDTH,COLLECTION_CELL_HEIGHT)];
@@ -90,6 +97,21 @@ ON_SIGNAL2(BeeUIBoard, signal)
 	{
 	}
 }
+
+#pragma mark - 监听事件
+-(void)initializeRouterObserveEvents
+{
+    [self observeNotification:HomeEvent.LOAD_ACTIVITY_START];
+    [self observeNotification:HomeEvent.LOAD_ACTIVITY_SUCCESS];
+    [self observeNotification:HomeEvent.LOAD_ACTIVITY_FAILED];
+    
+}
+
+-(void)startDownloadHomeActivity
+{
+    [[CoreService sharedInstance].homeRemoteService queryHomeActivity];
+}
+
 -(void)setHeaderView{
     self.headerView = [CommonHeaderView createHeaderView:self.view AndStyle:1 AndTitle:@"首 页"];
     
@@ -171,6 +193,19 @@ ON_SIGNAL2(BeeUIBoard, signal)
     [callout show];
 }
 
-
+ON_NOTIFICATION3(HomeEvent, LOAD_ACTIVITY_START, notification)
+{
+    [TCMessageBox showMessage:@"Loading..." hideByTouch:NO withActivityIndicator:YES];
+}
+ON_NOTIFICATION3(HomeEvent, LOAD_ACTIVITY_SUCCESS, notification)
+{
+    [TCMessageBox hide];
+    activityList = (NSArray*)notification.object;
+}
+ON_NOTIFICATION3(HomeEvent, LOAD_ACTIVITY_FAILED, notification)
+{
+    [TCMessageBox hide];
+    [TCMessageBox showMessage:@"加载失败..." hideByTouch:NO withActivityIndicator:YES];
+}
 
 @end

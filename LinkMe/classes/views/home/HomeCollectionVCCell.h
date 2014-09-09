@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "Bee.h"
+#import "ActivityModel.h"
 @interface HomeCollectionVCCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 
 
 -(void)updateCell:(NSInteger)index;
+-(void)updatecellByActivityModel:(ActivityModel*)activityModel;
 
 @end

@@ -9,6 +9,15 @@
 
 #import "HomeCollectionVCCell.h"
 #import "summer_extend.h"
+#import "ImageDownloader.h"
+
+@interface HomeCollectionVCCell()
+{
+    ActivityModel    *_activityModel;
+}
+
+@end
+
 @implementation HomeCollectionVCCell
 
 
@@ -35,6 +44,14 @@
         [self.imageView setImage:[UIImage imageNamed:@"pic4.jpg"]];
     }
     
+}
+
+-(void)updatecellByActivityModel:(ActivityModel *)activityModel
+{
+    ImageDownloader * imageDownloader = [[ImageDownloader alloc]init];
+    [imageDownloader startDownloadImage:activityModel.imageURL andLoadImage:^(id data) {
+        self.imageView.image = data;
+    }];
 }
 
 @end

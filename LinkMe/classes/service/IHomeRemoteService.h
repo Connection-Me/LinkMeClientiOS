@@ -10,6 +10,6 @@
 @class ActivityModel;
 @protocol IHomeRemoteService <NSObject>
 
--(void)queryActivityByUserName:(NSString*)username andController:(NSString*)c andMethodName:(NSString*)methodName;
+-(void)queryHomeActivity;
 -(void)addActivityByActivityModel:(ActivityModel *)activityModel;
 @end

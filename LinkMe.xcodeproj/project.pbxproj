@@ -82,6 +82,7 @@
 		E117D33C19B4B43100411512 /* ActivityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E117D33B19B4B43100411512 /* ActivityModel.m */; };
 		E117D34019B4B8CC00411512 /* HomeRemoteServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E117D33F19B4B8CC00411512 /* HomeRemoteServiceImpl.m */; };
 		E117D34319B4B93A00411512 /* HomeEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E117D34219B4B93A00411512 /* HomeEvent.m */; };
+		E11A0C6D19BE9207000C6E02 /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = E11A0C6C19BE9207000C6E02 /* ImageDownloader.m */; };
 		E161263419A7E5F90012834A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E161263319A7E5F90012834A /* Foundation.framework */; };
 		E161263619A7E5F90012834A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E161263519A7E5F90012834A /* CoreGraphics.framework */; };
 		E161263819A7E5F90012834A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E161263719A7E5F90012834A /* UIKit.framework */; };
@@ -410,6 +411,8 @@
 		E117D33F19B4B8CC00411512 /* HomeRemoteServiceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeRemoteServiceImpl.m; sourceTree = "<group>"; };
 		E117D34119B4B93A00411512 /* HomeEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeEvent.h; sourceTree = "<group>"; };
 		E117D34219B4B93A00411512 /* HomeEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeEvent.m; sourceTree = "<group>"; };
+		E11A0C6B19BE9207000C6E02 /* ImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
+		E11A0C6C19BE9207000C6E02 /* ImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownloader.m; sourceTree = "<group>"; };
 		E161263019A7E5F90012834A /* LinkMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinkMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E161263319A7E5F90012834A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E161263519A7E5F90012834A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1029,6 +1032,15 @@
 				E117D33B19B4B43100411512 /* ActivityModel.m */,
 			);
 			path = databean;
+			sourceTree = "<group>";
+		};
+		E11A0C6A19BE9144000C6E02 /* loadImage */ = {
+			isa = PBXGroup;
+			children = (
+				E11A0C6B19BE9207000C6E02 /* ImageDownloader.h */,
+				E11A0C6C19BE9207000C6E02 /* ImageDownloader.m */,
+			);
+			path = loadImage;
 			sourceTree = "<group>";
 		};
 		E161262719A7E5F90012834A = {
@@ -2217,6 +2229,7 @@
 		E1F3503819AC912000317104 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				E11A0C6A19BE9144000C6E02 /* loadImage */,
 				D897331119B5AB0300133321 /* RNFrostedSidebar */,
 				D87DF01219ACE1C50010BEE9 /* CollapseClick */,
 				E1F3503919AC913300317104 /* TCMessageBox.h */,
@@ -2555,6 +2568,7 @@
 				E17AC7AD19A7F0E0008CF3FC /* ASIHTTPRequest.m in Sources */,
 				E17AC6FA19A7F0E0008CF3FC /* UIViewController+Metrics.m in Sources */,
 				E17AC75E19A7F0E0008CF3FC /* BeeUIQuery+Effects.m in Sources */,
+				E11A0C6D19BE9207000C6E02 /* ImageDownloader.m in Sources */,
 				E17AC74719A7F0E0008CF3FC /* Bee_UIPullLoader.m in Sources */,
 				E17AC79419A7F0E0008CF3FC /* NSData+BeeExtension.mm in Sources */,
 				E17AC6F319A7F0E0008CF3FC /* BeeUIBoard+ModalView.m in Sources */,

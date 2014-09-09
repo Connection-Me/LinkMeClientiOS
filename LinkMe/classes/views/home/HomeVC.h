@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BEE.h"
+#import "Bee.h"
 #import "RNFrostedSidebar.h"
 #import "CommonHeaderView.h"
 @interface HomeVC : BeeUIBoard<UICollectionViewDataSource,UICollectionViewDelegate,RNFrostedSidebarDelegate>

@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "IHomeRemoteService.h"
 #import "BaseService.h"
+#import "Bee.h"
 
 @interface HomeRemoteServiceImpl : BaseService<IHomeRemoteService>
+AS_SINGLETON(HomeRemoteServiceImpl)
 
 @end

@@ -14,8 +14,9 @@
 #import "ActivityModel.h"
 
 @implementation HomeRemoteServiceImpl
+DEF_SINGLETON(HomeRemoteServiceImpl)
 
--(void)queryActivityByUserName:(NSString *)username andController:(NSString *)c andMethodName:(NSString *)methodName
+-(void)queryHomeActivity
 {
 //    FOREGROUND_BEGIN
 //    [self postNotification:HomeEvent.LOAD_ACTIVITY_START withObject:nil];
@@ -35,9 +36,9 @@
         ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
         NSMutableDictionary * postParams = [[NSMutableDictionary alloc] init];
         //请求的json
-        [postParams setObject:username forKey:@"userName"];
-        [postParams setObject:c forKey:@"controller"];
-        [postParams setObject:methodName forKey:@"methodName"];
+//        [postParams setObject:username forKey:@"userName"];
+//        [postParams setObject:c forKey:@"controller"];
+//        [postParams setObject:methodName forKey:@"methodName"];
         NSString * jsonString = [postParams JSONString];
         NSLog(@"the request jsonString == %@",jsonString);
         
