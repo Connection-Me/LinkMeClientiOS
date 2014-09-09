@@ -15,7 +15,7 @@
 
 @implementation HomeRemoteServiceImpl
 DEF_SINGLETON(HomeRemoteServiceImpl)
-#define TEST_URL @"http://love-petpet.u.qiniudn.com/linkMetest3.json"
+#define TEST_URL @"http://love-petpet.u.qiniudn.com/linkMetest5.json"
 -(void)queryHomeActivity
 {
 //    FOREGROUND_BEGIN

@@ -22,6 +22,8 @@
             @"closeTime",
             @"lowerLimit",
             @"upperLimit",
+            @"approveCount",
+            @"rejectCount",
             nil];
 }
 

@@ -52,6 +52,9 @@
     [imageDownloader startDownloadImage:activityModel.imageURL andLoadImage:^(id data) {
         self.imageView.image = data;
     }];
+    self.approveCount.text = [NSString stringWithFormat:@"%d",activityModel.approveCount];
+    self.rejectCount.text = [NSString stringWithFormat:@"%d",activityModel.rejectCount];
+    
 }
 
 @end

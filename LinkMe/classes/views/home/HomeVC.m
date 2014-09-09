@@ -138,7 +138,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     HomeCollectionVCCell *cell = (HomeCollectionVCCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"HomeCollectionVCCell" forIndexPath:indexPath];
-    [cell updateCell:indexPath.row];
+    [cell updatecellByActivityModel:[activityList objectAtIndex:indexPath.row]];
     return cell;
 }
 #pragma mark -- UICollectionViewDataSource
@@ -205,11 +205,13 @@ ON_NOTIFICATION3(HomeEvent, LOAD_ACTIVITY_SUCCESS, notification)
 {
     [TCMessageBox hide];
     activityList = (NSArray*)notification.object;
+    [self.mainView reloadData];
     if(activityList==nil||[activityList count]==0){
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"没有活动列表,亲，赶紧新建一个" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alertView show];
 
     }
+    
 }
 ON_NOTIFICATION3(HomeEvent, LOAD_ACTIVITY_FAILED, notification)
 {
