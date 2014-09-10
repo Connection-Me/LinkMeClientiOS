@@ -50,22 +50,12 @@ ON_SIGNAL2(BeeUIBoard, signal)
     if([signal isKindOf:BeeUIBoard.CREATE_VIEWS])
     {
         [self initializeRouterObserveEvents];
-        [self startDownloadHomeActivity];
-//        //流布局
-//        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-//        [flowLayout setItemSize:CGSizeMake(COLLECTION_CELL_WIDTH,COLLECTION_CELL_HEIGHT)];
-//        [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-//        [flowLayout setMinimumLineSpacing:20];
-//        [self.mainView setCollectionViewLayout:flowLayout];
         
-//        [self  setAutoLayoutLocation];
-//        [self.mainView setBackgroundColor:[UIColor whiteColor]];
-
         [self setupCollectionView];
-         [self addHeader];
-//        [self addFooter];
+        [self addHeader];
+        [self addFooter];
         [self startDownloadHomeActivity];
-                
+        
         
     }
     else if([signal isKindOf:BeeUIBoard.LAYOUT_VIEWS])
@@ -145,8 +135,8 @@ ON_SIGNAL2(BeeUIBoard, signal)
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     HomeCollectionVCCell *cell = (HomeCollectionVCCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"HomeCollectionVCCell" forIndexPath:indexPath];
-    [cell updateCell:indexPath.row];
-   // [cell updatecellByActivityModel:[activityList objectAtIndex:indexPath.row]];
+//    [cell updateCell:indexPath.row];
+    [cell updatecellByActivityModel:[activityList objectAtIndex:indexPath.row]];
 
     return cell;
 }
@@ -212,8 +202,8 @@ ON_SIGNAL2(BeeUIBoard, signal)
     // 添加下拉刷新头部控件
     [self.mainView addHeaderWithCallback:^{
         // 进入刷新状态就会回调这个Block
-        NSLog(@"aaadsadsa");
-        
+        NSLog(@"刷新开始");
+        [vc startDownloadHomeActivity];
         // 模拟延迟加载数据，因此2秒后才调用）
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [vc.mainView reloadData];
@@ -223,8 +213,26 @@ ON_SIGNAL2(BeeUIBoard, signal)
     }];
     
 #warning 自动刷新(一进入程序就下拉刷新)
-    [self.mainView headerBeginRefreshing];
+//    [self.mainView headerBeginRefreshing];
 }
+
+- (void)addFooter
+{
+    __unsafe_unretained typeof(self) vc = self;
+    // 添加上拉刷新尾部控件
+    [self.mainView addFooterWithCallback:^{
+        // 进入刷新状态就会回调这个Block
+        NSLog(@"刷新开始");
+        [vc startDownloadHomeActivity];
+        // 模拟延迟加载数据，因此2秒后才调用）
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [vc.mainView reloadData];
+            // 结束刷新
+            [vc.mainView footerEndRefreshing];
+        });
+    }];
+}
+
 
 
 ON_NOTIFICATION3(HomeEvent, LOAD_ACTIVITY_START, notification)
@@ -235,7 +243,7 @@ ON_NOTIFICATION3(HomeEvent, LOAD_ACTIVITY_SUCCESS, notification)
 {
     [TCMessageBox hide];
     activityList = (NSArray*)notification.object;
-    [self.mainView reloadData];
+
     if(activityList==nil||[activityList count]==0){
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"没有活动列表,亲，赶紧新建一个" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alertView show];
