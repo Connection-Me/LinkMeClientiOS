@@ -90,7 +90,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
 
 -(void)initializeRouterMapClass
 {
-   // [_router map:@"login" toClass:[LoginVC class]];
+    [_router map:@"login" toClass:[LoginPageViewController class]];
     [_router map:@"home" toClass:[HomeVC class]];
 }
 
@@ -106,7 +106,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
 -(void)autoLogin
 {
     //先直接打开login界面
-    [self testOpenScreen:@"home"];
+    [self testOpenScreen:@"login"];
 }
 
 #pragma mark - Notification
@@ -119,12 +119,18 @@ ON_NOTIFICATION3(LoginEvent, LOGIN_SUCCESS, notification)
     [TCMessageBox hide];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"登录成功" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
+    [self testOpenScreen:@"home"];
+    
 }
 ON_NOTIFICATION3(LoginEvent, LOGIN_FAILED, notification)
 {
     [TCMessageBox hide];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"登录失败" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
+    //test
+#ifdef DEBUG
+     [self testOpenScreen:@"home"];
+#endif
 }
 
 ON_NOTIFICATION3(LoginEvent, REGISTER_SUCCESS, notification)

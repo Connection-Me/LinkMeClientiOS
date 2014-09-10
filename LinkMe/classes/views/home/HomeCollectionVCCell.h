@@ -11,6 +11,8 @@
 #import "ActivityModel.h"
 @interface HomeCollectionVCCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *approveCount;
+@property (weak, nonatomic) IBOutlet UILabel *rejectCount;
 
 
 

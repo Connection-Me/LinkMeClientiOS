@@ -20,6 +20,8 @@
 @property (nonatomic,strong) NSDate *closeTime;
 @property  NSInteger lowerLimit;
 @property  NSInteger upperLimit;
+@property NSInteger approveCount;
+@property NSInteger rejectCount;
 
 
 

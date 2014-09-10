@@ -15,7 +15,7 @@
 
 @implementation HomeRemoteServiceImpl
 DEF_SINGLETON(HomeRemoteServiceImpl)
-
+#define TEST_URL @"http://love-petpet.u.qiniudn.com/linkMetest5.json"
 -(void)queryHomeActivity
 {
 //    FOREGROUND_BEGIN
@@ -30,7 +30,9 @@ DEF_SINGLETON(HomeRemoteServiceImpl)
 //    }else
     CHECK_NETWORK_AND_SEND_START_BEE(HomeEvent.LOAD_ACTIVITY_START){
         //TODO
-        NSString *urlString = [[CoreModel sharedInstance].serverURL stringByAppendingString:@""];//拼接请求路径
+//        NSString *urlString = [[CoreModel sharedInstance].serverURL stringByAppendingString:@""];//拼接请求路径
+        
+        NSString *urlString = TEST_URL;
         NSURL *url = [NSURL URLWithString:urlString];
         
         ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];

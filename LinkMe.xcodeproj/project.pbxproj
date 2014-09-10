@@ -75,6 +75,7 @@
 		D8C3F69619B617AD000697A3 /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C3F69219B617AC000697A3 /* add@2x.png */; };
 		D8D5511D19B4BD3F0020DB8B /* CommonHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D5511C19B4BD3F0020DB8B /* CommonHeaderView.m */; };
 		D8D5511E19B4BD3F0020DB8B /* CommonHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D5511C19B4BD3F0020DB8B /* CommonHeaderView.m */; };
+		D8F6C48219BEFA940018BD29 /* HomeRemoteServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E117D33F19B4B8CC00411512 /* HomeRemoteServiceImpl.m */; };
 		E117D32D19B3882B00411512 /* LibModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E117D32C19B3882B00411512 /* LibModel.m */; };
 		E117D32F19B3955F00411512 /* BeeMessage+BeeJSON.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17AC4CE19A7F0DF008CF3FC /* BeeMessage+BeeJSON.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E117D33019B3956300411512 /* NSObject+BeeJSON.mm in Sources */ = {isa = PBXBuildFile; fileRef = E17AC65C19A7F0E0008CF3FC /* NSObject+BeeJSON.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -2673,6 +2674,7 @@
 			files = (
 				E161265919A7E5F90012834A /* LinkMeTests.m in Sources */,
 				D87DF00F19ACE1BB0010BEE9 /* LoginPageViewController.m in Sources */,
+				D8F6C48219BEFA940018BD29 /* HomeRemoteServiceImpl.m in Sources */,
 				D8D5511E19B4BD3F0020DB8B /* CommonHeaderView.m in Sources */,
 				D85DE5BD19B3609000A906E7 /* HomeCollectionVCCell.m in Sources */,
 				D87DF01B19ACE1C50010BEE9 /* CollapseClick.m in Sources */,

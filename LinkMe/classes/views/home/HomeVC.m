@@ -69,7 +69,8 @@ ON_SIGNAL2(BeeUIBoard, signal)
         //指定xib文件
         self.mainView.dataSource = self;
         self.mainView.delegate = self;
-        
+        [self startDownloadHomeActivity];
+                
         
     }
     else if([signal isKindOf:BeeUIBoard.LAYOUT_VIEWS])
@@ -128,7 +129,10 @@ ON_SIGNAL2(BeeUIBoard, signal)
 //每个section的item个数
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 10;
+    if(activityList==nil){
+        return 0;
+    }
+    return [activityList count];
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -136,6 +140,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
     HomeCollectionVCCell *cell = (HomeCollectionVCCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"HomeCollectionVCCell" forIndexPath:indexPath];
     [cell updateCell:indexPath.row];
    // [cell updatecellByActivityModel:[activityList objectAtIndex:indexPath.row]];
+
     return cell;
 }
 #pragma mark -- UICollectionViewDataSource
@@ -202,11 +207,19 @@ ON_NOTIFICATION3(HomeEvent, LOAD_ACTIVITY_SUCCESS, notification)
 {
     [TCMessageBox hide];
     activityList = (NSArray*)notification.object;
+    [self.mainView reloadData];
+    if(activityList==nil||[activityList count]==0){
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"没有活动列表,亲，赶紧新建一个" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+
+    }
+    
 }
 ON_NOTIFICATION3(HomeEvent, LOAD_ACTIVITY_FAILED, notification)
 {
     [TCMessageBox hide];
-    [TCMessageBox showMessage:@"加载失败..." hideByTouch:NO withActivityIndicator:YES];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"加载失败..." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
 }
 
 @end
