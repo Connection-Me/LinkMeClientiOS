@@ -12,7 +12,7 @@
 #import "HomeEvent.h"
 #import "TCMessageBox.h"
 #import "CoreService.h"
-
+#import "MJRefresh.h"
 
 @interface HomeVC ()
 {
@@ -61,14 +61,9 @@ ON_SIGNAL2(BeeUIBoard, signal)
 //        [self  setAutoLayoutLocation];
 //        [self.mainView setBackgroundColor:[UIColor whiteColor]];
 
-        UINib *nib = [UINib nibWithNibName:@"HomeCollectionVCCell" bundle:nil];
-        [self.mainView registerNib:nib forCellWithReuseIdentifier:@"HomeCollectionVCCell"];
-        //设置title
-        [self setHeaderView];
-        
-        //指定xib文件
-        self.mainView.dataSource = self;
-        self.mainView.delegate = self;
+        [self setupCollectionView];
+         [self addHeader];
+//        [self addFooter];
         [self startDownloadHomeActivity];
                 
         
@@ -97,6 +92,18 @@ ON_SIGNAL2(BeeUIBoard, signal)
 	else if ( [signal is:BeeUIBoard.DID_DISAPPEAR] )
 	{
 	}
+}
+
+-(void)setupCollectionView{
+    
+    UINib *nib = [UINib nibWithNibName:@"HomeCollectionVCCell" bundle:nil];
+    [self.mainView registerNib:nib forCellWithReuseIdentifier:@"HomeCollectionVCCell"];
+    //设置title
+    [self setHeaderView];
+    self.mainView.alwaysBounceVertical = YES;
+    //指定xib文件
+    self.mainView.dataSource = self;
+    self.mainView.delegate = self;
 }
 
 #pragma mark - 监听事件
@@ -196,6 +203,27 @@ ON_SIGNAL2(BeeUIBoard, signal)
     //    callout.showFromRight = YES;
     [callout show];
 }
+
+- (void)addHeader
+{
+    __unsafe_unretained typeof(self) vc = self;
+    // 添加下拉刷新头部控件
+    [self.mainView addHeaderWithCallback:^{
+        // 进入刷新状态就会回调这个Block
+        NSLog(@"aaadsadsa");
+        
+        // 模拟延迟加载数据，因此2秒后才调用）
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [vc.mainView reloadData];
+            // 结束刷新
+            [vc.mainView headerEndRefreshing];
+        });
+    }];
+    
+#warning 自动刷新(一进入程序就下拉刷新)
+    [self.mainView headerBeginRefreshing];
+}
+
 
 ON_NOTIFICATION3(HomeEvent, LOAD_ACTIVITY_START, notification)
 {

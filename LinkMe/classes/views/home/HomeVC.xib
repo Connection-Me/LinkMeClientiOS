@@ -21,7 +21,8 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" red="0.32156862745098036" green="0.30588235294117649" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
-                    <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="10"/>
+                    <inset key="contentInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                    <inset key="scrollIndicatorInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="3" id="eHc-t8-ZD0">
                         <size key="itemSize" width="155" height="155"/>
                         <size key="headerReferenceSize" width="0.0" height="35"/>
