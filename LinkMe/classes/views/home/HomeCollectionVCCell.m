@@ -20,7 +20,7 @@
 
 @implementation HomeCollectionVCCell
 
-
+DEF_SIGNAL(TESTVC)
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -55,6 +55,11 @@
     self.approveCount.text = [NSString stringWithFormat:@"%d",activityModel.approveCount];
     self.rejectCount.text = [NSString stringWithFormat:@"%d",activityModel.rejectCount];
     
+}
+
+-(IBAction)anawerTouchUpInside:(id)sender
+{
+    [self sendUISignal:self.TESTVC withObject:nil];
 }
 
 @end

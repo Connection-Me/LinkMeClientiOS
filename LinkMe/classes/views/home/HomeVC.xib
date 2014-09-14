@@ -6,8 +6,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC">
             <connections>
-                <outlet property="footerView" destination="S5j-Ml-aLh" id="9bG-Lo-tpd"/>
-                <outlet property="headerView" destination="t2d-NB-F0C" id="PdO-uP-00c"/>
                 <outlet property="mainView" destination="1xH-pT-uso" id="fpT-11-3uK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,12 +19,12 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" red="0.32156862745098036" green="0.30588235294117649" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
-                    <inset key="contentInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                    <inset key="contentInset" minX="0.0" minY="3" maxX="0.0" maxY="10"/>
                     <inset key="scrollIndicatorInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="3" id="eHc-t8-ZD0">
                         <size key="itemSize" width="155" height="155"/>
-                        <size key="headerReferenceSize" width="0.0" height="35"/>
-                        <size key="footerReferenceSize" width="320" height="42"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="3" minY="3" maxX="3" maxY="3"/>
                     </collectionViewFlowLayout>
                     <cells/>
@@ -35,16 +33,6 @@
                         <outlet property="delegate" destination="-1" id="ohS-Kz-HsQ"/>
                     </connections>
                 </collectionView>
-                <view hidden="YES" contentMode="scaleToFill" id="t2d-NB-F0C" userLabel="HeaderView">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                </view>
-                <view alpha="0.40000000000000002" contentMode="scaleToFill" id="S5j-Ml-aLh">
-                    <rect key="frame" x="0.0" y="526" width="320" height="42"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

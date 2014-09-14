@@ -13,7 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *approveCount;
 @property (weak, nonatomic) IBOutlet UILabel *rejectCount;
-
+AS_SIGNAL(TESTVC)
 
 
 -(void)updateCell:(NSInteger)index;

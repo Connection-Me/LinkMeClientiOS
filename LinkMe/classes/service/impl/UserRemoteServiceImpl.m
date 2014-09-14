@@ -22,17 +22,18 @@ DEF_SINGLETON(UserRemoteServiceImpl)
 //登陆
 -(void)queryLoginByUsername:(NSString*)username andPassWord:(NSString*)passWord andController:(NSString*)c andMethodName:(NSString*)methodName
 {
-//    FOREGROUND_BEGIN
-//    [self postNotification:LoginEvent.LOGIN withObject:nil];
-//    FOREGROUND_COMMIT
-//    BOOL isConnectAvailable = [self isConnectionAvailable];
-//    if (!isConnectAvailable)
-//    {
-//        FOREGROUND_BEGIN
-//        [self postNotification:NetWorkEvent.NEWWORK_UNREACHABLE];
-//        FOREGROUND_COMMIT
-//    }else
-    CHECK_NETWORK_AND_SEND_START_BEE(LoginEvent.LOGIN){
+    
+    BOOL isConnectAvailable = [self isConnectionAvailable];
+    if (!isConnectAvailable)
+    {
+        FOREGROUND_BEGIN
+        [self postNotification:NetWorkEvent.NEWWORK_UNREACHABLE];
+        FOREGROUND_COMMIT
+    }else
+   {
+       FOREGROUND_BEGIN
+       [self postNotification:LoginEvent.LOGIN withObject:nil];
+       FOREGROUND_COMMIT
         NSString *urlString = [[CoreModel sharedInstance].serverURL stringByAppendingString:@""];//拼接请求路径
         NSURL *url = [NSURL URLWithString:urlString];
         
