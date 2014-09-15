@@ -33,19 +33,11 @@
                         <outlet property="delegate" destination="-1" id="ohS-Kz-HsQ"/>
                     </connections>
                 </collectionView>
-<<<<<<< HEAD
                 <view hidden="YES" contentMode="scaleToFill" id="t2d-NB-F0C" userLabel="HeaderView" customClass="CommonHeaderView">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
-                <view alpha="0.40000000000000002" contentMode="scaleToFill" id="S5j-Ml-aLh">
-                    <rect key="frame" x="0.0" y="526" width="320" height="42"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                </view>
-=======
->>>>>>> 6309b672caa5d221e0162accc8b57f7c18b1f042
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
