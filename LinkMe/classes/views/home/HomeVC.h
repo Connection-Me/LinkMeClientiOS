@@ -11,9 +11,12 @@
 #import "RNFrostedSidebar.h"
 #import "CommonHeaderView.h"
 @interface HomeVC : BeeUIBoard<UICollectionViewDataSource,UICollectionViewDelegate,RNFrostedSidebarDelegate>
-@property (strong, nonatomic) IBOutlet CommonHeaderView *headerView;
+//@property (strong, nonatomic) IBOutlet CommonHeaderView *headerView;
+AS_SIGNAL(TEST)
+AS_SINGLETON(HomeVC)
+AS_SIGNAL(OPEN_CELL_DETAIL)
 @property (strong, nonatomic) IBOutlet UICollectionView *mainView;
-@property (weak, nonatomic) IBOutlet UIView *footerView;
+//@property (weak, nonatomic) IBOutlet UIView *footerView;
 
 
 @end

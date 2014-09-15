@@ -8,11 +8,13 @@
 
 #import "HAppDelegate.h"
 #import "RootVC.h"
+#import "LinkMeStartupService.h"
 
 @implementation HAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[LinkMeStartupService sharedInstance] preStartup];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];

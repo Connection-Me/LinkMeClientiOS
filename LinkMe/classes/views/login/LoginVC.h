@@ -10,5 +10,6 @@
 #import "Bee.h"
 
 @interface LoginVC : BeeUIBoard
-
+AS_SINGLETON(LoginVC)
+AS_SIGNAL(CLOSE_VC)
 @end

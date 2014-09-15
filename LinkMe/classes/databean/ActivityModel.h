@@ -11,11 +11,13 @@
 
 @interface ActivityModel :LibModel
 
-@property (nonatomic,strong) NSString* token;
+//@property (nonatomic,strong) NSString* token;
+@property (nonatomic,strong) NSString * activityId;
 @property (nonatomic,strong) NSString* name;
 @property (nonatomic,strong) NSString* type;
 @property (nonatomic,strong) NSString* desc;
 @property (nonatomic,strong) NSString* imageURL;
+@property (nonatomic,strong) NSDate * activityInitTime; 
 @property (nonatomic,strong) NSDate *openTime;
 @property (nonatomic,strong) NSDate *closeTime;
 @property  NSInteger lowerLimit;

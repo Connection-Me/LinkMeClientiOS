@@ -12,23 +12,32 @@
 #import "HomeEvent.h"
 #import "CoreModel.h"
 #import "ActivityModel.h"
+#import "CoreDao.h"
 
 @implementation HomeRemoteServiceImpl
 DEF_SINGLETON(HomeRemoteServiceImpl)
 #define TEST_URL @"http://love-petpet.u.qiniudn.com/linkMetest5.json"
+
+-(void)loadLocalActivity
+{
+    NSArray *localActivities = [[CoreDao sharedInstance].homeDao findActivities];
+    [self postNotification:HomeEvent.LOAD_LOCAL_ACTIVITY withObject:localActivities];
+}
 -(void)queryHomeActivity
 {
-//    FOREGROUND_BEGIN
-//    [self postNotification:HomeEvent.LOAD_ACTIVITY_START withObject:nil];
-//    FOREGROUND_COMMIT
-//    BOOL isConnectAvailable = [self isConnectionAvailable];
-//    if (!isConnectAvailable)
-//    {
-//        FOREGROUND_BEGIN
-//        [self postNotification:NetWorkEvent.NEWWORK_UNREACHABLE];
-//        FOREGROUND_COMMIT
-//    }else
-    CHECK_NETWORK_AND_SEND_START_BEE(HomeEvent.LOAD_ACTIVITY_START){
+   
+    BOOL isConnectAvailable = [self isConnectionAvailable];
+    if (!isConnectAvailable)
+    {
+        FOREGROUND_BEGIN
+        [self postNotification:NetWorkEvent.NEWWORK_UNREACHABLE];
+        [self loadLocalActivity];
+        FOREGROUND_COMMIT
+    }else
+   {
+       FOREGROUND_BEGIN
+       [self postNotification:HomeEvent.LOAD_ACTIVITY_START withObject:nil];
+       FOREGROUND_COMMIT
         //TODO
 //        NSString *urlString = [[CoreModel sharedInstance].serverURL stringByAppendingString:@""];//拼接请求路径
         
@@ -57,7 +66,14 @@ DEF_SINGLETON(HomeRemoteServiceImpl)
             if (code == 200) {
                 NSArray * activityList = [responseDic objectForKey:@"resultList"];
                 FOREGROUND_BEGIN
-                [self postNotification:HomeEvent.LOAD_ACTIVITY_SUCCESS withObject:[ActivityModel modelWithJsonArray:activityList]];
+                NSArray * activityArray = [ActivityModel modelWithJsonArray:activityList];
+                [self postNotification:HomeEvent.LOAD_ACTIVITY_SUCCESS withObject:activityArray];
+                for(ActivityModel *activity in activityArray)
+                {
+                    activity.activityId = activity.imageURL;
+                    [[CoreDao sharedInstance].homeDao insertActivity:activity];
+                }
+                
                 FOREGROUND_COMMIT
             }
             else

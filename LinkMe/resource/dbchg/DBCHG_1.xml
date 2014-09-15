@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sql version="1">
+	<statement>
+	CREATE TABLE conf_general
+	(
+		param_name TEXT NOT NULL,
+		param_value TEXT NOT NULL,
+		param_desc TEXT,
+		update_time DATETIME,
+		CONSTRAINT PK_app_config PRIMARY KEY (param_name)
+	);
+	</statement>
+    <statement>
+        CREATE TABLE activity
+        (
+        activity_Id TEXT NOT NULL,
+		name TEXT,
+        type TEXT,
+        desc TEXT,
+		image_u_r_l TEXT,
+		starter TEXT,
+        activity_init_time DATETIME,
+        open_time DATETIME,
+        close_time DATETIME,
+        start_time DATETIME,
+        stop_time DATETIME,
+        validTime DATETIME,
+        lower_limit INTEGER,
+        upper_limit INTEGER,
+        invite_count INTEGER,
+        invite_list TEXT,
+        approve_count INTEGER,
+        approve_list TEXT,
+        reject_count INTEGER,
+        reject_list TEXT,
+        announce TEXT,
+		CONSTRAINT PK_activity PRIMARY KEY (activity_Id)
+        );
+	</statement>
+    
+	<statement>
+        INSERT INTO conf_general(param_name, param_value, param_desc,update_time) values ('DB_VERSION','1','version of structure and library',CURRENT_TIMESTAMP);
+	</statement>
+</sql>

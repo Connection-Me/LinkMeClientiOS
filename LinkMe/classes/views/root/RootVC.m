@@ -13,6 +13,8 @@
 #import "TCMessageBox.h"
 #import "LoginPageViewController.h"
 #import "HomeVC.h"
+#import "MainVC.h"
+#import "NetWorkEvent.h"
 
 @interface RootVC ()
 
@@ -86,12 +88,15 @@ ON_SIGNAL2(BeeUIBoard, signal)
     [self observeNotification:LoginEvent.REGISTER];
     [self observeNotification:LoginEvent.REGISTER_SUCCESS];
     [self observeNotification:LoginEvent.REGISTER_FAILED];
+    
+    [self observeNotification:NetWorkEvent.NEWWORK_UNREACHABLE];
 }
 
 -(void)initializeRouterMapClass
 {
     [_router map:@"login" toClass:[LoginPageViewController class]];
-    [_router map:@"home" toClass:[HomeVC class]];
+    //[_router map:@"home" toClass:[HomeVC class]];
+    [_router map:@"main" toClass:[MainVC class]];
 }
 
 -(void)testOpenScreen:(NSString*)name
@@ -119,7 +124,7 @@ ON_NOTIFICATION3(LoginEvent, LOGIN_SUCCESS, notification)
     [TCMessageBox hide];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"登录成功" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
-    [self testOpenScreen:@"home"];
+    [self testOpenScreen:@"main"];
     
 }
 ON_NOTIFICATION3(LoginEvent, LOGIN_FAILED, notification)
@@ -129,7 +134,7 @@ ON_NOTIFICATION3(LoginEvent, LOGIN_FAILED, notification)
     [alertView show];
     //test
 #ifdef DEBUG
-     [self testOpenScreen:@"home"];
+     [self testOpenScreen:@"main"];
 #endif
 }
 
@@ -149,6 +154,13 @@ ON_NOTIFICATION3(LoginEvent, REGISTER_FAILED, notification)
     [TCMessageBox hide];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"注册失败" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
+}
+
+ON_NOTIFICATION3(NetWorkEvent, NEWWORK_UNREACHABLE, notification)
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请检查网络" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+[self testOpenScreen:@"main"];
 }
 
 @end

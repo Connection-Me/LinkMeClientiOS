@@ -15,7 +15,8 @@
 @end
 
 @implementation LoginVC
-
+DEF_SINGLETON(LoginVC)
+DEF_SIGNAL(CLOSE_VC)
 SUMMER_DEF_XIB(LoginVC, YES, NO)
 
 ON_SIGNAL2(BeeUIBoard, signal)
@@ -24,7 +25,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
     
     if([signal isKindOf:BeeUIBoard.CREATE_VIEWS])
     {
-        
+        self.title = @"登陆";
     }
     else if([signal isKindOf:BeeUIBoard.LAYOUT_VIEWS])
     {
@@ -53,6 +54,11 @@ ON_SIGNAL2(BeeUIBoard, signal)
 -(IBAction)loginTouchUpInside:(id)sender
 {
     [[CoreService sharedInstance].userRemoteService queryLoginByUsername:@"summer" andPassWord:@"123456" andController:@"user" andMethodName:@"login"];
+}
+
+-(IBAction)backTouchUpInside:(id)sender
+{
+    [self sendUISignal:self.CLOSE_VC withObject:nil];
 }
 
 @end
