@@ -25,6 +25,14 @@
 		D86791AC19B42B9200630891 /* pic2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D86791A319B42B9200630891 /* pic2.jpg */; };
 		D86791AD19B42B9200630891 /* pic4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D86791A419B42B9200630891 /* pic4.jpg */; };
 		D86791AE19B42B9200630891 /* pic4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D86791A419B42B9200630891 /* pic4.jpg */; };
+		D86F9E9119C878C000F8F75D /* HomeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86F9E8F19C878C000F8F75D /* HomeDetailViewController.m */; };
+		D86F9E9219C878C000F8F75D /* HomeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86F9E8F19C878C000F8F75D /* HomeDetailViewController.m */; };
+		D86F9E9319C878C000F8F75D /* HomeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D86F9E9019C878C000F8F75D /* HomeDetailViewController.xib */; };
+		D86F9E9419C878C000F8F75D /* HomeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D86F9E9019C878C000F8F75D /* HomeDetailViewController.xib */; };
+		D87D710C19C72FAF00C313FD /* AddActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87D710A19C72FAF00C313FD /* AddActivityViewController.m */; };
+		D87D710D19C72FAF00C313FD /* AddActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87D710A19C72FAF00C313FD /* AddActivityViewController.m */; };
+		D87D710E19C72FAF00C313FD /* AddActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87D710B19C72FAF00C313FD /* AddActivityViewController.xib */; };
+		D87D710F19C72FAF00C313FD /* AddActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87D710B19C72FAF00C313FD /* AddActivityViewController.xib */; };
 		D87DF00E19ACE1BB0010BEE9 /* LoginPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DF00C19ACE1BB0010BEE9 /* LoginPageViewController.m */; };
 		D87DF00F19ACE1BB0010BEE9 /* LoginPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DF00C19ACE1BB0010BEE9 /* LoginPageViewController.m */; };
 		D87DF01019ACE1BB0010BEE9 /* LoginPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87DF00D19ACE1BB0010BEE9 /* LoginPageViewController.xib */; };
@@ -401,6 +409,12 @@
 		D86791A219B42B9200630891 /* pic1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic1.jpg; sourceTree = "<group>"; };
 		D86791A319B42B9200630891 /* pic2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic2.jpg; sourceTree = "<group>"; };
 		D86791A419B42B9200630891 /* pic4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic4.jpg; sourceTree = "<group>"; };
+		D86F9E8E19C878C000F8F75D /* HomeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailViewController.h; sourceTree = "<group>"; };
+		D86F9E8F19C878C000F8F75D /* HomeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailViewController.m; sourceTree = "<group>"; };
+		D86F9E9019C878C000F8F75D /* HomeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeDetailViewController.xib; sourceTree = "<group>"; };
+		D87D710919C72FAF00C313FD /* AddActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddActivityViewController.h; sourceTree = "<group>"; };
+		D87D710A19C72FAF00C313FD /* AddActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddActivityViewController.m; sourceTree = "<group>"; };
+		D87D710B19C72FAF00C313FD /* AddActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddActivityViewController.xib; sourceTree = "<group>"; };
 		D87DF00B19ACE1BB0010BEE9 /* LoginPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginPageViewController.h; sourceTree = "<group>"; };
 		D87DF00C19ACE1BB0010BEE9 /* LoginPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginPageViewController.m; sourceTree = "<group>"; };
 		D87DF00D19ACE1BB0010BEE9 /* LoginPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginPageViewController.xib; sourceTree = "<group>"; };
@@ -1059,6 +1073,28 @@
 			path = ../home;
 			sourceTree = "<group>";
 		};
+		D86F9E8D19C878A600F8F75D /* activityDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D86F9E8E19C878C000F8F75D /* HomeDetailViewController.h */,
+				D86F9E8F19C878C000F8F75D /* HomeDetailViewController.m */,
+				D86F9E9019C878C000F8F75D /* HomeDetailViewController.xib */,
+			);
+			name = activityDetail;
+			path = LinkMe/classes/views/activityDetail;
+			sourceTree = SOURCE_ROOT;
+		};
+		D87D710819C726E800C313FD /* addActivies */ = {
+			isa = PBXGroup;
+			children = (
+				D87D710919C72FAF00C313FD /* AddActivityViewController.h */,
+				D87D710A19C72FAF00C313FD /* AddActivityViewController.m */,
+				D87D710B19C72FAF00C313FD /* AddActivityViewController.xib */,
+			);
+			name = addActivies;
+			path = LinkMe/classes/views/addActivies;
+			sourceTree = SOURCE_ROOT;
+		};
 		D87DF01219ACE1C50010BEE9 /* CollapseClick */ = {
 			isa = PBXGroup;
 			children = (
@@ -1169,6 +1205,8 @@
 		E11A0D2D19C2217F000C6E02 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				D86F9E8D19C878A600F8F75D /* activityDetail */,
+				D87D710819C726E800C313FD /* addActivies */,
 				D85DE5B219B3601300A906E7 /* home */,
 				E11A0D3919C287D2000C6E02 /* header */,
 				E11A0D3819C287C9000C6E02 /* footer */,
@@ -1389,10 +1427,10 @@
 				D8C3F67519B607FB000697A3 /* menu@2x.png */,
 				D8C3F67619B607FB000697A3 /* reject.png */,
 				D8C3F67719B607FB000697A3 /* weiboLogo.png */,
+				D8C3F67B19B607FB000697A3 /* join.png */,
 				D8C3F67819B607FB000697A3 /* join@2x.png */,
 				D8C3F67919B607FB000697A3 /* reject@2x.png */,
 				D8C3F67A19B607FB000697A3 /* qqLogo.png */,
-				D8C3F67B19B607FB000697A3 /* join.png */,
 				D8C3F67C19B607FB000697A3 /* weixinLogo.png */,
 				D8C3F67D19B607FB000697A3 /* menu.png */,
 			);
@@ -2507,6 +2545,7 @@
 				D86791A719B42B9200630891 /* pic5.jpg in Resources */,
 				D86791A919B42B9200630891 /* pic1.jpg in Resources */,
 				E11A0D3E19C28F7D000C6E02 /* FooterVC.xib in Resources */,
+				D87D710E19C72FAF00C313FD /* AddActivityViewController.xib in Resources */,
 				D897332219B5B0CC00133321 /* profile@2x.png in Resources */,
 				D8C3F68219B607FB000697A3 /* weiboLogo.png in Resources */,
 				E1E2C3E019AC3A11004C3F57 /* RootVC.xib in Resources */,
@@ -2531,6 +2570,7 @@
 				D85DE5B819B3604C00A906E7 /* HomeVC.xib in Resources */,
 				D8C5780D19BFFCC1008476DE /* MJRefresh.bundle in Resources */,
 				D86791A519B42B9200630891 /* galleryImage.jpg in Resources */,
+				D86F9E9319C878C000F8F75D /* HomeDetailViewController.xib in Resources */,
 				E161264619A7E5F90012834A /* Images.xcassets in Resources */,
 				E11A0D0F19C04742000C6E02 /* DBCHG_1.xml in Resources */,
 				E17AC6DC19A7F0E0008CF3FC /* right_arrow.png in Resources */,
@@ -2572,12 +2612,14 @@
 				D897332519B5B0CC00133321 /* star.png in Resources */,
 				D8C3F68119B607FB000697A3 /* reject.png in Resources */,
 				D8C3F69619B617AD000697A3 /* add@2x.png in Resources */,
+				D86F9E9419C878C000F8F75D /* HomeDetailViewController.xib in Resources */,
 				D85DE5B919B3604C00A906E7 /* HomeVC.xib in Resources */,
 				D8C3F68F19B607FB000697A3 /* menu.png in Resources */,
 				D87DF02119ACE1C50010BEE9 /* CollapseClickCell.xib in Resources */,
 				D87DF01119ACE1BB0010BEE9 /* LoginPageViewController.xib in Resources */,
 				D8C3F68319B607FB000697A3 /* weiboLogo.png in Resources */,
 				D8C3F69419B617AD000697A3 /* add.png in Resources */,
+				D87D710F19C72FAF00C313FD /* AddActivityViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2697,6 +2739,7 @@
 				E1A5A6F919C4B7DE004A8876 /* Bee_UITableView.m in Sources */,
 				D8C5780F19BFFCC1008476DE /* MJRefreshBaseView.m in Sources */,
 				E1A5A6EE19C4B7DE004A8876 /* Bee_UINavigationBar.m in Sources */,
+				D86F9E9119C878C000F8F75D /* HomeDetailViewController.m in Sources */,
 				E1A5A73E19C4B7DE004A8876 /* Bee_MemoryCache.mm in Sources */,
 				E1A5A6BF19C4B7DE004A8876 /* UIView+UINavigationController.m in Sources */,
 				E1A5A75A19C4B7DE004A8876 /* NSArray+BeeExtension.mm in Sources */,
@@ -2747,6 +2790,7 @@
 				E1A5A73D19C4B7DE004A8876 /* Bee_Keychain.mm in Sources */,
 				E1A5A6C119C4B7DE004A8876 /* UIViewController+LifeCycle.m in Sources */,
 				E1A5A76D19C4B7DE004A8876 /* NSObject+BeeHTTPRequest.m in Sources */,
+				D87D710C19C72FAF00C313FD /* AddActivityViewController.m in Sources */,
 				E1A5A72919C4B7DE004A8876 /* BeeUIQuery+Miscellaneous.m in Sources */,
 				E1A5A6B219C4B7DE004A8876 /* Bee_View.mm in Sources */,
 				E1A5A78919C4B7DE004A8876 /* CXMLNode.m in Sources */,
@@ -2873,11 +2917,13 @@
 				E161265919A7E5F90012834A /* LinkMeTests.m in Sources */,
 				D87DF00F19ACE1BB0010BEE9 /* LoginPageViewController.m in Sources */,
 				D8C5781619BFFCC1008476DE /* MJRefreshHeaderView.m in Sources */,
+				D87D710D19C72FAF00C313FD /* AddActivityViewController.m in Sources */,
 				D8F6C48219BEFA940018BD29 /* HomeRemoteServiceImpl.m in Sources */,
 				D8C5781419BFFCC1008476DE /* MJRefreshFooterView.m in Sources */,
 				D8D5511E19B4BD3F0020DB8B /* CommonHeaderView.m in Sources */,
 				D85DE5BD19B3609000A906E7 /* HomeCollectionVCCell.m in Sources */,
 				D87DF01B19ACE1C50010BEE9 /* CollapseClick.m in Sources */,
+				D86F9E9219C878C000F8F75D /* HomeDetailViewController.m in Sources */,
 				D8C5781019BFFCC1008476DE /* MJRefreshBaseView.m in Sources */,
 				D8C5781819BFFCC1008476DE /* UIScrollView+MJExtension.m in Sources */,
 				D85DE5B719B3604C00A906E7 /* HomeVC.m in Sources */,

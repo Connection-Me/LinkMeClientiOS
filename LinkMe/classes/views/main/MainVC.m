@@ -12,6 +12,7 @@
 #import "FooterVC.h"
 #import "HomeVC.h"
 #import "LoginVC.h"
+#import "HomeDetailViewController.h"
 
 @interface MainVC ()
 {
@@ -141,9 +142,13 @@ ON_SIGNAL3(FooterVC, OPEN_VC, signal)
 
 ON_SIGNAL3(HomeVC, OPEN_CELL_DETAIL, signal)
 {
-    LoginVC *loginVC = [LoginVC sharedInstance];
-    loginVC.parentBoard = self;
-    [self.navigationController pushViewController:loginVC animated:YES];
+    HomeDetailViewController *detail = [HomeDetailViewController sharedInstance];
+    detail.parentBoard = self;
+    [self.navigationController pushViewController:detail animated:YES];
+    
+//    LoginVC *loginVC = [LoginVC sharedInstance];
+//    loginVC.parentBoard = self;
+//    [self.navigationController pushViewController:loginVC animated:YES];
    // loginVC.hidesBottomBarWhenPushed = YES;
    // UIBarButtonItem *backbutton = [[UIBarButtonItem alloc]init];
 //    UIButton *button = [[UIButton alloc] init];

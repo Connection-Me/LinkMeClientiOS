@@ -14,6 +14,7 @@
 #import "LoginPageViewController.h"
 #import "HomeVC.h"
 #import "MainVC.h"
+#import "HomeDetailViewController.h"
 #import "NetWorkEvent.h"
 
 @interface RootVC ()
@@ -97,6 +98,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
     [_router map:@"login" toClass:[LoginPageViewController class]];
     //[_router map:@"home" toClass:[HomeVC class]];
     [_router map:@"main" toClass:[MainVC class]];
+    [_router map:@"detail" toClass:[HomeDetailViewController class]];
 }
 
 -(void)testOpenScreen:(NSString*)name
@@ -160,7 +162,7 @@ ON_NOTIFICATION3(NetWorkEvent, NEWWORK_UNREACHABLE, notification)
 {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请检查网络" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
-[self testOpenScreen:@"main"];
+    [self testOpenScreen:@"main"];
 }
 
 @end

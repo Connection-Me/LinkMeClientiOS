@@ -31,11 +31,6 @@ SUMMER_DEF_XIB(HomeVC, YES, NO)
 
 #define COLLECTION_CELL_WIDTH (ISIPAD ? 220 : 155)
 #define COLLECTION_CELL_HEIGHT (ISIPAD ? 200 : 155)
-//- (void)viewDidLoad
-//{
-//    [super viewDidLoad];
-//    
-//}
 
 #define WINDOW_BOUNDS [UIScreen mainScreen ].bounds
 ON_SIGNAL2(BeeUIBoard, signal)
@@ -183,7 +178,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
     }];
     
 #warning 自动刷新(一进入程序就下拉刷新)
-//    [self.mainView headerBeginRefreshing];
+    [self.mainView headerBeginRefreshing];
 }
 
 - (void)addFooter

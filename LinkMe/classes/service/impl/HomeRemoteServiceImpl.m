@@ -62,6 +62,8 @@ DEF_SINGLETON(HomeRemoteServiceImpl)
             NSInteger code = blockRequest.responseStatusCode;
             //responseString 是服务器返回的数据
             NSString * responseString = blockRequest.responseString;
+            NSLog(@"<HomeRemoteServiceImpl> responeString is %@",responseString);
+            
             NSDictionary *responseDic = [responseString objectFromJSONString];
             if (code == 200) {
                 NSArray * activityList = [responseDic objectForKey:@"resultList"];
