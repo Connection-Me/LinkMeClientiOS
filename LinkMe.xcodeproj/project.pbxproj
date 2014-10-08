@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D85D76AC19E585DD00B2A9B9 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D85D76AA19E585DD00B2A9B9 /* back@2x.png */; };
+		D85D76AD19E585DD00B2A9B9 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D85D76AA19E585DD00B2A9B9 /* back@2x.png */; };
+		D85D76AE19E585DD00B2A9B9 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = D85D76AB19E585DD00B2A9B9 /* back.png */; };
+		D85D76AF19E585DD00B2A9B9 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = D85D76AB19E585DD00B2A9B9 /* back.png */; };
 		D85DE5B619B3604C00A906E7 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D85DE5B419B3604C00A906E7 /* HomeVC.m */; };
 		D85DE5B719B3604C00A906E7 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D85DE5B419B3604C00A906E7 /* HomeVC.m */; };
 		D85DE5B819B3604C00A906E7 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D85DE5B519B3604C00A906E7 /* HomeVC.xib */; };
@@ -398,6 +402,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D85D76AA19E585DD00B2A9B9 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		D85D76AB19E585DD00B2A9B9 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		D85DE5B319B3604C00A906E7 /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
 		D85DE5B419B3604C00A906E7 /* HomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; wrapsLines = 1; };
 		D85DE5B519B3604C00A906E7 /* HomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
@@ -1059,6 +1065,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D85D76A819E5758500B2A9B9 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
 		D85DE5B219B3601300A906E7 /* home */ = {
 			isa = PBXGroup;
 			children = (
@@ -1205,6 +1218,7 @@
 		E11A0D2D19C2217F000C6E02 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				D85D76A819E5758500B2A9B9 /* New Group */,
 				D86F9E8D19C878A600F8F75D /* activityDetail */,
 				D87D710819C726E800C313FD /* addActivies */,
 				D85DE5B219B3601300A906E7 /* home */,
@@ -1422,6 +1436,8 @@
 		E17AC6D719A7F0E0008CF3FC /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				D85D76AA19E585DD00B2A9B9 /* back@2x.png */,
+				D85D76AB19E585DD00B2A9B9 /* back.png */,
 				D8C3F69119B617AC000697A3 /* add.png */,
 				D8C3F69219B617AC000697A3 /* add@2x.png */,
 				D8C3F67519B607FB000697A3 /* menu@2x.png */,
@@ -2555,10 +2571,12 @@
 				E1E2C3DA19AC39CB004C3F57 /* LoginVC.xib in Resources */,
 				D87DF01019ACE1BB0010BEE9 /* LoginPageViewController.xib in Resources */,
 				D86791AB19B42B9200630891 /* pic2.jpg in Resources */,
+				D85D76AE19E585DD00B2A9B9 /* back.png in Resources */,
 				D8C3F68419B607FB000697A3 /* join@2x.png in Resources */,
 				D8C3F68A19B607FB000697A3 /* join.png in Resources */,
 				E11A0D3719C287A6000C6E02 /* HeaderVC.xib in Resources */,
 				D897332419B5B0CC00133321 /* star.png in Resources */,
+				D85D76AC19E585DD00B2A9B9 /* back@2x.png in Resources */,
 				D897331E19B5B0CC00133321 /* globe@2x.png in Resources */,
 				E17AC6DA19A7F0E0008CF3FC /* left_arrow.png in Resources */,
 				E161263E19A7E5F90012834A /* InfoPlist.strings in Resources */,
@@ -2600,7 +2618,9 @@
 				D8C3F68D19B607FB000697A3 /* weixinLogo.png in Resources */,
 				D897332319B5B0CC00133321 /* profile@2x.png in Resources */,
 				D897331D19B5B0CC00133321 /* globe.png in Resources */,
+				D85D76AD19E585DD00B2A9B9 /* back@2x.png in Resources */,
 				D86791AE19B42B9200630891 /* pic4.jpg in Resources */,
+				D85D76AF19E585DD00B2A9B9 /* back.png in Resources */,
 				D8C3F68719B607FB000697A3 /* reject@2x.png in Resources */,
 				D8C3F68B19B607FB000697A3 /* join.png in Resources */,
 				D86791A619B42B9200630891 /* galleryImage.jpg in Resources */,
