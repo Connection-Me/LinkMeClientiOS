@@ -22,18 +22,13 @@
          contextName = "-[HomeVC collectionView:numberOfItemsInSection:]:HomeVC.m">
       </ContextState>
       <ContextState
+         contextName = "-[UIViewController(BeeUISignal) sendUISignal:withObject:from:]:UIViewController+BeeUISignal.m">
+      </ContextState>
+      <ContextState
          contextName = "-[FooterVC activityBtnTouchUpInside:]:FooterVC.m">
          <PersistentStrings>
             <PersistentString
                value = "btn.tag">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[MainVC setupRouter]:MainVC.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "_router.view.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -46,7 +41,20 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[UIViewController(BeeUISignal) sendUISignal:withObject:from:]:UIViewController+BeeUISignal.m">
+         contextName = "-[MainVC setupRouter]:MainVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_router.view.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "+[CommonHeaderView setBackButtonBlock:]:CommonHeaderView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.backButtonBlock">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "-[MainVC setupFooter]:MainVC.m">

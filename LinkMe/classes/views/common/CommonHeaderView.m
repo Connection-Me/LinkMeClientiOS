@@ -10,7 +10,6 @@
 #import "summer_extend.h"
 @implementation CommonHeaderView
 
-
 #define COMMON_TITLE_VIEW_TAG   20140901
 @synthesize label = _label;
 @synthesize leftButton = _leftButton;
@@ -54,8 +53,6 @@
     titleView = [[CommonHeaderView alloc] initWithSytle:style AndTitle:title AndFrame:superView.frame];
     [superView addSubview:titleView];
     return titleView;
-    
-    
 }
 + (CommonHeaderView*)titleView:(UIView*)superView
 {
@@ -118,11 +115,22 @@
         [self.leftButton setImage:leftImage forState:UIControlStateNormal];
         [self.leftButton setImageEdgeInsets:UIEdgeInsetsMake(5, 10, 5, 65)];
         [self.leftButton setBackgroundColor:[UIColor clearColor]];
+        [self.leftButton addTarget:self action:@selector(backBtnTouchUpInside) forControlEvents:UIControlEventTouchUpInside];
         //        [_leftButton setFont:THE_FONT(20)];
         [self insertSubview:_leftButton atIndex:0];
         
     }
 }
+
+-(void)setBackButtonBlock:(BACK_BUTTON_BLOCK)backBtnBlock
+{
+    _backButtonBlock = backBtnBlock;
+}
+
+-(void)backBtnTouchUpInside{
+    _backButtonBlock();
+}
+
 +(void)setBackButton{
     
     

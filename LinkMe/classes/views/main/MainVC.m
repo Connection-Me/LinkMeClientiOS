@@ -172,6 +172,14 @@ ON_SIGNAL3(HomeVC, OPEN_CELL_DETAIL, signal)
 //    }];
 }
 
+ON_SIGNAL3(HomeDetailViewController, CLOSE_CELL_DETAIL, signal)
+{
+    [self.navigationController popViewControllerAnimated:YES];
+    _footerVC.view.userInteractionEnabled = YES;
+    _headerVC.view.userInteractionEnabled = YES;
+    _router.view.userInteractionEnabled = YES;
+}
+
 ON_SIGNAL3(LoginVC, CLOSE_VC, signal)
 {
     [self.navigationController popViewControllerAnimated:YES];

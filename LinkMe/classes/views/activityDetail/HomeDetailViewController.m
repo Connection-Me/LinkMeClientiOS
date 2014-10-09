@@ -15,6 +15,7 @@
 {
     HeaderVC                   *_headerVC;
     FooterVC                   *_footerVC;
+    BACK_BUTTON_BLOCK          _backButtonBlock;
 }
 @end
 
@@ -22,6 +23,7 @@
 
 
 DEF_SINGLETON(HomeDetailViewController)
+DEF_SIGNAL(CLOSE_CELL_DETAIL)
 
 SUMMER_DEF_XIB(HomeDetailViewController,YES, NO)
 
@@ -47,8 +49,6 @@ ON_SIGNAL2(BeeUIBoard, signal)
     else if ( [signal is:BeeUIBoard.WILL_APPEAR] )
 	{
         
-        
-        
 	}
 	else if ( [signal is:BeeUIBoard.DID_APPEAR] )
 	{
@@ -56,7 +56,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
 	}
 	else if ( [signal is:BeeUIBoard.WILL_DISAPPEAR] )
 	{
-        
+        _backButtonBlock = nil;
 	}
 	else if ( [signal is:BeeUIBoard.DID_DISAPPEAR] )
 	{
@@ -69,8 +69,13 @@ ON_SIGNAL2(BeeUIBoard, signal)
 -(void)setupHeader
 {
 //    _headerVC = [HeaderVC sharedInstance];
+    __block HomeDetailViewController *homeDetailVC = self;
+    _backButtonBlock = ^(){
+        [homeDetailVC sendUISignal:homeDetailVC.CLOSE_CELL_DETAIL withObject:nil];
+    };
    
-    [CommonHeaderView createHeaderView:self.view AndStyle:2 AndTitle:@"活动详细"];
+    CommonHeaderView *commonHeaderView= [CommonHeaderView createHeaderView:self.view AndStyle:2 AndTitle:@"活动详细"];
+    [commonHeaderView setBackButtonBlock:_backButtonBlock];
     _headerVC.parentBoard = self;
     _headerVC.view.alpha = 1.0f;
     _headerVC.view.hidden = NO;
@@ -79,6 +84,8 @@ ON_SIGNAL2(BeeUIBoard, signal)
     _headerVC.view.frame = CGRectMake(0, 0, rect.size.width, 55);
     [self.view addSubview:_headerVC.view];
 }
+
+
 -(void)setupAcitityView{
     [_activityView removeAllSubviews];
     

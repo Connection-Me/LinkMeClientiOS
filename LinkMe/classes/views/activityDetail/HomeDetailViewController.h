@@ -12,6 +12,8 @@
 @interface HomeDetailViewController : BeeUIBoard
 AS_SINGLETON(HomeDetailViewController)
 
+AS_SIGNAL(CLOSE_CELL_DETAIL)
+
 
 
 @property (weak, nonatomic) IBOutlet UIView *insertUserView;
