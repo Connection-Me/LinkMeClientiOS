@@ -63,6 +63,10 @@
 		D897332519B5B0CC00133321 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = D897331A19B5B0CC00133321 /* star.png */; };
 		D897332619B5B0CC00133321 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D897331B19B5B0CC00133321 /* star@2x.png */; };
 		D897332719B5B0CC00133321 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D897331B19B5B0CC00133321 /* star@2x.png */; };
+		D8AF2EAC19E6858700BDCDF8 /* HeaderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AF2EAA19E6858700BDCDF8 /* HeaderVC.m */; };
+		D8AF2EAD19E6858700BDCDF8 /* HeaderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AF2EAA19E6858700BDCDF8 /* HeaderVC.m */; };
+		D8AF2EAE19E6858700BDCDF8 /* HeaderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8AF2EAB19E6858700BDCDF8 /* HeaderVC.xib */; };
+		D8AF2EAF19E6858700BDCDF8 /* HeaderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8AF2EAB19E6858700BDCDF8 /* HeaderVC.xib */; };
 		D8C3F67E19B607FB000697A3 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C3F67519B607FB000697A3 /* menu@2x.png */; };
 		D8C3F67F19B607FB000697A3 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C3F67519B607FB000697A3 /* menu@2x.png */; };
 		D8C3F68019B607FB000697A3 /* reject.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C3F67619B607FB000697A3 /* reject.png */; };
@@ -116,8 +120,6 @@
 		E11A0D2619C0BA23000C6E02 /* HomeDaoImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E11A0D2519C0BA23000C6E02 /* HomeDaoImpl.m */; };
 		E11A0D3119C22404000C6E02 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E11A0D2F19C22404000C6E02 /* MainVC.m */; };
 		E11A0D3219C22404000C6E02 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E11A0D3019C22404000C6E02 /* MainVC.xib */; };
-		E11A0D3619C287A6000C6E02 /* HeaderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E11A0D3419C287A6000C6E02 /* HeaderVC.m */; };
-		E11A0D3719C287A6000C6E02 /* HeaderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E11A0D3519C287A6000C6E02 /* HeaderVC.xib */; };
 		E11A0D3D19C28F7D000C6E02 /* FooterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E11A0D3B19C28F7D000C6E02 /* FooterVC.m */; };
 		E11A0D3E19C28F7D000C6E02 /* FooterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E11A0D3C19C28F7D000C6E02 /* FooterVC.xib */; };
 		E161263419A7E5F90012834A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E161263319A7E5F90012834A /* Foundation.framework */; };
@@ -439,6 +441,9 @@
 		D897331919B5B0CC00133321 /* profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile@2x.png"; sourceTree = "<group>"; };
 		D897331A19B5B0CC00133321 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		D897331B19B5B0CC00133321 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
+		D8AF2EA919E6858700BDCDF8 /* HeaderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderVC.h; sourceTree = "<group>"; };
+		D8AF2EAA19E6858700BDCDF8 /* HeaderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderVC.m; sourceTree = "<group>"; };
+		D8AF2EAB19E6858700BDCDF8 /* HeaderVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderVC.xib; sourceTree = "<group>"; };
 		D8C3F67519B607FB000697A3 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		D8C3F67619B607FB000697A3 /* reject.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reject.png; sourceTree = "<group>"; };
 		D8C3F67719B607FB000697A3 /* weiboLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weiboLogo.png; sourceTree = "<group>"; };
@@ -492,9 +497,6 @@
 		E11A0D2E19C22404000C6E02 /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
 		E11A0D2F19C22404000C6E02 /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
 		E11A0D3019C22404000C6E02 /* MainVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
-		E11A0D3319C287A6000C6E02 /* HeaderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HeaderVC.h; path = ../HeaderVC.h; sourceTree = "<group>"; };
-		E11A0D3419C287A6000C6E02 /* HeaderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HeaderVC.m; path = ../HeaderVC.m; sourceTree = "<group>"; };
-		E11A0D3519C287A6000C6E02 /* HeaderVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HeaderVC.xib; path = ../HeaderVC.xib; sourceTree = "<group>"; };
 		E11A0D3A19C28F7D000C6E02 /* FooterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooterVC.h; sourceTree = "<group>"; };
 		E11A0D3B19C28F7D000C6E02 /* FooterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FooterVC.m; sourceTree = "<group>"; };
 		E11A0D3C19C28F7D000C6E02 /* FooterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FooterVC.xib; sourceTree = "<group>"; };
@@ -1131,6 +1133,16 @@
 			path = RNFrostedSidebar;
 			sourceTree = "<group>";
 		};
+		D8AF2EA819E6858700BDCDF8 /* header */ = {
+			isa = PBXGroup;
+			children = (
+				D8AF2EA919E6858700BDCDF8 /* HeaderVC.h */,
+				D8AF2EAA19E6858700BDCDF8 /* HeaderVC.m */,
+				D8AF2EAB19E6858700BDCDF8 /* HeaderVC.xib */,
+			);
+			path = header;
+			sourceTree = "<group>";
+		};
 		D8C577FC19BFFCC1008476DE /* MJRefresh */ = {
 			isa = PBXGroup;
 			children = (
@@ -1218,11 +1230,11 @@
 		E11A0D2D19C2217F000C6E02 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				D8AF2EA819E6858700BDCDF8 /* header */,
 				D85D76A819E5758500B2A9B9 /* New Group */,
 				D86F9E8D19C878A600F8F75D /* activityDetail */,
 				D87D710819C726E800C313FD /* addActivies */,
 				D85DE5B219B3601300A906E7 /* home */,
-				E11A0D3919C287D2000C6E02 /* header */,
 				E11A0D3819C287C9000C6E02 /* footer */,
 				E11A0D2E19C22404000C6E02 /* MainVC.h */,
 				E11A0D2F19C22404000C6E02 /* MainVC.m */,
@@ -1239,16 +1251,6 @@
 				E11A0D3C19C28F7D000C6E02 /* FooterVC.xib */,
 			);
 			path = footer;
-			sourceTree = "<group>";
-		};
-		E11A0D3919C287D2000C6E02 /* header */ = {
-			isa = PBXGroup;
-			children = (
-				E11A0D3319C287A6000C6E02 /* HeaderVC.h */,
-				E11A0D3419C287A6000C6E02 /* HeaderVC.m */,
-				E11A0D3519C287A6000C6E02 /* HeaderVC.xib */,
-			);
-			path = header;
 			sourceTree = "<group>";
 		};
 		E161262719A7E5F90012834A = {
@@ -2561,6 +2563,7 @@
 				D86791A719B42B9200630891 /* pic5.jpg in Resources */,
 				D86791A919B42B9200630891 /* pic1.jpg in Resources */,
 				E11A0D3E19C28F7D000C6E02 /* FooterVC.xib in Resources */,
+				D8AF2EAE19E6858700BDCDF8 /* HeaderVC.xib in Resources */,
 				D87D710E19C72FAF00C313FD /* AddActivityViewController.xib in Resources */,
 				D897332219B5B0CC00133321 /* profile@2x.png in Resources */,
 				D8C3F68219B607FB000697A3 /* weiboLogo.png in Resources */,
@@ -2574,7 +2577,6 @@
 				D85D76AE19E585DD00B2A9B9 /* back.png in Resources */,
 				D8C3F68419B607FB000697A3 /* join@2x.png in Resources */,
 				D8C3F68A19B607FB000697A3 /* join.png in Resources */,
-				E11A0D3719C287A6000C6E02 /* HeaderVC.xib in Resources */,
 				D897332419B5B0CC00133321 /* star.png in Resources */,
 				D85D76AC19E585DD00B2A9B9 /* back@2x.png in Resources */,
 				D897331E19B5B0CC00133321 /* globe@2x.png in Resources */,
@@ -2611,6 +2613,7 @@
 				D8C3F68519B607FB000697A3 /* join@2x.png in Resources */,
 				D897332119B5B0CC00133321 /* profile.png in Resources */,
 				D8C5780E19BFFCC1008476DE /* MJRefresh.bundle in Resources */,
+				D8AF2EAF19E6858700BDCDF8 /* HeaderVC.xib in Resources */,
 				D8C3F68919B607FB000697A3 /* qqLogo.png in Resources */,
 				D8C3F67F19B607FB000697A3 /* menu@2x.png in Resources */,
 				D86791A819B42B9200630891 /* pic5.jpg in Resources */,
@@ -2659,6 +2662,7 @@
 				E1A5A6EA19C4B7DE004A8876 /* Bee_UIImageView.m in Sources */,
 				E1A5A73619C4B7DE004A8876 /* UIImage+Theme.m in Sources */,
 				D8C5781319BFFCC1008476DE /* MJRefreshFooterView.m in Sources */,
+				D8AF2EAC19E6858700BDCDF8 /* HeaderVC.m in Sources */,
 				E1A5A6F719C4B7DE004A8876 /* Bee_UISwitch.m in Sources */,
 				E1A5A6C219C4B7DE004A8876 /* UIViewController+Metrics.m in Sources */,
 				E1A5A6E519C4B7DE004A8876 /* Bee_UIActivityIndicatorView.m in Sources */,
@@ -2671,7 +2675,6 @@
 				E1A5A6E419C4B7DE004A8876 /* Bee_UIActivity.m in Sources */,
 				E1A5A71D19C4B7DE004A8876 /* UIScrollView+BeeUILayout.m in Sources */,
 				E1A5A74C19C4B7DE004A8876 /* NSDictionary+BeeActiveRecord.m in Sources */,
-				E11A0D3619C287A6000C6E02 /* HeaderVC.m in Sources */,
 				E1A5A6E119C4B7DE004A8876 /* UIView+BeeExtension.m in Sources */,
 				E1A5A6E819C4B7DE004A8876 /* Bee_UIDatePicker.m in Sources */,
 				E1A5A6FB19C4B7DE004A8876 /* Bee_UITextView.m in Sources */,
@@ -2945,6 +2948,7 @@
 				D87DF01B19ACE1C50010BEE9 /* CollapseClick.m in Sources */,
 				D86F9E9219C878C000F8F75D /* HomeDetailViewController.m in Sources */,
 				D8C5781019BFFCC1008476DE /* MJRefreshBaseView.m in Sources */,
+				D8AF2EAD19E6858700BDCDF8 /* HeaderVC.m in Sources */,
 				D8C5781819BFFCC1008476DE /* UIScrollView+MJExtension.m in Sources */,
 				D85DE5B719B3604C00A906E7 /* HomeVC.m in Sources */,
 				D8C5781219BFFCC1008476DE /* MJRefreshConst.m in Sources */,
