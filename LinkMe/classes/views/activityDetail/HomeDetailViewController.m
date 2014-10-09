@@ -36,6 +36,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
         //设置 头导航栏
         [self setupHeader];
         [self setupAcitityView];
+        [self drawLineInPage];
         
         
     }
@@ -123,6 +124,40 @@ ON_SIGNAL2(BeeUIBoard, signal)
     [_activityView addSubview:activityHeader];
 }
 
+-(UIView *)drawViewLineX:(CGFloat)x andY:(CGFloat)y andWidth:(CGFloat)width andLength:(CGFloat)length{
+    UIView *line = [[UIView alloc] initWithFrame:CGRectMake(x, y, width,length)];
+    [line setBackgroundColor:[UIColor whiteColor]];
+    return line;
+}
 
+
+-(void)drawLineInView:(UIView *)superView WithX:(CGFloat)X WithY:(CGFloat)Y {
+    
+    
+    UIView *line1 = [self drawViewLineX:X andY:Y andWidth:2 andLength:superView.frame.size.height];
+    
+    line1.layer.masksToBounds = YES;
+    line1.layer.cornerRadius = 10.0;
+    
+    [superView addSubview:line1];
+}
+#define DEFAULT_LINE_X 50
+#define DEFAULT_LINE_Y 0
+-(void)drawLineInView:(UIView *)superView{
+    [self drawLineInView:superView WithX:DEFAULT_LINE_X WithY:DEFAULT_LINE_Y];
+}
+
+-(void)drawLineInUserView{
+    [self drawLineInView:_insertUserView];
+}
+-(void)drawLineInInformationView{
+    [self drawLineInView:_informationView];
+}
+
+-(void)drawLineInPage{
+    [self drawLineInUserView];
+    [self drawLineInInformationView];
+    
+}
 
 @end
