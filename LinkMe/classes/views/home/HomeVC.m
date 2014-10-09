@@ -217,7 +217,7 @@ ON_NOTIFICATION3(HomeEvent, LOAD_ACTIVITY_SUCCESS, notification)
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"没有活动列表,亲，赶紧新建一个" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alertView show];
     }
-    
+    [self.mainView reloadData];
 }
 ON_NOTIFICATION3(HomeEvent, LOAD_ACTIVITY_FAILED, notification)
 {
