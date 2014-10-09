@@ -7,12 +7,15 @@
 //
 
 #import "CommonHeaderView.h"
-
+#import "summer_extend.h"
 @implementation CommonHeaderView
+
+
 #define COMMON_TITLE_VIEW_TAG   20140901
 @synthesize label = _label;
 @synthesize leftButton = _leftButton;
 @synthesize rightButton = _rightButton;
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -97,9 +100,41 @@
 //        [_rightButton setFont:THE_FONT(20)];
         [self.rightButton setBackgroundColor:[UIColor clearColor]];
         [self addSubview:self.rightButton];
+    }
+    else if(style == 2){
+        //标题
+        [_label setFrame:CGRectMake((self.frame.size.width-100)/2, 20, 100, 35)];
+        [_label setText:title];
+        [_label setFont:AD_BOLD_FONT(20, 20)];
+        [_label setTextColor:[UIColor whiteColor]];
+        [_label setTextAlignment:NSTextAlignmentCenter];
+        [_label setBackgroundColor:[UIColor clearColor]];
+        [self insertSubview:_label atIndex:0];
+        CGFloat leftButton_Y = (HEAD_VIEW_HEIGHT-STATUSBAR_DELTA-30)/2.0f + STATUSBAR_DELTA;
         
+        //左边按钮
+        UIImage *leftImage = [UIImage imageNamed:@"back"];
+        [self.leftButton setFrame:CGRectMake(0, leftButton_Y, 100, 30)];
+        [self.leftButton setImage:leftImage forState:UIControlStateNormal];
+        [self.leftButton setImageEdgeInsets:UIEdgeInsetsMake(5, 10, 5, 65)];
+        [self.leftButton setBackgroundColor:[UIColor clearColor]];
+        //        [_leftButton setFont:THE_FONT(20)];
+        [self insertSubview:_leftButton atIndex:0];
         
     }
 }
++(void)setBackButton{
+    
+    
+}
+
+
+#pragma mark - Listen
+-(void)setListenInView:(UIView*)view selector:(SEL)selector{
+    UITapGestureRecognizer* singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:selector];
+    [view addGestureRecognizer:singleTap];
+}
+
+
 
 @end

@@ -12,6 +12,8 @@
 @interface HomeDetailViewController : BeeUIBoard
 AS_SINGLETON(HomeDetailViewController)
 
+
+
 @property (weak, nonatomic) IBOutlet UIView *insertUserView;
 @property (weak, nonatomic) IBOutlet UIView *activityView;
 @property (weak, nonatomic) IBOutlet UIView *informationView;
