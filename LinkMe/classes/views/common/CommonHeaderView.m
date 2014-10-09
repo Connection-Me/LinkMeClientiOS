@@ -135,9 +135,6 @@
     [view addGestureRecognizer:singleTap];
 }
 
--(void)backTouchUpInside
-{
-    [self sendUISignal:self.CLOSE_VC withObject:nil];
-}
+
 
 @end
