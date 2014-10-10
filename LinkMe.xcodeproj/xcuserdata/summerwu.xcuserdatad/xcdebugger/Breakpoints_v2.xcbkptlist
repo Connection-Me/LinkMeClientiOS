@@ -816,11 +816,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/activityDetail/HomeDetailViewController.m"
-            timestampString = "434555417.854871"
+            timestampString = "434646262.122359"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "-setupHeader"
             landmarkType = "5">
          </BreakpointContent>

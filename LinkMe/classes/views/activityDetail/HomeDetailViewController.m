@@ -32,6 +32,9 @@ ON_SIGNAL2(BeeUIBoard, signal)
     
     if([signal isKindOf:BeeUIBoard.CREATE_VIEWS])
     {
+        //load 数据
+        [self loadDetailData];
+        
         //设置 头导航栏
         [self setupHeader];
         [self setupAcitityView];
@@ -61,9 +64,13 @@ ON_SIGNAL2(BeeUIBoard, signal)
 	{
 	}
     
+}
 
+-(void)loadDetailData
+{
     
 }
+
 #pragma mark header界面
 -(void)setupHeader
 {

@@ -519,6 +519,7 @@
 		E161299E19A7E7EE0012834A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E16129A019A7E8280012834A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		E16129A219A7E8320012834A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		E165887719E82E55002ABFFE /* IDetailRemoteService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDetailRemoteService.h; sourceTree = "<group>"; };
 		E17AC4B119A7F0DF008CF3FC /* CKCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCalendarView.h; sourceTree = "<group>"; };
 		E17AC4B219A7F0DF008CF3FC /* CKCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCalendarView.m; sourceTree = "<group>"; };
 		E17AC4B419A7F0DF008CF3FC /* left_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_arrow.png; sourceTree = "<group>"; };
@@ -2439,6 +2440,7 @@
 				E1E2C3F119AC73CF004C3F57 /* impl */,
 				E1E2C3F219AC740C004C3F57 /* IUserRemoteService.h */,
 				E117D33919B4B38E00411512 /* IHomeRemoteService.h */,
+				E165887719E82E55002ABFFE /* IDetailRemoteService.h */,
 			);
 			path = service;
 			sourceTree = "<group>";
