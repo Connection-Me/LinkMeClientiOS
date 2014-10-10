@@ -11,7 +11,7 @@
 @implementation CommonHeaderView
 
 #define COMMON_TITLE_VIEW_TAG   20140901
-@synthesize label = _label;
+@synthesize title = _title;
 @synthesize leftButton = _leftButton;
 @synthesize rightButton = _rightButton;
 
@@ -20,121 +20,129 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        _label = [[UILabel alloc] init];
+        _title = [[UILabel alloc] init];
         _leftButton = [[UIButton alloc] init];
         _rightButton = [[UIButton alloc] init];
     }
     return self;
 }
--(id)initWithSytle:(NSInteger)style AndTitle:(NSString *)title AndFrame:(CGRect)frame{
-    self = [super init];
+
+#define DEFAULT_STYLE CommonHeaderNone
++(CommonHeaderView *)createHeader:(UIView *)superView WithTitle:(NSString *)titleText{
+    return [CommonHeaderView createHeader:superView WithTitle:titleText LeftButtonType:DEFAULT_STYLE RightButtonType:DEFAULT_STYLE];
+}
+
+
++(CommonHeaderView *)createHeader:(UIView *)superView WithTitle:(NSString *)titleText LeftButtonType:(CommonHeaderButtonSytle)leftBtnStyle RightButtonType:(CommonHeaderButtonSytle)rightBtnStyle{
+    CommonHeaderView *header = [[CommonHeaderView alloc] init];
+    [CommonHeaderView initHeader:header];
+    
+    header.title.text = titleText;
+    [header setButtonType:leftBtnStyle button:header.leftButton];
+    [header setButtonType:rightBtnStyle button:header.rightButton];
+    [superView addSubview:header];
+    
+    return header;
+}
+
+
+
+#define HEAD_VIEW_HEIGHT (ISIOS7 ? 55 : 35)
+
++(void)initHeader:(CommonHeaderView *)header{
     //位置
     if(ISIOS7){
         
-        self.frame = CGRectMake(0, 0, frame.size.width,55);
+        header.frame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width,55);
     }else{
-        self.frame = CGRectMake(0, 0, frame.size.width,35);
+        header.frame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width,35);
     }
-    [self setBackgroundColor:[UIColor colorWithRed:92/255.0f green:92/255.0f blue:92/255.0f alpha:1.0f]];
-//    [self setBackgroundColor:[UIColor redColor]];
-
-    [self initData:style AndTitle:title AndFrame:frame];
-    return self;
+    [header setBackgroundColor:[UIColor colorWithRed:92/255.0f green:92/255.0f blue:92/255.0f alpha:1.0f]];
+    
+    
+    [header.title setFrame:CGRectMake((header.frame.size.width-100)/2, 20, 100, 35)];
+    [header.title setFont:AD_BOLD_FONT(20, 20)];
+    [header.title setTextColor:[UIColor whiteColor]];
+    [header.title setTextAlignment:NSTextAlignmentCenter];
+    [header.title setBackgroundColor:[UIColor clearColor]];
+    [header addSubview:header.title];
+    
+    CGFloat leftButton_Y = (HEAD_VIEW_HEIGHT-STATUSBAR_DELTA-30)/2.0f + STATUSBAR_DELTA;
+    
+    [header.leftButton setFrame:CGRectMake(0, leftButton_Y, 100, 30)];
+    [header.leftButton setBackgroundColor:[UIColor clearColor]];
+    [header.leftButton addTarget:header action:@selector(clickLeft) forControlEvents:UIControlEventTouchUpInside];
+    //        [_leftButton setFont:THE_FONT(20)];
+    [header addSubview:header.leftButton];
+    
+    [header.rightButton setFrame:CGRectMake(header.frame.size.width-10-35, 20, 100, 35)];
+    //        [_rightButton setFont:THE_FONT(20)];
+    [header.rightButton addTarget:header action:@selector(clickRight) forControlEvents:UIControlEventTouchUpInside];
+    [header.rightButton setBackgroundColor:[UIColor clearColor]];
+    [header addSubview:header.rightButton];
+    
+    
 }
 
-+(CommonHeaderView*)createHeaderView:(UIView*)superView AndStyle:(NSInteger)style AndTitle:(NSString *)title{
-    
-    CommonHeaderView* titleView = [self titleView:superView];
-    if (titleView != nil){
+
+-(void)setButtonType:(CommonHeaderButtonSytle)style button:(UIButton *)button{
+    switch (style) {
+        case CommonHeaderBack:{
         
-        return titleView;
-    }
-    
-    titleView = [[CommonHeaderView alloc] initWithSytle:style AndTitle:title AndFrame:superView.frame];
-    [superView addSubview:titleView];
-    return titleView;
-}
-+ (CommonHeaderView*)titleView:(UIView*)superView
-{
-    UIView* view = [superView viewWithTag:COMMON_TITLE_VIEW_TAG];
-    if ([view isKindOfClass:[CommonHeaderView class]]){
-        return (CommonHeaderView*)view;
-    }
-    else{
-        if (view != nil){
-            NSLog(@"the view is not nil");
+            UIImage *leftImage = [UIImage imageNamed:@"back"];
+            [button setImage:leftImage forState:UIControlStateNormal];
+            [button setImageEdgeInsets:UIEdgeInsetsMake(5, 10, 5, 65)];
         }
-        return nil;
+            break;
+            
+        case CommonHeaderMenu:
+        {
+            UIImage *leftImage = [UIImage imageNamed:@"menu"];
+            [button setImage:leftImage forState:UIControlStateNormal];
+            [button setImageEdgeInsets:UIEdgeInsetsMake(5, 10, 5, 65)];
+        }
+            break;
+            
+        case CommonHeaderAdd:
+        {
+            UIImage *leftImage = [UIImage imageNamed:@"add"];
+            [button setImage:leftImage forState:UIControlStateNormal];
+            [button setImageEdgeInsets:UIEdgeInsetsMake(5, 10, 5, 65)];
+        }
+            break;
+            
+        default:
+            break;
     }
-}
-#define HEAD_VIEW_HEIGHT (ISIOS7 ? 55 : 35)
--(void)initData:(NSInteger)style AndTitle:(NSString *)title AndFrame:(CGRect)frame{
+
     
-    if(style==1){
-        //标题
-        [_label setFrame:CGRectMake((self.frame.size.width-100)/2, 20, 100, 35)];
-        [_label setText:title];
-        [_label setFont:AD_BOLD_FONT(20, 20)];
-        [_label setTextColor:[UIColor whiteColor]];
-        [_label setTextAlignment:NSTextAlignmentCenter];
-        [_label setBackgroundColor:[UIColor clearColor]];
-        [self insertSubview:_label atIndex:0];
-        CGFloat leftButton_Y = (HEAD_VIEW_HEIGHT-STATUSBAR_DELTA-30)/2.0f + STATUSBAR_DELTA;
-        //左边按钮
-        UIImage *leftImage = [UIImage imageNamed:@"menu"];
-        [self.leftButton setFrame:CGRectMake(0, leftButton_Y, 100, 30)];
-        [self.leftButton setImage:leftImage forState:UIControlStateNormal];
-        [self.leftButton setImageEdgeInsets:UIEdgeInsetsMake(5, 10, 5, 65)];
-        [self.leftButton setBackgroundColor:[UIColor clearColor]];
-//        [_leftButton setFont:THE_FONT(20)];
-        [self insertSubview:_leftButton atIndex:0];
-        
-        //右边按钮
-        UIImage *rightImage = [UIImage imageNamed:@"add"];
-        [self.rightButton setFrame:CGRectMake(self.frame.size.width-10-90, 20, 100, 35)];
-        [self.rightButton setImage:rightImage forState:UIControlStateNormal];
-        [self.rightButton setImageEdgeInsets:UIEdgeInsetsMake(9, 70, 5, 10)];
-//        [_rightButton setFont:THE_FONT(20)];
-        [self.rightButton setBackgroundColor:[UIColor clearColor]];
-        [self addSubview:self.rightButton];
-    }
-    else if(style == 2){
-        //标题
-        [_label setFrame:CGRectMake((self.frame.size.width-100)/2, 20, 100, 35)];
-        [_label setText:title];
-        [_label setFont:AD_BOLD_FONT(20, 20)];
-        [_label setTextColor:[UIColor whiteColor]];
-        [_label setTextAlignment:NSTextAlignmentCenter];
-        [_label setBackgroundColor:[UIColor clearColor]];
-        [self insertSubview:_label atIndex:0];
-        CGFloat leftButton_Y = (HEAD_VIEW_HEIGHT-STATUSBAR_DELTA-30)/2.0f + STATUSBAR_DELTA;
-        
-        //左边按钮
-        UIImage *leftImage = [UIImage imageNamed:@"back"];
-        [self.leftButton setFrame:CGRectMake(0, leftButton_Y, 100, 30)];
-        [self.leftButton setImage:leftImage forState:UIControlStateNormal];
-        [self.leftButton setImageEdgeInsets:UIEdgeInsetsMake(5, 10, 5, 65)];
-        [self.leftButton setBackgroundColor:[UIColor clearColor]];
-        [self.leftButton addTarget:self action:@selector(backBtnTouchUpInside) forControlEvents:UIControlEventTouchUpInside];
-        //        [_leftButton setFont:THE_FONT(20)];
-        [self insertSubview:_leftButton atIndex:0];
-        
-    }
+    
 }
 
--(void)setBackButtonBlock:(BACK_BUTTON_BLOCK)backBtnBlock
+
+-(void)setLeftButtonBlock:(LEFT_BUTTON_BLOCK)BtnBlock
 {
-    _backButtonBlock = backBtnBlock;
+    _leftButtonBlock = BtnBlock;
+}
+-(void)clickLeft{
+    if(_leftButtonBlock == nil){
+        NSLog(@"left block is nil");
+        return ;
+    }
+    _leftButtonBlock();
+}
+-(void)setRightButtonBlock:(RIGHT_BUTTON_BLOCK)BtnBlock
+{
+    _rightButtonBlock = BtnBlock;
+}
+-(void)clickRight{
+    if(_rightButtonBlock == nil){
+        NSLog(@"right block is nil");
+        return ;
+    }
+    _rightButtonBlock();
 }
 
--(void)backBtnTouchUpInside{
-    _backButtonBlock();
-}
-
-+(void)setBackButton{
-    
-    
-}
 
 
 #pragma mark - Listen

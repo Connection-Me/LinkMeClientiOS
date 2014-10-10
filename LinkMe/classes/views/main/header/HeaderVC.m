@@ -52,7 +52,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
 }
 
 -(void)setHeaderView{
-    self.headerView = [CommonHeaderView createHeaderView:self.view AndStyle:1 AndTitle:@"首 页"];
+    self.headerView = [CommonHeaderView createHeader:self.view WithTitle:@"首页" LeftButtonType:CommonHeaderMenu RightButtonType:CommonHeaderAdd];
     
     
     [self.headerView.leftButton addTarget:self action:@selector(onBurger:) forControlEvents:UIControlEventTouchUpInside];

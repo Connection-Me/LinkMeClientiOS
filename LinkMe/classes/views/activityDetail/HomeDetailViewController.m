@@ -15,7 +15,6 @@
 {
     HeaderVC                   *_headerVC;
     FooterVC                   *_footerVC;
-    BACK_BUTTON_BLOCK          _backButtonBlock;
 }
 @end
 
@@ -57,7 +56,6 @@ ON_SIGNAL2(BeeUIBoard, signal)
 	}
 	else if ( [signal is:BeeUIBoard.WILL_DISAPPEAR] )
 	{
-        _backButtonBlock = nil;
 	}
 	else if ( [signal is:BeeUIBoard.DID_DISAPPEAR] )
 	{
@@ -71,12 +69,15 @@ ON_SIGNAL2(BeeUIBoard, signal)
 {
 //    _headerVC = [HeaderVC sharedInstance];
     __block HomeDetailViewController *homeDetailVC = self;
-    _backButtonBlock = ^(){
-        [homeDetailVC sendUISignal:homeDetailVC.CLOSE_CELL_DETAIL withObject:nil];
-    };
    
-    CommonHeaderView *commonHeaderView= [CommonHeaderView createHeaderView:self.view AndStyle:2 AndTitle:@"活动详细"];
-    [commonHeaderView setBackButtonBlock:_backButtonBlock];
+    CommonHeaderView *commonHeaderView= [CommonHeaderView createHeader:self.view WithTitle:@"活动详细" LeftButtonType:CommonHeaderBack RightButtonType:CommonHeaderNone  ];
+    [commonHeaderView setLeftButtonBlock:^(){
+        [homeDetailVC sendUISignal:homeDetailVC.CLOSE_CELL_DETAIL withObject:nil];
+    }];
+    
+    [commonHeaderView setRightButtonBlock:^(){
+       
+    }];
     _headerVC.parentBoard = self;
     _headerVC.view.alpha = 1.0f;
     _headerVC.view.hidden = NO;

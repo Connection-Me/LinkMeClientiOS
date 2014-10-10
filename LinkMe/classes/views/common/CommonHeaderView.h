@@ -8,16 +8,28 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^BACK_BUTTON_BLOCK)();
+typedef void(^LEFT_BUTTON_BLOCK)();
+typedef void(^RIGHT_BUTTON_BLOCK)();
 
 @interface CommonHeaderView : UIView
+typedef NS_ENUM(NSInteger, CommonHeaderButtonSytle) {
+    CommonHeaderBack,
+    CommonHeaderMenu,
+    CommonHeaderAdd,
+    CommonHeaderNone,
+};
 
-@property (nonatomic,strong)UILabel *label;
+@property (nonatomic,strong)UILabel *title;
 @property (nonatomic,strong)UIButton *leftButton;
 @property (nonatomic,strong)UIButton *rightButton;
-@property (nonatomic,strong) BACK_BUTTON_BLOCK backButtonBlock;
+@property (nonatomic,strong) LEFT_BUTTON_BLOCK leftButtonBlock;
+@property (nonatomic,strong) RIGHT_BUTTON_BLOCK rightButtonBlock;
 
--(id)initWithSytle:(NSInteger)style AndTitle:(NSString *)title;
-+(CommonHeaderView*)createHeaderView:(UIView*)superView AndStyle:(NSInteger)style AndTitle:(NSString *)title;
--(void)setBackButtonBlock:(BACK_BUTTON_BLOCK)backButtonBlock;
++(CommonHeaderView *)createHeader:(UIView *)superView WithTitle:(NSString *)titleText;
++(CommonHeaderView *)createHeader:(UIView *)superView WithTitle:(NSString *)titleText LeftButtonType:(CommonHeaderButtonSytle)leftBtnStyle RightButtonType:(CommonHeaderButtonSytle)rightBtnStyle;
+
+-(void)setLeftButtonBlock:(LEFT_BUTTON_BLOCK)BtnBlock;
+
+-(void)setRightButtonBlock:(RIGHT_BUTTON_BLOCK)BtnBlock;
+
 @end
