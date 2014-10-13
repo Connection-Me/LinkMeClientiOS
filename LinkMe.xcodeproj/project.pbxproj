@@ -471,6 +471,7 @@
 		D8C5780A19BFFCC1008476DE /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		D8C5780B19BFFCC1008476DE /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		D8C5780C19BFFCC1008476DE /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		D8D43A3819E8E22C00F67512 /* UIView_H_FollowListCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIView_H_FollowListCellView.h; sourceTree = "<group>"; };
 		D8D5511B19B4BD3F0020DB8B /* CommonHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonHeaderView.h; sourceTree = "<group>"; };
 		D8D5511C19B4BD3F0020DB8B /* CommonHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonHeaderView.m; sourceTree = "<group>"; };
 		E117D32B19B3882B00411512 /* LibModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibModel.h; sourceTree = "<group>"; };
@@ -1091,6 +1092,7 @@
 		D86F9E8D19C878A600F8F75D /* activityDetail */ = {
 			isa = PBXGroup;
 			children = (
+				D8D43A3619E8E08300F67512 /* followListCell */,
 				D86F9E8E19C878C000F8F75D /* HomeDetailViewController.h */,
 				D86F9E8F19C878C000F8F75D /* HomeDetailViewController.m */,
 				D86F9E9019C878C000F8F75D /* HomeDetailViewController.xib */,
@@ -1164,6 +1166,14 @@
 				D8C5780C19BFFCC1008476DE /* UIView+MJExtension.m */,
 			);
 			path = MJRefresh;
+			sourceTree = "<group>";
+		};
+		D8D43A3619E8E08300F67512 /* followListCell */ = {
+			isa = PBXGroup;
+			children = (
+				D8D43A3819E8E22C00F67512 /* UIView_H_FollowListCellView.h */,
+			);
+			name = followListCell;
 			sourceTree = "<group>";
 		};
 		D8F2AD8419A8EC44009554A5 /* views */ = {
