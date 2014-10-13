@@ -11,6 +11,12 @@
 #import "HeaderVC.h"
 #import "CommonHeaderView.h"
 #import "FooterVC.h"
+#import "DetailEvent.h"
+#import "TCMessageBox.h"
+#import "CoreService.h"
+#import "ImageDownloader.h"
+#import "UserModel.h"
+
 @interface HomeDetailViewController ()
 {
     HeaderVC                   *_headerVC;
@@ -32,6 +38,9 @@ ON_SIGNAL2(BeeUIBoard, signal)
     
     if([signal isKindOf:BeeUIBoard.CREATE_VIEWS])
     {
+        //load 数据
+      //  [self loadDetailData];
+        [self initializeObserveEvents];
         //设置 头导航栏
         [self setupHeader];
         [self setupAcitityView];
@@ -61,9 +70,22 @@ ON_SIGNAL2(BeeUIBoard, signal)
 	{
 	}
     
+}
 
+#pragma mark - 监听事件
+-(void)initializeObserveEvents
+{
+    [self observeNotification:DetailEvent.LOAD_DETAIL_ACTIVITY_START];
+    [self observeNotification:DetailEvent.LOAD_DETAIL_ACTIVITY_SUCCESS];
+    [self observeNotification:DetailEvent.LOAD_DETAIL_ACTIVITY_FAILED];
     
 }
+
+-(void)loadDetailData
+{
+    [[CoreService sharedInstance].detailRemoteService queryDetailActivityByActivityId:_sampleActivityModel.activityId];
+}
+
 #pragma mark header界面
 -(void)setupHeader
 {
@@ -160,5 +182,36 @@ ON_SIGNAL2(BeeUIBoard, signal)
     [self drawLineInInformationView];
     
 }
+
+-(void)setUI
+{
+    ImageDownloader * imageDownloader = [[ImageDownloader alloc]init];
+    for (int i=0; i<_detailActivityModel.approveList.count&&i<4; i++) {
+        UserModel *userModel = [_detailActivityModel.approveList objectAtIndex:i];
+        UIImageView  *userImageView = [[UIImageView alloc]initWithFrame:CGRectMake(i*45, 0, 42, 42)];
+        [imageDownloader startDownloadImage:userModel.profile andLoadImage:^(id data) {
+            userImageView.image = data;
+        }];
+    }
+}
+
+
+ON_NOTIFICATION3(DetailEvent, LOAD_DETAIL_ACTIVITY_START, notification)
+{
+    [TCMessageBox showMessage:@"Loading..." hideByTouch:NO withActivityIndicator:YES];
+}
+ON_NOTIFICATION3(DetailEvent, LOAD_DETAIL_ACTIVITY_SUCCESS, notification)
+{
+    [TCMessageBox hide];
+    _detailActivityModel= (ActivityModel*)notification.object;
+    [self setUI];
+}
+ON_NOTIFICATION3(DetailEvent, LOAD_DETAIL_ACTIVITY_FAILED, notification)
+{
+    [TCMessageBox hide];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"加载失败..." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+}
+
 
 @end

@@ -25,6 +25,7 @@
 @property NSInteger approveCount;
 @property NSInteger rejectCount;
 
+@property (nonatomic,strong) NSArray    *approveList;
 
 
 @end

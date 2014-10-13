@@ -25,7 +25,6 @@ DEF_SINGLETON(HomeRemoteServiceImpl)
 }
 -(void)queryHomeActivity
 {
-   
     BOOL isConnectAvailable = [self isConnectionAvailable];
     if (!isConnectAvailable)
     {
