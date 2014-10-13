@@ -143,6 +143,7 @@ ON_SIGNAL3(FooterVC, OPEN_VC, signal)
 ON_SIGNAL3(HomeVC, OPEN_CELL_DETAIL, signal)
 {
     HomeDetailViewController *detail = [HomeDetailViewController sharedInstance];
+    detail.sampleActivityModel = (ActivityModel*)signal.object;
     detail.parentBoard = self;
     [self.navigationController pushViewController:detail animated:YES];
     

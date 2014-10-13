@@ -24,7 +24,13 @@
             @"upperLimit",
             @"approveCount",
             @"rejectCount",
+            @"approveList",
             nil];
+}
+
+-(NSDictionary *)propertyClassMap
+{
+    return @{@"approveList":@"UserModel"};
 }
 
 @end

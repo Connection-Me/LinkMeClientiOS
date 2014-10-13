@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "IUserRemoteService.h"
 #import "IHomeRemoteService.h"
+#import "IDetailRemoteService.h"
 #import "Bee.h"
 
 @interface CoreService : NSObject
@@ -17,6 +18,7 @@ AS_SINGLETON(CoreService)
 
 @property(nonatomic,readonly) id<IUserRemoteService> userRemoteService;
 @property(nonatomic,readonly) id<IHomeRemoteService> homeRemoteService;
+@property(nonatomic,readonly) id<IDetailRemoteService> detailRemoteService;
 
 @end
 

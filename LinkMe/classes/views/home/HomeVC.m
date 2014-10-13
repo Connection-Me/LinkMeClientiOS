@@ -120,8 +120,8 @@ ON_SIGNAL2(BeeUIBoard, signal)
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     HomeCollectionVCCell *cell = (HomeCollectionVCCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"HomeCollectionVCCell" forIndexPath:indexPath];
-//    [cell updateCell:indexPath.row];
-    [cell updatecellByActivityModel:[activityList objectAtIndex:indexPath.row]];
+    [cell updateCell:indexPath.row];
+   // [cell updatecellByActivityModel:[activityList objectAtIndex:indexPath.row]];
 
     return cell;
 }
@@ -200,7 +200,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self sendUISignal:self.OPEN_CELL_DETAIL withObject:nil];
+    [self sendUISignal:self.OPEN_CELL_DETAIL withObject:[activityList objectAtIndex:indexPath.row]];
 }
 
 

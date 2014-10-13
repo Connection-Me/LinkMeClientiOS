@@ -10,4 +10,6 @@
 
 @protocol IDetailRemoteService <NSObject>
 
+-(void)queryDetailActivityByActivityId:(NSString*)activityId;
+
 @end
