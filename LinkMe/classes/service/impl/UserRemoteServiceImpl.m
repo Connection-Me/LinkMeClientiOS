@@ -11,6 +11,7 @@
 #import "NetWorkEvent.h"
 #import "CoreModel.h"
 #import "RequestMethod.h"
+#import "StaticVar.h"
 
 @implementation UserRemoteServiceImpl
 DEF_SINGLETON(UserRemoteServiceImpl)
@@ -34,20 +35,20 @@ DEF_SINGLETON(UserRemoteServiceImpl)
        FOREGROUND_BEGIN
        [self postNotification:LoginEvent.LOGIN withObject:nil];
        FOREGROUND_COMMIT
-        NSString *urlString = [[CoreModel sharedInstance].serverURL stringByAppendingString:@""];//拼接请求路径
+        NSString *urlString = [[CoreModel sharedInstance].serverURL stringByAppendingString:LOGIN_USER_URL];//拼接请求路径
         NSURL *url = [NSURL URLWithString:urlString];
         
         ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
         NSMutableDictionary * postParams = [[NSMutableDictionary alloc] init];
         //请求的json
         [postParams setObject:username forKey:@"userName"];
-        [postParams setObject:passWord forKey:@"passWord"];
-        [postParams setObject:c forKey:@"controller"];
-        [postParams setObject:methodName forKey:@"methodName"];
+        [postParams setObject:passWord forKey:@"userPass"];
+        [postParams setObject:c forKey:@"c"];
+        [postParams setObject:methodName forKey:@"m"];
         NSString * jsonString = [postParams JSONString];
         NSLog(@"the request jsonString == %@",jsonString);
         [request appendPostData:[jsonString dataUsingEncoding:NSUTF8StringEncoding]];
-        request.requestMethod = RequestMethod.POST;
+        request.requestMethod = RequestMethod.GET;
         __block ASIHTTPRequest * blockRequest = request;
         request.delegate = self;
         [request setCompletionBlock:^{
@@ -56,6 +57,8 @@ DEF_SINGLETON(UserRemoteServiceImpl)
             //responseString 是服务器返回的数据
             NSString * responseString = blockRequest.responseString;
             if (code == 200) {
+                
+                
                 FOREGROUND_BEGIN
                 [self postNotification:LoginEvent.LOGIN_SUCCESS];
                 FOREGROUND_COMMIT

@@ -16,7 +16,8 @@
 #import "CoreService.h"
 #import "ImageDownloader.h"
 #import "UserModel.h"
-
+#import "HTableViewCell.h"
+#import "TimeUtil.h"
 @interface HomeDetailViewController ()
 {
     HeaderVC                   *_headerVC;
@@ -43,8 +44,10 @@ ON_SIGNAL2(BeeUIBoard, signal)
         [self initializeObserveEvents];
         //设置 头导航栏
         [self setupHeader];
+//        [self drawLineInPage];
         [self setupAcitityView];
-        [self drawLineInPage];
+
+        [self.approveUserList setBackgroundColor:[UIColor clearColor]];
         
         
     }
@@ -145,7 +148,10 @@ ON_SIGNAL2(BeeUIBoard, signal)
     [activityHeader addSubview:timeDis];
     
     [_activityView addSubview:activityHeader];
+    
 }
+
+
 
 -(UIView *)drawViewLineX:(CGFloat)x andY:(CGFloat)y andWidth:(CGFloat)width andLength:(CGFloat)length{
     UIView *line = [[UIView alloc] initWithFrame:CGRectMake(x, y, width,length)];
@@ -212,6 +218,66 @@ ON_NOTIFICATION3(DetailEvent, LOAD_DETAIL_ACTIVITY_FAILED, notification)
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"加载失败..." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
 }
+
+
+#pragma mark - TableViewDelegate
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+     UIView *view = [self getTableViewCellWithDef:@"HTableViewCell" WithTableView:tableView];
+    HTableViewCell *cell = (HTableViewCell *)view;
+    
+    NSInteger index = indexPath.row;
+    [cell updateCell:[self.sampleActivityModel.approveList objectAtIndex:index]];
+    return cell;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectio{
+    return [self.sampleActivityModel.approveList count];
+    
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 70.0f; 
+}
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    
+    return 1;
+}
+
+-(UITableViewCell *)getTableViewCellWithDef:(NSString*)nibName WithTableView:(UITableView *)tableView {
+    
+    NSString *CustomCellIdentifier = nibName;
+    HTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CustomCellIdentifier];
+    //cell
+    if (cell == nil){
+        //类名
+        UINib *nib = [UINib nibWithNibName:CustomCellIdentifier bundle:nil];
+        [tableView registerNib:nib forCellReuseIdentifier:CustomCellIdentifier];
+        cell = [tableView dequeueReusableCellWithIdentifier:CustomCellIdentifier];
+    }
+    return cell;
+}
+
+#pragma mark - setDataInUserInformation
+
+-(void)insertDataToSampleActivityView{
+    if(self.sampleActivityModel == nil){
+        NSLog(@"activity is nil ");
+        return;
+    }
+    self.activityStartDateLabel.text = [TimeUtil stringFromDate:self.sampleActivityModel.openTime];
+    self.activityEndingDateLabel.text = [TimeUtil stringFromDate:self.sampleActivityModel.closeTime];
+    self.activityLessPeopleLabel.text = [NSString stringWithFormat:@"%d",self.sampleActivityModel.lowerLimit];
+    self.activityCompareCurrentyTime.text = [TimeUtil compareCurrentTime:[NSDate date]];
+    self.activityImageView.image = [UIImage imageNamed:self.sampleActivityModel.imageURL];
+}
+
+-(void)insertUserInfo{
+    //TODO sampleActivityModel add userInfo
+    
+}
+
+
+
 
 
 @end
