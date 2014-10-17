@@ -12,6 +12,6 @@
 
 
 
-#define LOGIN_USER_URL @"117.78.0.96/LinkMe/?"
+#define LOGIN_USER_URL @"117.78.0.96/LinkMe/?c=user&a=login"
 
 @end

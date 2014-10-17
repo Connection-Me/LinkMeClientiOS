@@ -20,6 +20,18 @@ DEF_SINGLETON(UserRemoteServiceImpl)
 {
     
 }
+-(void)loginMsgForFailed{
+    FOREGROUND_BEGIN
+    [self postNotification:LoginEvent.LOGIN_FAILED];
+    FOREGROUND_COMMIT
+}
+
+-(void)loginMsgForSuccess{
+    FOREGROUND_BEGIN
+    [self postNotification:LoginEvent.LOGIN_SUCCESS];
+    FOREGROUND_COMMIT
+}
+
 //登陆
 -(void)queryLoginByUsername:(NSString*)username andPassWord:(NSString*)passWord andController:(NSString*)c andMethodName:(NSString*)methodName
 {
@@ -43,39 +55,51 @@ DEF_SINGLETON(UserRemoteServiceImpl)
         //请求的json
         [postParams setObject:username forKey:@"userName"];
         [postParams setObject:passWord forKey:@"userPass"];
-        [postParams setObject:c forKey:@"c"];
-        [postParams setObject:methodName forKey:@"m"];
+//        [postParams setObject:c forKey:@"c"];
+//        [postParams setObject:methodName forKey:@"a"];
         NSString * jsonString = [postParams JSONString];
         NSLog(@"the request jsonString == %@",jsonString);
         [request appendPostData:[jsonString dataUsingEncoding:NSUTF8StringEncoding]];
-        request.requestMethod = RequestMethod.GET;
+   
+       
+        request.requestMethod = RequestMethod.POST ;
         __block ASIHTTPRequest * blockRequest = request;
         request.delegate = self;
         [request setCompletionBlock:^{
             //tips:use [request responseString] and [request responseData] to fetch the responseString/responseData
             NSInteger code = blockRequest.responseStatusCode;
             //responseString 是服务器返回的数据
-            NSString * responseString = blockRequest.responseString;
+           
             if (code == 200) {
+                NSString * responseString = blockRequest.responseString;
+                NSMutableDictionary * dic = [responseString objectFromJSONString];
+                NSLog(@"%@",[dic objectForKey:@"result_code"]);
+                if([[dic objectForKey:@"result_code"] longValue] == 10002){
+                    NSLog(@"logining is failed because the user didn't register");
+                    [self loginMsgForFailed];
+                }
+                else if([[dic objectForKey:@"result_code"] longValue] == 10001){
+                    NSLog(@"logining is failed because the password is wrong");
+                    [self loginMsgForFailed];
+                }else if([[dic objectForKey:@"result_code"] longValue] == 0){
+                    NSLog(@"success");
+                    [self loginMsgForSuccess];
+                }
                 
                 
-                FOREGROUND_BEGIN
-                [self postNotification:LoginEvent.LOGIN_SUCCESS];
-                FOREGROUND_COMMIT
+//                FOREGROUND_BEGIN
+//                [self postNotification:LoginEvent.LOGIN_SUCCESS];
+//                FOREGROUND_COMMIT
             }
             else
             {
-                FOREGROUND_BEGIN
-                [self postNotification:LoginEvent.LOGIN_FAILED];
-                FOREGROUND_COMMIT
+                [self loginMsgForFailed];
             }
             
         }];
         [request setFailedBlock:^{
             NSError *error = [blockRequest error];
-            FOREGROUND_BEGIN
-            [self postNotification:LoginEvent.LOGIN_FAILED];
-            FOREGROUND_COMMIT
+           [self loginMsgForFailed];
             NSLog(@"error = %@",error);
         }];
         [request setBytesSentBlock:^(unsigned long long size, unsigned long long total)

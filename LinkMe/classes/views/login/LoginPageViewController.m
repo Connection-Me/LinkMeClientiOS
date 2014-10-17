@@ -150,7 +150,7 @@ SUMMER_DEF_XIB(LoginPageViewController, YES, NO)
         [_loginPwdTextField resignFirstResponder];
         
         if(textField.returnKeyType == UIReturnKeyDone){
-            //TODO Login
+            //TODO Login  登录功能
             NSString *loginName = _loginNameTextField.text;
             NSString *loginPwd = _loginPwdTextField.text;
              [[CoreService sharedInstance].userRemoteService queryLoginByUsername:loginName andPassWord:loginPwd andController:CONTROLLER_NAME andMethodName:METHOD_NAME];
@@ -163,7 +163,7 @@ SUMMER_DEF_XIB(LoginPageViewController, YES, NO)
        [_registerPwdTextField resignFirstResponder];
         
         if(textField.returnKeyType == UIReturnKeyDone){
-            //TODO Register
+            //TODO Register  注册功能
             NSString *registerName = _registerNameTextField.text;
             NSString *registerPwd = _registerPwdTextField.text;
             [[CoreService sharedInstance].userRemoteService queryRegisterByUserName:registerName andPassWord:registerPwd andController:CONTROLLER_NAME andMethodName:METHOD_NAME];
