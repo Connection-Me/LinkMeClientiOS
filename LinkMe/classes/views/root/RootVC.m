@@ -85,6 +85,8 @@ ON_SIGNAL2(BeeUIBoard, signal)
     [self observeNotification:UserEvent.LOGIN];
     [self observeNotification:UserEvent.LOGIN_SUCCESS];
     [self observeNotification:UserEvent.LOGIN_FAILED];
+    [self observeNotification:UserEvent.LOGIN_FAILED_USER_NOT_EXISTED];
+    [self observeNotification:UserEvent.LOGIN_FAILED_PASS_ERROR];
     
     [self observeNotification:UserEvent.REGISTER];
     [self observeNotification:UserEvent.REGISTER_SUCCESS];
@@ -141,6 +143,20 @@ ON_NOTIFICATION3(UserEvent, LOGIN_FAILED, notification)
      [self testOpenScreen:@"main"];
 #endif
 }
+
+ON_NOTIFICATION3(UserEvent, LOGIN_FAILED_USER_NOT_EXISTED, notification)
+{
+    [TCMessageBox hide];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"用户不存在，请注册！" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+}
+ON_NOTIFICATION3(UserEvent, LOGIN_FAILED_PASS_ERROR, notification)
+{
+    [TCMessageBox hide];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"密码有误，请重新登录！" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+}
+
 
 ON_NOTIFICATION3(UserEvent, REGISTER, notification)
 {

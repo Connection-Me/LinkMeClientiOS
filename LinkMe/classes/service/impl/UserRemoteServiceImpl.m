@@ -20,17 +20,6 @@ DEF_SINGLETON(UserRemoteServiceImpl)
 {
     
 }
--(void)loginMsgForFailed{
-    FOREGROUND_BEGIN
-    [self postNotification:UserEvent.LOGIN_FAILED];
-    FOREGROUND_COMMIT
-}
-
--(void)loginMsgForSuccess{
-    FOREGROUND_BEGIN
-    [self postNotification:UserEvent.LOGIN_SUCCESS];
-    FOREGROUND_COMMIT
-}
 
 //登陆
 -(void)queryLoginByUsername:(NSString*)username andPassWord:(NSString*)passWord andController:(NSString*)c andMethodName:(NSString*)methodName
@@ -68,31 +57,33 @@ DEF_SINGLETON(UserRemoteServiceImpl)
             NSInteger code = blockRequest.responseStatusCode;
             //responseString 是服务器s返回的数据
             NSString * responseString = blockRequest.responseString;
+            NSMutableDictionary * dic = [responseString objectFromJSONString];
+            NSLog(@"%@",[dic objectForKey:@"result_code"]);
             if (code == 200) {
-                NSString * responseString = blockRequest.responseString;
-                NSMutableDictionary * dic = [responseString objectFromJSONString];
-                NSLog(@"%@",[dic objectForKey:@"result_code"]);
+                FOREGROUND_BEGIN
                 if([[dic objectForKey:@"result_code"] longValue] == 10002){
-                    NSLog(@"logining is failed because the user didn't register");
-                    [self loginMsgForFailed];
+                    [self postNotification:UserEvent.LOGIN_FAILED_USER_NOT_EXISTED];
                 }
                 else if([[dic objectForKey:@"result_code"] longValue] == 10001){
-                    NSLog(@"logining is failed because the password is wrong");
-                    [self loginMsgForFailed];
+                    [self postNotification:UserEvent.LOGIN_FAILED_PASS_ERROR];
                 }else if([[dic objectForKey:@"result_code"] longValue] == 0){
-                    NSLog(@"success");
-                    [self loginMsgForSuccess];
+                    [self postNotification:UserEvent.LOGIN_SUCCESS];
                 }
+                FOREGROUND_COMMIT
             }
             else
             {
-                [self loginMsgForFailed];
+                FOREGROUND_BEGIN
+                [self postNotification:UserEvent.LOGIN_FAILED];
+                FOREGROUND_COMMIT
             }
             
         }];
         [request setFailedBlock:^{
             NSError *error = [blockRequest error];
-           [self loginMsgForFailed];
+            FOREGROUND_BEGIN
+           [self postNotification:UserEvent.LOGIN_FAILED];
+            FOREGROUND_COMMIT
             NSLog(@"error = %@",error);
         }];
         [request setBytesSentBlock:^(unsigned long long size, unsigned long long total)
