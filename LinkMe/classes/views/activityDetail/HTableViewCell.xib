@@ -24,7 +24,9 @@
                         <rect key="frame" x="30" y="10" width="50" height="50"/>
                     </imageView>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="approveNameLabel" destination="sau-nF-PnJ" id="Gev-mn-HdW"/>
                 <outlet property="approveUserImage" destination="brR-nj-Zy1" id="3M1-y6-896"/>

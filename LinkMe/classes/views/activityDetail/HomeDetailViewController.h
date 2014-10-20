@@ -19,7 +19,7 @@ AS_SIGNAL(CLOSE_CELL_DETAIL)
 @property (weak, nonatomic) IBOutlet UIView *activityView;
 @property (weak, nonatomic) IBOutlet UIView *informationView;
 @property (weak, nonatomic) IBOutlet UITableView *approveUserList;
-@property (weak, nonatomic) IBOutlet UIView *founderImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *founderImageView;
 @property (weak, nonatomic) IBOutlet UILabel *founderNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *founderTime;
 @property (weak, nonatomic) IBOutlet UIImageView *activityImageView;

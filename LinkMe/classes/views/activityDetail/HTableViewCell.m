@@ -22,6 +22,11 @@
 
 -(void)updateCell:(ActivityModel *) sampleActivityModel{
     
+    if(sampleActivityModel == nil){
+        
+        return ;
+    }
+    
     self.approveNameLabel.text = @"Messi is approved";
     self.approveNameLabel.textColor = [UIColor whiteColor];
     self.approveUserImage.image = [UIImage imageNamed:@"user1.jpg"];

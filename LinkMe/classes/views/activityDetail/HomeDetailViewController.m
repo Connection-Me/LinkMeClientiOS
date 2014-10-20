@@ -47,7 +47,10 @@ ON_SIGNAL2(BeeUIBoard, signal)
 //        [self drawLineInPage];
         [self setupAcitityView];
 
-        [self.approveUserList setBackgroundColor:[UIColor clearColor]];
+        [self.approveUserList setBackgroundColor:[UIColor redColor]];
+        
+        [self insertDataFromSampleActivityView];
+        [self insertUserInfo];
         
         
     }
@@ -114,12 +117,12 @@ ON_SIGNAL2(BeeUIBoard, signal)
 
 
 -(void)setupAcitityView{
-    [_activityView removeAllSubviews];
+//    [_activityView removeAllSubviews];
     
     [_activityView setBackgroundColor:[UIColor colorWithRed:253/255.f green:253/255.f blue:253/255.f alpha:0.9]];
     
     //加圆角
-    _activityView.layer.cornerRadius = 10;
+//    _activityView.layer.cornerRadius = 10;
     //加阴影
     _activityView.layer.shadowColor = [UIColor blackColor].CGColor;
     _activityView.layer.shadowOffset = CGSizeMake(0, 0);
@@ -130,13 +133,13 @@ ON_SIGNAL2(BeeUIBoard, signal)
     UIView *activityHeader = [[UIView alloc] initWithFrame:CGRectMake(0, 0, _activityView.frame.size.width, 42)];
     
     
-    [activityHeader setBackgroundColor:[UIColor colorWithRed:24/255.f green:140/255.f blue:209/255.f alpha:0.9]];
+    [activityHeader setBackgroundColor:[UIColor colorWithRed:24/255.f green:140/255.f blue:209/255.f alpha:0.6]];
 
-    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:activityHeader.bounds byRoundingCorners:  UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii:CGSizeMake(10, 10)];
+//    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:activityHeader.bounds byRoundingCorners:  UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii:CGSizeMake(10, 10)];
     CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
     maskLayer.frame = activityHeader.bounds;
-    maskLayer.path = maskPath.CGPath;
-    activityHeader.layer.mask = maskLayer;
+//    maskLayer.path = maskPath.CGPath;
+//    activityHeader.layer.mask = maskLayer;
     
     //TODO roundAvatar
     
@@ -148,6 +151,9 @@ ON_SIGNAL2(BeeUIBoard, signal)
     [activityHeader addSubview:timeDis];
     
     [_activityView addSubview:activityHeader];
+    
+    UIImage *backgroundImage = [UIImage imageFromString:_sampleActivityModel.imageURL];
+    [_activityImageView setImage:backgroundImage];
     
 }
 
@@ -161,7 +167,6 @@ ON_SIGNAL2(BeeUIBoard, signal)
 
 
 -(void)drawLineInView:(UIView *)superView WithX:(CGFloat)X WithY:(CGFloat)Y {
-    
     
     UIView *line1 = [self drawViewLineX:X andY:Y andWidth:2 andLength:superView.frame.size.height];
     
@@ -223,6 +228,7 @@ ON_NOTIFICATION3(DetailEvent, LOAD_DETAIL_ACTIVITY_FAILED, notification)
 #pragma mark - TableViewDelegate
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView setBackgroundColor:[UIColor clearColor]];
      UIView *view = [self getTableViewCellWithDef:@"HTableViewCell" WithTableView:tableView];
     HTableViewCell *cell = (HTableViewCell *)view;
     
@@ -231,6 +237,9 @@ ON_NOTIFICATION3(DetailEvent, LOAD_DETAIL_ACTIVITY_FAILED, notification)
     return cell;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectio{
+#ifdef DEBUG
+    return 10;
+#endif
     return [self.sampleActivityModel.approveList count];
     
 }
@@ -259,20 +268,36 @@ ON_NOTIFICATION3(DetailEvent, LOAD_DETAIL_ACTIVITY_FAILED, notification)
 
 #pragma mark - setDataInUserInformation
 
--(void)insertDataToSampleActivityView{
+-(void)insertDataFromSampleActivityView{
     if(self.sampleActivityModel == nil){
         NSLog(@"activity is nil ");
         return;
     }
     self.activityStartDateLabel.text = [TimeUtil stringFromDate:self.sampleActivityModel.openTime];
+    [self.activityStartDateLabel bringSubviewToFront:self.activityView];
+    
     self.activityEndingDateLabel.text = [TimeUtil stringFromDate:self.sampleActivityModel.closeTime];
     self.activityLessPeopleLabel.text = [NSString stringWithFormat:@"%d",self.sampleActivityModel.lowerLimit];
     self.activityCompareCurrentyTime.text = [TimeUtil compareCurrentTime:[NSDate date]];
     self.activityImageView.image = [UIImage imageNamed:self.sampleActivityModel.imageURL];
+    
+#ifdef DEBUG
+    self.activityStartDateLabel.text = @"test";
+    self.activityEndingDateLabel.text = @"test";
+    self.activityLessPeopleLabel.text = @"test";
+    self.activityCompareCurrentyTime.text = @"test";
+    self.activityImageView.image = [UIImage imageNamed:@"pic5.jpg"];
+#endif
 }
 
 -(void)insertUserInfo{
     //TODO sampleActivityModel add userInfo
+#ifdef DEBUG
+    self.founderImageView.image = [UIImage imageNamed:@"user1.jpg"];
+    self.founderNameLabel.text = @"test";
+    self.founderTime.text =[TimeUtil stringFromDate:[NSDate date]];
+#endif
+    
     
 }
 
