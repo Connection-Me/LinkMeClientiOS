@@ -7,7 +7,7 @@
 //
 
 #import "UserRemoteServiceImpl.h"
-#import "LoginEvent.h"
+#import "UserEvent.h"
 #import "NetWorkEvent.h"
 #import "CoreModel.h"
 #import "RequestMethod.h"
@@ -22,13 +22,13 @@ DEF_SINGLETON(UserRemoteServiceImpl)
 }
 -(void)loginMsgForFailed{
     FOREGROUND_BEGIN
-    [self postNotification:LoginEvent.LOGIN_FAILED];
+    [self postNotification:UserEvent.LOGIN_FAILED];
     FOREGROUND_COMMIT
 }
 
 -(void)loginMsgForSuccess{
     FOREGROUND_BEGIN
-    [self postNotification:LoginEvent.LOGIN_SUCCESS];
+    [self postNotification:UserEvent.LOGIN_SUCCESS];
     FOREGROUND_COMMIT
 }
 
@@ -45,31 +45,29 @@ DEF_SINGLETON(UserRemoteServiceImpl)
     }else
    {
        FOREGROUND_BEGIN
-       [self postNotification:LoginEvent.LOGIN withObject:nil];
+       [self postNotification:UserEvent.LOGIN withObject:nil];
        FOREGROUND_COMMIT
-        NSString *urlString = [[CoreModel sharedInstance].serverURL stringByAppendingString:LOGIN_USER_URL];//拼接请求路径
+        NSString *urlString = [[CoreModel sharedInstance].serverURL stringByAppendingString:@""];
+       //拼接请求路径
         NSURL *url = [NSURL URLWithString:urlString];
         
-        ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-        NSMutableDictionary * postParams = [[NSMutableDictionary alloc] init];
+        ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+       request.showAccurateProgress = YES;
+       request.timeOutSeconds = 60.0;
+       [request setPostValue:username forKey:@"userName"];
+       [request setPostValue:passWord forKey:@"userPass"];
+       [request setPostValue:c forKey:@"c"];
+       [request setPostValue:methodName forKey:@"a"];
         //请求的json
-        [postParams setObject:username forKey:@"userName"];
-        [postParams setObject:passWord forKey:@"userPass"];
-//        [postParams setObject:c forKey:@"c"];
-//        [postParams setObject:methodName forKey:@"a"];
-        NSString * jsonString = [postParams JSONString];
-        NSLog(@"the request jsonString == %@",jsonString);
-        [request appendPostData:[jsonString dataUsingEncoding:NSUTF8StringEncoding]];
-   
-       
-        request.requestMethod = RequestMethod.POST ;
-        __block ASIHTTPRequest * blockRequest = request;
+        request.requestMethod = RequestMethod.POST;
+     //  [request addRequestHeader:@"Content-Type" value:@"application/json; charset=utf-8"];
+        __block ASIFormDataRequest * blockRequest = request;
         request.delegate = self;
         [request setCompletionBlock:^{
             //tips:use [request responseString] and [request responseData] to fetch the responseString/responseData
             NSInteger code = blockRequest.responseStatusCode;
-            //responseString 是服务器返回的数据
-           
+            //responseString 是服务器s返回的数据
+            NSString * responseString = blockRequest.responseString;
             if (code == 200) {
                 NSString * responseString = blockRequest.responseString;
                 NSMutableDictionary * dic = [responseString objectFromJSONString];
@@ -85,11 +83,6 @@ DEF_SINGLETON(UserRemoteServiceImpl)
                     NSLog(@"success");
                     [self loginMsgForSuccess];
                 }
-                
-                
-//                FOREGROUND_BEGIN
-//                [self postNotification:LoginEvent.LOGIN_SUCCESS];
-//                FOREGROUND_COMMIT
             }
             else
             {
@@ -127,7 +120,7 @@ DEF_SINGLETON(UserRemoteServiceImpl)
 -(void)queryRegisterByUserName:(NSString*)username andPassWord:(NSString*)passWord andController:(NSString*)c andMethodName:(NSString*)methodName {
     
     FOREGROUND_BEGIN
-    [self postNotification:LoginEvent.LOGIN withObject:nil];
+    [self postNotification:UserEvent.REGISTER withObject:nil];
     FOREGROUND_COMMIT
     BOOL isConnectAvailable = [self isConnectionAvailable];
     if (!isConnectAvailable)
@@ -139,33 +132,41 @@ DEF_SINGLETON(UserRemoteServiceImpl)
         NSString *urlString = [[CoreModel sharedInstance].serverURL stringByAppendingString:@""];//拼接请求路径
         NSURL *url = [NSURL URLWithString:urlString];
         
-        ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-        NSMutableDictionary * postParams = [[NSMutableDictionary alloc] init];
-        [postParams setObject:username forKey:@"userName"];
-        [postParams setObject:passWord forKey:@"passWord"];
-        [postParams setObject:c forKey:@"controller"];
-        [postParams setObject:methodName forKey:@"methodName"];
+        ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+       
+        request.showAccurateProgress = YES;
+        request.timeOutSeconds = 60.0;
+        [request setPostValue:username forKey:@"userName"];
+        [request setPostValue:passWord forKey:@"userPass"];
+        [request setPostValue:c forKey:@"c"];
+        [request setPostValue:methodName forKey:@"a"];
         //请求的json
-        NSString * jsonString = [postParams JSONString];
-        NSLog(@"the request jsonString == %@",jsonString);
-        [request appendPostData:[jsonString dataUsingEncoding:NSUTF8StringEncoding]];
         request.requestMethod = RequestMethod.POST;
-        __block ASIHTTPRequest * blockRequest = request;
+        __block ASIFormDataRequest * blockRequest = request;
         request.delegate = self;
         [request setCompletionBlock:^{
             //tips:use [request responseString] and [request responseData] to fetch the responseString/responseData
             NSInteger code = blockRequest.responseStatusCode;
             //responseString 是服务器返回的数据
             NSString * responseString = blockRequest.responseString;
+            NSMutableDictionary * dic = [responseString objectFromJSONString];
             if (code == 200) {
                 FOREGROUND_BEGIN
-                [self postNotification:LoginEvent.REGISTER_SUCCESS];
+                if ([[dic objectForKey:@"result_code"] longValue] == 10003) {
+                    [self postNotification: UserEvent.REGISTER_FAILED_INFO_ERROR];
+                }
+                else if([[dic objectForKey:@"result_code"] longValue] == 10004){
+                    [self postNotification: UserEvent.REGISTER_FAILED_EXISTED];
+                }
+                else if([[dic objectForKey:@"result_code"] longValue] == 0){
+                    [self postNotification:UserEvent.REGISTER_SUCCESS];
+                }
                 FOREGROUND_COMMIT
             }
             else
             {
                 FOREGROUND_BEGIN
-                [self postNotification:LoginEvent.REGISTER_FAILED];
+                [self postNotification:UserEvent.REGISTER_FAILED];
                 FOREGROUND_COMMIT
             }
             
@@ -173,7 +174,7 @@ DEF_SINGLETON(UserRemoteServiceImpl)
         [request setFailedBlock:^{
             NSError *error = [blockRequest error];
             FOREGROUND_BEGIN
-            [self postNotification:LoginEvent.REGISTER_FAILED];
+            [self postNotification:UserEvent.REGISTER_FAILED];
             FOREGROUND_COMMIT
             NSLog(@"error = %@",error);
         }];
@@ -193,12 +194,6 @@ DEF_SINGLETON(UserRemoteServiceImpl)
                 unsigned long long sentBytes = [blockRequest totalBytesSent];
                 progress = [NSNumber numberWithFloat: ((double)sentBytes)/ total];
             }
-            
-        }];
-        [request setCompletionBlock:^{
-           //TODO 接收服务端返回的json
-            
-            
             
         }];
         [request startAsynchronous];

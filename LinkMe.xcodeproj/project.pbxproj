@@ -400,7 +400,7 @@
 		E1E2C3DA19AC39CB004C3F57 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E2C3D819AC39CB004C3F57 /* LoginVC.xib */; };
 		E1E2C3DF19AC3A11004C3F57 /* RootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E2C3DD19AC3A11004C3F57 /* RootVC.m */; };
 		E1E2C3E019AC3A11004C3F57 /* RootVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E2C3DE19AC3A11004C3F57 /* RootVC.xib */; };
-		E1E2C3EA19AC6350004C3F57 /* LoginEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E2C3E919AC6350004C3F57 /* LoginEvent.m */; };
+		E1E2C3EA19AC6350004C3F57 /* UserEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E2C3E919AC6350004C3F57 /* UserEvent.m */; };
 		E1E2C3ED19AC7139004C3F57 /* CoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E2C3EC19AC7139004C3F57 /* CoreModel.m */; };
 		E1E2C3F019AC7311004C3F57 /* CoreService.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E2C3EF19AC7311004C3F57 /* CoreService.m */; };
 		E1E2C3F519AC74C5004C3F57 /* UserRemoteServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E2C3F419AC74C5004C3F57 /* UserRemoteServiceImpl.m */; };
@@ -1056,8 +1056,8 @@
 		E1E2C3DC19AC3A11004C3F57 /* RootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootVC.h; sourceTree = "<group>"; };
 		E1E2C3DD19AC3A11004C3F57 /* RootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootVC.m; sourceTree = "<group>"; };
 		E1E2C3DE19AC3A11004C3F57 /* RootVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootVC.xib; sourceTree = "<group>"; };
-		E1E2C3E819AC6350004C3F57 /* LoginEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginEvent.h; sourceTree = "<group>"; };
-		E1E2C3E919AC6350004C3F57 /* LoginEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginEvent.m; sourceTree = "<group>"; };
+		E1E2C3E819AC6350004C3F57 /* UserEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEvent.h; sourceTree = "<group>"; };
+		E1E2C3E919AC6350004C3F57 /* UserEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEvent.m; sourceTree = "<group>"; };
 		E1E2C3EB19AC7139004C3F57 /* CoreModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreModel.h; sourceTree = "<group>"; };
 		E1E2C3EC19AC7139004C3F57 /* CoreModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreModel.m; sourceTree = "<group>"; };
 		E1E2C3EE19AC7311004C3F57 /* CoreService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreService.h; path = ../CoreService.h; sourceTree = "<group>"; };
@@ -2480,8 +2480,8 @@
 		E1E2C3E519AC6315004C3F57 /* event */ = {
 			isa = PBXGroup;
 			children = (
-				E1E2C3E819AC6350004C3F57 /* LoginEvent.h */,
-				E1E2C3E919AC6350004C3F57 /* LoginEvent.m */,
+				E1E2C3E819AC6350004C3F57 /* UserEvent.h */,
+				E1E2C3E919AC6350004C3F57 /* UserEvent.m */,
 				E1F3503319AC8CF500317104 /* NetWorkEvent.h */,
 				E1F3503419AC8CF500317104 /* NetWorkEvent.m */,
 				E117D34119B4B93A00411512 /* HomeEvent.h */,
@@ -2943,7 +2943,7 @@
 				E1A5A72219C4B7DE004A8876 /* Bee_UIQuery.m in Sources */,
 				E1A5A78719C4B7DE004A8876 /* CXMLElement_ElementTreeExtensions.m in Sources */,
 				D87DF01C19ACE1C50010BEE9 /* CollapseClickArrow.m in Sources */,
-				E1E2C3EA19AC6350004C3F57 /* LoginEvent.m in Sources */,
+				E1E2C3EA19AC6350004C3F57 /* UserEvent.m in Sources */,
 				E1A5A74219C4B7DE004A8876 /* Bee_ActiveBuilder.m in Sources */,
 				E1A5A74119C4B7DE004A8876 /* NSObject+BeeUserDefaults.mm in Sources */,
 				E1A5A74B19C4B7DE004A8876 /* NSArray+BeeActiveRecord.m in Sources */,

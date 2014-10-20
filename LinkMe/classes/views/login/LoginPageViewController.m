@@ -166,7 +166,7 @@ SUMMER_DEF_XIB(LoginPageViewController, YES, NO)
             //TODO Register  注册功能
             NSString *registerName = _registerNameTextField.text;
             NSString *registerPwd = _registerPwdTextField.text;
-            [[CoreService sharedInstance].userRemoteService queryRegisterByUserName:registerName andPassWord:registerPwd andController:CONTROLLER_NAME andMethodName:METHOD_NAME];
+            [[CoreService sharedInstance].userRemoteService queryRegisterByUserName:registerName andPassWord:registerPwd andController:CONTROLLER_NAME andMethodName:REGISTER_METHOD_NAME];
         }
     }
     
@@ -180,9 +180,6 @@ SUMMER_DEF_XIB(LoginPageViewController, YES, NO)
         }
     }
 
-    
-   
-    
     return YES;
 }
 

@@ -53,7 +53,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
 
 -(IBAction)loginTouchUpInside:(id)sender
 {
-    [[CoreService sharedInstance].userRemoteService queryLoginByUsername:@"summer" andPassWord:@"123456" andController:@"user" andMethodName:@"login"];
+    [[CoreService sharedInstance].userRemoteService queryLoginByUsername:@"123" andPassWord:@"123" andController:@"user" andMethodName:@"login"];
 }
 
 -(IBAction)backTouchUpInside:(id)sender

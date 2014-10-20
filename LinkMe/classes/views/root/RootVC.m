@@ -9,7 +9,7 @@
 #import "RootVC.h"
 #import "summer_extend.h"
 #import "LoginVC.h"
-#import "LoginEvent.h"
+#import "UserEvent.h"
 #import "TCMessageBox.h"
 #import "LoginPageViewController.h"
 #import "HomeVC.h"
@@ -82,13 +82,15 @@ ON_SIGNAL2(BeeUIBoard, signal)
 #pragma mark - 监听事件
 -(void)initializeRouterObserveEvents
 {
-    [self observeNotification:LoginEvent.LOGIN];
-    [self observeNotification:LoginEvent.LOGIN_SUCCESS];
-    [self observeNotification:LoginEvent.LOGIN_FAILED];
+    [self observeNotification:UserEvent.LOGIN];
+    [self observeNotification:UserEvent.LOGIN_SUCCESS];
+    [self observeNotification:UserEvent.LOGIN_FAILED];
     
-    [self observeNotification:LoginEvent.REGISTER];
-    [self observeNotification:LoginEvent.REGISTER_SUCCESS];
-    [self observeNotification:LoginEvent.REGISTER_FAILED];
+    [self observeNotification:UserEvent.REGISTER];
+    [self observeNotification:UserEvent.REGISTER_SUCCESS];
+    [self observeNotification:UserEvent.REGISTER_FAILED];
+    [self observeNotification:UserEvent.REGISTER_FAILED_EXISTED];
+    [self observeNotification:UserEvent.REGISTER_FAILED_INFO_ERROR];
     
     [self observeNotification:NetWorkEvent.NEWWORK_UNREACHABLE];
 }
@@ -117,11 +119,11 @@ ON_SIGNAL2(BeeUIBoard, signal)
 }
 
 #pragma mark - Notification
-ON_NOTIFICATION3(LoginEvent, LOGIN, notification)
+ON_NOTIFICATION3(UserEvent, LOGIN, notification)
 {
     [TCMessageBox showMessage:@"Logining..." hideByTouch:NO withActivityIndicator:YES];
 }
-ON_NOTIFICATION3(LoginEvent, LOGIN_SUCCESS, notification)
+ON_NOTIFICATION3(UserEvent, LOGIN_SUCCESS, notification)
 {
     [TCMessageBox hide];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"登录成功" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -129,7 +131,7 @@ ON_NOTIFICATION3(LoginEvent, LOGIN_SUCCESS, notification)
     [self testOpenScreen:@"main"];
     
 }
-ON_NOTIFICATION3(LoginEvent, LOGIN_FAILED, notification)
+ON_NOTIFICATION3(UserEvent, LOGIN_FAILED, notification)
 {
     [TCMessageBox hide];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"登录失败" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -140,10 +142,15 @@ ON_NOTIFICATION3(LoginEvent, LOGIN_FAILED, notification)
 #endif
 }
 
-ON_NOTIFICATION3(LoginEvent, REGISTER_SUCCESS, notification)
+ON_NOTIFICATION3(UserEvent, REGISTER, notification)
+{
+    [TCMessageBox showMessage:@"registering..." hideByTouch:NO withActivityIndicator:YES];
+}
+
+ON_NOTIFICATION3(UserEvent, REGISTER_SUCCESS, notification)
 {
     [TCMessageBox hide];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"注册失败" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"注册成功" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
     
     //请求服务器返回的json
@@ -151,10 +158,24 @@ ON_NOTIFICATION3(LoginEvent, REGISTER_SUCCESS, notification)
     //TODO 处理返回json
 }
 
-ON_NOTIFICATION3(LoginEvent, REGISTER_FAILED, notification)
+ON_NOTIFICATION3(UserEvent, REGISTER_FAILED, notification)
 {
     [TCMessageBox hide];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"注册失败" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"服务器异常，请稍后再试。" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+}
+
+ON_NOTIFICATION3(UserEvent, REGISTER_FAILED_EXISTED, notification)
+{
+    [TCMessageBox hide];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"用户名已被注册！" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+}
+
+ON_NOTIFICATION3(UserEvent, REGISTER_FAILED_INFO_ERROR, notification)
+{
+    [TCMessageBox hide];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"注册信息有误！" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
 }
 

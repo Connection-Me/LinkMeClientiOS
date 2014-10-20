@@ -8,7 +8,7 @@
 
 #import "CoreModel.h"
 
-static NSString *url = @"http://";//根路径
+static NSString *url = @"http://117.78.0.96/LinkMe/";//根路径
 
 @implementation CoreModel
 
