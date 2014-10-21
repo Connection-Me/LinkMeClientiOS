@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D84A4F5C19F6954A004E83A0 /* AddActivityCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D84A4F5A19F6954A004E83A0 /* AddActivityCollectionViewController.m */; };
+		D84A4F5D19F6954A004E83A0 /* AddActivityCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D84A4F5A19F6954A004E83A0 /* AddActivityCollectionViewController.m */; };
+		D84A4F5E19F6954A004E83A0 /* AddActivityCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D84A4F5B19F6954A004E83A0 /* AddActivityCollectionViewController.xib */; };
+		D84A4F5F19F6954A004E83A0 /* AddActivityCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D84A4F5B19F6954A004E83A0 /* AddActivityCollectionViewController.xib */; };
 		D85D76AC19E585DD00B2A9B9 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D85D76AA19E585DD00B2A9B9 /* back@2x.png */; };
 		D85D76AD19E585DD00B2A9B9 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D85D76AA19E585DD00B2A9B9 /* back@2x.png */; };
 		D85D76AE19E585DD00B2A9B9 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = D85D76AB19E585DD00B2A9B9 /* back.png */; };
@@ -422,6 +426,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D84A4F5919F6954A004E83A0 /* AddActivityCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddActivityCollectionViewController.h; sourceTree = "<group>"; };
+		D84A4F5A19F6954A004E83A0 /* AddActivityCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddActivityCollectionViewController.m; sourceTree = "<group>"; };
+		D84A4F5B19F6954A004E83A0 /* AddActivityCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddActivityCollectionViewController.xib; sourceTree = "<group>"; };
 		D85D76AA19E585DD00B2A9B9 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
 		D85D76AB19E585DD00B2A9B9 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		D85DE5B319B3604C00A906E7 /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
@@ -1144,6 +1151,9 @@
 				D87D710919C72FAF00C313FD /* AddActivityViewController.h */,
 				D87D710A19C72FAF00C313FD /* AddActivityViewController.m */,
 				D87D710B19C72FAF00C313FD /* AddActivityViewController.xib */,
+				D84A4F5919F6954A004E83A0 /* AddActivityCollectionViewController.h */,
+				D84A4F5A19F6954A004E83A0 /* AddActivityCollectionViewController.m */,
+				D84A4F5B19F6954A004E83A0 /* AddActivityCollectionViewController.xib */,
 			);
 			name = addActivies;
 			path = LinkMe/classes/views/addActivies;
@@ -2675,6 +2685,7 @@
 				E11A0D3219C22404000C6E02 /* MainVC.xib in Resources */,
 				D8C3F69519B617AD000697A3 /* add@2x.png in Resources */,
 				D85DE5BF19B360A200A906E7 /* HomeCollectionVCCell.xib in Resources */,
+				D84A4F5E19F6954A004E83A0 /* AddActivityCollectionViewController.xib in Resources */,
 				D86791AD19B42B9200630891 /* pic4.jpg in Resources */,
 				E17AC6DD19A7F0E0008CF3FC /* right_arrow@2x.png in Resources */,
 				D897332619B5B0CC00133321 /* star@2x.png in Resources */,
@@ -2687,6 +2698,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D84A4F5F19F6954A004E83A0 /* AddActivityCollectionViewController.xib in Resources */,
 				D8A54E8719EBCA380029858F /* user1.jpg in Resources */,
 				D8C3F68519B607FB000697A3 /* join@2x.png in Resources */,
 				D897332119B5B0CC00133321 /* profile.png in Resources */,
@@ -2886,6 +2898,7 @@
 				E1A5A72F19C4B7DE004A8876 /* UIView+BeeUITemplate.m in Sources */,
 				E1A5A76219C4B7DE004A8876 /* NSObject+BeeProperty.mm in Sources */,
 				E1A5A6D319C4B7DE004A8876 /* Bee_UIAnimationBounce.m in Sources */,
+				D84A4F5C19F6954A004E83A0 /* AddActivityCollectionViewController.m in Sources */,
 				E1A5A71119C4B7DE004A8876 /* Bee_UIZoomView.m in Sources */,
 				E1A5A6CF19C4B7DE004A8876 /* UITextView+BeeUIStyle.m in Sources */,
 				E1A5A77519C4B7DE004A8876 /* ASIHTTPRequest.m in Sources */,
@@ -3048,6 +3061,7 @@
 				D87DF01D19ACE1C50010BEE9 /* CollapseClickArrow.m in Sources */,
 				D897331519B5AB0300133321 /* RNFrostedSidebar.m in Sources */,
 				D8A6AC1819F5F6AF00B41D58 /* DetailRemoteServiceImpl.m in Sources */,
+				D84A4F5D19F6954A004E83A0 /* AddActivityCollectionViewController.m in Sources */,
 				D8A54E8219EB82320029858F /* HTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

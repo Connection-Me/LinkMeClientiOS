@@ -13,6 +13,6 @@
 
 @interface HeaderVC : BeeUIBoard<RNFrostedSidebarDelegate>
 AS_SINGLETON(HeaderVC)
-
+AS_SIGNAL(ADD_VC)
 @property (strong,nonatomic) IBOutlet CommonHeaderView *headerView;
 @end

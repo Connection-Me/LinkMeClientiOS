@@ -8,7 +8,6 @@
 
 #import "HeaderVC.h"
 #import "summer_extend.h"
-
 @interface HeaderVC ()
 {
     
@@ -18,6 +17,7 @@
 
 @implementation HeaderVC
 DEF_SINGLETON(HeaderVC)
+DEF_SIGNAL(ADD_VC)
 SUMMER_DEF_XIB(HeaderVC, YES, NO);
 ON_SIGNAL2(BeeUIBoard, signal)
 {
@@ -56,10 +56,13 @@ ON_SIGNAL2(BeeUIBoard, signal)
     
     
     [self.headerView.leftButton addTarget:self action:@selector(onBurger:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.headerView.rightButton addTarget:self action:@selector(clickAdd:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 #pragma mark - click button
 - (IBAction)onBurger:(id)sender {
+    NSLog(@"click Menu button");
     NSArray *images = @[
                         [UIImage imageNamed:@"globe"],
                         [UIImage imageNamed:@"profile"],
@@ -78,6 +81,18 @@ ON_SIGNAL2(BeeUIBoard, signal)
     //    callout.showFromRight = YES;
     [callout show];
 }
+- (IBAction)clickAdd:(id)sender {
+    NSLog(@"click ADD button");
+    [self sendUISignal:self.ADD_VC withObject:nil];
+
+}
+#pragma mark - DELEGATE
+-(void)sidebar:(RNFrostedSidebar *)sidebar didTapItemAtIndex:(NSUInteger)index{
+    if(index == 0){
+            }
+    
+}
+
 
 
 @end
