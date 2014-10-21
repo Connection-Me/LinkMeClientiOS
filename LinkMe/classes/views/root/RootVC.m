@@ -128,8 +128,8 @@ ON_NOTIFICATION3(UserEvent, LOGIN, notification)
 ON_NOTIFICATION3(UserEvent, LOGIN_SUCCESS, notification)
 {
     [TCMessageBox hide];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"登录成功" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alertView show];
+//    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"登录成功" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//    [alertView show];
     [self testOpenScreen:@"main"];
     
 }

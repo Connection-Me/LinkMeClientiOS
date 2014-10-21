@@ -9,7 +9,6 @@
 #import "UserRemoteServiceImpl.h"
 #import "UserEvent.h"
 #import "NetWorkEvent.h"
-#import "CoreModel.h"
 #import "RequestMethod.h"
 #import "StaticVar.h"
 
@@ -22,6 +21,9 @@ DEF_SINGLETON(UserRemoteServiceImpl)
 }
 
 //登陆
+#define LOGIN_PASS 0
+#define LOGIN_UNREGISTER 10002
+#define LOGIN_WRONG_PASSWORD 10001
 -(void)queryLoginByUsername:(NSString*)username andPassWord:(NSString*)passWord andController:(NSString*)c andMethodName:(NSString*)methodName
 {
     
@@ -61,13 +63,19 @@ DEF_SINGLETON(UserRemoteServiceImpl)
             NSLog(@"%@",[dic objectForKey:@"result_code"]);
             if (code == 200) {
                 FOREGROUND_BEGIN
-                if([[dic objectForKey:@"result_code"] longValue] == 10002){
+                
+                if([[dic objectForKey:@"result_code"] longValue] == LOGIN_UNREGISTER){
                     [self postNotification:UserEvent.LOGIN_FAILED_USER_NOT_EXISTED];
                 }
-                else if([[dic objectForKey:@"result_code"] longValue] == 10001){
+                else if([[dic objectForKey:@"result_code"] longValue] == LOGIN_WRONG_PASSWORD){
                     [self postNotification:UserEvent.LOGIN_FAILED_PASS_ERROR];
-                }else if([[dic objectForKey:@"result_code"] longValue] == 0){
+                }else if([[dic objectForKey:@"result_code"] longValue] == LOGIN_PASS){
+                    
+                    [self setTokenToModel:dic];
                     [self postNotification:UserEvent.LOGIN_SUCCESS];
+                    
+                    
+                    
                 }
                 FOREGROUND_COMMIT
             }
@@ -144,12 +152,15 @@ DEF_SINGLETON(UserRemoteServiceImpl)
             if (code == 200) {
                 FOREGROUND_BEGIN
                 if ([[dic objectForKey:@"result_code"] longValue] == 10003) {
+                    
                     [self postNotification: UserEvent.REGISTER_FAILED_INFO_ERROR];
                 }
                 else if([[dic objectForKey:@"result_code"] longValue] == 10004){
+                    
                     [self postNotification: UserEvent.REGISTER_FAILED_EXISTED];
                 }
                 else if([[dic objectForKey:@"result_code"] longValue] == 0){
+            
                     [self postNotification:UserEvent.REGISTER_SUCCESS];
                 }
                 FOREGROUND_COMMIT
@@ -192,6 +203,19 @@ DEF_SINGLETON(UserRemoteServiceImpl)
     
     
     
+}
+
+-(void)setTokenToModel:(NSDictionary *)dic{
+    
+    
+    if([dic objectForKey:@"data"]==nil){
+        NSLog(@"the dic has not the data key");
+        return ;
+    }
+    NSDictionary *data = [[dic objectForKey:@"data"] objectFromJSONString];
+    //存储token
+    CoreModel *coreModel = [CoreModel sharedInstance];
+    [coreModel setToken:[data objectForKey:@"session_id"]];
 }
 
 @end

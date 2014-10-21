@@ -142,8 +142,6 @@ SUMMER_DEF_XIB(LoginPageViewController, YES, NO)
 #define TAG_REGISTER_PWD 20002
 #define TAG_REFIND_NAME 30001
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
-   
-    
     if(textField.tag == TAG_LOGIN_NAME){
         [_loginPwdTextField becomeFirstResponder];
     }else if(textField.tag == TAG_LOGIN_PWD){
@@ -153,7 +151,7 @@ SUMMER_DEF_XIB(LoginPageViewController, YES, NO)
             //TODO Login  登录功能
             NSString *loginName = _loginNameTextField.text;
             NSString *loginPwd = _loginPwdTextField.text;
-             [[CoreService sharedInstance].userRemoteService queryLoginByUsername:loginName andPassWord:loginPwd andController:CONTROLLER_NAME andMethodName:METHOD_NAME];
+            [self loginEventUserName:loginName pwd:loginPwd];
         }
     }
     
@@ -166,10 +164,9 @@ SUMMER_DEF_XIB(LoginPageViewController, YES, NO)
             //TODO Register  注册功能
             NSString *registerName = _registerNameTextField.text;
             NSString *registerPwd = _registerPwdTextField.text;
-            [[CoreService sharedInstance].userRemoteService queryRegisterByUserName:registerName andPassWord:registerPwd andController:CONTROLLER_NAME andMethodName:REGISTER_METHOD_NAME];
+            [self registerEventUserName:registerName pwd:registerPwd];
         }
     }
-    
     if(textField.tag == TAG_REGISTER_NAME){
 //        [_registerPwdTextField becomeFirstResponder];
     }else{
@@ -179,11 +176,25 @@ SUMMER_DEF_XIB(LoginPageViewController, YES, NO)
             //TODO Refind
         }
     }
-
     return YES;
 }
 
--(void)setTextFieldStyle{
+-(void)assembleRegisterText{
+    //注册text
+    self.registerNameTextField.layer.borderWidth = 1.0;
+    self.loginNameTextField.layer.borderColor = [[UIColor blackColor] CGColor];
+    [self.registerNameTextField.layer setCornerRadius:5];
+    [self.registerNameTextField setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
+    
+    //注册密码 text
+    self.registerPwdTextField.layer.borderWidth = 1.0;
+    self.registerPwdTextField.layer.borderColor = [[UIColor blackColor] CGColor];
+    [self.registerPwdTextField.layer setCornerRadius:5];
+    [self.registerPwdTextField setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
+}
+
+#pragma mark - 装配页面组件
+-(void)assembleLoginText{
     //登陆text
     self.loginNameTextField.layer.borderWidth = 1.0;
     self.loginNameTextField.layer.borderColor = [[UIColor blackColor] CGColor];
@@ -194,27 +205,38 @@ SUMMER_DEF_XIB(LoginPageViewController, YES, NO)
     self.loginPwdTextField.layer.borderColor = [[UIColor blackColor] CGColor];
     [self.loginPwdTextField.layer setCornerRadius:5];
     [self.loginPwdTextField setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
-    
-    //注册text
-    self.registerNameTextField.layer.borderWidth = 1.0;
-    self.loginNameTextField.layer.borderColor = [[UIColor blackColor] CGColor];
-    [self.registerNameTextField.layer setCornerRadius:5];
-    [self.registerNameTextField setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
-    //注册密码 text
-    self.registerPwdTextField.layer.borderWidth = 1.0;
-    self.registerPwdTextField.layer.borderColor = [[UIColor blackColor] CGColor];
-    [self.registerPwdTextField.layer setCornerRadius:5];
-    [self.registerPwdTextField setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
-    
+}
+
+-(void)assembleRefindText{
     self.refindNameTextField.layer.borderWidth = 1.0;
     self.refindNameTextField.layer.borderColor = [[UIColor blackColor] CGColor];
     [self.refindNameTextField.layer setCornerRadius:5];
     [self.refindNameTextField setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
+}
 
+-(void)setTextFieldStyle{
+    [self assembleLoginText];
+    [self assembleRefindText];
+    [self assembleRegisterText];
+}
+
+
+#pragma mark - 页面事件
+-(void)loginEventUserName:(NSString *)name pwd:(NSString *)pwd{
+    [[CoreService sharedInstance].userRemoteService queryLoginByUsername:name andPassWord:pwd andController:CONTROLLER_NAME andMethodName:METHOD_NAME];
+}
+-(void)registerEventUserName:(NSString *)name pwd:(NSString *)pwd{
+    [[CoreService sharedInstance].userRemoteService queryRegisterByUserName:name andPassWord:pwd andController:CONTROLLER_NAME andMethodName:REGISTER_METHOD_NAME];
+}
+-(void)refindListeningUserName:(NSString *)name{
+    //TODO to do refind service
     
 }
 
 
-
-
+- (IBAction)clickRegisterBtn:(id)sender {
+    NSString *registerName = _registerNameTextField.text;
+    NSString *registerPwd = _registerPwdTextField.text;
+    [self registerEventUserName:registerName pwd:registerPwd];
+}
 @end

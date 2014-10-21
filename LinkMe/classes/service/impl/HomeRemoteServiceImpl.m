@@ -10,7 +10,6 @@
 #import "NetWorkEvent.h"
 #import "RequestMethod.h"
 #import "HomeEvent.h"
-#import "CoreModel.h"
 #import "ActivityModel.h"
 #import "CoreDao.h"
 

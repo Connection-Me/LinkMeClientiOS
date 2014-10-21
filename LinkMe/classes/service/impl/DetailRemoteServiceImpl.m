@@ -10,7 +10,6 @@
 #import "DetailEvent.h"
 #import "NetWorkEvent.h"
 #import "RequestMethod.h"
-#import "CoreModel.h"
 #import "ActivityModel.h"
 
 #define TEST_URL @"http://love-petpet.u.qiniudn.com/linkMetest5.json"

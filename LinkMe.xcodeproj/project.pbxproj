@@ -73,6 +73,7 @@
 		D8A54E8719EBCA380029858F /* user1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8A54E8519EBCA380029858F /* user1.jpg */; };
 		D8A54E8919EBCB8A0029858F /* user2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8A54E8819EBCB8A0029858F /* user2.jpg */; };
 		D8A54E8A19EBCB8A0029858F /* user2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8A54E8819EBCB8A0029858F /* user2.jpg */; };
+		D8A6AC1819F5F6AF00B41D58 /* DetailRemoteServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E165888319E92589002ABFFE /* DetailRemoteServiceImpl.m */; };
 		D8AF2EAC19E6858700BDCDF8 /* HeaderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AF2EAA19E6858700BDCDF8 /* HeaderVC.m */; };
 		D8AF2EAD19E6858700BDCDF8 /* HeaderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AF2EAA19E6858700BDCDF8 /* HeaderVC.m */; };
 		D8AF2EAE19E6858700BDCDF8 /* HeaderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8AF2EAB19E6858700BDCDF8 /* HeaderVC.xib */; };
@@ -3046,6 +3047,7 @@
 				D888BAD919ED17B000FEB873 /* TimeUtil.m in Sources */,
 				D87DF01D19ACE1C50010BEE9 /* CollapseClickArrow.m in Sources */,
 				D897331519B5AB0300133321 /* RNFrostedSidebar.m in Sources */,
+				D8A6AC1819F5F6AF00B41D58 /* DetailRemoteServiceImpl.m in Sources */,
 				D8A54E8219EB82320029858F /* HTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

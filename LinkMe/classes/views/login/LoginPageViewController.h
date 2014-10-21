@@ -31,5 +31,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *refindNameTextField;
 @property (weak, nonatomic) IBOutlet UIButton *registerBtn;
 
+- (IBAction)clickRegisterBtn:(id)sender;
 
 @end

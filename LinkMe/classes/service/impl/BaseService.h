@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Bee.h"
+#import "CoreModel.h"
 
 typedef void (^SuccessFunction)(id data);
 typedef void (^FailFunction)(id data);
