@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
@@ -23,56 +24,84 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" id="LpN-jB-KDD" userLabel="view">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" red="0.32156862745098036" green="0.30588235294117649" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
-                </view>
-                <view tag="1" contentMode="scaleToFill" id="rJw-1n-08M" userLabel="name" colorLabel="IBBuiltInLabel-Orange">
-                    <rect key="frame" x="0.0" y="120" width="320" height="80"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" red="0.32156862745098036" green="0.30588235294117649" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
-                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="K4N-oI-N7I">
+                            <rect key="frame" x="282" y="35" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="确定">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ew6-ml-ZnM">
+                            <rect key="frame" x="0.0" y="35" width="46" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0ic-Ux-rsy">
+                            <rect key="frame" x="54" y="35" width="220" height="68"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="addActivityPic.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="2" contentMode="scaleToFill" id="9rB-Ns-hyu" userLabel="openTime">
-                    <rect key="frame" x="0.0" y="199" width="160" height="80"/>
+                    <rect key="frame" x="5" y="170" width="307" height="40"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" red="0.32156862745098036" green="0.30588235294117649" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view tag="3" contentMode="scaleToFill" id="Fhr-9z-yOy" userLabel="endingTime">
-                    <rect key="frame" x="160" y="199" width="160" height="80"/>
+                    <rect key="frame" x="5" y="210" width="307" height="40"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" red="0.32156862745098036" green="0.30588235294117649" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view tag="4" contentMode="scaleToFill" id="xi0-19-CKH" userLabel="limitCount">
-                    <rect key="frame" x="0.0" y="279" width="160" height="80"/>
+                    <rect key="frame" x="5" y="261" width="307" height="40"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" red="0.32156862745098036" green="0.30588235294117649" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view tag="5" contentMode="scaleToFill" id="nxf-w2-UBF" userLabel="downCount">
-                    <rect key="frame" x="160" y="279" width="160" height="80"/>
+                    <rect key="frame" x="5" y="301" width="307" height="40"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" red="0.32156862745098036" green="0.30588235294117649" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view tag="6" contentMode="scaleToFill" id="kmN-VM-nIF" userLabel="limitCount">
-                    <rect key="frame" x="0.0" y="359" width="160" height="80"/>
+                    <rect key="frame" x="5" y="357" width="307" height="37"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" red="0.32156862745098036" green="0.30588235294117649" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view tag="8" contentMode="scaleToFill" id="sQf-FF-ckN" userLabel="description">
-                    <rect key="frame" x="0.0" y="438" width="320" height="159"/>
+                    <rect key="frame" x="5" y="444" width="307" height="116"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" red="0.32156862745098036" green="0.30588235294117649" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view tag="7" contentMode="scaleToFill" id="2do-ag-aD2" userLabel="downCount">
-                    <rect key="frame" x="160" y="359" width="160" height="80"/>
+                    <rect key="frame" x="5" y="394" width="307" height="37"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" red="0.32156862745098036" green="0.30588235294117649" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view tag="1" contentMode="scaleToFill" id="rJw-1n-08M" userLabel="name" colorLabel="IBBuiltInLabel-Orange">
+                    <rect key="frame" x="5" y="119" width="310" height="40"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.32156862745098036" green="0.30588235294117649" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
             <point key="canvasLocation" x="139" y="154"/>
         </view>
     </objects>
+    <resources>
+        <image name="addActivityPic.png" width="32" height="32"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

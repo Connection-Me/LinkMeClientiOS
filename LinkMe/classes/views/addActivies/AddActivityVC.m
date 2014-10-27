@@ -27,7 +27,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
     {
         titleName  = @[@"",@"活动名字",@"活动开始日期",@"活动结束日期",@"上限人数",@"下限人数",@"开始报名时间",@"截止报名时间",@"活动简介"];
         
-        [self setAllViewBorader];
+//        [self setAllViewBorader];
         [self setAllViewTitle];
         
         
@@ -101,14 +101,18 @@ ON_SIGNAL2(BeeUIBoard, signal)
     if(view == nil){
         return ;
     }
-    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, 200, 20)];
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(10, (40-15)/2, 100, 20)];
     [title setText:titleText];
     [title setTextColor:[UIColor whiteColor]];
+    [title setFont:[UIFont fontWithName:@"Avenir-Heavy" size:15]];
     [view addSubview:title];
     
-    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(10, view.frame.size.height-50, 200, 50)];
+    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(title.frame.origin.x+title.frame.size.width+10, title.frame.origin.y+2.5, view.frame.size.width-title.frame.size.width, 20)];
     [textField setTextColor:[UIColor whiteColor]];
-    [textField setPlaceholder:titleText];
+//    textField.borderStyle=UITextBorderStyleRoundedRect;
+    textField.clearButtonMode=UITextFieldViewModeNever;
+//    [textField setPlaceholder:titleText];
+//    [textField setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
     [view addSubview:textField];
 }
 
