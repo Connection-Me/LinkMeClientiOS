@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddActivityVC">
+            <connections>
+                <outlet property="approveTime" destination="kmN-VM-nIF" id="5Tl-kd-zHX"/>
+                <outlet property="closeTime" destination="2do-ag-aD2" id="u2K-rP-r5I"/>
+                <outlet property="descView" destination="sQf-FF-ckN" id="egQ-Ym-8lm"/>
+                <outlet property="downCountView" destination="nxf-w2-UBF" id="NNU-wr-4Ab"/>
+                <outlet property="endingTimeView" destination="Fhr-9z-yOy" id="KlS-r5-Y3m"/>
+                <outlet property="limitCount" destination="xi0-19-CKH" id="zlL-RB-UdY"/>
+                <outlet property="nameView" destination="rJw-1n-08M" id="On6-Vg-cue"/>
+                <outlet property="openTimeView" destination="9rB-Ns-hyu" id="nr8-kp-azJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" id="LpN-jB-KDD" userLabel="view">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="0.32156862745098036" green="0.30588235294117649" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                </view>
+                <view tag="1" contentMode="scaleToFill" id="rJw-1n-08M" userLabel="name" colorLabel="IBBuiltInLabel-Orange">
+                    <rect key="frame" x="0.0" y="120" width="320" height="80"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="0.32156862745098036" green="0.30588235294117649" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view tag="2" contentMode="scaleToFill" id="9rB-Ns-hyu" userLabel="openTime">
+                    <rect key="frame" x="0.0" y="199" width="160" height="80"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="0.32156862745098036" green="0.30588235294117649" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                </view>
+                <view tag="3" contentMode="scaleToFill" id="Fhr-9z-yOy" userLabel="endingTime">
+                    <rect key="frame" x="160" y="199" width="160" height="80"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="0.32156862745098036" green="0.30588235294117649" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                </view>
+                <view tag="4" contentMode="scaleToFill" id="xi0-19-CKH" userLabel="limitCount">
+                    <rect key="frame" x="0.0" y="279" width="160" height="80"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="0.32156862745098036" green="0.30588235294117649" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                </view>
+                <view tag="5" contentMode="scaleToFill" id="nxf-w2-UBF" userLabel="downCount">
+                    <rect key="frame" x="160" y="279" width="160" height="80"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="0.32156862745098036" green="0.30588235294117649" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                </view>
+                <view tag="6" contentMode="scaleToFill" id="kmN-VM-nIF" userLabel="limitCount">
+                    <rect key="frame" x="0.0" y="359" width="160" height="80"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="0.32156862745098036" green="0.30588235294117649" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                </view>
+                <view tag="8" contentMode="scaleToFill" id="sQf-FF-ckN" userLabel="description">
+                    <rect key="frame" x="0.0" y="438" width="320" height="159"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="0.32156862745098036" green="0.30588235294117649" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                </view>
+                <view tag="7" contentMode="scaleToFill" id="2do-ag-aD2" userLabel="downCount">
+                    <rect key="frame" x="160" y="359" width="160" height="80"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="0.32156862745098036" green="0.30588235294117649" blue="0.30196078431372547" alpha="1" colorSpace="deviceRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="139" y="154"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

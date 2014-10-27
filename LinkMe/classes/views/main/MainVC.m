@@ -13,7 +13,7 @@
 #import "HomeVC.h"
 #import "LoginVC.h"
 #import "HomeDetailViewController.h"
-#import "AddActivityCollectionViewController.h"
+#import "AddActivityVC.h"
 
 @interface MainVC ()
 {
@@ -190,9 +190,9 @@ ON_SIGNAL3(LoginVC, CLOSE_VC, signal)
     _router.view.userInteractionEnabled = YES;
 }
 
-ON_SIGNAL3(AddActivityCollectionViewController, ADD_VC, signal)
+ON_SIGNAL3(HeaderVC, ADD_VC, signal)
 {
-    AddActivityCollectionViewController *addPage = [[AddActivityCollectionViewController alloc] init];
+    AddActivityVC *addPage = [[AddActivityVC alloc] init];
     [self.navigationController pushViewController:addPage animated:YES];
 }
 

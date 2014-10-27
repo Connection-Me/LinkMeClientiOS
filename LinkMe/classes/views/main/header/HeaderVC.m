@@ -89,7 +89,8 @@ ON_SIGNAL2(BeeUIBoard, signal)
 #pragma mark - DELEGATE
 -(void)sidebar:(RNFrostedSidebar *)sidebar didTapItemAtIndex:(NSUInteger)index{
     if(index == 0){
-            }
+    
+    }
     
 }
 
