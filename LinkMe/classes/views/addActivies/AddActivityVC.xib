@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
@@ -8,12 +8,16 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddActivityVC">
             <connections>
                 <outlet property="approveTime" destination="kmN-VM-nIF" id="5Tl-kd-zHX"/>
+                <outlet property="closeDateTextField" destination="qAa-sr-eKF" id="2mu-TV-giW"/>
                 <outlet property="closeTime" destination="2do-ag-aD2" id="u2K-rP-r5I"/>
+                <outlet property="closeTimeTextField" destination="I5r-u5-aE5" id="IcZ-CF-UVT"/>
                 <outlet property="descView" destination="sQf-FF-ckN" id="egQ-Ym-8lm"/>
                 <outlet property="downCountView" destination="nxf-w2-UBF" id="NNU-wr-4Ab"/>
                 <outlet property="endingTimeView" destination="Fhr-9z-yOy" id="KlS-r5-Y3m"/>
                 <outlet property="limitCount" destination="xi0-19-CKH" id="zlL-RB-UdY"/>
                 <outlet property="nameView" destination="rJw-1n-08M" id="On6-Vg-cue"/>
+                <outlet property="openDateTextField" destination="nMe-1d-PpJ" id="7fx-xx-7dc"/>
+                <outlet property="openTimeTextField" destination="yHD-OJ-w1k" id="kRd-Nq-LRX"/>
                 <outlet property="openTimeView" destination="9rB-Ns-hyu" id="nr8-kp-azJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,7 +27,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" id="LpN-jB-KDD" userLabel="view">
+                <view hidden="YES" contentMode="scaleToFill" id="LpN-jB-KDD" userLabel="view">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
@@ -54,42 +58,110 @@
                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view tag="2" contentMode="scaleToFill" id="9rB-Ns-hyu" userLabel="openTime">
-                    <rect key="frame" x="5" y="170" width="307" height="40"/>
+                    <rect key="frame" x="7" y="106" width="307" height="40"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" id="nMe-1d-PpJ">
+                            <rect key="frame" x="102" y="5" width="100" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" id="yHD-OJ-w1k">
+                            <rect key="frame" x="206" y="5" width="100" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RLI-6o-WRt">
+                            <rect key="frame" x="102" y="5" width="100" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="openDateTouchUpInside:" destination="-1" eventType="touchUpInside" id="4Qj-VI-NHh"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qu6-8P-vJY">
+                            <rect key="frame" x="206" y="5" width="100" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="openTimeTouchUpInside:" destination="-1" eventType="touchUpInside" id="o5Q-cg-hmW"/>
+                            </connections>
+                        </button>
+                    </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view tag="3" contentMode="scaleToFill" id="Fhr-9z-yOy" userLabel="endingTime">
-                    <rect key="frame" x="5" y="210" width="307" height="40"/>
+                    <rect key="frame" x="7" y="146" width="307" height="40"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" id="qAa-sr-eKF">
+                            <rect key="frame" x="102" y="5" width="100" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" id="I5r-u5-aE5">
+                            <rect key="frame" x="206" y="5" width="100" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gsS-e0-bLU">
+                            <rect key="frame" x="102" y="5" width="100" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="closeDateTouchUpInside:" destination="-1" eventType="touchUpInside" id="Nbm-kc-cXS"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dCS-Am-VHb">
+                            <rect key="frame" x="206" y="4" width="100" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="closeTimeTouchUpInside:" destination="-1" eventType="touchUpInside" id="zhQ-Ne-QxQ"/>
+                            </connections>
+                        </button>
+                    </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view tag="4" contentMode="scaleToFill" id="xi0-19-CKH" userLabel="limitCount">
-                    <rect key="frame" x="5" y="261" width="307" height="40"/>
+                    <rect key="frame" x="7" y="197" width="307" height="40"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view tag="5" contentMode="scaleToFill" id="nxf-w2-UBF" userLabel="downCount">
-                    <rect key="frame" x="5" y="301" width="307" height="40"/>
+                    <rect key="frame" x="7" y="237" width="307" height="40"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view tag="6" contentMode="scaleToFill" id="kmN-VM-nIF" userLabel="limitCount">
-                    <rect key="frame" x="5" y="357" width="307" height="37"/>
+                    <rect key="frame" x="7" y="291" width="307" height="37"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view tag="8" contentMode="scaleToFill" id="sQf-FF-ckN" userLabel="description">
-                    <rect key="frame" x="5" y="444" width="307" height="116"/>
+                    <rect key="frame" x="7" y="378" width="307" height="116"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view tag="7" contentMode="scaleToFill" id="2do-ag-aD2" userLabel="downCount">
-                    <rect key="frame" x="5" y="394" width="307" height="37"/>
+                    <rect key="frame" x="7" y="328" width="307" height="37"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view tag="1" contentMode="scaleToFill" id="rJw-1n-08M" userLabel="name" colorLabel="IBBuiltInLabel-Orange">
-                    <rect key="frame" x="5" y="119" width="310" height="40"/>
+                    <rect key="frame" x="7" y="55" width="307" height="40"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

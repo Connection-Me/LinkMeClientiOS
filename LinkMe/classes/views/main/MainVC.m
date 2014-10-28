@@ -193,7 +193,16 @@ ON_SIGNAL3(LoginVC, CLOSE_VC, signal)
 ON_SIGNAL3(HeaderVC, ADD_VC, signal)
 {
     AddActivityVC *addPage = [[AddActivityVC alloc] init];
+    addPage.parentBoard = self;
     [self.navigationController pushViewController:addPage animated:YES];
+}
+
+ON_SIGNAL3(AddActivityVC, CLOSE_ADDVC, signal)
+{
+    [self.navigationController popViewControllerAnimated:YES];
+    _footerVC.view.userInteractionEnabled = YES;
+    _headerVC.view.userInteractionEnabled = YES;
+    _router.view.userInteractionEnabled = YES;
 }
 
 

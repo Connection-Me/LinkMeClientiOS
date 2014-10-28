@@ -11,6 +11,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[DatePopupPickerVC okTouchUpInside:]:DatePopupPickerVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.sendSignal">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[HomeVC handleUISignal_BeeUIBoard:]:HomeVC.m">
          <PersistentStrings>
             <PersistentString
@@ -25,10 +33,10 @@
          contextName = "-[UIViewController(BeeUISignal) sendUISignal:withObject:from:]:UIViewController+BeeUISignal.m">
       </ContextState>
       <ContextState
-         contextName = "-[FooterVC activityBtnTouchUpInside:]:FooterVC.m">
+         contextName = "-[MainVC setupRouter]:MainVC.m">
          <PersistentStrings>
             <PersistentString
-               value = "btn.tag">
+               value = "_router.view.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -41,10 +49,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[MainVC setupRouter]:MainVC.m">
+         contextName = "-[FooterVC activityBtnTouchUpInside:]:FooterVC.m">
          <PersistentStrings>
             <PersistentString
-               value = "_router.view.frame">
+               value = "btn.tag">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

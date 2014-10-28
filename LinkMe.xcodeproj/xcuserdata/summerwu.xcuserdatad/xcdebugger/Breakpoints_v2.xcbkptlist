@@ -687,7 +687,7 @@
                   symbolName = "__86-[UserRemoteServiceImpl queryLoginByUsername:andPassWord:andController:andMethodName:]_block_invoke62"
                   moduleName = "LinkMe"
                   urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
-                  timestampString = "436154114.775166"
+                  timestampString = "436172223.645989"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "65"
@@ -701,7 +701,7 @@
                   symbolName = "__86-[UserRemoteServiceImpl queryLoginByUsername:andPassWord:andController:andMethodName:]_block_invoke_2"
                   moduleName = "LinkMe"
                   urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
-                  timestampString = "436154114.775697"
+                  timestampString = "436172223.646328"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "65"
@@ -819,7 +819,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "126"
             endingLineNumber = "126"
-            landmarkName = "-setBackButtonBlock:"
+            landmarkName = "-setLeftButtonBlock:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1005,7 +1005,7 @@
                   symbolName = "-[LoginPageViewController textFieldShouldReturn:]"
                   moduleName = "LinkMe"
                   urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/login/LoginPageViewController.m"
-                  timestampString = "436154114.780981"
+                  timestampString = "436172223.686801"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "147"
@@ -1019,7 +1019,7 @@
                   symbolName = "-[LoginPageViewController textFieldShouldReturn:]"
                   moduleName = "LinkMe"
                   urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/login/LoginPageViewController.m"
-                  timestampString = "436154114.781311"
+                  timestampString = "436172223.68726"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "147"
@@ -1196,7 +1196,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/main/MainVC.m"
-            timestampString = "435593713.724653"
+            timestampString = "436156561.067185"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "195"
@@ -1218,6 +1218,100 @@
             startingLineNumber = "86"
             endingLineNumber = "86"
             landmarkName = "-clickAdd:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/views/addActivies/AddActivityVC.m"
+            timestampString = "436173336.428643"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "-openDateTouchUpInside:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/views/addActivies/datePicker/DatePopupPickerVC.m"
+            timestampString = "436173839.070724"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "-okTouchUpInside:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/views/addActivies/AddActivityVC.m"
+            timestampString = "436173336.428643"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "ON_SIGNAL3()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AddActivityVC handleUISignal_DatePopupPickerVC_OPEN_DATE:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/AddActivityVC.m"
+                  timestampString = "436172223.693275"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "189"
+                  endingLineNumber = "189"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__60-[AddActivityVC handleUISignal_DatePopupPickerVC_OPEN_DATE:]_block_invoke"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/AddActivityVC.m"
+                  timestampString = "436172223.693557"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "189"
+                  endingLineNumber = "189"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/views/addActivies/timePicker/TimePopupPickerVC.m"
+            timestampString = "436173839.070724"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "-okTouchUpInside:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -10,6 +10,10 @@
 #import "Bee.h"
 
 @interface AddActivityVC : BeeUIBoard
+
+AS_SIGNAL(CLOSE_ADDVC)
+
+
 @property (weak, nonatomic) IBOutlet UIView *nameView;
 @property (weak, nonatomic) IBOutlet UIView *openTimeView;
 @property (weak, nonatomic) IBOutlet UIView *endingTimeView;
@@ -18,5 +22,10 @@
 @property (weak, nonatomic) IBOutlet UIView *approveTime;
 @property (weak, nonatomic) IBOutlet UIView *closeTime;
 @property (weak, nonatomic) IBOutlet UIView *descView;
+
+@property (weak, nonatomic) IBOutlet UITextField  *openDateTextField;
+@property (weak, nonatomic) IBOutlet UITextField  *openTimeTextField;
+@property (weak, nonatomic) IBOutlet UITextField  *closeDateTextField;
+@property (weak, nonatomic) IBOutlet UITextField  *closeTimeTextField;
 
 @end

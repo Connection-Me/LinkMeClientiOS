@@ -139,6 +139,10 @@
 		E11A0D3219C22404000C6E02 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E11A0D3019C22404000C6E02 /* MainVC.xib */; };
 		E11A0D3D19C28F7D000C6E02 /* FooterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E11A0D3B19C28F7D000C6E02 /* FooterVC.m */; };
 		E11A0D3E19C28F7D000C6E02 /* FooterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E11A0D3C19C28F7D000C6E02 /* FooterVC.xib */; };
+		E12B08AE19FF489C00CDF3FA /* DatePopupPickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E12B08AC19FF489C00CDF3FA /* DatePopupPickerVC.m */; };
+		E12B08AF19FF489C00CDF3FA /* DatePopupPickerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E12B08AD19FF489C00CDF3FA /* DatePopupPickerVC.xib */; };
+		E12B08B319FF704400CDF3FA /* TimePopupPickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E12B08B119FF704400CDF3FA /* TimePopupPickerVC.m */; };
+		E12B08B419FF704400CDF3FA /* TimePopupPickerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E12B08B219FF704400CDF3FA /* TimePopupPickerVC.xib */; };
 		E161263419A7E5F90012834A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E161263319A7E5F90012834A /* Foundation.framework */; };
 		E161263619A7E5F90012834A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E161263519A7E5F90012834A /* CoreGraphics.framework */; };
 		E161263819A7E5F90012834A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E161263719A7E5F90012834A /* UIKit.framework */; };
@@ -533,6 +537,12 @@
 		E11A0D3A19C28F7D000C6E02 /* FooterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooterVC.h; sourceTree = "<group>"; };
 		E11A0D3B19C28F7D000C6E02 /* FooterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FooterVC.m; sourceTree = "<group>"; };
 		E11A0D3C19C28F7D000C6E02 /* FooterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FooterVC.xib; sourceTree = "<group>"; };
+		E12B08AB19FF489C00CDF3FA /* DatePopupPickerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePopupPickerVC.h; sourceTree = "<group>"; };
+		E12B08AC19FF489C00CDF3FA /* DatePopupPickerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePopupPickerVC.m; sourceTree = "<group>"; };
+		E12B08AD19FF489C00CDF3FA /* DatePopupPickerVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePopupPickerVC.xib; sourceTree = "<group>"; };
+		E12B08B019FF704400CDF3FA /* TimePopupPickerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimePopupPickerVC.h; sourceTree = "<group>"; };
+		E12B08B119FF704400CDF3FA /* TimePopupPickerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimePopupPickerVC.m; sourceTree = "<group>"; };
+		E12B08B219FF704400CDF3FA /* TimePopupPickerVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimePopupPickerVC.xib; sourceTree = "<group>"; };
 		E161263019A7E5F90012834A /* LinkMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinkMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E161263319A7E5F90012834A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E161263519A7E5F90012834A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1147,6 +1157,8 @@
 		D87D710819C726E800C313FD /* addActivies */ = {
 			isa = PBXGroup;
 			children = (
+				E12B08A719FF471700CDF3FA /* datePicker */,
+				E12B08A819FF471700CDF3FA /* timePicker */,
 				D8B1FA0219FB9E8000234823 /* AddActivityVC.h */,
 				D8B1FA0319FB9E8000234823 /* AddActivityVC.m */,
 				D8B1FA0419FB9E8000234823 /* AddActivityVC.xib */,
@@ -1321,6 +1333,26 @@
 				E11A0D3C19C28F7D000C6E02 /* FooterVC.xib */,
 			);
 			path = footer;
+			sourceTree = "<group>";
+		};
+		E12B08A719FF471700CDF3FA /* datePicker */ = {
+			isa = PBXGroup;
+			children = (
+				E12B08AB19FF489C00CDF3FA /* DatePopupPickerVC.h */,
+				E12B08AC19FF489C00CDF3FA /* DatePopupPickerVC.m */,
+				E12B08AD19FF489C00CDF3FA /* DatePopupPickerVC.xib */,
+			);
+			path = datePicker;
+			sourceTree = "<group>";
+		};
+		E12B08A819FF471700CDF3FA /* timePicker */ = {
+			isa = PBXGroup;
+			children = (
+				E12B08B019FF704400CDF3FA /* TimePopupPickerVC.h */,
+				E12B08B119FF704400CDF3FA /* TimePopupPickerVC.m */,
+				E12B08B219FF704400CDF3FA /* TimePopupPickerVC.xib */,
+			);
+			path = timePicker;
 			sourceTree = "<group>";
 		};
 		E161262719A7E5F90012834A = {
@@ -2650,6 +2682,7 @@
 				D897332219B5B0CC00133321 /* profile@2x.png in Resources */,
 				D8C3F68219B607FB000697A3 /* weiboLogo.png in Resources */,
 				E1E2C3E019AC3A11004C3F57 /* RootVC.xib in Resources */,
+				E12B08B419FF704400CDF3FA /* TimePopupPickerVC.xib in Resources */,
 				D897332019B5B0CC00133321 /* profile.png in Resources */,
 				D8C3F69319B617AC000697A3 /* add.png in Resources */,
 				D897331C19B5B0CC00133321 /* globe.png in Resources */,
@@ -2660,6 +2693,7 @@
 				D8A54E8619EBCA380029858F /* user1.jpg in Resources */,
 				D8C3F68419B607FB000697A3 /* join@2x.png in Resources */,
 				D8C3F68A19B607FB000697A3 /* join.png in Resources */,
+				E12B08AF19FF489C00CDF3FA /* DatePopupPickerVC.xib in Resources */,
 				D897332419B5B0CC00133321 /* star.png in Resources */,
 				D85D76AC19E585DD00B2A9B9 /* back@2x.png in Resources */,
 				D897331E19B5B0CC00133321 /* globe@2x.png in Resources */,
@@ -2771,6 +2805,7 @@
 				E1A5A6E119C4B7DE004A8876 /* UIView+BeeExtension.m in Sources */,
 				E1A5A6E819C4B7DE004A8876 /* Bee_UIDatePicker.m in Sources */,
 				E1A5A6FB19C4B7DE004A8876 /* Bee_UITextView.m in Sources */,
+				E12B08B319FF704400CDF3FA /* TimePopupPickerVC.m in Sources */,
 				E1A5A6BC19C4B7DE004A8876 /* BeeUIBoard+Popover.m in Sources */,
 				E1A5A76319C4B7DE004A8876 /* NSObject+BeeTicker.mm in Sources */,
 				E1A5A6DD19C4B7DE004A8876 /* UILabel+UIDataBinding.m in Sources */,
@@ -2994,6 +3029,7 @@
 				E1A5A70819C4B7DE004A8876 /* UIView+TapGesture.m in Sources */,
 				E1A5A6D619C4B7DE004A8876 /* Bee_UIAnimationZoom.m in Sources */,
 				D85DE5BC19B3609000A906E7 /* HomeCollectionVCCell.m in Sources */,
+				E12B08AE19FF489C00CDF3FA /* DatePopupPickerVC.m in Sources */,
 				E1A5A70B19C4B7DE004A8876 /* UIView+Wireframe.m in Sources */,
 				E1A5A78A19C4B7DE004A8876 /* CXMLNode_CreationExtensions.m in Sources */,
 				E1A5A6B019C4B7DE004A8876 /* NSObject+BeeMessage.mm in Sources */,
