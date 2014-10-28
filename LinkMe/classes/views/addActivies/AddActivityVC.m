@@ -14,7 +14,7 @@
 
 @interface AddActivityVC ()
 {
-    NSArray *titleName;
+    NSInteger dateOrTimePickerTag;
     HeaderVC                   *_headerVC;
     DatePopupPickerVC          *_datePopupPickerVC;
     TimePopupPickerVC          *_timePopupPickerVC;
@@ -27,6 +27,7 @@
 SUMMER_DEF_XIB(AddActivityVC, YES, NO)
 DEF_SIGNAL(CLOSE_ADDVC)
 
+
 ON_SIGNAL2(BeeUIBoard, signal)
 {
     [super handleUISignal:signal];
@@ -34,10 +35,6 @@ ON_SIGNAL2(BeeUIBoard, signal)
     if([signal isKindOf:BeeUIBoard.CREATE_VIEWS])
     {
         [self setupHeader];
-        titleName  = @[@"",@"活动名字",@"活动开始日期",@"活动结束日期",@"上限人数",@"下限人数",@"开始报名时间",@"截止报名时间",@"活动简介"];
-        
-//        [self setAllViewBorader];
-        [self setAllViewTitle];
         [self setTextFieldUI];
         
         
@@ -93,10 +90,21 @@ ON_SIGNAL2(BeeUIBoard, signal)
 
 -(void)setTextFieldUI
 {
-    _openDateTextField.placeholder = @"月/日/年";
-    _openTimeTextField.placeholder = @"时/分";
-    _closeDateTextField.placeholder = @"月/日/年";
-    _closeTimeTextField.placeholder = @"时/分";
+//    _openDateTextField.placeholder = @"月/日/年";
+//    _openTimeTextField.placeholder = @"时/分";
+//    _closeDateTextField.placeholder = @"月/日/年";
+//    _closeTimeTextField.placeholder = @"时/分";
+    int viewTag;
+    //time picker
+    for(viewTag = 41;viewTag < 50 ; viewTag ++){
+         UITextField *tf = (UITextField *)[self.view viewWithTag:(viewTag)];
+        tf.placeholder = @"时/分";
+    }
+    for(viewTag = 51;viewTag < 60 ; viewTag ++){
+        UITextField *tf = (UITextField *)[self.view viewWithTag:(viewTag)];
+        tf.placeholder = @"月/日/年";
+    }
+    
 }
 
 
@@ -107,24 +115,6 @@ ON_SIGNAL2(BeeUIBoard, signal)
 }
 
 
--(void)setAllViewBorader{
-    int viewTag ;
-    UIView *view;
-    for(viewTag = 1; viewTag<9; viewTag ++){
-        view = (UIView *)[self.view viewWithTag:viewTag];
-        [self addViewBorder:view];
-    }
-}
--(void)setAllViewTitle{
-    int viewTag ;
-    UIView *view;
-    NSString *title;
-    for(viewTag = 1; viewTag<9; viewTag ++){
-        view = (UIView *)[self.view viewWithTag:viewTag];
-        title = [titleName objectAtIndex:viewTag];
-        [self addViewTitleAndTextField:view title:title];
-    }
-}
 
 
 
@@ -158,56 +148,62 @@ ON_SIGNAL2(BeeUIBoard, signal)
     [view addSubview:textField];
 }
 
+
 -(IBAction)openDateTouchUpInside:(id)sender
 {
-    _datePopupPickerVC = [[DatePopupPickerVC alloc]init];
-    _datePopupPickerVC.sendSignal = @"OPEN_DATE";
-    _datePopupPickerVC.parentBoard = self;
-    _datePopupPickerVC.modalPresentationStyle = UIModalPresentationCustom;
-    [self presentViewController:_datePopupPickerVC animated:YES completion:NO];
+    UIButton *button = (UIButton *)sender;
+    dateOrTimePickerTag = button.tag;
     
+    // 打开TImePicker 的条件
+    if(dateOrTimePickerTag > 20 && dateOrTimePickerTag < 30){
+        _timePopupPickerVC = [[TimePopupPickerVC alloc]init];
+        _timePopupPickerVC.sendSignal = @"OPEN_TIME";
+        _timePopupPickerVC.parentBoard = self;
+        _timePopupPickerVC.modalPresentationStyle = UIModalPresentationCustom;
+        [self presentViewController:_timePopupPickerVC animated:YES completion:NO];
+    }
+    //打开 DatePicker
+    else if(dateOrTimePickerTag >30 && dateOrTimePickerTag <40){
+        _datePopupPickerVC = [[DatePopupPickerVC alloc]init];
+        _datePopupPickerVC.sendSignal = @"OPEN_DATE";
+        _datePopupPickerVC.parentBoard = self;
+        _datePopupPickerVC.modalPresentationStyle = UIModalPresentationCustom;
+        [self presentViewController:_datePopupPickerVC animated:YES completion:NO];
+    }
 }
--(IBAction)openTimeTouchUpInside:(id)sender
-{
-    _timePopupPickerVC = [[TimePopupPickerVC alloc]init];
-    _timePopupPickerVC.sendSignal = @"OPEN_TIME";
-    _timePopupPickerVC.parentBoard = self;
-    _timePopupPickerVC.modalPresentationStyle = UIModalPresentationCustom;
-    [self presentViewController:_timePopupPickerVC animated:YES completion:NO];
+
+
+
+-(void)setTextIntoTextField:(NSString *)dataString{
+    
+    UITextField *tf = (UITextField *)[self.view viewWithTag:(dateOrTimePickerTag+20)];
+    [tf setText:dataString];
 }
--(IBAction)closeDateTouchUpInside:(id)sender
-{
-    _datePopupPickerVC = [[DatePopupPickerVC alloc]init];
-    _datePopupPickerVC.sendSignal = @"CLOSE_DATE";
-    _datePopupPickerVC.parentBoard = self;
-    _datePopupPickerVC.modalPresentationStyle = UIModalPresentationCustom;
-    [self presentViewController:_datePopupPickerVC animated:YES completion:NO];
-}
--(IBAction)closeTimeTouchUpInside:(id)sender
-{
-    _timePopupPickerVC = [[TimePopupPickerVC alloc]init];
-    _timePopupPickerVC.sendSignal = @"CLOSE_TIME";
-    _timePopupPickerVC.parentBoard = self;
-    _timePopupPickerVC.modalPresentationStyle = UIModalPresentationCustom;
-    [self presentViewController:_timePopupPickerVC animated:YES completion:NO];
-}
+
+#pragma mark - send signal
 
 ON_SIGNAL3(DatePopupPickerVC, OPEN_DATE, signal)
 {
     NSString  *dateString = (NSString*)signal.object;
-    _openDateTextField.text = dateString;
+    
+    [self setTextIntoTextField:dateString];
+    
     [self dismissViewControllerAnimated:YES completion:^{
         _datePopupPickerVC = nil;
     }];
 }
-ON_SIGNAL3(DatePopupPickerVC, CLOSE_DATE, signal)
-{
-    NSString  *dateString = (NSString*)signal.object;
-    _closeDateTextField.text = dateString;
-    [self dismissViewControllerAnimated:YES completion:^{
-        _datePopupPickerVC = nil;
-    }];
-}
+
+
+//ON_SIGNAL3(DatePopupPickerVC, CLOSE_DATE, signal)
+//{
+//    NSString  *dateString = (NSString*)signal.object;
+//    _closeDateTextField.text = dateString;
+//    [self dismissViewControllerAnimated:YES completion:^{
+//        _datePopupPickerVC = nil;
+//    }];
+//}
+
+
 ON_SIGNAL3(DatePopupPickerVC, DISMISS_OPEN_DATE, signal)
 {
     [self dismissViewControllerAnimated:YES completion:^{
@@ -215,26 +211,30 @@ ON_SIGNAL3(DatePopupPickerVC, DISMISS_OPEN_DATE, signal)
     }];
 }
 
+
+
 ON_SIGNAL3(TimePopupPickerVC, OPEN_TIME, signal)
 {
     NSString  *timeString = (NSString*)signal.object;
-    _openTimeTextField.text = timeString;
+        [self setTextIntoTextField:timeString];
+    
     [self dismissViewControllerAnimated:YES completion:^{
         _timePopupPickerVC = nil;
     }];
 }
-ON_SIGNAL3(TimePopupPickerVC, CLOSE_TIME, signal)
-{
-    NSString  *timeString = (NSString*)signal.object;
-    _closeTimeTextField.text = timeString;
-    [self dismissViewControllerAnimated:YES completion:^{
-        _timePopupPickerVC = nil;
-    }];
-}
+//ON_SIGNAL3(TimePopupPickerVC, CLOSE_TIME, signal)
+//{
+//    NSString  *timeString = (NSString*)signal.object;
+//    _closeTimeTextField.text = timeString;
+//    [self dismissViewControllerAnimated:YES completion:^{
+//        _timePopupPickerVC = nil;
+//    }];
+//}
 ON_SIGNAL3(TimePopupPickerVC, DISMISS_OPEN_TIME, signal)
 {
     [self dismissViewControllerAnimated:YES completion:^{
         _timePopupPickerVC = nil;
     }];
 }
+
 @end

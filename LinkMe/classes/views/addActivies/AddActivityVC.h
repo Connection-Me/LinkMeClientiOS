@@ -28,4 +28,9 @@ AS_SIGNAL(CLOSE_ADDVC)
 @property (weak, nonatomic) IBOutlet UITextField  *closeDateTextField;
 @property (weak, nonatomic) IBOutlet UITextField  *closeTimeTextField;
 
+@property (weak, nonatomic) IBOutlet UITextField  *openSignDateTextField;
+@property (weak, nonatomic) IBOutlet UITextField  *openSignTimeTextField;
+@property (weak, nonatomic) IBOutlet UITextField  *closeSignDateTextField;
+@property (weak, nonatomic) IBOutlet UITextField  *closeSignTimeTextField;
+
 @end
