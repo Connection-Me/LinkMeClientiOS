@@ -23,6 +23,15 @@ AS_SIGNAL(CLOSE_ADDVC)
 @property (weak, nonatomic) IBOutlet UIView *closeTime;
 @property (weak, nonatomic) IBOutlet UIView *descView;
 
+
+
+
+#pragma mark textField
+@property (weak, nonatomic) IBOutlet UITextField *nameTf;
+@property (weak, nonatomic) IBOutlet UITextField *ceilingCountTf;
+@property (weak, nonatomic) IBOutlet UITextField *lowerLimitCountTf;
+@property (weak, nonatomic) IBOutlet UITextView *descriptionTf;
+
 @property (weak, nonatomic) IBOutlet UITextField  *openDateTextField;
 @property (weak, nonatomic) IBOutlet UITextField  *openTimeTextField;
 @property (weak, nonatomic) IBOutlet UITextField  *closeDateTextField;
@@ -32,5 +41,6 @@ AS_SIGNAL(CLOSE_ADDVC)
 @property (weak, nonatomic) IBOutlet UITextField  *openSignTimeTextField;
 @property (weak, nonatomic) IBOutlet UITextField  *closeSignDateTextField;
 @property (weak, nonatomic) IBOutlet UITextField  *closeSignTimeTextField;
+
 
 @end

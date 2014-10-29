@@ -11,7 +11,7 @@
 #import "HeaderVC.h"
 #import "DatePopupPickerVC.h"
 #import "TimePopupPickerVC.h"
-
+#import "ActivityManager.h"
 @interface AddActivityVC ()
 {
     NSInteger dateOrTimePickerTag;
@@ -36,7 +36,8 @@ ON_SIGNAL2(BeeUIBoard, signal)
     {
         [self setupHeader];
         [self setTextFieldUI];
-        
+        [self setImageToTextField];
+        [self setColorPlaceHolder];
         
     }
     else if([signal isKindOf:BeeUIBoard.LAYOUT_VIEWS])
@@ -236,5 +237,17 @@ ON_SIGNAL3(TimePopupPickerVC, DISMISS_OPEN_TIME, signal)
         _timePopupPickerVC = nil;
     }];
 }
+-(void)setImageToTextField{
+    ActivityManager *am = [ActivityManager sharedInstance];
+    [am setAddPageTextFieldImage:self];
+}
+
+-(void)setColorPlaceHolder{
+    [_nameTf setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
+    [_ceilingCountTf setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
+    [_lowerLimitCountTf setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
+}
+
+    
 
 @end

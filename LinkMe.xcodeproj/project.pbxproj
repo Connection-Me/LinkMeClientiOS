@@ -71,6 +71,22 @@
 		D8A4FCA81A009AEC008C6DEF /* BeeUIBoard+BeeBoardUIExt.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A4FCA61A009AEC008C6DEF /* BeeUIBoard+BeeBoardUIExt.m */; };
 		D8A4FCAB1A00B91A008C6DEF /* LinkMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A4FCAA1A00B91A008C6DEF /* LinkMeViewController.m */; };
 		D8A4FCAC1A00B91A008C6DEF /* LinkMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A4FCAA1A00B91A008C6DEF /* LinkMeViewController.m */; };
+		D8A4FCB41A00E9BF008C6DEF /* p_activityTime.png in Resources */ = {isa = PBXBuildFile; fileRef = D8A4FCAE1A00E9BF008C6DEF /* p_activityTime.png */; };
+		D8A4FCB51A00E9C0008C6DEF /* p_activityTime.png in Resources */ = {isa = PBXBuildFile; fileRef = D8A4FCAE1A00E9BF008C6DEF /* p_activityTime.png */; };
+		D8A4FCB61A00E9C0008C6DEF /* p_description@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8A4FCAF1A00E9BF008C6DEF /* p_description@2x.png */; };
+		D8A4FCB71A00E9C0008C6DEF /* p_description@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8A4FCAF1A00E9BF008C6DEF /* p_description@2x.png */; };
+		D8A4FCB81A00E9C0008C6DEF /* p_downCount@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8A4FCB01A00E9BF008C6DEF /* p_downCount@2x.png */; };
+		D8A4FCB91A00E9C0008C6DEF /* p_downCount@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8A4FCB01A00E9BF008C6DEF /* p_downCount@2x.png */; };
+		D8A4FCBA1A00E9C0008C6DEF /* p_name@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8A4FCB11A00E9BF008C6DEF /* p_name@2x.png */; };
+		D8A4FCBB1A00E9C0008C6DEF /* p_name@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8A4FCB11A00E9BF008C6DEF /* p_name@2x.png */; };
+		D8A4FCBC1A00E9C0008C6DEF /* p_peopleLimit.png in Resources */ = {isa = PBXBuildFile; fileRef = D8A4FCB21A00E9BF008C6DEF /* p_peopleLimit.png */; };
+		D8A4FCBD1A00E9C0008C6DEF /* p_peopleLimit.png in Resources */ = {isa = PBXBuildFile; fileRef = D8A4FCB21A00E9BF008C6DEF /* p_peopleLimit.png */; };
+		D8A4FCBE1A00E9C0008C6DEF /* p_signUp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8A4FCB31A00E9BF008C6DEF /* p_signUp@2x.png */; };
+		D8A4FCBF1A00E9C0008C6DEF /* p_signUp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8A4FCB31A00E9BF008C6DEF /* p_signUp@2x.png */; };
+		D8A4FCC21A00F0A5008C6DEF /* ActivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A4FCC11A00F0A5008C6DEF /* ActivityManager.m */; };
+		D8A4FCC31A00F0A5008C6DEF /* ActivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A4FCC11A00F0A5008C6DEF /* ActivityManager.m */; };
+		D8A4FCC51A00F387008C6DEF /* p_upLimit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8A4FCC41A00F387008C6DEF /* p_upLimit@2x.png */; };
+		D8A4FCC61A00F387008C6DEF /* p_upLimit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8A4FCC41A00F387008C6DEF /* p_upLimit@2x.png */; };
 		D8A54E8119EB82320029858F /* HTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A54E7F19EB82320029858F /* HTableViewCell.m */; };
 		D8A54E8219EB82320029858F /* HTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A54E7F19EB82320029858F /* HTableViewCell.m */; };
 		D8A54E8319EB82320029858F /* HTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8A54E8019EB82320029858F /* HTableViewCell.xib */; };
@@ -482,6 +498,15 @@
 		D8A4FCA61A009AEC008C6DEF /* BeeUIBoard+BeeBoardUIExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BeeUIBoard+BeeBoardUIExt.m"; sourceTree = "<group>"; };
 		D8A4FCA91A00B91A008C6DEF /* LinkMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinkMeViewController.h; path = common/LinkMeViewController.h; sourceTree = "<group>"; };
 		D8A4FCAA1A00B91A008C6DEF /* LinkMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinkMeViewController.m; path = common/LinkMeViewController.m; sourceTree = "<group>"; };
+		D8A4FCAE1A00E9BF008C6DEF /* p_activityTime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p_activityTime.png; sourceTree = "<group>"; };
+		D8A4FCAF1A00E9BF008C6DEF /* p_description@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "p_description@2x.png"; sourceTree = "<group>"; };
+		D8A4FCB01A00E9BF008C6DEF /* p_downCount@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "p_downCount@2x.png"; sourceTree = "<group>"; };
+		D8A4FCB11A00E9BF008C6DEF /* p_name@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "p_name@2x.png"; sourceTree = "<group>"; };
+		D8A4FCB21A00E9BF008C6DEF /* p_peopleLimit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p_peopleLimit.png; sourceTree = "<group>"; };
+		D8A4FCB31A00E9BF008C6DEF /* p_signUp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "p_signUp@2x.png"; sourceTree = "<group>"; };
+		D8A4FCC01A00F0A5008C6DEF /* ActivityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityManager.h; sourceTree = "<group>"; };
+		D8A4FCC11A00F0A5008C6DEF /* ActivityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityManager.m; sourceTree = "<group>"; };
+		D8A4FCC41A00F387008C6DEF /* p_upLimit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "p_upLimit@2x.png"; sourceTree = "<group>"; };
 		D8A54E7E19EB82320029858F /* HTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTableViewCell.h; sourceTree = "<group>"; };
 		D8A54E7F19EB82320029858F /* HTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTableViewCell.m; sourceTree = "<group>"; };
 		D8A54E8019EB82320029858F /* HTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTableViewCell.xib; sourceTree = "<group>"; };
@@ -1137,11 +1162,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D85D76A819E5758500B2A9B9 /* New Group */ = {
+		D85D76A819E5758500B2A9B9 /* manager */ = {
 			isa = PBXGroup;
 			children = (
+				D8A4FCC01A00F0A5008C6DEF /* ActivityManager.h */,
+				D8A4FCC11A00F0A5008C6DEF /* ActivityManager.m */,
 			);
-			name = "New Group";
+			name = manager;
 			sourceTree = "<group>";
 		};
 		D85DE5B219B3601300A906E7 /* home */ = {
@@ -1339,7 +1366,7 @@
 			isa = PBXGroup;
 			children = (
 				D8AF2EA819E6858700BDCDF8 /* header */,
-				D85D76A819E5758500B2A9B9 /* New Group */,
+				D85D76A819E5758500B2A9B9 /* manager */,
 				D86F9E8D19C878A600F8F75D /* activityDetail */,
 				D87D710819C726E800C313FD /* addActivies */,
 				D85DE5B219B3601300A906E7 /* home */,
@@ -1567,6 +1594,13 @@
 		E17AC6D719A7F0E0008CF3FC /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				D8A4FCC41A00F387008C6DEF /* p_upLimit@2x.png */,
+				D8A4FCAE1A00E9BF008C6DEF /* p_activityTime.png */,
+				D8A4FCAF1A00E9BF008C6DEF /* p_description@2x.png */,
+				D8A4FCB01A00E9BF008C6DEF /* p_downCount@2x.png */,
+				D8A4FCB11A00E9BF008C6DEF /* p_name@2x.png */,
+				D8A4FCB21A00E9BF008C6DEF /* p_peopleLimit.png */,
+				D8A4FCB31A00E9BF008C6DEF /* p_signUp@2x.png */,
 				D867F4B619FE50D400D02FB8 /* addActivityPic.png */,
 				D867F4B719FE50D400D02FB8 /* addActivityPic@2x.png */,
 				D85D76AA19E585DD00B2A9B9 /* back@2x.png */,
@@ -2722,19 +2756,24 @@
 				D87DF01019ACE1BB0010BEE9 /* LoginPageViewController.xib in Resources */,
 				D86791AB19B42B9200630891 /* pic2.jpg in Resources */,
 				D85D76AE19E585DD00B2A9B9 /* back.png in Resources */,
+				D8A4FCC51A00F387008C6DEF /* p_upLimit@2x.png in Resources */,
+				D8A4FCBA1A00E9C0008C6DEF /* p_name@2x.png in Resources */,
 				D8A54E8619EBCA380029858F /* user1.jpg in Resources */,
 				D8C3F68419B607FB000697A3 /* join@2x.png in Resources */,
 				D8C3F68A19B607FB000697A3 /* join.png in Resources */,
+				D8A4FCBC1A00E9C0008C6DEF /* p_peopleLimit.png in Resources */,
 				E12B08AF19FF489C00CDF3FA /* DatePopupPickerVC.xib in Resources */,
 				D897332419B5B0CC00133321 /* star.png in Resources */,
 				D85D76AC19E585DD00B2A9B9 /* back@2x.png in Resources */,
 				D897331E19B5B0CC00133321 /* globe@2x.png in Resources */,
+				D8A4FCBE1A00E9C0008C6DEF /* p_signUp@2x.png in Resources */,
 				E17AC6DA19A7F0E0008CF3FC /* left_arrow.png in Resources */,
 				D867F4B819FE50D400D02FB8 /* addActivityPic.png in Resources */,
 				E161263E19A7E5F90012834A /* InfoPlist.strings in Resources */,
 				D8A54E8319EB82320029858F /* HTableViewCell.xib in Resources */,
 				D8C3F68E19B607FB000697A3 /* menu.png in Resources */,
 				D8C3F68619B607FB000697A3 /* reject@2x.png in Resources */,
+				D8A4FCB41A00E9BF008C6DEF /* p_activityTime.png in Resources */,
 				D8C3F68819B607FB000697A3 /* qqLogo.png in Resources */,
 				D8C3F68C19B607FB000697A3 /* weixinLogo.png in Resources */,
 				D8C3F67E19B607FB000697A3 /* menu@2x.png in Resources */,
@@ -2743,12 +2782,14 @@
 				D86791A519B42B9200630891 /* galleryImage.jpg in Resources */,
 				D86F9E9319C878C000F8F75D /* HomeDetailViewController.xib in Resources */,
 				E161264619A7E5F90012834A /* Images.xcassets in Resources */,
+				D8A4FCB81A00E9C0008C6DEF /* p_downCount@2x.png in Resources */,
 				E11A0D0F19C04742000C6E02 /* DBCHG_1.xml in Resources */,
 				E17AC6DC19A7F0E0008CF3FC /* right_arrow.png in Resources */,
 				E17AC6DB19A7F0E0008CF3FC /* left_arrow@2x.png in Resources */,
 				D8C3F68019B607FB000697A3 /* reject.png in Resources */,
 				E11A0D3219C22404000C6E02 /* MainVC.xib in Resources */,
 				D8C3F69519B617AD000697A3 /* add@2x.png in Resources */,
+				D8A4FCB61A00E9C0008C6DEF /* p_description@2x.png in Resources */,
 				D85DE5BF19B360A200A906E7 /* HomeCollectionVCCell.xib in Resources */,
 				D86791AD19B42B9200630891 /* pic4.jpg in Resources */,
 				E17AC6DD19A7F0E0008CF3FC /* right_arrow@2x.png in Resources */,
@@ -2767,6 +2808,7 @@
 				D8C3F68519B607FB000697A3 /* join@2x.png in Resources */,
 				D897332119B5B0CC00133321 /* profile.png in Resources */,
 				D867F4B919FE50D400D02FB8 /* addActivityPic.png in Resources */,
+				D8A4FCB71A00E9C0008C6DEF /* p_description@2x.png in Resources */,
 				D8C5780E19BFFCC1008476DE /* MJRefresh.bundle in Resources */,
 				D8AF2EAF19E6858700BDCDF8 /* HeaderVC.xib in Resources */,
 				D8C3F68919B607FB000697A3 /* qqLogo.png in Resources */,
@@ -2780,6 +2822,7 @@
 				D85D76AD19E585DD00B2A9B9 /* back@2x.png in Resources */,
 				D86791AE19B42B9200630891 /* pic4.jpg in Resources */,
 				D85D76AF19E585DD00B2A9B9 /* back.png in Resources */,
+				D8A4FCB51A00E9C0008C6DEF /* p_activityTime.png in Resources */,
 				D8C3F68719B607FB000697A3 /* reject@2x.png in Resources */,
 				D8C3F68B19B607FB000697A3 /* join.png in Resources */,
 				D8A54E8419EB82320029858F /* HTableViewCell.xib in Resources */,
@@ -2789,18 +2832,23 @@
 				D897331F19B5B0CC00133321 /* globe@2x.png in Resources */,
 				D86791AC19B42B9200630891 /* pic2.jpg in Resources */,
 				D86791AA19B42B9200630891 /* pic1.jpg in Resources */,
+				D8A4FCC61A00F387008C6DEF /* p_upLimit@2x.png in Resources */,
 				D897332519B5B0CC00133321 /* star.png in Resources */,
 				D8B1FA0819FB9E8000234823 /* AddActivityVC.xib in Resources */,
 				D8C3F68119B607FB000697A3 /* reject.png in Resources */,
 				D8C3F69619B617AD000697A3 /* add@2x.png in Resources */,
 				D86F9E9419C878C000F8F75D /* HomeDetailViewController.xib in Resources */,
 				D85DE5B919B3604C00A906E7 /* HomeVC.xib in Resources */,
+				D8A4FCBB1A00E9C0008C6DEF /* p_name@2x.png in Resources */,
 				D8C3F68F19B607FB000697A3 /* menu.png in Resources */,
 				D87DF02119ACE1C50010BEE9 /* CollapseClickCell.xib in Resources */,
+				D8A4FCBF1A00E9C0008C6DEF /* p_signUp@2x.png in Resources */,
 				D87DF01119ACE1BB0010BEE9 /* LoginPageViewController.xib in Resources */,
+				D8A4FCBD1A00E9C0008C6DEF /* p_peopleLimit.png in Resources */,
 				D8C3F68319B607FB000697A3 /* weiboLogo.png in Resources */,
 				D8A54E8A19EBCB8A0029858F /* user2.jpg in Resources */,
 				D8C3F69419B617AD000697A3 /* add.png in Resources */,
+				D8A4FCB91A00E9C0008C6DEF /* p_downCount@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2875,6 +2923,7 @@
 				E1A5A6D819C4B7DE004A8876 /* UIView+Transition.m in Sources */,
 				E1A5A6C919C4B7DE004A8876 /* UIButton+BeeUIStyle.m in Sources */,
 				E1A5A78619C4B7DE004A8876 /* CXMLElement_CreationExtensions.m in Sources */,
+				D8A4FCC21A00F0A5008C6DEF /* ActivityManager.m in Sources */,
 				E1A5A75119C4B7DE004A8876 /* Bee_Log.mm in Sources */,
 				E1A5A6FD19C4B7DE004A8876 /* Bee_UIVideoEditorController.m in Sources */,
 				E1A5A71C19C4B7DE004A8876 /* UILabel+BeeUILayout.m in Sources */,
@@ -3134,6 +3183,7 @@
 				D888BAD919ED17B000FEB873 /* TimeUtil.m in Sources */,
 				D8A4FCAC1A00B91A008C6DEF /* LinkMeViewController.m in Sources */,
 				D87DF01D19ACE1C50010BEE9 /* CollapseClickArrow.m in Sources */,
+				D8A4FCC31A00F0A5008C6DEF /* ActivityManager.m in Sources */,
 				D897331519B5AB0300133321 /* RNFrostedSidebar.m in Sources */,
 				D8A6AC1819F5F6AF00B41D58 /* DetailRemoteServiceImpl.m in Sources */,
 				D8A54E8219EB82320029858F /* HTableViewCell.m in Sources */,
