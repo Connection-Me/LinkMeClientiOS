@@ -36,7 +36,7 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" red="0.32156862745098036" green="0.30588235294117649" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.15686274509803921" green="0.1803921568627451" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
         </view>
         <view contentMode="scaleToFill" id="14" userLabel="Test1">
             <rect key="frame" x="0.0" y="0.0" width="320" height="185"/>
@@ -181,7 +181,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="807-pm-bJ0">
                     <rect key="frame" x="65" y="147" width="190" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.24313725490196078" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.30588235294117649" green="0.3529411764705882" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="加入LinkMe">
                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>

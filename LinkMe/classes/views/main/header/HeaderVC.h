@@ -7,11 +7,12 @@
 //
 
 #import "Bee_UIBoard.h"
+#import "LinkMeViewController.h"
 #import "Bee.h"
 #import "RNFrostedSidebar.h"
 #import "CommonHeaderView.h"
 
-@interface HeaderVC : BeeUIBoard<RNFrostedSidebarDelegate>
+@interface HeaderVC : LinkMeViewController<RNFrostedSidebarDelegate>
 AS_SINGLETON(HeaderVC)
 AS_SIGNAL(ADD_VC)
 @property (strong,nonatomic) IBOutlet CommonHeaderView *headerView;

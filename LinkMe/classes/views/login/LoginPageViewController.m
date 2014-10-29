@@ -38,6 +38,11 @@ SUMMER_DEF_XIB(LoginPageViewController, YES, NO)
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:)name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     
+    
+ 
+    
+
+    
 }
 -(void)keyboardWillShow:(int)index{
     
@@ -108,13 +113,13 @@ SUMMER_DEF_XIB(LoginPageViewController, YES, NO)
 -(UIColor *)colorForCollapseClickTitleViewAtIndex:(int)index {
     
     if(index==0){
-        return [UIColor colorWithRed:200/255.0f green:242/255.0f blue:110/255.0f alpha:1.0];
+        return COLOR_LIGHT_GRAY;
     }
     if(index==1){
-        return [UIColor colorWithRed:85/255.0f green:204/255.0f blue:195/255.0f alpha:1.0];
+        return COLOR_LIGHT_YELLOW;
     }
     else{
-        return [UIColor colorWithRed:252/255.0f green:108/255.0f blue:110/255.0f alpha:1.0];
+        return COLOR_LIGHT_RED;
     }
 }
 
@@ -181,14 +186,19 @@ SUMMER_DEF_XIB(LoginPageViewController, YES, NO)
 
 -(void)assembleRegisterText{
     //注册text
-    self.registerNameTextField.layer.borderWidth = 1.0;
-    self.loginNameTextField.layer.borderColor = [[UIColor blackColor] CGColor];
+    [self.registerNameTextField
+     setBackgroundColor:
+     COLOR_COMPONENT_BACKGROUND];
     [self.registerNameTextField.layer setCornerRadius:5];
     [self.registerNameTextField setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
     
     //注册密码 text
-    self.registerPwdTextField.layer.borderWidth = 1.0;
-    self.registerPwdTextField.layer.borderColor = [[UIColor blackColor] CGColor];
+//    self.registerPwdTextField.layer.borderWidth = 1.0;
+//    self.registerPwdTextField.layer.borderColor = [[UIColor blackColor] CGColor];
+    
+    [self.registerPwdTextField
+     setBackgroundColor:
+     COLOR_COMPONENT_BACKGROUND];
     [self.registerPwdTextField.layer setCornerRadius:5];
     [self.registerPwdTextField setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
 }
@@ -196,20 +206,23 @@ SUMMER_DEF_XIB(LoginPageViewController, YES, NO)
 #pragma mark - 装配页面组件
 -(void)assembleLoginText{
     //登陆text
-    self.loginNameTextField.layer.borderWidth = 1.0;
-    self.loginNameTextField.layer.borderColor = [[UIColor blackColor] CGColor];
+    [self.loginNameTextField
+     setBackgroundColor:
+     COLOR_COMPONENT_BACKGROUND];
     [self.loginNameTextField.layer setCornerRadius:5];
     [self.loginNameTextField setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
     //密码 text
-    self.loginPwdTextField.layer.borderWidth = 1.0;
-    self.loginPwdTextField.layer.borderColor = [[UIColor blackColor] CGColor];
+    [self.loginPwdTextField
+     setBackgroundColor:
+     COLOR_COMPONENT_BACKGROUND];
     [self.loginPwdTextField.layer setCornerRadius:5];
     [self.loginPwdTextField setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
 }
 
 -(void)assembleRefindText{
-    self.refindNameTextField.layer.borderWidth = 1.0;
-    self.refindNameTextField.layer.borderColor = [[UIColor blackColor] CGColor];
+    [self.refindNameTextField
+     setBackgroundColor:
+     COLOR_COMPONENT_BACKGROUND];
     [self.refindNameTextField.layer setCornerRadius:5];
     [self.refindNameTextField setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
 }

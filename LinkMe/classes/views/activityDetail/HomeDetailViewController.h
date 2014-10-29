@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "Bee_UIBoard.h"
+#import "LinkMeViewController.h"
 #import "Bee.h"
 #import "ActivityModel.h"
-@interface HomeDetailViewController : BeeUIBoard< UITableViewDelegate, UITableViewDataSource>
+@interface HomeDetailViewController : LinkMeViewController< UITableViewDelegate, UITableViewDataSource>
 AS_SINGLETON(HomeDetailViewController)
 
 AS_SIGNAL(CLOSE_CELL_DETAIL)

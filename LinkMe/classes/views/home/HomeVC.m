@@ -45,6 +45,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
         [self addHeader];
         [self addFooter];
         [self startDownloadHomeActivity];
+        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
         
         
     }

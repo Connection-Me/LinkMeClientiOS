@@ -11,7 +11,7 @@
 #import "BaseService.h"
 #import "Bee.h"
 
-@interface HomeRemoteServiceImpl : BaseService<IHomeRemoteService>
-AS_SINGLETON(HomeRemoteServiceImpl)
+@interface ActivityRemoteServiceImpl : BaseService<IHomeRemoteService>
+AS_SINGLETON(ActivityRemoteServiceImpl)
 
 @end

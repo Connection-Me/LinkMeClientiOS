@@ -454,6 +454,8 @@ static NSMutableArray *		__allBoards = nil;
 {
 	INFO( @"'%@' viewDidLoad", [[self class] description] );
 	
+    
+    
 	[self createViews];
 	[self loadDatas];
 

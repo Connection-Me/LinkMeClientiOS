@@ -65,6 +65,12 @@
 		D897332519B5B0CC00133321 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = D897331A19B5B0CC00133321 /* star.png */; };
 		D897332619B5B0CC00133321 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D897331B19B5B0CC00133321 /* star@2x.png */; };
 		D897332719B5B0CC00133321 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D897331B19B5B0CC00133321 /* star@2x.png */; };
+		D8A4FCA31A007CD6008C6DEF /* UIColor+UIColorExt.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A4FCA11A007CD6008C6DEF /* UIColor+UIColorExt.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D8A4FCA41A007CD6008C6DEF /* UIColor+UIColorExt.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A4FCA11A007CD6008C6DEF /* UIColor+UIColorExt.m */; };
+		D8A4FCA71A009AEC008C6DEF /* BeeUIBoard+BeeBoardUIExt.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A4FCA61A009AEC008C6DEF /* BeeUIBoard+BeeBoardUIExt.m */; };
+		D8A4FCA81A009AEC008C6DEF /* BeeUIBoard+BeeBoardUIExt.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A4FCA61A009AEC008C6DEF /* BeeUIBoard+BeeBoardUIExt.m */; };
+		D8A4FCAB1A00B91A008C6DEF /* LinkMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A4FCAA1A00B91A008C6DEF /* LinkMeViewController.m */; };
+		D8A4FCAC1A00B91A008C6DEF /* LinkMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A4FCAA1A00B91A008C6DEF /* LinkMeViewController.m */; };
 		D8A54E8119EB82320029858F /* HTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A54E7F19EB82320029858F /* HTableViewCell.m */; };
 		D8A54E8219EB82320029858F /* HTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A54E7F19EB82320029858F /* HTableViewCell.m */; };
 		D8A54E8319EB82320029858F /* HTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8A54E8019EB82320029858F /* HTableViewCell.xib */; };
@@ -122,12 +128,14 @@
 		D8C5781A19BFFCC1008476DE /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C5780A19BFFCC1008476DE /* UIScrollView+MJRefresh.m */; };
 		D8C5781B19BFFCC1008476DE /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C5780C19BFFCC1008476DE /* UIView+MJExtension.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D8C5781C19BFFCC1008476DE /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C5780C19BFFCC1008476DE /* UIView+MJExtension.m */; };
+		D8CC312C19FFA190003F2693 /* ColorList.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CC312B19FFA190003F2693 /* ColorList.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D8CC312D19FFA190003F2693 /* ColorList.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CC312B19FFA190003F2693 /* ColorList.m */; };
 		D8D5511D19B4BD3F0020DB8B /* CommonHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D5511C19B4BD3F0020DB8B /* CommonHeaderView.m */; };
 		D8D5511E19B4BD3F0020DB8B /* CommonHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D5511C19B4BD3F0020DB8B /* CommonHeaderView.m */; };
-		D8F6C48219BEFA940018BD29 /* HomeRemoteServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E117D33F19B4B8CC00411512 /* HomeRemoteServiceImpl.m */; };
+		D8F6C48219BEFA940018BD29 /* ActivityRemoteServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E117D33F19B4B8CC00411512 /* ActivityRemoteServiceImpl.m */; };
 		E117D32D19B3882B00411512 /* LibModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E117D32C19B3882B00411512 /* LibModel.m */; };
 		E117D33C19B4B43100411512 /* ActivityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E117D33B19B4B43100411512 /* ActivityModel.m */; };
-		E117D34019B4B8CC00411512 /* HomeRemoteServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E117D33F19B4B8CC00411512 /* HomeRemoteServiceImpl.m */; };
+		E117D34019B4B8CC00411512 /* ActivityRemoteServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E117D33F19B4B8CC00411512 /* ActivityRemoteServiceImpl.m */; };
 		E117D34319B4B93A00411512 /* HomeEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E117D34219B4B93A00411512 /* HomeEvent.m */; };
 		E11A0C6D19BE9207000C6E02 /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = E11A0C6C19BE9207000C6E02 /* ImageDownloader.m */; };
 		E11A0D0F19C04742000C6E02 /* DBCHG_1.xml in Resources */ = {isa = PBXBuildFile; fileRef = E11A0D0E19C04742000C6E02 /* DBCHG_1.xml */; };
@@ -468,6 +476,12 @@
 		D897331919B5B0CC00133321 /* profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile@2x.png"; sourceTree = "<group>"; };
 		D897331A19B5B0CC00133321 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		D897331B19B5B0CC00133321 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
+		D8A4FCA11A007CD6008C6DEF /* UIColor+UIColorExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+UIColorExt.m"; sourceTree = "<group>"; };
+		D8A4FCA21A007CD6008C6DEF /* UIColor+UIColorExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+UIColorExt.h"; sourceTree = "<group>"; };
+		D8A4FCA51A009AEC008C6DEF /* BeeUIBoard+BeeBoardUIExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BeeUIBoard+BeeBoardUIExt.h"; sourceTree = "<group>"; };
+		D8A4FCA61A009AEC008C6DEF /* BeeUIBoard+BeeBoardUIExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BeeUIBoard+BeeBoardUIExt.m"; sourceTree = "<group>"; };
+		D8A4FCA91A00B91A008C6DEF /* LinkMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinkMeViewController.h; path = common/LinkMeViewController.h; sourceTree = "<group>"; };
+		D8A4FCAA1A00B91A008C6DEF /* LinkMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinkMeViewController.m; path = common/LinkMeViewController.m; sourceTree = "<group>"; };
 		D8A54E7E19EB82320029858F /* HTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTableViewCell.h; sourceTree = "<group>"; };
 		D8A54E7F19EB82320029858F /* HTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTableViewCell.m; sourceTree = "<group>"; };
 		D8A54E8019EB82320029858F /* HTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTableViewCell.xib; sourceTree = "<group>"; };
@@ -508,6 +522,8 @@
 		D8C5780A19BFFCC1008476DE /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		D8C5780B19BFFCC1008476DE /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		D8C5780C19BFFCC1008476DE /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		D8CC312A19FFA190003F2693 /* ColorList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorList.h; sourceTree = "<group>"; };
+		D8CC312B19FFA190003F2693 /* ColorList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorList.m; sourceTree = "<group>"; };
 		D8D5511B19B4BD3F0020DB8B /* CommonHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonHeaderView.h; sourceTree = "<group>"; };
 		D8D5511C19B4BD3F0020DB8B /* CommonHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonHeaderView.m; sourceTree = "<group>"; };
 		E117D32B19B3882B00411512 /* LibModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibModel.h; sourceTree = "<group>"; };
@@ -515,8 +531,8 @@
 		E117D33919B4B38E00411512 /* IHomeRemoteService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IHomeRemoteService.h; sourceTree = "<group>"; };
 		E117D33A19B4B43100411512 /* ActivityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityModel.h; sourceTree = "<group>"; };
 		E117D33B19B4B43100411512 /* ActivityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityModel.m; sourceTree = "<group>"; };
-		E117D33E19B4B8CC00411512 /* HomeRemoteServiceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeRemoteServiceImpl.h; sourceTree = "<group>"; };
-		E117D33F19B4B8CC00411512 /* HomeRemoteServiceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeRemoteServiceImpl.m; sourceTree = "<group>"; };
+		E117D33E19B4B8CC00411512 /* ActivityRemoteServiceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityRemoteServiceImpl.h; sourceTree = "<group>"; };
+		E117D33F19B4B8CC00411512 /* ActivityRemoteServiceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityRemoteServiceImpl.m; sourceTree = "<group>"; };
 		E117D34119B4B93A00411512 /* HomeEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeEvent.h; sourceTree = "<group>"; };
 		E117D34219B4B93A00411512 /* HomeEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeEvent.m; sourceTree = "<group>"; };
 		E11A0C6B19BE9207000C6E02 /* ImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
@@ -1199,6 +1215,15 @@
 			path = RNFrostedSidebar;
 			sourceTree = "<group>";
 		};
+		D8A4FCAD1A00BB34008C6DEF /* base */ = {
+			isa = PBXGroup;
+			children = (
+				D8A4FCA91A00B91A008C6DEF /* LinkMeViewController.h */,
+				D8A4FCAA1A00B91A008C6DEF /* LinkMeViewController.m */,
+			);
+			name = base;
+			sourceTree = "<group>";
+		};
 		D8AF2EA819E6858700BDCDF8 /* header */ = {
 			isa = PBXGroup;
 			children = (
@@ -1245,6 +1270,7 @@
 		D8F2AD8419A8EC44009554A5 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				D8A4FCAD1A00BB34008C6DEF /* base */,
 				E11A0D2D19C2217F000C6E02 /* main */,
 				E1F3503819AC912000317104 /* common */,
 				E1E2C3DB19AC39F0004C3F57 /* root */,
@@ -2562,8 +2588,8 @@
 				E1E2C3F419AC74C5004C3F57 /* UserRemoteServiceImpl.m */,
 				E1E2C3F719AC78B4004C3F57 /* BaseService.h */,
 				E1E2C3F819AC78B4004C3F57 /* BaseService.m */,
-				E117D33E19B4B8CC00411512 /* HomeRemoteServiceImpl.h */,
-				E117D33F19B4B8CC00411512 /* HomeRemoteServiceImpl.m */,
+				E117D33E19B4B8CC00411512 /* ActivityRemoteServiceImpl.h */,
+				E117D33F19B4B8CC00411512 /* ActivityRemoteServiceImpl.m */,
 				E11A0D1319C04C90000C6E02 /* LinkMeStartupService.h */,
 				E11A0D1419C04C90000C6E02 /* LinkMeStartupService.m */,
 				E165888219E92589002ABFFE /* DetailRemoteServiceImpl.h */,
@@ -2575,6 +2601,8 @@
 		E1F3503819AC912000317104 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				D8A4FCA11A007CD6008C6DEF /* UIColor+UIColorExt.m */,
+				D8A4FCA21A007CD6008C6DEF /* UIColor+UIColorExt.h */,
 				D8C577FC19BFFCC1008476DE /* MJRefresh */,
 				E11A0C6A19BE9144000C6E02 /* loadImage */,
 				D897331119B5AB0300133321 /* RNFrostedSidebar */,
@@ -2583,6 +2611,10 @@
 				E1F3503A19AC913300317104 /* TCMessageBox.m */,
 				D8D5511B19B4BD3F0020DB8B /* CommonHeaderView.h */,
 				D8D5511C19B4BD3F0020DB8B /* CommonHeaderView.m */,
+				D8CC312A19FFA190003F2693 /* ColorList.h */,
+				D8CC312B19FFA190003F2693 /* ColorList.m */,
+				D8A4FCA51A009AEC008C6DEF /* BeeUIBoard+BeeBoardUIExt.h */,
+				D8A4FCA61A009AEC008C6DEF /* BeeUIBoard+BeeBoardUIExt.m */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -2831,6 +2863,7 @@
 				D87DF01E19ACE1C50010BEE9 /* CollapseClickCell.m in Sources */,
 				E1A5A74A19C4B7DE004A8876 /* BeeDatabase+BeeActiveRecord.m in Sources */,
 				E1A5A75319C4B7DE004A8876 /* Bee_Runtime.mm in Sources */,
+				D8A4FCAB1A00B91A008C6DEF /* LinkMeViewController.m in Sources */,
 				E1A5A70219C4B7DE004A8876 /* UIView+LifeCycle.m in Sources */,
 				E1A5A6E719C4B7DE004A8876 /* Bee_UIButton.m in Sources */,
 				E1A5A73419C4B7DE004A8876 /* UIColor+Theme.m in Sources */,
@@ -2919,7 +2952,7 @@
 				E1A5A77819C4B7DE004A8876 /* FMDatabase.m in Sources */,
 				E1A5A73019C4B7DE004A8876 /* UIViewController+BeeUITemplate.m in Sources */,
 				D8A54E8119EB82320029858F /* HTableViewCell.m in Sources */,
-				E117D34019B4B8CC00411512 /* HomeRemoteServiceImpl.m in Sources */,
+				E117D34019B4B8CC00411512 /* ActivityRemoteServiceImpl.m in Sources */,
 				E1A5A73819C4B7DE004A8876 /* Bee.mm in Sources */,
 				E1A5A78119C4B7DE004A8876 /* CXHTMLDocument.m in Sources */,
 				E1A5A6F119C4B7DE004A8876 /* Bee_UIPickerView.m in Sources */,
@@ -2940,6 +2973,7 @@
 				E1A5A6FA19C4B7DE004A8876 /* Bee_UITextField.m in Sources */,
 				E1A5A76A19C4B7DE004A8876 /* Bee_HTTPRequest.m in Sources */,
 				E1A5A72B19C4B7DE004A8876 /* BeeUIQuery+Transform.m in Sources */,
+				D8CC312C19FFA190003F2693 /* ColorList.m in Sources */,
 				D8C5781119BFFCC1008476DE /* MJRefreshConst.m in Sources */,
 				E1A5A6C519C4B7DE004A8876 /* UIViewController+UINavigationBar.m in Sources */,
 				E1A5A73F19C4B7DE004A8876 /* Bee_UserDefaults.mm in Sources */,
@@ -3011,6 +3045,7 @@
 				E17AC7C819A7F0E1008CF3FC /* ZipArchive.m in Sources */,
 				E1A5A6D019C4B7DE004A8876 /* UIView+BeeUIStyle.m in Sources */,
 				E17AC7C619A7F0E1008CF3FC /* unzip.c in Sources */,
+				D8A4FCA71A009AEC008C6DEF /* BeeUIBoard+BeeBoardUIExt.m in Sources */,
 				E1A5A71519C4B7DE004A8876 /* Bee_UISignalBus.m in Sources */,
 				E1A5A70C19C4B7DE004A8876 /* Bee_UICameraView.m in Sources */,
 				E1A5A6C319C4B7DE004A8876 /* UIViewController+Title.m in Sources */,
@@ -3050,6 +3085,7 @@
 				E1A5A73319C4B7DE004A8876 /* Bee_UITemplateXML.m in Sources */,
 				E1A5A6F419C4B7DE004A8876 /* Bee_UISearchBar.m in Sources */,
 				D87DF00E19ACE1BB0010BEE9 /* LoginPageViewController.m in Sources */,
+				D8A4FCA31A007CD6008C6DEF /* UIColor+UIColorExt.m in Sources */,
 				E1A5A6BA19C4B7DE004A8876 /* BeeUIBoard+ModalStack.m in Sources */,
 				E1A5A77A19C4B7DE004A8876 /* FMDatabasePool.m in Sources */,
 				E1A5A6E619C4B7DE004A8876 /* Bee_UIAlertView.m in Sources */,
@@ -3073,12 +3109,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8CC312D19FFA190003F2693 /* ColorList.m in Sources */,
 				E161265919A7E5F90012834A /* LinkMeTests.m in Sources */,
 				D8B1FA0619FB9E8000234823 /* AddActivityVC.m in Sources */,
 				D87DF00F19ACE1BB0010BEE9 /* LoginPageViewController.m in Sources */,
 				D8C5781619BFFCC1008476DE /* MJRefreshHeaderView.m in Sources */,
-				D8F6C48219BEFA940018BD29 /* HomeRemoteServiceImpl.m in Sources */,
+				D8F6C48219BEFA940018BD29 /* ActivityRemoteServiceImpl.m in Sources */,
 				D8C5781419BFFCC1008476DE /* MJRefreshFooterView.m in Sources */,
+				D8A4FCA41A007CD6008C6DEF /* UIColor+UIColorExt.m in Sources */,
 				D8D5511E19B4BD3F0020DB8B /* CommonHeaderView.m in Sources */,
 				D85DE5BD19B3609000A906E7 /* HomeCollectionVCCell.m in Sources */,
 				D87DF01B19ACE1C50010BEE9 /* CollapseClick.m in Sources */,
@@ -3092,7 +3130,9 @@
 				D8C5781A19BFFCC1008476DE /* UIScrollView+MJRefresh.m in Sources */,
 				D8C5781C19BFFCC1008476DE /* UIView+MJExtension.m in Sources */,
 				D87DF01F19ACE1C50010BEE9 /* CollapseClickCell.m in Sources */,
+				D8A4FCA81A009AEC008C6DEF /* BeeUIBoard+BeeBoardUIExt.m in Sources */,
 				D888BAD919ED17B000FEB873 /* TimeUtil.m in Sources */,
+				D8A4FCAC1A00B91A008C6DEF /* LinkMeViewController.m in Sources */,
 				D87DF01D19ACE1C50010BEE9 /* CollapseClickArrow.m in Sources */,
 				D897331519B5AB0300133321 /* RNFrostedSidebar.m in Sources */,
 				D8A6AC1819F5F6AF00B41D58 /* DetailRemoteServiceImpl.m in Sources */,

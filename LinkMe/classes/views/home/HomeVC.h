@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "Bee.h"
+#import "LinkMeViewController.h"
 #import "RNFrostedSidebar.h"
 #import "CommonHeaderView.h"
-@interface HomeVC : BeeUIBoard<UICollectionViewDataSource,UICollectionViewDelegate,RNFrostedSidebarDelegate>
+@interface HomeVC : LinkMeViewController<UICollectionViewDataSource,UICollectionViewDelegate,RNFrostedSidebarDelegate>
 //@property (strong, nonatomic) IBOutlet CommonHeaderView *headerView;
 AS_SIGNAL(TEST)
 AS_SINGLETON(HomeVC)

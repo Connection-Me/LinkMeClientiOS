@@ -57,11 +57,12 @@
     }else{
         header.frame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width,35);
     }
-    [header setBackgroundColor:[UIColor colorWithRed:92/255.0f green:92/255.0f blue:92/255.0f alpha:1.0f]];
+    [header setBackgroundColor:COLOR_HEADER];
+//    [header setBackgroundColor:[UIColor blueColor]];
     
     
     [header.title setFrame:CGRectMake((header.frame.size.width-100)/2, 20, 100, 35)];
-    [header.title setFont:AD_BOLD_FONT(20, 20)];
+    [header.title setFont:AD_BOLD_FONT(20, 15)];
     [header.title setTextColor:[UIColor whiteColor]];
     [header.title setTextAlignment:NSTextAlignmentCenter];
     [header.title setBackgroundColor:[UIColor clearColor]];
@@ -80,6 +81,10 @@
     [header.rightButton addTarget:header action:@selector(clickRight) forControlEvents:UIControlEventTouchUpInside];
     [header.rightButton setBackgroundColor:[UIColor clearColor]];
     [header addSubview:header.rightButton];
+    
+    UIView *footLine = [[UIView alloc] initWithFrame:CGRectMake(0, header.frame.size.height-0.5, header.frame.size.width, 0.5)];
+    [footLine setBackgroundColor:[UIColor darkGrayColor]];
+    [header addSubview:footLine];
     
     
 }

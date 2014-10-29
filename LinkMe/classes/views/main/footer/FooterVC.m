@@ -28,6 +28,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
     {
         [self setupButton];
         [self setupData];
+        [self setLine];
     }
     else if([signal isKindOf:BeeUIBoard.LAYOUT_VIEWS])
     {
@@ -52,12 +53,19 @@ ON_SIGNAL2(BeeUIBoard, signal)
 	{
 	}
 }
+-(void)setLine{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.size.width,0.3)];
+    [view setBackgroundColor:COLOR_LIGHT_GRAY];
+    [self.view addSubview:view];
+    
+}
+
 
 -(void)setupButton
 {
-    [_allTypeBtn setBackgroundColor:[UIColor colorWithRed:92/255.0f green:92/255.0f blue:92/255.0f alpha:1.0f]];
-    [_nowTypeBtn setBackgroundColor:[UIColor colorWithRed:92/255.0f green:92/255.0f blue:92/255.0f alpha:1.0f]];
-    [_timeTypeBtn setBackgroundColor:[UIColor colorWithRed:92/255.0f green:92/255.0f blue:92/255.0f alpha:1.0f]];
+    [_allTypeBtn setBackgroundColor:COLOR_HEADER];
+    [_nowTypeBtn setBackgroundColor:COLOR_HEADER];
+    [_timeTypeBtn setBackgroundColor:COLOR_HEADER];
 }
 -(void)setupData
 {

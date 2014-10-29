@@ -6,15 +6,15 @@
 //  Copyright (c) 2014年 Summer.Wu. All rights reserved.
 //
 
-#import "HomeRemoteServiceImpl.h"
+#import "ActivityRemoteServiceImpl.h"
 #import "NetWorkEvent.h"
 #import "RequestMethod.h"
 #import "HomeEvent.h"
 #import "ActivityModel.h"
 #import "CoreDao.h"
 
-@implementation HomeRemoteServiceImpl
-DEF_SINGLETON(HomeRemoteServiceImpl)
+@implementation ActivityRemoteServiceImpl
+DEF_SINGLETON(ActivityRemoteServiceImpl)
 #define TEST_URL @"http://love-petpet.u.qiniudn.com/linkMetest5.json"
 
 -(void)loadLocalActivity
