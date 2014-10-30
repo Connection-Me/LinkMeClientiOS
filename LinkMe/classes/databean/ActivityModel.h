@@ -20,6 +20,8 @@
 @property (nonatomic,strong) NSDate * activityInitTime; 
 @property (nonatomic,strong) NSDate *openTime;
 @property (nonatomic,strong) NSDate *closeTime;
+@property (nonatomic,strong) NSDate *startTime;
+@property (nonatomic,strong) NSDate *endTime;
 @property  NSInteger lowerLimit;
 @property  NSInteger upperLimit;
 @property NSInteger approveCount;

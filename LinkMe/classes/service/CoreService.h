@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "IUserRemoteService.h"
-#import "IHomeRemoteService.h"
+#import "IActivityRemoteService.h"
 #import "IDetailRemoteService.h"
 #import "Bee.h"
 
@@ -17,7 +17,7 @@
 AS_SINGLETON(CoreService)
 
 @property(nonatomic,readonly) id<IUserRemoteService> userRemoteService;
-@property(nonatomic,readonly) id<IHomeRemoteService> homeRemoteService;
+@property(nonatomic,readonly) id<IActivityRemoteService> activityRemoteService;
 @property(nonatomic,readonly) id<IDetailRemoteService> detailRemoteService;
 
 @end

@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "IHomeRemoteService.h"
+#import "IActivityRemoteService.h"
 #import "BaseService.h"
 #import "Bee.h"
 
-@interface ActivityRemoteServiceImpl : BaseService<IHomeRemoteService>
+@interface ActivityRemoteServiceImpl : BaseService<IActivityRemoteService>
 AS_SINGLETON(ActivityRemoteServiceImpl)
 
 @end
