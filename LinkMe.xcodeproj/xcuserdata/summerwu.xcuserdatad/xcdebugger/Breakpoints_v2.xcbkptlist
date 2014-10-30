@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/root/RootVC.m"
-            timestampString = "435512762.939516"
+            timestampString = "436332989.928781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "-initializeRouterObserveEvents"
             landmarkType = "5">
          </BreakpointContent>
@@ -366,22 +366,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LinkMe/classes/views/home/HomeVC.m"
-            timestampString = "432334283.542723"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "-setupCollectionView"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -425,22 +409,6 @@
             endingLineNumber = "106"
             landmarkName = "-setupFooter"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LinkMe/classes/views/home/HomeVC.m"
-            timestampString = "432334283.542723"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "@implementation HomeVC"
-            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -687,7 +655,7 @@
                   symbolName = "__86-[UserRemoteServiceImpl queryLoginByUsername:andPassWord:andController:andMethodName:]_block_invoke62"
                   moduleName = "LinkMe"
                   urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
-                  timestampString = "436172223.645989"
+                  timestampString = "436290337.172123"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "65"
@@ -701,7 +669,7 @@
                   symbolName = "__86-[UserRemoteServiceImpl queryLoginByUsername:andPassWord:andController:andMethodName:]_block_invoke_2"
                   moduleName = "LinkMe"
                   urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
-                  timestampString = "436172223.646328"
+                  timestampString = "436290337.172508"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "65"
@@ -974,11 +942,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/root/RootVC.m"
-            timestampString = "435512762.939516"
+            timestampString = "436332989.928781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "ON_NOTIFICATION3()"
             landmarkType = "7">
          </BreakpointContent>
@@ -997,36 +965,6 @@
             endingLineNumber = "147"
             landmarkName = "-textFieldShouldReturn:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[LoginPageViewController textFieldShouldReturn:]"
-                  moduleName = "LinkMe"
-                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/login/LoginPageViewController.m"
-                  timestampString = "436172223.686801"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "147"
-                  endingLineNumber = "147"
-                  offsetFromSymbolStart = "155">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[LoginPageViewController textFieldShouldReturn:]"
-                  moduleName = "LinkMe"
-                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/login/LoginPageViewController.m"
-                  timestampString = "436172223.68726"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "147"
-                  endingLineNumber = "147"
-                  offsetFromSymbolStart = "160">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1036,11 +974,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/root/RootVC.m"
-            timestampString = "435512762.939516"
+            timestampString = "436332989.928781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
             landmarkName = "ON_NOTIFICATION3()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1052,11 +990,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/root/RootVC.m"
-            timestampString = "435512762.939516"
+            timestampString = "436332989.928781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
             landmarkName = "ON_NOTIFICATION3()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1068,11 +1006,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/root/RootVC.m"
-            timestampString = "435512762.939516"
+            timestampString = "436332989.928781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "ON_NOTIFICATION3()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1084,11 +1022,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/root/RootVC.m"
-            timestampString = "435512762.939516"
+            timestampString = "436332989.928781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
             landmarkName = "ON_NOTIFICATION3()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1116,11 +1054,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/root/RootVC.m"
-            timestampString = "435512748.777927"
+            timestampString = "436332989.928781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "ON_NOTIFICATION3()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1132,11 +1070,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/root/RootVC.m"
-            timestampString = "435512750.238388"
+            timestampString = "436332989.928781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "ON_NOTIFICATION3()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1148,11 +1086,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/root/RootVC.m"
-            timestampString = "435512751.741282"
+            timestampString = "436332989.928781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "ON_NOTIFICATION3()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1164,11 +1102,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/root/RootVC.m"
-            timestampString = "435512756.736177"
+            timestampString = "436332989.928781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
             landmarkName = "ON_NOTIFICATION3()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1180,11 +1118,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/root/RootVC.m"
-            timestampString = "435512759.489206"
+            timestampString = "436332989.928781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
             landmarkName = "ON_NOTIFICATION3()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1228,11 +1166,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/addActivies/AddActivityVC.m"
-            timestampString = "436173336.428643"
+            timestampString = "436332989.928781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
             landmarkName = "-openDateTouchUpInside:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1260,43 +1198,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/addActivies/AddActivityVC.m"
-            timestampString = "436173336.428643"
+            timestampString = "436332989.928781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "199"
-            endingLineNumber = "199"
-            landmarkName = "ON_SIGNAL3()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AddActivityVC handleUISignal_DatePopupPickerVC_OPEN_DATE:]"
-                  moduleName = "LinkMe"
-                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/AddActivityVC.m"
-                  timestampString = "436172223.693275"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "189"
-                  endingLineNumber = "189"
-                  offsetFromSymbolStart = "180">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__60-[AddActivityVC handleUISignal_DatePopupPickerVC_OPEN_DATE:]_block_invoke"
-                  moduleName = "LinkMe"
-                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/AddActivityVC.m"
-                  timestampString = "436172223.693557"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "189"
-                  endingLineNumber = "189"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
+            startingLineNumber = "239"
+            endingLineNumber = "239"
+            landmarkName = "@implementation AddActivityVC"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

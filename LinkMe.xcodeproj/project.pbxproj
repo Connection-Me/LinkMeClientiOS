@@ -154,7 +154,7 @@
 		E117D32D19B3882B00411512 /* LibModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E117D32C19B3882B00411512 /* LibModel.m */; };
 		E117D33C19B4B43100411512 /* ActivityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E117D33B19B4B43100411512 /* ActivityModel.m */; };
 		E117D34019B4B8CC00411512 /* ActivityRemoteServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E117D33F19B4B8CC00411512 /* ActivityRemoteServiceImpl.m */; };
-		E117D34319B4B93A00411512 /* HomeEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E117D34219B4B93A00411512 /* HomeEvent.m */; };
+		E117D34319B4B93A00411512 /* ActivityEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E117D34219B4B93A00411512 /* ActivityEvent.m */; };
 		E11A0C6D19BE9207000C6E02 /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = E11A0C6C19BE9207000C6E02 /* ImageDownloader.m */; };
 		E11A0D0F19C04742000C6E02 /* DBCHG_1.xml in Resources */ = {isa = PBXBuildFile; fileRef = E11A0D0E19C04742000C6E02 /* DBCHG_1.xml */; };
 		E11A0D1519C04C90000C6E02 /* LinkMeStartupService.m in Sources */ = {isa = PBXBuildFile; fileRef = E11A0D1419C04C90000C6E02 /* LinkMeStartupService.m */; };
@@ -556,13 +556,13 @@
 		D8D5511C19B4BD3F0020DB8B /* CommonHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonHeaderView.m; sourceTree = "<group>"; };
 		E117D32B19B3882B00411512 /* LibModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibModel.h; sourceTree = "<group>"; };
 		E117D32C19B3882B00411512 /* LibModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibModel.m; sourceTree = "<group>"; };
-		E117D33919B4B38E00411512 /* IHomeRemoteService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IHomeRemoteService.h; sourceTree = "<group>"; };
+		E117D33919B4B38E00411512 /* IActivityRemoteService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IActivityRemoteService.h; sourceTree = "<group>"; };
 		E117D33A19B4B43100411512 /* ActivityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityModel.h; sourceTree = "<group>"; };
 		E117D33B19B4B43100411512 /* ActivityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityModel.m; sourceTree = "<group>"; };
 		E117D33E19B4B8CC00411512 /* ActivityRemoteServiceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityRemoteServiceImpl.h; sourceTree = "<group>"; };
 		E117D33F19B4B8CC00411512 /* ActivityRemoteServiceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityRemoteServiceImpl.m; sourceTree = "<group>"; };
-		E117D34119B4B93A00411512 /* HomeEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeEvent.h; sourceTree = "<group>"; };
-		E117D34219B4B93A00411512 /* HomeEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeEvent.m; sourceTree = "<group>"; };
+		E117D34119B4B93A00411512 /* ActivityEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityEvent.h; sourceTree = "<group>"; };
+		E117D34219B4B93A00411512 /* ActivityEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityEvent.m; sourceTree = "<group>"; };
 		E11A0C6B19BE9207000C6E02 /* ImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
 		E11A0C6C19BE9207000C6E02 /* ImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownloader.m; sourceTree = "<group>"; };
 		E11A0D0E19C04742000C6E02 /* DBCHG_1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = DBCHG_1.xml; sourceTree = "<group>"; };
@@ -2589,8 +2589,8 @@
 				E1E2C3E919AC6350004C3F57 /* UserEvent.m */,
 				E1F3503319AC8CF500317104 /* NetWorkEvent.h */,
 				E1F3503419AC8CF500317104 /* NetWorkEvent.m */,
-				E117D34119B4B93A00411512 /* HomeEvent.h */,
-				E117D34219B4B93A00411512 /* HomeEvent.m */,
+				E117D34119B4B93A00411512 /* ActivityEvent.h */,
+				E117D34219B4B93A00411512 /* ActivityEvent.m */,
 				E165888519E9265A002ABFFE /* DetailEvent.h */,
 				E165888619E9265A002ABFFE /* DetailEvent.m */,
 			);
@@ -2611,7 +2611,7 @@
 			children = (
 				E1E2C3F119AC73CF004C3F57 /* impl */,
 				E1E2C3F219AC740C004C3F57 /* IUserRemoteService.h */,
-				E117D33919B4B38E00411512 /* IHomeRemoteService.h */,
+				E117D33919B4B38E00411512 /* IActivityRemoteService.h */,
 				E165887719E82E55002ABFFE /* IDetailRemoteService.h */,
 			);
 			path = service;
@@ -3039,7 +3039,7 @@
 				E1A5A6B219C4B7DE004A8876 /* Bee_View.mm in Sources */,
 				E1A5A78919C4B7DE004A8876 /* CXMLNode.m in Sources */,
 				E11A0C6D19BE9207000C6E02 /* ImageDownloader.m in Sources */,
-				E117D34319B4B93A00411512 /* HomeEvent.m in Sources */,
+				E117D34319B4B93A00411512 /* ActivityEvent.m in Sources */,
 				E1A5A6DA19C4B7DE004A8876 /* Bee_UIDataBinding.m in Sources */,
 				E1A5A6D719C4B7DE004A8876 /* UIView+Animation.m in Sources */,
 				E1A5A6BE19C4B7DE004A8876 /* BeeUIStack+BackwardCompatible.m in Sources */,

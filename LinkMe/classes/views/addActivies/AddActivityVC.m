@@ -12,13 +12,19 @@
 #import "DatePopupPickerVC.h"
 #import "TimePopupPickerVC.h"
 #import "ActivityManager.h"
+#import "ActivityEvent.h"
+#import "UserEvent.h"
+#import "TCMessageBox.h"
+#import "CoreService.h"
+#import "ActivityModel.h"
+
 @interface AddActivityVC ()
 {
-    NSInteger dateOrTimePickerTag;
+    NSInteger                   dateOrTimePickerTag;
     HeaderVC                   *_headerVC;
     DatePopupPickerVC          *_datePopupPickerVC;
     TimePopupPickerVC          *_timePopupPickerVC;
-    
+    ActivityModel              *_activityModel;
 }
 
 @end
@@ -34,6 +40,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
     
     if([signal isKindOf:BeeUIBoard.CREATE_VIEWS])
     {
+        [self observeNotification];
         [self setupHeader];
         [self setTextFieldUI];
         [self setImageToTextField];
@@ -63,6 +70,14 @@ ON_SIGNAL2(BeeUIBoard, signal)
     else if ( [signal is:BeeUIBoard.DID_DISAPPEAR] )
     {
     }
+}
+
+-(void)observeNotification
+{
+    [self observeNotification:ActivityEvent.ADD_ACTIVITY_START];
+    [self observeNotification:ActivityEvent.ADD_ACTIVITY_SUCCESS];
+    [self observeNotification:ActivityEvent.ADD_ACTIVITY_FAILED];
+    [self observeNotification:UserEvent.USER_NOT_FOUND];
 }
 
 #pragma mark header界面
@@ -184,7 +199,32 @@ ON_SIGNAL2(BeeUIBoard, signal)
     [tf setText:dataString];
 }
 
-#pragma mark - send signal
+
+-(IBAction)saveActivityTouchUpInside:(id)sender
+{
+    _activityModel = [[ActivityModel alloc] init];
+    _activityModel.name = _nameTf.text;
+    _activityModel.type = @"";
+    _activityModel.desc = _descriptionTf.text;
+    _activityModel.imageURL = @"";
+    _activityModel.openTime = [self StringToDate:[NSString stringWithFormat:@"%@ %@",_openSignDateTextField.text,_openSignTimeTextField.text]];
+    _activityModel.closeTime = [self StringToDate:[NSString stringWithFormat:@"%@ %@",_closeSignDateTextField.text,_closeSignTimeTextField.text]];
+    _activityModel.startTime = [self StringToDate:[NSString stringWithFormat:@"%@ %@",_openDateTextField.text,_openTimeTextField.text]];
+    _activityModel.endTime = [self StringToDate:[NSString stringWithFormat:@"%@ %@",_closeDateTextField.text,_closeTimeTextField.text]];
+    _activityModel.lowerLimit = [_lowerLimitCountTf.text intValue];
+    _activityModel.upperLimit = [_ceilingCountTf.text intValue];
+    [[CoreService sharedInstance].activityRemoteService addActivityByActivityModel:_activityModel];
+}
+-(NSDate*)StringToDate:(NSString*)dateString
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSDate *dateAndTime = [dateFormatter dateFromString:dateString];
+    return dateAndTime;
+}
+
+
+#pragma mark - receive signal
 
 ON_SIGNAL3(DatePopupPickerVC, OPEN_DATE, signal)
 {
@@ -266,6 +306,25 @@ ON_SIGNAL3(TimePopupPickerVC, DISMISS_OPEN_TIME, signal)
     return YES;
 }
 
-    
+#pragma mark - receive notification
+ON_NOTIFICATION3(ActivityEvent, ADD_ACTIVITY_START, notification)
+{
+    [TCMessageBox showMessage:@"Adding..." hideByTouch:NO withActivityIndicator:YES];
+}
+
+ON_NOTIFICATION3(ActivityEvent, ADD_ACTIVITY_SUCCESS, notification)
+{
+    [TCMessageBox hide];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"添加成功 ！" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+}
+
+ON_NOTIFICATION3(ActivityEvent, ADD_ACTIVITY_FAILED, notification)
+{
+    [TCMessageBox hide];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"服务器异常，请稍后添加 ！" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+}
+
 
 @end

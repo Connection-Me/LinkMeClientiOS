@@ -9,9 +9,10 @@
 #import "ActivityRemoteServiceImpl.h"
 #import "NetWorkEvent.h"
 #import "RequestMethod.h"
-#import "HomeEvent.h"
+#import "ActivityEvent.h"
 #import "ActivityModel.h"
 #import "CoreDao.h"
+#import "UserEvent.h"
 
 @implementation ActivityRemoteServiceImpl
 DEF_SINGLETON(ActivityRemoteServiceImpl)
@@ -20,7 +21,7 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
 -(void)loadLocalActivity
 {
     NSArray *localActivities = [[CoreDao sharedInstance].homeDao findActivities];
-    [self postNotification:HomeEvent.LOAD_LOCAL_ACTIVITY withObject:localActivities];
+    [self postNotification:ActivityEvent.LOAD_LOCAL_ACTIVITY withObject:localActivities];
 }
 -(void)queryHomeActivity
 {
@@ -34,7 +35,7 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
     }else
    {
        FOREGROUND_BEGIN
-       [self postNotification:HomeEvent.LOAD_ACTIVITY_START withObject:nil];
+       [self postNotification:ActivityEvent.LOAD_ACTIVITY_START withObject:nil];
        FOREGROUND_COMMIT
         //TODO
 //        NSString *urlString = [[CoreModel sharedInstance].serverURL stringByAppendingString:@""];//拼接请求路径
@@ -67,7 +68,7 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
                 NSArray * activityList = [responseDic objectForKey:@"resultList"];
                 FOREGROUND_BEGIN
                 NSArray * activityArray = [ActivityModel modelWithJsonArray:activityList];
-                [self postNotification:HomeEvent.LOAD_ACTIVITY_SUCCESS withObject:activityArray];
+                [self postNotification:ActivityEvent.LOAD_ACTIVITY_SUCCESS withObject:activityArray];
                 for(ActivityModel *activity in activityArray)
                 {
                     activity.activityId = activity.imageURL;
@@ -79,7 +80,7 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
             else
             {
                 FOREGROUND_BEGIN
-                [self postNotification:HomeEvent.LOAD_ACTIVITY_FAILED];
+                [self postNotification:ActivityEvent.LOAD_ACTIVITY_FAILED];
                 FOREGROUND_COMMIT
             }
             
@@ -87,7 +88,7 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
         [request setFailedBlock:^{
             NSError *error = [blockRequest error];
             FOREGROUND_BEGIN
-            [self postNotification:HomeEvent.LOAD_ACTIVITY_FAILED];
+            [self postNotification:ActivityEvent.LOAD_ACTIVITY_FAILED];
             FOREGROUND_COMMIT
             NSLog(@"error = %@",error);
         }];
@@ -116,36 +117,53 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
 //新建活动
 -(void)addActivityByActivityModel:(ActivityModel *)activityModel{
     
-    CHECK_NETWORK_AND_SEND_START_BEE(HomeEvent.ADD_ACTIVITY_START){
+    CHECK_NETWORK_AND_SEND_START_BEE(ActivityEvent.ADD_ACTIVITY_START){
         //TODO
         NSString *urlString = [[CoreModel sharedInstance].serverURL stringByAppendingString:@""];//拼接请求路径
         NSURL *url = [NSURL URLWithString:urlString];
         
-        ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-        NSSet *jsonSet = [activityModel propertiesForJson];
-        NSString *jsonString = [NSString stringWithFormat:@"%@",jsonSet];
-        NSLog(@"jsonString == %@",jsonString);
+        ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
         
-        [request appendPostData:[jsonString dataUsingEncoding:NSUTF8StringEncoding]];
+        request.timeOutSeconds = 60.0;
+        
+        [request setPostValue:[CoreModel sharedInstance].token forKey:@"sessionId"];
+        [request setPostValue:activityModel.name forKey:@"name"];
+        [request setPostValue:activityModel.type forKey:@"type"];
+        [request setPostValue:activityModel.desc forKey:@"description"];
+        [request setPostValue:activityModel.imageURL forKey:@"picture"];
+        [request setPostValue:[NSNumber numberWithInt: activityModel.lowerLimit]forKey:@"lowerLimit"];
+        [request setPostValue:[NSNumber numberWithInt: activityModel.upperLimit] forKey:@"upperLimit"];
+        [request setPostValue:activityModel.openTime forKey:@"openTime"];
+        [request setPostValue:activityModel.closeTime forKey:@"closeTime"];
+        [request setPostValue:activityModel.startTime forKey:@"startTime"];
+        [request setPostValue:activityModel.endTime forKey:@"endTime"];
+        [request setPostValue:@"activity" forKey:@"c"];
+        [request setPostValue:@"create" forKey:@"a"];
         request.requestMethod = RequestMethod.POST;
-        __block ASIHTTPRequest * blockRequest = request;
+        __block ASIFormDataRequest * blockRequest = request;
         request.delegate = self;
         [request setCompletionBlock:^{
             //tips:use [request responseString] and [request responseData] to fetch the responseString/responseData
             NSInteger code = blockRequest.responseStatusCode;
             //responseString 是服务器返回的数据
             NSString * responseString = blockRequest.responseString;
-            
+            NSMutableDictionary * dic = [responseString objectFromJSONString];
             //成功
             if (code == 200) {
                 FOREGROUND_BEGIN
-                [self postNotification:HomeEvent.ADD_ACTIVITY_SUCCESS];
+                if ([[dic objectForKey:@"result_code"] longValue] == 10005) {
+                    [self postNotification:UserEvent.USER_NOT_FOUND];
+                }
+                else if([[dic objectForKey:@"result_code"] longValue] == 0)
+                {
+                    [self postNotification:ActivityEvent.ADD_ACTIVITY_SUCCESS];
+                }
                 FOREGROUND_COMMIT
             }
             else
             {
                 FOREGROUND_BEGIN
-                [self postNotification:HomeEvent.ADD_ACTIVITY_FAILED];
+                [self postNotification:ActivityEvent.ADD_ACTIVITY_FAILED];
                 FOREGROUND_COMMIT
             }
             
@@ -154,28 +172,9 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
         [request setFailedBlock:^{
             NSError *error = [blockRequest error];
             FOREGROUND_BEGIN
-            [self postNotification:HomeEvent.ADD_ACTIVITY_FAILED];
+            [self postNotification:ActivityEvent.ADD_ACTIVITY_FAILED];
             FOREGROUND_COMMIT
             NSLog(@"error = %@",error);
-        }];
-        
-        [request setBytesSentBlock:^(unsigned long long size, unsigned long long total)
-         {
-             if(total>0 && size>0)
-             {
-                 NSNumber * progress = @(0);
-                 unsigned long long sentBytes = [blockRequest totalBytesSent];
-                 progress = [NSNumber numberWithFloat: ((double)sentBytes)/ total];
-             }
-         }];
-        [request setBytesReceivedBlock:^(unsigned long long size, unsigned long long total) {
-            if(total>0 && size>0)
-            {
-                NSNumber * progress = @(0);
-                unsigned long long sentBytes = [blockRequest totalBytesSent];
-                progress = [NSNumber numberWithFloat: ((double)sentBytes)/ total];
-            }
-            
         }];
         [request startAsynchronous];
     }

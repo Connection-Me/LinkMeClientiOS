@@ -21,7 +21,7 @@ DEF_SINGLETON(CoreService)
     if(self)
     {
         _userRemoteService = [UserRemoteServiceImpl sharedInstance];
-        _homeRemoteService = [ActivityRemoteServiceImpl sharedInstance];
+        _activityRemoteService = [ActivityRemoteServiceImpl sharedInstance];
         _detailRemoteService = [DetailRemoteServiceImpl sharedInstance];
     }
     return self;

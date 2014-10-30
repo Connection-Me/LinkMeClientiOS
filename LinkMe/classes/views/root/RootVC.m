@@ -95,6 +95,8 @@ ON_SIGNAL2(BeeUIBoard, signal)
     [self observeNotification:UserEvent.REGISTER_FAILED_INFO_ERROR];
     
     [self observeNotification:NetWorkEvent.NEWWORK_UNREACHABLE];
+    
+    [self observeNotification:UserEvent.USER_NOT_FOUND];
 }
 
 -(void)initializeRouterMapClass
@@ -197,9 +199,17 @@ ON_NOTIFICATION3(UserEvent, REGISTER_FAILED_INFO_ERROR, notification)
 
 ON_NOTIFICATION3(NetWorkEvent, NEWWORK_UNREACHABLE, notification)
 {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请检查网络" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请检查网络 ！" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
     [self testOpenScreen:@"main"];
+}
+
+ON_NOTIFICATION3(UserEvent, USER_NOT_FOUND, notification)
+{
+    [TCMessageBox hide];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"找不到用户 ！" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+    [self testOpenScreen:@"login"];
 }
 
 @end

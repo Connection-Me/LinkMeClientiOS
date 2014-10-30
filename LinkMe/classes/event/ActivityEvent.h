@@ -1,5 +1,5 @@
 //
-//  HomeEvent.h
+//  ActivityEvent.h
 //  LinkMe
 //
 //  Created by Summer Wu on 14-9-1.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Bee.h"
-@interface HomeEvent : NSObject
+@interface ActivityEvent : NSObject
 
 AS_NOTIFICATION(LOAD_ACTIVITY_START)
 AS_NOTIFICATION(LOAD_ACTIVITY_SUCCESS)

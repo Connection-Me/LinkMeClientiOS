@@ -9,7 +9,7 @@
 #import "HomeVC.h"
 #import "summer_extend.h"
 #import "HomeCollectionVCCell.h"
-#import "HomeEvent.h"
+#import "ActivityEvent.h"
 #import "TCMessageBox.h"
 #import "CoreService.h"
 #import "MJRefresh.h"
@@ -90,16 +90,16 @@ ON_SIGNAL2(BeeUIBoard, signal)
 #pragma mark - 监听事件
 -(void)initializeRouterObserveEvents
 {
-    [self observeNotification:HomeEvent.LOAD_ACTIVITY_START];
-    [self observeNotification:HomeEvent.LOAD_ACTIVITY_SUCCESS];
-    [self observeNotification:HomeEvent.LOAD_ACTIVITY_FAILED];
-    [self observeNotification:HomeEvent.LOAD_LOCAL_ACTIVITY];
+    [self observeNotification:ActivityEvent.LOAD_ACTIVITY_START];
+    [self observeNotification:ActivityEvent.LOAD_ACTIVITY_SUCCESS];
+    [self observeNotification:ActivityEvent.LOAD_ACTIVITY_FAILED];
+    [self observeNotification:ActivityEvent.LOAD_LOCAL_ACTIVITY];
     
 }
 
 -(void)startDownloadHomeActivity
 {
-    [[CoreService sharedInstance].homeRemoteService queryHomeActivity];
+    [[CoreService sharedInstance].activityRemoteService queryHomeActivity];
 }
 
 
@@ -205,11 +205,11 @@ ON_SIGNAL2(BeeUIBoard, signal)
 }
 
 
-ON_NOTIFICATION3(HomeEvent, LOAD_ACTIVITY_START, notification)
+ON_NOTIFICATION3(ActivityEvent, LOAD_ACTIVITY_START, notification)
 {
     [TCMessageBox showMessage:@"Loading..." hideByTouch:NO withActivityIndicator:YES];
 }
-ON_NOTIFICATION3(HomeEvent, LOAD_ACTIVITY_SUCCESS, notification)
+ON_NOTIFICATION3(ActivityEvent, LOAD_ACTIVITY_SUCCESS, notification)
 {
     [TCMessageBox hide];
     activityList = (NSArray*)notification.object;
@@ -220,14 +220,14 @@ ON_NOTIFICATION3(HomeEvent, LOAD_ACTIVITY_SUCCESS, notification)
     }
     [self.mainView reloadData];
 }
-ON_NOTIFICATION3(HomeEvent, LOAD_ACTIVITY_FAILED, notification)
+ON_NOTIFICATION3(ActivityEvent, LOAD_ACTIVITY_FAILED, notification)
 {
     [TCMessageBox hide];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"加载失败..." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
 }
 
-ON_NOTIFICATION3(HomeEvent, LOAD_LOCAL_ACTIVITY, notification)
+ON_NOTIFICATION3(ActivityEvent, LOAD_LOCAL_ACTIVITY, notification)
 {
     activityList = (NSArray*)notification.object;
     
