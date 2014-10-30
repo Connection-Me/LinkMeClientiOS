@@ -38,23 +38,22 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
        [self postNotification:ActivityEvent.LOAD_ACTIVITY_START withObject:nil];
        FOREGROUND_COMMIT
         //TODO
-//        NSString *urlString = [[CoreModel sharedInstance].serverURL stringByAppendingString:@""];//拼接请求路径
+        NSString *urlString = [[CoreModel sharedInstance].serverURL stringByAppendingString:@""];//拼接请求路径
         
-        NSString *urlString = TEST_URL;
+       // NSString *urlString = TEST_URL;
         NSURL *url = [NSURL URLWithString:urlString];
         
-        ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-        NSMutableDictionary * postParams = [[NSMutableDictionary alloc] init];
-        //请求的json
-//        [postParams setObject:username forKey:@"userName"];
-//        [postParams setObject:c forKey:@"controller"];
-//        [postParams setObject:methodName forKey:@"methodName"];
-        NSString * jsonString = [postParams JSONString];
-        NSLog(@"the request jsonString == %@",jsonString);
-        
-        [request appendPostData:[jsonString dataUsingEncoding:NSUTF8StringEncoding]];
+        ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+       
+       [request setPostValue:[CoreModel sharedInstance].token forKey:@"sessionId"];
+       [request setPostValue:@"all" forKey:@"way"];
+       [request setPostValue:[NSNumber numberWithInt:0] forKey:@"offset"];
+       [request setPostValue:[NSNumber numberWithInt:10] forKey:@"limit"];
+       [request setPostValue:@"activity" forKey:@"c"];
+       [request setPostValue:@"showList" forKey:@"a"];
+       
         request.requestMethod = RequestMethod.POST;
-        __block ASIHTTPRequest * blockRequest = request;
+        __block ASIFormDataRequest * blockRequest = request;
         request.delegate = self;
         [request setCompletionBlock:^{
             //tips:use [request responseString] and [request responseData] to fetch the responseString/responseData
@@ -63,18 +62,23 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
             NSString * responseString = blockRequest.responseString;
             NSLog(@"<HomeRemoteServiceImpl> responeString is %@",responseString);
             
-            NSDictionary *responseDic = [responseString objectFromJSONString];
+            NSDictionary *dic = [responseString objectFromJSONString];
             if (code == 200) {
-                NSArray * activityList = [responseDic objectForKey:@"resultList"];
                 FOREGROUND_BEGIN
-                NSArray * activityArray = [ActivityModel modelWithJsonArray:activityList];
-                [self postNotification:ActivityEvent.LOAD_ACTIVITY_SUCCESS withObject:activityArray];
-                for(ActivityModel *activity in activityArray)
-                {
-                    activity.activityId = activity.imageURL;
-                    [[CoreDao sharedInstance].homeDao insertActivity:activity];
+                if ([[dic objectForKey:@"result_code"] longValue] == 10005) {
+                    [self postNotification:UserEvent.USER_NOT_FOUND];
                 }
-                
+                else if([[dic objectForKey:@"result_code"] longValue] == 0)
+                {
+                    NSDictionary *data = [[dic objectForKey:@"data"] objectFromJSONString];
+                    NSArray * activityList = [data objectForKey:@"activityList"];
+                    NSArray * activityArray = [ActivityModel modelWithJsonArray:activityList];
+                    for(ActivityModel *activity in activityArray)
+                    {
+                        [[CoreDao sharedInstance].homeDao insertActivity:activity];
+                    }
+                    [self postNotification:ActivityEvent.LOAD_ACTIVITY_SUCCESS withObject:activityArray];
+                }
                 FOREGROUND_COMMIT
             }
             else
@@ -124,13 +128,14 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
         
         ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
         
+        request.showAccurateProgress = YES;
         request.timeOutSeconds = 60.0;
         
         [request setPostValue:[CoreModel sharedInstance].token forKey:@"sessionId"];
         [request setPostValue:activityModel.name forKey:@"name"];
-        [request setPostValue:activityModel.type forKey:@"type"];
+        [request setPostValue:@"" forKey:@"type"];
         [request setPostValue:activityModel.desc forKey:@"description"];
-        [request setPostValue:activityModel.imageURL forKey:@"picture"];
+        [request setPostValue:@"" forKey:@"picture"];
         [request setPostValue:[NSNumber numberWithInt: activityModel.lowerLimit]forKey:@"lowerLimit"];
         [request setPostValue:[NSNumber numberWithInt: activityModel.upperLimit] forKey:@"upperLimit"];
         [request setPostValue:activityModel.openTime forKey:@"openTime"];

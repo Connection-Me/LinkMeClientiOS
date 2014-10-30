@@ -3,56 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[MainVC testOpenScreen:]:MainVC.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "_router.frame">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[DatePopupPickerVC okTouchUpInside:]:DatePopupPickerVC.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.sendSignal">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[HomeVC handleUISignal_BeeUIBoard:]:HomeVC.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.view.frame">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[HomeVC collectionView:numberOfItemsInSection:]:HomeVC.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[UIViewController(BeeUISignal) sendUISignal:withObject:from:]:UIViewController+BeeUISignal.m">
-      </ContextState>
-      <ContextState
          contextName = "-[MainVC setupRouter]:MainVC.m">
          <PersistentStrings>
             <PersistentString
                value = "_router.view.frame">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[BeeUIRouter open:animated:]:Bee_UIRouter.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.view">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[FooterVC activityBtnTouchUpInside:]:FooterVC.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "btn.tag">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -65,10 +19,75 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[MainVC testOpenScreen:]:MainVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_router.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[HomeVC collectionView:numberOfItemsInSection:]:HomeVC.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[HomeVC handleUISignal_BeeUIBoard:]:HomeVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.view.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[DatePopupPickerVC okTouchUpInside:]:DatePopupPickerVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.sendSignal">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[FooterVC activityBtnTouchUpInside:]:FooterVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "btn.tag">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[MainVC setupFooter]:MainVC.m">
          <PersistentStrings>
             <PersistentString
                value = "_router.view.frame.origin.y+_router.view.frame.size.height">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AddActivityVC StringToDate:]:AddActivityVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_openSignDateTextField.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ActivityRemoteServiceImpl addActivityByActivityModel:]:ActivityRemoteServiceImpl.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[BeeUIRouter open:animated:]:Bee_UIRouter.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.view">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[UIViewController(BeeUISignal) sendUISignal:withObject:from:]:UIViewController+BeeUISignal.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[AddActivityVC saveActivityTouchUpInside:]:AddActivityVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_openSignDateTextField.text">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

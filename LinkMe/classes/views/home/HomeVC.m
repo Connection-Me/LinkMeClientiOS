@@ -121,8 +121,8 @@ ON_SIGNAL2(BeeUIBoard, signal)
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     HomeCollectionVCCell *cell = (HomeCollectionVCCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"HomeCollectionVCCell" forIndexPath:indexPath];
-    [cell updateCell:indexPath.row];
-   // [cell updatecellByActivityModel:[activityList objectAtIndex:indexPath.row]];
+   // [cell updateCell:indexPath.row];
+    [cell updatecellByActivityModel:[activityList objectAtIndex:indexPath.row]];
 
     return cell;
 }

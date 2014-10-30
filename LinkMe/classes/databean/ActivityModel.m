@@ -13,19 +13,29 @@
 -(NSSet *)propertiesForJson
 {
     return [NSSet setWithObjects:
-            @"token",
+            @"activityId",
             @"name",
             @"type",
             @"desc",
             @"imageURL",
+            @"activityInitTime",
             @"openTime",
             @"closeTime",
+            @"startTime",
+            @"endTime",
             @"lowerLimit",
             @"upperLimit",
             @"approveCount",
             @"rejectCount",
             @"approveList",
             nil];
+}
+
+-(NSDictionary *)propertiesMap
+{
+    return @{
+      @"activityId":@"aid"
+      };
 }
 
 -(NSDictionary *)propertyClassMap

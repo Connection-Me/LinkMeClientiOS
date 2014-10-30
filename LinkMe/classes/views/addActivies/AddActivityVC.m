@@ -40,6 +40,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
     
     if([signal isKindOf:BeeUIBoard.CREATE_VIEWS])
     {
+        _scrollView.contentSize = CGSizeMake(320,600);
         [self observeNotification];
         [self setupHeader];
         [self setTextFieldUI];
@@ -218,7 +219,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
 -(NSDate*)StringToDate:(NSString*)dateString
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
     NSDate *dateAndTime = [dateFormatter dateFromString:dateString];
     return dateAndTime;
 }

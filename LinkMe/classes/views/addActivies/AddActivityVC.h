@@ -43,5 +43,6 @@ AS_SIGNAL(CLOSE_ADDVC)
 @property (weak, nonatomic) IBOutlet UITextField  *closeSignTimeTextField;
 @property (weak, nonatomic) IBOutlet UILabel *textViewPlaceHolder;
 
+@property (weak, nonatomic) IBOutlet UIScrollView  *scrollView;
 
 @end
