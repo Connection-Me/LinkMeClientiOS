@@ -13,7 +13,6 @@
 @end
 
 @implementation LinkMeViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;

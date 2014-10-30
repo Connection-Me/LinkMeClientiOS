@@ -39,6 +39,8 @@
 		D86F9E9419C878C000F8F75D /* HomeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D86F9E9019C878C000F8F75D /* HomeDetailViewController.xib */; };
 		D87D60951A01EBB000E6F549 /* imageView.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D87D60941A01EBB000E6F549 /* imageView.jpg */; };
 		D87D60961A01EBB100E6F549 /* imageView.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D87D60941A01EBB000E6F549 /* imageView.jpg */; };
+		D87D60991A0233A100E6F549 /* UIImageView+UIImageViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = D87D60981A0233A100E6F549 /* UIImageView+UIImageViewExt.m */; };
+		D87D609A1A0233A100E6F549 /* UIImageView+UIImageViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = D87D60981A0233A100E6F549 /* UIImageView+UIImageViewExt.m */; };
 		D87DF00E19ACE1BB0010BEE9 /* LoginPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DF00C19ACE1BB0010BEE9 /* LoginPageViewController.m */; };
 		D87DF00F19ACE1BB0010BEE9 /* LoginPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DF00C19ACE1BB0010BEE9 /* LoginPageViewController.m */; };
 		D87DF01019ACE1BB0010BEE9 /* LoginPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87DF00D19ACE1BB0010BEE9 /* LoginPageViewController.xib */; };
@@ -475,6 +477,8 @@
 		D86F9E8F19C878C000F8F75D /* HomeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailViewController.m; sourceTree = "<group>"; };
 		D86F9E9019C878C000F8F75D /* HomeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeDetailViewController.xib; sourceTree = "<group>"; };
 		D87D60941A01EBB000E6F549 /* imageView.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imageView.jpg; sourceTree = "<group>"; };
+		D87D60971A0233A100E6F549 /* UIImageView+UIImageViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+UIImageViewExt.h"; sourceTree = "<group>"; };
+		D87D60981A0233A100E6F549 /* UIImageView+UIImageViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+UIImageViewExt.m"; sourceTree = "<group>"; };
 		D87DF00B19ACE1BB0010BEE9 /* LoginPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginPageViewController.h; sourceTree = "<group>"; };
 		D87DF00C19ACE1BB0010BEE9 /* LoginPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginPageViewController.m; sourceTree = "<group>"; };
 		D87DF00D19ACE1BB0010BEE9 /* LoginPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginPageViewController.xib; sourceTree = "<group>"; };
@@ -2653,6 +2657,8 @@
 				D8CC312B19FFA190003F2693 /* ColorList.m */,
 				D8A4FCA51A009AEC008C6DEF /* BeeUIBoard+BeeBoardUIExt.h */,
 				D8A4FCA61A009AEC008C6DEF /* BeeUIBoard+BeeBoardUIExt.m */,
+				D87D60971A0233A100E6F549 /* UIImageView+UIImageViewExt.h */,
+				D87D60981A0233A100E6F549 /* UIImageView+UIImageViewExt.m */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -3118,6 +3124,7 @@
 				E1A5A75C19C4B7DE004A8876 /* NSData+BeeExtension.mm in Sources */,
 				E1A5A70819C4B7DE004A8876 /* UIView+TapGesture.m in Sources */,
 				E1A5A6D619C4B7DE004A8876 /* Bee_UIAnimationZoom.m in Sources */,
+				D87D60991A0233A100E6F549 /* UIImageView+UIImageViewExt.m in Sources */,
 				D85DE5BC19B3609000A906E7 /* HomeCollectionVCCell.m in Sources */,
 				E12B08AE19FF489C00CDF3FA /* DatePopupPickerVC.m in Sources */,
 				E1A5A70B19C4B7DE004A8876 /* UIView+Wireframe.m in Sources */,
@@ -3187,6 +3194,7 @@
 				D87DF01F19ACE1C50010BEE9 /* CollapseClickCell.m in Sources */,
 				D8A4FCA81A009AEC008C6DEF /* BeeUIBoard+BeeBoardUIExt.m in Sources */,
 				D888BAD919ED17B000FEB873 /* TimeUtil.m in Sources */,
+				D87D609A1A0233A100E6F549 /* UIImageView+UIImageViewExt.m in Sources */,
 				D8A4FCAC1A00B91A008C6DEF /* LinkMeViewController.m in Sources */,
 				D87DF01D19ACE1C50010BEE9 /* CollapseClickArrow.m in Sources */,
 				D8A4FCC31A00F0A5008C6DEF /* ActivityManager.m in Sources */,

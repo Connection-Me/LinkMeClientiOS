@@ -7,6 +7,7 @@
 //
 
 #import "Bee_UIBoard.h"
+#import "UIImageView+UIImageViewExt.h"
 
 @interface LinkMeViewController : BeeUIBoard
 

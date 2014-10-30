@@ -130,27 +130,10 @@ ON_SIGNAL2(BeeUIBoard, signal)
     _activityView.layer.shadowRadius = 10.0;
     _activityView.layer.masksToBounds = NO;
     
-    UIView *activityHeader = [[UIView alloc] initWithFrame:CGRectMake(0, 0, _activityView.frame.size.width, 42)];
-    
-    
-    [activityHeader setBackgroundColor:[UIColor blackColor]];
-
-//    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:activityHeader.bounds byRoundingCorners:  UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii:CGSizeMake(10, 10)];
-    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
-    maskLayer.frame = activityHeader.bounds;
-//    maskLayer.path = maskPath.CGPath;
-//    activityHeader.layer.mask = maskLayer;
-    
     //TODO roundAvatar
     
     
-    UILabel *timeDis = [[UILabel alloc] initWithFrame:CGRectMake(activityHeader.frame.size.width/3*2, 0, activityHeader.frame.size.width/3, activityHeader.frame.size.height)];
-    timeDis.text = @"2010.06.15";
-    timeDis.font = AD_FONT(20, 10);
-    timeDis.textColor = [UIColor whiteColor];
-    [activityHeader addSubview:timeDis];
-    
-    [_activityView addSubview:activityHeader];
+   
     
     UIImage *backgroundImage = [UIImage imageFromString:_sampleActivityModel.imageURL];
     [_activityImageView setImage:backgroundImage];
@@ -294,8 +277,10 @@ ON_NOTIFICATION3(DetailEvent, LOAD_DETAIL_ACTIVITY_FAILED, notification)
     //TODO sampleActivityModel add userInfo
 #ifdef DEBUG
     self.founderImageView.image = [UIImage imageNamed:@"user1.jpg"];
+    
     self.founderNameLabel.text = @"test";
     self.founderTime.text =[TimeUtil stringFromDate:[NSDate date]];
+    [_founderImageView setCircle];
 #endif
     
     
