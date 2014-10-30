@@ -37,8 +37,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
         [self setupHeader];
         [self setTextFieldUI];
         [self setImageToTextField];
-        [self setColorPlaceHolder];
-        
+        [self setPlaceHolderSytle];
     }
     else if([signal isKindOf:BeeUIBoard.LAYOUT_VIEWS])
     {
@@ -100,11 +99,15 @@ ON_SIGNAL2(BeeUIBoard, signal)
     for(viewTag = 41;viewTag < 50 ; viewTag ++){
          UITextField *tf = (UITextField *)[self.view viewWithTag:(viewTag)];
         tf.placeholder = @"时/分";
+        [tf setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
     }
     for(viewTag = 51;viewTag < 60 ; viewTag ++){
         UITextField *tf = (UITextField *)[self.view viewWithTag:(viewTag)];
         tf.placeholder = @"月/日/年";
+        [tf setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
     }
+    [self setPlaceHolderSytle];
+    [_descriptionTf.layer setCornerRadius:5];
     
 }
 
@@ -242,10 +245,25 @@ ON_SIGNAL3(TimePopupPickerVC, DISMISS_OPEN_TIME, signal)
     [am setAddPageTextFieldImage:self];
 }
 
--(void)setColorPlaceHolder{
+-(void)setPlaceHolderSytle{
     [_nameTf setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
     [_ceilingCountTf setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
     [_lowerLimitCountTf setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
+    
+    
+}
+
+#pragma mark - UITextViewDelegate
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+    
+    if(![text isEqualToString:@""]){
+        _textViewPlaceHolder.hidden = YES;
+    }
+    if([text isEqualToString:@""] && range.location == 0 && range.length == 1){
+        _textViewPlaceHolder.hidden = NO;
+    }
+    
+    return YES;
 }
 
     

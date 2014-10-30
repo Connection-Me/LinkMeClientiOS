@@ -37,6 +37,8 @@
 		D86F9E9219C878C000F8F75D /* HomeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86F9E8F19C878C000F8F75D /* HomeDetailViewController.m */; };
 		D86F9E9319C878C000F8F75D /* HomeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D86F9E9019C878C000F8F75D /* HomeDetailViewController.xib */; };
 		D86F9E9419C878C000F8F75D /* HomeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D86F9E9019C878C000F8F75D /* HomeDetailViewController.xib */; };
+		D87D60951A01EBB000E6F549 /* imageView.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D87D60941A01EBB000E6F549 /* imageView.jpg */; };
+		D87D60961A01EBB100E6F549 /* imageView.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D87D60941A01EBB000E6F549 /* imageView.jpg */; };
 		D87DF00E19ACE1BB0010BEE9 /* LoginPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DF00C19ACE1BB0010BEE9 /* LoginPageViewController.m */; };
 		D87DF00F19ACE1BB0010BEE9 /* LoginPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DF00C19ACE1BB0010BEE9 /* LoginPageViewController.m */; };
 		D87DF01019ACE1BB0010BEE9 /* LoginPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87DF00D19ACE1BB0010BEE9 /* LoginPageViewController.xib */; };
@@ -472,6 +474,7 @@
 		D86F9E8E19C878C000F8F75D /* HomeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailViewController.h; sourceTree = "<group>"; };
 		D86F9E8F19C878C000F8F75D /* HomeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailViewController.m; sourceTree = "<group>"; };
 		D86F9E9019C878C000F8F75D /* HomeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeDetailViewController.xib; sourceTree = "<group>"; };
+		D87D60941A01EBB000E6F549 /* imageView.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imageView.jpg; sourceTree = "<group>"; };
 		D87DF00B19ACE1BB0010BEE9 /* LoginPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginPageViewController.h; sourceTree = "<group>"; };
 		D87DF00C19ACE1BB0010BEE9 /* LoginPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginPageViewController.m; sourceTree = "<group>"; };
 		D87DF00D19ACE1BB0010BEE9 /* LoginPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginPageViewController.xib; sourceTree = "<group>"; };
@@ -1623,6 +1626,7 @@
 		E17AC6D819A7F0E0008CF3FC /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D87D60941A01EBB000E6F549 /* imageView.jpg */,
 				D8A54E8819EBCB8A0029858F /* user2.jpg */,
 				D8A54E8519EBCA380029858F /* user1.jpg */,
 				D897331619B5B0CC00133321 /* globe.png */,
@@ -2744,6 +2748,7 @@
 				D86791A919B42B9200630891 /* pic1.jpg in Resources */,
 				E11A0D3E19C28F7D000C6E02 /* FooterVC.xib in Resources */,
 				D8AF2EAE19E6858700BDCDF8 /* HeaderVC.xib in Resources */,
+				D87D60951A01EBB000E6F549 /* imageView.jpg in Resources */,
 				D867F4BA19FE50D400D02FB8 /* addActivityPic@2x.png in Resources */,
 				D897332219B5B0CC00133321 /* profile@2x.png in Resources */,
 				D8C3F68219B607FB000697A3 /* weiboLogo.png in Resources */,
@@ -2834,6 +2839,7 @@
 				D86791AA19B42B9200630891 /* pic1.jpg in Resources */,
 				D8A4FCC61A00F387008C6DEF /* p_upLimit@2x.png in Resources */,
 				D897332519B5B0CC00133321 /* star.png in Resources */,
+				D87D60961A01EBB100E6F549 /* imageView.jpg in Resources */,
 				D8B1FA0819FB9E8000234823 /* AddActivityVC.xib in Resources */,
 				D8C3F68119B607FB000697A3 /* reject.png in Resources */,
 				D8C3F69619B617AD000697A3 /* add@2x.png in Resources */,

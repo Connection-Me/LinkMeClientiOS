@@ -14,7 +14,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hPX-jc-CPj">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hPX-jc-CPj">
                         <rect key="frame" x="0.0" y="0.0" width="160" height="155"/>
                         <color key="backgroundColor" red="0.23529411759999999" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>

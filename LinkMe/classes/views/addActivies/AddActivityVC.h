@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Bee.h"
 
-@interface AddActivityVC : BeeUIBoard
+@interface AddActivityVC : BeeUIBoard<UITextViewDelegate>
 
 AS_SIGNAL(CLOSE_ADDVC)
 
@@ -41,6 +41,7 @@ AS_SIGNAL(CLOSE_ADDVC)
 @property (weak, nonatomic) IBOutlet UITextField  *openSignTimeTextField;
 @property (weak, nonatomic) IBOutlet UITextField  *closeSignDateTextField;
 @property (weak, nonatomic) IBOutlet UITextField  *closeSignTimeTextField;
+@property (weak, nonatomic) IBOutlet UILabel *textViewPlaceHolder;
 
 
 @end

@@ -30,8 +30,11 @@ DEF_SINGLETON(ActivityManager)
 }
 
 -(void)setImageIntoTextField:(UIImage *)image textField:(UITextField *)tf{
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 25, 25)];
+    imageView.image = image;
     tf.leftView = imageView;
     tf.leftViewMode = UITextFieldViewModeAlways;
+    tf.clearButtonMode = UITextFieldViewModeWhileEditing;
+    
 }
 @end
