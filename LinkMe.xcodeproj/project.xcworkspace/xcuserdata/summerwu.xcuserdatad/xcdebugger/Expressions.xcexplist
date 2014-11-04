@@ -3,10 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[MainVC setupRouter]:MainVC.m">
+         contextName = "-[AddActivityVC saveActivityTouchUpInside:]:AddActivityVC.m">
          <PersistentStrings>
             <PersistentString
-               value = "_router.view.frame">
+               value = "_openSignDateTextField.text">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -33,7 +33,13 @@
          contextName = "-[HomeVC handleUISignal_BeeUIBoard:]:HomeVC.m">
          <PersistentStrings>
             <PersistentString
+               value = "isAddActivity">
+            </PersistentString>
+            <PersistentString
                value = "self.view.frame">
+            </PersistentString>
+            <PersistentString
+               value = "activityList.count">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -54,18 +60,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[MainVC setupFooter]:MainVC.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "_router.view.frame.origin.y+_router.view.frame.size.height">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "-[AddActivityVC StringToDate:]:AddActivityVC.m">
          <PersistentStrings>
             <PersistentString
                value = "_openSignDateTextField.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MainVC setupFooter]:MainVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_router.view.frame.origin.y+_router.view.frame.size.height">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -84,10 +90,18 @@
          contextName = "-[UIViewController(BeeUISignal) sendUISignal:withObject:from:]:UIViewController+BeeUISignal.m">
       </ContextState>
       <ContextState
-         contextName = "-[AddActivityVC saveActivityTouchUpInside:]:AddActivityVC.m">
+         contextName = "-[HomeVC handleNotification_ActivityEvent_LOAD_ACTIVITY_SUCCESS:]:HomeVC.m">
          <PersistentStrings>
             <PersistentString
-               value = "_openSignDateTextField.text">
+               value = "activityList">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MainVC setupRouter]:MainVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_router.view.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

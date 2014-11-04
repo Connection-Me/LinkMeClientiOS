@@ -21,7 +21,7 @@
     NSInteger    offset;
     NSInteger    limit;
     NSInteger    isAddActivity;
-    BOOL    isUpRefresh;
+    BOOL    isAllRefresh;
 }
 @property (nonatomic, strong) NSMutableIndexSet *optionIndices;
 @end
@@ -46,7 +46,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
         offset = 0;
         limit = 10;
         isAddActivity = 0;
-        isUpRefresh = NO;
+        isAllRefresh = NO;
         activityList = [[NSMutableArray alloc]init];
         [self initializeRouterObserveEvents];
         
@@ -70,6 +70,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
       
         if(isAddActivity>0)
         {
+            isAllRefresh = YES;
             [[CoreService sharedInstance].activityRemoteService queryHomeActivity:0 andLimit:activityList.count+isAddActivity];
             isAddActivity = 0;
         }
@@ -186,7 +187,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
         //这里传给后台的值还需要和后台协商
         vc->offset = 0;
         vc->limit = vc->activityList.count;
-        vc->isUpRefresh = YES;
+        vc->isAllRefresh = YES;
         [vc startDownloadHomeActivity];
         // 模拟延迟加载数据，因此2秒后才调用）
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -232,10 +233,10 @@ ON_NOTIFICATION3(ActivityEvent, LOAD_ACTIVITY_START, notification)
 ON_NOTIFICATION3(ActivityEvent, LOAD_ACTIVITY_SUCCESS, notification)
 {
     [TCMessageBox hide];
-    if (isUpRefresh) {
+    if (isAllRefresh) {
         [activityList removeAllObjects];
         [activityList addObjectsFromArray:(NSArray*)notification.object];
-        isUpRefresh = NO;
+        isAllRefresh = NO;
     }
     else
         [activityList addObjectsFromArray:(NSArray*)notification.object];
