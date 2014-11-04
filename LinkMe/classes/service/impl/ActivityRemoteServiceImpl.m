@@ -49,6 +49,8 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
        [request setPostValue:@"all" forKey:@"way"];
        [request setPostValue:[NSNumber numberWithInt:offset] forKey:@"offset"];
        [request setPostValue:[NSNumber numberWithInt:limit] forKey:@"limit"];
+       [request setPostValue:@"all" forKey:@"way"];
+       [request setPostValue:@"all" forKey:@"when"];
        [request setPostValue:@"activity" forKey:@"c"];
        [request setPostValue:@"showList" forKey:@"a"];
        
