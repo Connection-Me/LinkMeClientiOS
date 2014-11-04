@@ -17,7 +17,11 @@
 
 @interface HomeVC ()
 {
-    NSArray    *activityList;
+    NSMutableArray    *activityList;
+    NSInteger    offset;
+    NSInteger    limit;
+    NSInteger    isAddActivity;
+    BOOL    isUpRefresh;
 }
 @property (nonatomic, strong) NSMutableIndexSet *optionIndices;
 @end
@@ -39,6 +43,11 @@ ON_SIGNAL2(BeeUIBoard, signal)
     
     if([signal isKindOf:BeeUIBoard.CREATE_VIEWS])
     {
+        offset = 0;
+        limit = 10;
+        isAddActivity = 0;
+        isUpRefresh = NO;
+        activityList = [[NSMutableArray alloc]init];
         [self initializeRouterObserveEvents];
         
         [self setupCollectionView];
@@ -59,8 +68,13 @@ ON_SIGNAL2(BeeUIBoard, signal)
     else if ( [signal is:BeeUIBoard.WILL_APPEAR] )
 	{
       
-        
-        
+        if(isAddActivity>0)
+        {
+            offset = activityList.count+isAddActivity;
+            limit = 10;
+            [[CoreService sharedInstance].activityRemoteService queryHomeActivity:offset andLimit:limit];
+            isAddActivity = 0;
+        }
 	}
 	else if ( [signal is:BeeUIBoard.DID_APPEAR] )
 	{
@@ -95,11 +109,13 @@ ON_SIGNAL2(BeeUIBoard, signal)
     [self observeNotification:ActivityEvent.LOAD_ACTIVITY_FAILED];
     [self observeNotification:ActivityEvent.LOAD_LOCAL_ACTIVITY];
     
+    [self observeNotification:ActivityEvent.ADD_ACTIVITY_SUCCESS];
+    
 }
 
 -(void)startDownloadHomeActivity
 {
-    [[CoreService sharedInstance].activityRemoteService queryHomeActivity];
+    [[CoreService sharedInstance].activityRemoteService queryHomeActivity:offset andLimit:limit];
 }
 
 
@@ -169,6 +185,10 @@ ON_SIGNAL2(BeeUIBoard, signal)
     [self.mainView addHeaderWithCallback:^{
         // 进入刷新状态就会回调这个Block
         NSLog(@"刷新开始");
+        //这里传给后台的值还需要和后台协商
+        vc->offset = 0;
+        vc->limit = vc->activityList.count;
+        vc->isUpRefresh = YES;
         [vc startDownloadHomeActivity];
         // 模拟延迟加载数据，因此2秒后才调用）
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -179,7 +199,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
     }];
     
 #warning 自动刷新(一进入程序就下拉刷新)
-    [self.mainView headerBeginRefreshing];
+    //[self.mainView headerBeginRefreshing];
 }
 
 - (void)addFooter
@@ -189,6 +209,8 @@ ON_SIGNAL2(BeeUIBoard, signal)
     [self.mainView addFooterWithCallback:^{
         // 进入刷新状态就会回调这个Block
         NSLog(@"刷新开始");
+        vc->offset = vc->activityList.count;
+        vc->limit = 10;
         [vc startDownloadHomeActivity];
         // 模拟延迟加载数据，因此2秒后才调用）
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -212,7 +234,13 @@ ON_NOTIFICATION3(ActivityEvent, LOAD_ACTIVITY_START, notification)
 ON_NOTIFICATION3(ActivityEvent, LOAD_ACTIVITY_SUCCESS, notification)
 {
     [TCMessageBox hide];
-    activityList = (NSArray*)notification.object;
+    if (isUpRefresh) {
+        [activityList removeAllObjects];
+        [activityList addObjectsFromArray:(NSArray*)notification.object];
+        isUpRefresh = NO;
+    }
+    else
+        [activityList addObjectsFromArray:(NSArray*)notification.object];
 
     if(activityList==nil||[activityList count]==0){
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"没有活动列表,亲，赶紧新建一个" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -238,6 +266,10 @@ ON_NOTIFICATION3(ActivityEvent, LOAD_LOCAL_ACTIVITY, notification)
     [self.mainView reloadData];
 }
 
+ON_NOTIFICATION3(ActivityEvent, ADD_ACTIVITY_SUCCESS, notification)
+{
+    isAddActivity ++;
+}
 
 ON_SIGNAL3(HomeCollectionVCCell, TESTVC, signal)
 {

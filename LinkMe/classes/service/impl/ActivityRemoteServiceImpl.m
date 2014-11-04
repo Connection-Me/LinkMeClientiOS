@@ -23,7 +23,7 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
     NSArray *localActivities = [[CoreDao sharedInstance].homeDao findActivities];
     [self postNotification:ActivityEvent.LOAD_LOCAL_ACTIVITY withObject:localActivities];
 }
--(void)queryHomeActivity
+-(void)queryHomeActivity:(NSInteger)offset andLimit:(NSInteger)limit
 {
     BOOL isConnectAvailable = [self isConnectionAvailable];
     if (!isConnectAvailable)
@@ -47,8 +47,8 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
        
        [request setPostValue:[CoreModel sharedInstance].token forKey:@"sessionId"];
        [request setPostValue:@"all" forKey:@"way"];
-       [request setPostValue:[NSNumber numberWithInt:0] forKey:@"offset"];
-       [request setPostValue:[NSNumber numberWithInt:10] forKey:@"limit"];
+       [request setPostValue:[NSNumber numberWithInt:offset] forKey:@"offset"];
+       [request setPostValue:[NSNumber numberWithInt:limit] forKey:@"limit"];
        [request setPostValue:@"activity" forKey:@"c"];
        [request setPostValue:@"showList" forKey:@"a"];
        
@@ -161,7 +161,7 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
                 }
                 else if([[dic objectForKey:@"result_code"] longValue] == 0)
                 {
-                    [self postNotification:ActivityEvent.ADD_ACTIVITY_SUCCESS];
+                    [self postNotification:ActivityEvent.ADD_ACTIVITY_SUCCESS withObject:activityModel];
                 }
                 FOREGROUND_COMMIT
             }
