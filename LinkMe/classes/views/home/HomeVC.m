@@ -70,9 +70,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
       
         if(isAddActivity>0)
         {
-            offset = activityList.count+isAddActivity;
-            limit = 10;
-            [[CoreService sharedInstance].activityRemoteService queryHomeActivity:offset andLimit:limit];
+            [[CoreService sharedInstance].activityRemoteService queryHomeActivity:0 andLimit:activityList.count+isAddActivity];
             isAddActivity = 0;
         }
 	}

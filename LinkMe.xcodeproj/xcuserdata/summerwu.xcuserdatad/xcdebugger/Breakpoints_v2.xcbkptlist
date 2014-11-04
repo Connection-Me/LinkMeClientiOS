@@ -327,7 +327,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "119"
             endingLineNumber = "119"
-            landmarkName = "-didReceiveMemoryWarning"
+            landmarkName = "-startDownloadHomeActivity"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -486,7 +486,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "269"
-            endingLineNumber = "269">
+            endingLineNumber = "269"
+            landmarkName = "ON_NOTIFICATION3()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -533,8 +535,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "225"
             endingLineNumber = "225"
-            landmarkName = "ON_NOTIFICATION3()"
-            landmarkType = "7">
+            landmarkName = "-collectionView:didSelectItemAtIndexPath:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1521,7 +1523,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "261"
             endingLineNumber = "261"
-            landmarkName = "ON_SIGNAL3()"
+            landmarkName = "ON_NOTIFICATION3()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
