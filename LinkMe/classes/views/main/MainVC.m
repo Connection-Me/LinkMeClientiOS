@@ -37,12 +37,11 @@ ON_SIGNAL2(BeeUIBoard, signal)
     if([signal isKindOf:BeeUIBoard.CREATE_VIEWS])
     {
         [self initializeRouterObserveEvents];
-        
         [self setupRouter];
         [self setupHeader];
         [self setupFooter];
         [self initializeRouterMapClass];
-        [self setupUI];
+        [self setupUI]; 
     }
     else if([signal isKindOf:BeeUIBoard.LAYOUT_VIEWS])
     {

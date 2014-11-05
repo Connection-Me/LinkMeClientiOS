@@ -41,6 +41,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
     {
         //load 数据
       //  [self loadDetailData];
+        [_scrollerView setContentSize:CGSizeMake(320,600)];
         [self initializeObserveEvents];
         //设置 头导航栏
         [self setupHeader];

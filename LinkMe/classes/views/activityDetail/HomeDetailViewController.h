@@ -28,6 +28,7 @@ AS_SIGNAL(CLOSE_CELL_DETAIL)
 @property (weak, nonatomic) IBOutlet UILabel *activityEndingDateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *activityLessPeopleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *activityCompareCurrentyTime;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollerView;
 
 @property (nonatomic,strong)  ActivityModel    *sampleActivityModel;
 

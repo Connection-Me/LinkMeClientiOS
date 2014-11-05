@@ -18,6 +18,7 @@
                 <outlet property="founderTime" destination="0nu-IQ-vjm" id="vbs-Io-z6z"/>
                 <outlet property="informationView" destination="Z6p-Bn-gQB" id="jad-PT-dsK"/>
                 <outlet property="insertUserView" destination="M16-bd-1mJ" id="otA-Ei-pUn"/>
+                <outlet property="scrollerView" destination="BL4-aM-KN6" id="ahC-8X-pAP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,14 +27,14 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BL4-aM-KN6">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BL4-aM-KN6">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="768"/>
                     <subviews>
                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dob-On-eHR">
                             <rect key="frame" x="0.0" y="105" width="320" height="252"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hFD-rq-dod">
-                                    <rect key="frame" x="0.0" y="44" width="320" height="219"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="263"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="活动开始日期" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Au-kn-SAJ">
                                     <rect key="frame" x="28" y="56" width="102" height="21"/>
@@ -92,8 +93,8 @@
                             </constraints>
                             <inset key="insetFor6xAndEarlier" minX="0.0" minY="-20" maxX="0.0" maxY="40"/>
                         </view>
-                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z6p-Bn-gQB">
-                            <rect key="frame" x="0.0" y="356" width="320" height="290"/>
+                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z6p-Bn-gQB">
+                            <rect key="frame" x="0.0" y="356" width="320" height="400"/>
                             <subviews>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="lpW-Ki-8Vk">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="290"/>
