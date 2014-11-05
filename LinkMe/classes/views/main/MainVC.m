@@ -22,6 +22,10 @@
     FooterVC                   *_footerVC;
     
     NSString                   * _screenName;
+    
+    HomeVC                     *_homeVCtodo;
+    HomeVC                     *_homeVCdoing;
+    HomeVC                     *_homeVCdone;
 }
 
 @end
@@ -69,7 +73,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
 
 -(void)setupUI
 {
-    [self testOpenScreen:@"all"];
+    [self testOpenScreen:@"todo"];
 }
 
 #pragma mark header界面
@@ -113,11 +117,20 @@ ON_SIGNAL2(BeeUIBoard, signal)
 
 -(void)initializeRouterMapClass
 {
-    HomeVC *homeVC = [HomeVC sharedInstance];
-    homeVC.parentBoard = self;
-    [_router map:@"all" toBoard:homeVC];
-    [_router map:@"now" toBoard:nil];
-    [_router map:@"time" toBoard:nil];
+    _homeVCtodo = [[HomeVC alloc]init];
+    _homeVCtodo.whenActivities = @"todo";
+    _homeVCtodo.parentBoard = self;
+    [_router map:@"todo" toBoard:_homeVCtodo];
+    
+    _homeVCdoing = [[HomeVC alloc]init];
+    _homeVCdoing.whenActivities = @"doing";
+    _homeVCdoing.parentBoard = self;
+    [_router map:@"doing" toBoard:_homeVCdoing];
+    
+    _homeVCdone = [[HomeVC alloc]init];
+    _homeVCdone.whenActivities = @"done";
+    _homeVCdone.parentBoard = self;
+    [_router map:@"done" toBoard:_homeVCdone];
 }
 
 -(void)testOpenScreen:(NSString*)name
@@ -125,7 +138,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
     _screenName = name;
     if(_screenName)
     {
-        [_router open:_screenName animated:NO];
+        [_router open:_screenName animated:YES];
     }
 }
 

@@ -58,7 +58,6 @@ ON_SIGNAL2(BeeUIBoard, signal)
     {
         
         
-        
     }
     else if ( [signal is:BeeUIBoard.DID_APPEAR] )
     {
@@ -66,7 +65,8 @@ ON_SIGNAL2(BeeUIBoard, signal)
     }
     else if ( [signal is:BeeUIBoard.WILL_DISAPPEAR] )
     {
-        
+        [self unobserveAllNotifications];
+        [self clearMemory];
     }
     else if ( [signal is:BeeUIBoard.DID_DISAPPEAR] )
     {
@@ -95,13 +95,13 @@ ON_SIGNAL2(BeeUIBoard, signal)
     [commonHeaderView setRightButtonBlock:^(){
         
     }];
-    _headerVC.parentBoard = self;
-    _headerVC.view.alpha = 1.0f;
-    _headerVC.view.hidden = NO;
-    // _headerVC.view.userInteractionEnabled = YES;
-    CGRect rect = [[UIScreen mainScreen] bounds];
-    _headerVC.view.frame = CGRectMake(0, 0, rect.size.width, 55);
-    [self.view addSubview:_headerVC.view];
+//    _headerVC.parentBoard = self;
+//    _headerVC.view.alpha = 1.0f;
+//    _headerVC.view.hidden = NO;
+//    // _headerVC.view.userInteractionEnabled = YES;
+//    CGRect rect = [[UIScreen mainScreen] bounds];
+//    _headerVC.view.frame = CGRectMake(0, 0, rect.size.width, 55);
+//    [self.view addSubview:_headerVC.view];
 }
 
 -(void)setTextFieldUI
@@ -214,6 +214,8 @@ ON_SIGNAL2(BeeUIBoard, signal)
     _activityModel.endTime = [self StringToDate:[NSString stringWithFormat:@"%@ %@",_closeDateTextField.text,_closeTimeTextField.text]];
     _activityModel.lowerLimit = [_lowerLimitCountTf.text intValue];
     _activityModel.upperLimit = [_ceilingCountTf.text intValue];
+    //todo:新创建的活动的时间应该只能是todo，用户添加活动时，要加条件限制。
+    [CoreModel sharedInstance].whenActivities = @"todo";
     [[CoreService sharedInstance].activityRemoteService addActivityByActivityModel:_activityModel];
 }
 -(NSDate*)StringToDate:(NSString*)dateString
@@ -292,6 +294,11 @@ ON_SIGNAL3(TimePopupPickerVC, DISMISS_OPEN_TIME, signal)
     [_lowerLimitCountTf setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
     
     
+}
+
+-(void)clearMemory
+{
+    _headerVC = nil;
 }
 
 #pragma mark - UITextViewDelegate

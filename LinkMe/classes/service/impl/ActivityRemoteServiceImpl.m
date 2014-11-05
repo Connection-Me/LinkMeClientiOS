@@ -23,7 +23,7 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
     NSArray *localActivities = [[CoreDao sharedInstance].homeDao findActivities];
     [self postNotification:ActivityEvent.LOAD_LOCAL_ACTIVITY withObject:localActivities];
 }
--(void)queryHomeActivity:(NSInteger)offset andLimit:(NSInteger)limit
+-(void)queryHomeActivity:(NSInteger)offset andLimit:(NSInteger)limit andWay:(NSString *)way andWhen:(NSString *)when
 {
     BOOL isConnectAvailable = [self isConnectionAvailable];
     if (!isConnectAvailable)
@@ -46,11 +46,10 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
         ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
        
        [request setPostValue:[CoreModel sharedInstance].token forKey:@"sessionId"];
-       [request setPostValue:@"all" forKey:@"way"];
        [request setPostValue:[NSNumber numberWithInt:offset] forKey:@"offset"];
        [request setPostValue:[NSNumber numberWithInt:limit] forKey:@"limit"];
-       [request setPostValue:@"all" forKey:@"way"];
-       [request setPostValue:@"all" forKey:@"when"];
+       [request setPostValue:way forKey:@"way"];
+       [request setPostValue:when forKey:@"when"];
        [request setPostValue:@"activity" forKey:@"c"];
        [request setPostValue:@"showList" forKey:@"a"];
        
@@ -140,10 +139,10 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
         [request setPostValue:@"" forKey:@"picture"];
         [request setPostValue:[NSNumber numberWithInt: activityModel.lowerLimit]forKey:@"lowerLimit"];
         [request setPostValue:[NSNumber numberWithInt: activityModel.upperLimit] forKey:@"upperLimit"];
-        [request setPostValue:activityModel.openTime forKey:@"openTime"];
-        [request setPostValue:activityModel.closeTime forKey:@"closeTime"];
-        [request setPostValue:activityModel.startTime forKey:@"startTime"];
-        [request setPostValue:activityModel.endTime forKey:@"endTime"];
+        [request setPostValue:[NSNumber numberWithDouble:activityModel.openTime.timeIntervalSince1970] forKey:@"openTime"];
+        [request setPostValue:[NSNumber numberWithDouble:activityModel.closeTime.timeIntervalSince1970] forKey:@"closeTime"];
+        [request setPostValue:[NSNumber numberWithDouble:activityModel.startTime.timeIntervalSince1970] forKey:@"startTime"];
+        [request setPostValue:[NSNumber numberWithDouble:activityModel.endTime.timeIntervalSince1970] forKey:@"endTime"];
         [request setPostValue:@"activity" forKey:@"c"];
         [request setPostValue:@"create" forKey:@"a"];
         request.requestMethod = RequestMethod.POST;
@@ -185,8 +184,6 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
         }];
         [request startAsynchronous];
     }
-    
-    
     
 }
 

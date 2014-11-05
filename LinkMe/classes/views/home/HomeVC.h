@@ -14,10 +14,10 @@
 @interface HomeVC : LinkMeViewController<UICollectionViewDataSource,UICollectionViewDelegate,RNFrostedSidebarDelegate>
 //@property (strong, nonatomic) IBOutlet CommonHeaderView *headerView;
 AS_SIGNAL(TEST)
-AS_SINGLETON(HomeVC)
 AS_SIGNAL(OPEN_CELL_DETAIL)
 @property (strong, nonatomic) IBOutlet UICollectionView *mainView;
 //@property (weak, nonatomic) IBOutlet UIView *footerView;
 
+@property (strong ,nonatomic) NSString  *whenActivities;
 
 @end
