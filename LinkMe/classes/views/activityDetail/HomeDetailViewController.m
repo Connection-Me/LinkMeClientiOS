@@ -270,7 +270,7 @@ ON_NOTIFICATION3(DetailEvent, LOAD_DETAIL_ACTIVITY_FAILED, notification)
     self.activityEndingDateLabel.text = @"test";
     self.activityLessPeopleLabel.text = @"test";
     self.activityCompareCurrentyTime.text = @"test";
-    self.activityImageView.image = [UIImage imageNamed:@"pic5.jpg"];
+    self.activityImageView.image = [UIImage imageNamed:@"testImage.jpg"];
 #endif
 }
 

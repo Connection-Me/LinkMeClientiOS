@@ -152,6 +152,8 @@
 		D8CC312D19FFA190003F2693 /* ColorList.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CC312B19FFA190003F2693 /* ColorList.m */; };
 		D8D5511D19B4BD3F0020DB8B /* CommonHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D5511C19B4BD3F0020DB8B /* CommonHeaderView.m */; };
 		D8D5511E19B4BD3F0020DB8B /* CommonHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D5511C19B4BD3F0020DB8B /* CommonHeaderView.m */; };
+		D8F3313F1A0A740900F9F5E5 /* testImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8F3313E1A0A740900F9F5E5 /* testImage.jpg */; };
+		D8F331401A0A740900F9F5E5 /* testImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8F3313E1A0A740900F9F5E5 /* testImage.jpg */; };
 		D8F6C48219BEFA940018BD29 /* ActivityRemoteServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E117D33F19B4B8CC00411512 /* ActivityRemoteServiceImpl.m */; };
 		E117D32D19B3882B00411512 /* LibModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E117D32C19B3882B00411512 /* LibModel.m */; };
 		E117D33C19B4B43100411512 /* ActivityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E117D33B19B4B43100411512 /* ActivityModel.m */; };
@@ -558,6 +560,7 @@
 		D8CC312B19FFA190003F2693 /* ColorList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorList.m; sourceTree = "<group>"; };
 		D8D5511B19B4BD3F0020DB8B /* CommonHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonHeaderView.h; sourceTree = "<group>"; };
 		D8D5511C19B4BD3F0020DB8B /* CommonHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonHeaderView.m; sourceTree = "<group>"; };
+		D8F3313E1A0A740900F9F5E5 /* testImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testImage.jpg; sourceTree = "<group>"; };
 		E117D32B19B3882B00411512 /* LibModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibModel.h; sourceTree = "<group>"; };
 		E117D32C19B3882B00411512 /* LibModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibModel.m; sourceTree = "<group>"; };
 		E117D33919B4B38E00411512 /* IActivityRemoteService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IActivityRemoteService.h; sourceTree = "<group>"; };
@@ -1630,6 +1633,7 @@
 		E17AC6D819A7F0E0008CF3FC /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D8F3313E1A0A740900F9F5E5 /* testImage.jpg */,
 				D87D60941A01EBB000E6F549 /* imageView.jpg */,
 				D8A54E8819EBCB8A0029858F /* user2.jpg */,
 				D8A54E8519EBCA380029858F /* user1.jpg */,
@@ -2752,6 +2756,7 @@
 			files = (
 				D86791A719B42B9200630891 /* pic5.jpg in Resources */,
 				D86791A919B42B9200630891 /* pic1.jpg in Resources */,
+				D8F3313F1A0A740900F9F5E5 /* testImage.jpg in Resources */,
 				E11A0D3E19C28F7D000C6E02 /* FooterVC.xib in Resources */,
 				D8AF2EAE19E6858700BDCDF8 /* HeaderVC.xib in Resources */,
 				D87D60951A01EBB000E6F549 /* imageView.jpg in Resources */,
@@ -2823,6 +2828,7 @@
 				D8C5780E19BFFCC1008476DE /* MJRefresh.bundle in Resources */,
 				D8AF2EAF19E6858700BDCDF8 /* HeaderVC.xib in Resources */,
 				D8C3F68919B607FB000697A3 /* qqLogo.png in Resources */,
+				D8F331401A0A740900F9F5E5 /* testImage.jpg in Resources */,
 				D8C3F67F19B607FB000697A3 /* menu@2x.png in Resources */,
 				D86791A819B42B9200630891 /* pic5.jpg in Resources */,
 				D897332719B5B0CC00133321 /* star@2x.png in Resources */,
