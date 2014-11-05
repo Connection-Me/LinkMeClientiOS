@@ -10,6 +10,8 @@
 @class ActivityModel;
 @protocol IActivityRemoteService <NSObject>
 
--(void)queryHomeActivity:(NSInteger)offset andLimit:(NSInteger)limit;
+//way:all,host,guest;
+//when:todo,doing,done;
+-(void)queryHomeActivity:(NSInteger)offset andLimit:(NSInteger)limit andWay:(NSString*)way andWhen:(NSString*)when;
 -(void)addActivityByActivityModel:(ActivityModel *)activityModel;
 @end

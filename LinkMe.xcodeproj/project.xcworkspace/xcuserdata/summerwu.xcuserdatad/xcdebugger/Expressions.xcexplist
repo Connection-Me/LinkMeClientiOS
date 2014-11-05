@@ -3,10 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[AddActivityVC saveActivityTouchUpInside:]:AddActivityVC.m">
+         contextName = "-[MainVC setupRouter]:MainVC.m">
          <PersistentStrings>
             <PersistentString
-               value = "_openSignDateTextField.text">
+               value = "_router.view.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -15,6 +15,14 @@
          <PersistentStrings>
             <PersistentString
                value = "self.backButtonBlock">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AddActivityVC setupHeader]:AddActivityVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "rect.size.width">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -28,15 +36,26 @@
       </ContextState>
       <ContextState
          contextName = "-[HomeVC collectionView:numberOfItemsInSection:]:HomeVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "activityList">
+            </PersistentString>
+            <PersistentString
+               value = "_whenActivities">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "-[HomeVC handleUISignal_BeeUIBoard:]:HomeVC.m">
          <PersistentStrings>
             <PersistentString
-               value = "isAddActivity">
+               value = "self.view.frame">
             </PersistentString>
             <PersistentString
-               value = "self.view.frame">
+               value = "_whenActivities">
+            </PersistentString>
+            <PersistentString
+               value = "isAddActivity">
             </PersistentString>
             <PersistentString
                value = "activityList.count">
@@ -87,6 +106,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "__71-[ActivityRemoteServiceImpl queryHomeActivity:andLimit:andWay:andWhen:]_block_invoke127:ActivityRemoteServiceImpl.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "when">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[UIViewController(BeeUISignal) sendUISignal:withObject:from:]:UIViewController+BeeUISignal.m">
       </ContextState>
       <ContextState
@@ -95,13 +122,16 @@
             <PersistentString
                value = "activityList">
             </PersistentString>
+            <PersistentString
+               value = "_whenActivities">
+            </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[MainVC setupRouter]:MainVC.m">
+         contextName = "-[AddActivityVC saveActivityTouchUpInside:]:AddActivityVC.m">
          <PersistentStrings>
             <PersistentString
-               value = "_router.view.frame">
+               value = "_openSignDateTextField.text">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

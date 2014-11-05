@@ -69,7 +69,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
 }
 -(void)setupData
 {
-    typeArray = [[NSMutableArray alloc]initWithArray:@[@"all",@"now",@"time"]];
+    typeArray = [[NSMutableArray alloc]initWithArray:@[@"todo",@"doing",@"done"]];
 }
 
 -(IBAction)activityBtnTouchUpInside:(id)sender

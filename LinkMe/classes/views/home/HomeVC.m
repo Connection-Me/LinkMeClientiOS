@@ -14,6 +14,7 @@
 #import "CoreService.h"
 #import "MJRefresh.h"
 #import "LoginVC.h"
+#import "CoreModel.h"
 
 @interface HomeVC ()
 {
@@ -29,7 +30,6 @@
 @implementation HomeVC
 DEF_SIGNAL(TEST)
 DEF_SIGNAL(OPEN_CELL_DETAIL)
-DEF_SINGLETON(HomeVC)
 SUMMER_DEF_XIB(HomeVC, YES, NO)
 
 
@@ -67,11 +67,11 @@ ON_SIGNAL2(BeeUIBoard, signal)
     }
     else if ( [signal is:BeeUIBoard.WILL_APPEAR] )
 	{
-      
-        if(isAddActivity>0)
+      //  [self initializeRouterObserveEvents];
+        if(isAddActivity>0&&[_whenActivities isEqualToString:[CoreModel sharedInstance].whenActivities])
         {
             isAllRefresh = YES;
-            [[CoreService sharedInstance].activityRemoteService queryHomeActivity:0 andLimit:activityList.count+isAddActivity];
+            [[CoreService sharedInstance].activityRemoteService queryHomeActivity:0 andLimit:activityList.count+isAddActivity andWay:@"all" andWhen:_whenActivities];
             isAddActivity = 0;
         }
 	}
@@ -81,7 +81,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
 	}
 	else if ( [signal is:BeeUIBoard.WILL_DISAPPEAR] )
 	{
-        
+//        [self unobserveNotifications];
 	}
 	else if ( [signal is:BeeUIBoard.DID_DISAPPEAR] )
 	{
@@ -112,9 +112,15 @@ ON_SIGNAL2(BeeUIBoard, signal)
     
 }
 
+-(void)unobserveNotifications
+{
+    [self unobserveAllNotifications];
+}
+
 -(void)startDownloadHomeActivity
 {
-    [[CoreService sharedInstance].activityRemoteService queryHomeActivity:offset andLimit:limit];
+    [CoreModel sharedInstance].whenActivities = _whenActivities;
+    [[CoreService sharedInstance].activityRemoteService queryHomeActivity:offset andLimit:limit andWay:@"all" andWhen:_whenActivities];
 }
 
 
@@ -187,6 +193,10 @@ ON_SIGNAL2(BeeUIBoard, signal)
         //这里传给后台的值还需要和后台协商
         vc->offset = 0;
         vc->limit = vc->activityList.count;
+        if(vc->limit == 0)
+        {
+            vc->limit = 10;
+        }
         vc->isAllRefresh = YES;
         [vc startDownloadHomeActivity];
         // 模拟延迟加载数据，因此2秒后才调用）
@@ -232,6 +242,9 @@ ON_NOTIFICATION3(ActivityEvent, LOAD_ACTIVITY_START, notification)
 }
 ON_NOTIFICATION3(ActivityEvent, LOAD_ACTIVITY_SUCCESS, notification)
 {
+    if (![_whenActivities isEqualToString:[CoreModel sharedInstance].whenActivities]) {
+        return;
+    }
     [TCMessageBox hide];
     if (isAllRefresh) {
         [activityList removeAllObjects];
@@ -267,7 +280,9 @@ ON_NOTIFICATION3(ActivityEvent, LOAD_LOCAL_ACTIVITY, notification)
 
 ON_NOTIFICATION3(ActivityEvent, ADD_ACTIVITY_SUCCESS, notification)
 {
-    isAddActivity ++;
+    if ([_whenActivities isEqualToString:[CoreModel sharedInstance].whenActivities]) {
+        isAddActivity ++;
+    }
 }
 
 ON_SIGNAL3(HomeCollectionVCCell, TESTVC, signal)
