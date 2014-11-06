@@ -9,7 +9,7 @@
             <connections>
                 <outlet property="activityImageView" destination="hFD-rq-dod" id="oew-KQ-pRo"/>
                 <outlet property="activityView" destination="dob-On-eHR" id="IZs-PL-zbN"/>
-                <outlet property="approveUserList" destination="lpW-Ki-8Vk" id="z1r-id-stW"/>
+                <outlet property="collectionView" destination="HJ2-bg-7PO" id="4D7-k0-p1q"/>
                 <outlet property="founderImageView" destination="Mcu-qO-EEa" id="rkE-wg-IM4"/>
                 <outlet property="informationView" destination="Z6p-Bn-gQB" id="jad-PT-dsK"/>
                 <outlet property="scrollerView" destination="BL4-aM-KN6" id="ahC-8X-pAP"/>
@@ -153,17 +153,37 @@
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z6p-Bn-gQB">
                             <rect key="frame" x="0.0" y="392" width="320" height="309"/>
                             <subviews>
-                                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="lpW-Ki-8Vk">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="HJ2-bg-7PO">
+                                    <rect key="frame" x="0.0" y="45" width="320" height="265"/>
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="DtM-HJ-WRn">
+                                        <size key="itemSize" width="70" height="70"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="20" minY="10" maxX="20" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
                                     <connections>
-                                        <outlet property="dataSource" destination="-1" id="Md6-DQ-h0X"/>
-                                        <outlet property="delegate" destination="-1" id="aBY-RV-izS"/>
+                                        <outlet property="dataSource" destination="-1" id="NAu-uj-rUC"/>
+                                        <outlet property="delegate" destination="-1" id="srQ-hj-4WS"/>
                                     </connections>
-                                </tableView>
+                                </collectionView>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UEW-cJ-FOp">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="赞成：10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kn9-4G-Exj">
+                                            <rect key="frame" x="8" y="8" width="153" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="拒绝：10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAz-Oa-rAf">
+                                            <rect key="frame" x="159" y="8" width="153" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" red="0.30588235294117649" green="0.3529411764705882" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
                         </view>

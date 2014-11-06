@@ -11,7 +11,7 @@
 #import "LinkMeViewController.h"
 #import "Bee.h"
 #import "ActivityModel.h"
-@interface HomeDetailViewController : LinkMeViewController< UITableViewDelegate, UITableViewDataSource>
+@interface HomeDetailViewController : LinkMeViewController<UICollectionViewDataSource,UICollectionViewDelegate>
 AS_SINGLETON(HomeDetailViewController)
 
 AS_SIGNAL(CLOSE_CELL_DETAIL)
@@ -29,6 +29,7 @@ AS_SIGNAL(CLOSE_CELL_DETAIL)
 @property (weak, nonatomic) IBOutlet UILabel *activityLessPeopleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *activityCompareCurrentyTime;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollerView;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @property (nonatomic,strong)  ActivityModel    *sampleActivityModel;
 

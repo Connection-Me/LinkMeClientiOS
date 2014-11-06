@@ -53,6 +53,10 @@
 		D87DF01F19ACE1C50010BEE9 /* CollapseClickCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D87DF01819ACE1C50010BEE9 /* CollapseClickCell.m */; };
 		D87DF02019ACE1C50010BEE9 /* CollapseClickCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87DF01919ACE1C50010BEE9 /* CollapseClickCell.xib */; };
 		D87DF02119ACE1C50010BEE9 /* CollapseClickCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87DF01919ACE1C50010BEE9 /* CollapseClickCell.xib */; };
+		D88439D71A0BAC11007C3BB2 /* ListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D88439D51A0BAC11007C3BB2 /* ListCollectionViewCell.m */; };
+		D88439D81A0BAC11007C3BB2 /* ListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D88439D51A0BAC11007C3BB2 /* ListCollectionViewCell.m */; };
+		D88439D91A0BAC11007C3BB2 /* ListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D88439D61A0BAC11007C3BB2 /* ListCollectionViewCell.xib */; };
+		D88439DA1A0BAC11007C3BB2 /* ListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D88439D61A0BAC11007C3BB2 /* ListCollectionViewCell.xib */; };
 		D888BAD819ED17B000FEB873 /* TimeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D888BAD719ED17B000FEB873 /* TimeUtil.m */; };
 		D888BAD919ED17B000FEB873 /* TimeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D888BAD719ED17B000FEB873 /* TimeUtil.m */; };
 		D897331419B5AB0300133321 /* RNFrostedSidebar.m in Sources */ = {isa = PBXBuildFile; fileRef = D897331319B5AB0300133321 /* RNFrostedSidebar.m */; };
@@ -91,10 +95,6 @@
 		D8A4FCC31A00F0A5008C6DEF /* ActivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A4FCC11A00F0A5008C6DEF /* ActivityManager.m */; };
 		D8A4FCC51A00F387008C6DEF /* p_upLimit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8A4FCC41A00F387008C6DEF /* p_upLimit@2x.png */; };
 		D8A4FCC61A00F387008C6DEF /* p_upLimit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8A4FCC41A00F387008C6DEF /* p_upLimit@2x.png */; };
-		D8A54E8119EB82320029858F /* HTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A54E7F19EB82320029858F /* HTableViewCell.m */; };
-		D8A54E8219EB82320029858F /* HTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8A54E7F19EB82320029858F /* HTableViewCell.m */; };
-		D8A54E8319EB82320029858F /* HTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8A54E8019EB82320029858F /* HTableViewCell.xib */; };
-		D8A54E8419EB82320029858F /* HTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8A54E8019EB82320029858F /* HTableViewCell.xib */; };
 		D8A54E8619EBCA380029858F /* user1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8A54E8519EBCA380029858F /* user1.jpg */; };
 		D8A54E8719EBCA380029858F /* user1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8A54E8519EBCA380029858F /* user1.jpg */; };
 		D8A54E8919EBCB8A0029858F /* user2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8A54E8819EBCB8A0029858F /* user2.jpg */; };
@@ -491,6 +491,9 @@
 		D87DF01719ACE1C50010BEE9 /* CollapseClickCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollapseClickCell.h; sourceTree = "<group>"; };
 		D87DF01819ACE1C50010BEE9 /* CollapseClickCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollapseClickCell.m; sourceTree = "<group>"; };
 		D87DF01919ACE1C50010BEE9 /* CollapseClickCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollapseClickCell.xib; sourceTree = "<group>"; };
+		D88439D41A0BAC11007C3BB2 /* ListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCollectionViewCell.h; sourceTree = "<group>"; };
+		D88439D51A0BAC11007C3BB2 /* ListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCollectionViewCell.m; sourceTree = "<group>"; };
+		D88439D61A0BAC11007C3BB2 /* ListCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListCollectionViewCell.xib; sourceTree = "<group>"; };
 		D888BAD619ED17B000FEB873 /* TimeUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeUtil.h; sourceTree = "<group>"; };
 		D888BAD719ED17B000FEB873 /* TimeUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeUtil.m; sourceTree = "<group>"; };
 		D897331219B5AB0300133321 /* RNFrostedSidebar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNFrostedSidebar.h; sourceTree = "<group>"; };
@@ -516,9 +519,6 @@
 		D8A4FCC01A00F0A5008C6DEF /* ActivityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityManager.h; sourceTree = "<group>"; };
 		D8A4FCC11A00F0A5008C6DEF /* ActivityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityManager.m; sourceTree = "<group>"; };
 		D8A4FCC41A00F387008C6DEF /* p_upLimit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "p_upLimit@2x.png"; sourceTree = "<group>"; };
-		D8A54E7E19EB82320029858F /* HTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTableViewCell.h; sourceTree = "<group>"; };
-		D8A54E7F19EB82320029858F /* HTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTableViewCell.m; sourceTree = "<group>"; };
-		D8A54E8019EB82320029858F /* HTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTableViewCell.xib; sourceTree = "<group>"; };
 		D8A54E8519EBCA380029858F /* user1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = user1.jpg; sourceTree = "<group>"; };
 		D8A54E8819EBCB8A0029858F /* user2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = user2.jpg; sourceTree = "<group>"; };
 		D8AF2EA919E6858700BDCDF8 /* HeaderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderVC.h; sourceTree = "<group>"; };
@@ -1297,9 +1297,9 @@
 		D8D43A3619E8E08300F67512 /* followListCell */ = {
 			isa = PBXGroup;
 			children = (
-				D8A54E7E19EB82320029858F /* HTableViewCell.h */,
-				D8A54E7F19EB82320029858F /* HTableViewCell.m */,
-				D8A54E8019EB82320029858F /* HTableViewCell.xib */,
+				D88439D41A0BAC11007C3BB2 /* ListCollectionViewCell.h */,
+				D88439D51A0BAC11007C3BB2 /* ListCollectionViewCell.m */,
+				D88439D61A0BAC11007C3BB2 /* ListCollectionViewCell.xib */,
 			);
 			name = followListCell;
 			sourceTree = "<group>";
@@ -2786,7 +2786,6 @@
 				E17AC6DA19A7F0E0008CF3FC /* left_arrow.png in Resources */,
 				D867F4B819FE50D400D02FB8 /* addActivityPic.png in Resources */,
 				E161263E19A7E5F90012834A /* InfoPlist.strings in Resources */,
-				D8A54E8319EB82320029858F /* HTableViewCell.xib in Resources */,
 				D8C3F68E19B607FB000697A3 /* menu.png in Resources */,
 				D8C3F68619B607FB000697A3 /* reject@2x.png in Resources */,
 				D8A4FCB41A00E9BF008C6DEF /* p_activityTime.png in Resources */,
@@ -2806,6 +2805,7 @@
 				E11A0D3219C22404000C6E02 /* MainVC.xib in Resources */,
 				D8C3F69519B617AD000697A3 /* add@2x.png in Resources */,
 				D8A4FCB61A00E9C0008C6DEF /* p_description@2x.png in Resources */,
+				D88439D91A0BAC11007C3BB2 /* ListCollectionViewCell.xib in Resources */,
 				D85DE5BF19B360A200A906E7 /* HomeCollectionVCCell.xib in Resources */,
 				D86791AD19B42B9200630891 /* pic4.jpg in Resources */,
 				E17AC6DD19A7F0E0008CF3FC /* right_arrow@2x.png in Resources */,
@@ -2826,6 +2826,7 @@
 				D867F4B919FE50D400D02FB8 /* addActivityPic.png in Resources */,
 				D8A4FCB71A00E9C0008C6DEF /* p_description@2x.png in Resources */,
 				D8C5780E19BFFCC1008476DE /* MJRefresh.bundle in Resources */,
+				D88439DA1A0BAC11007C3BB2 /* ListCollectionViewCell.xib in Resources */,
 				D8AF2EAF19E6858700BDCDF8 /* HeaderVC.xib in Resources */,
 				D8C3F68919B607FB000697A3 /* qqLogo.png in Resources */,
 				D8F331401A0A740900F9F5E5 /* testImage.jpg in Resources */,
@@ -2842,7 +2843,6 @@
 				D8A4FCB51A00E9C0008C6DEF /* p_activityTime.png in Resources */,
 				D8C3F68719B607FB000697A3 /* reject@2x.png in Resources */,
 				D8C3F68B19B607FB000697A3 /* join.png in Resources */,
-				D8A54E8419EB82320029858F /* HTableViewCell.xib in Resources */,
 				D86791A619B42B9200630891 /* galleryImage.jpg in Resources */,
 				D85DE5C019B360A200A906E7 /* HomeCollectionVCCell.xib in Resources */,
 				E161265719A7E5F90012834A /* InfoPlist.strings in Resources */,
@@ -3018,9 +3018,9 @@
 				E1A5A76019C4B7DE004A8876 /* NSObject+BeeJSON.mm in Sources */,
 				E1A5A77819C4B7DE004A8876 /* FMDatabase.m in Sources */,
 				E1A5A73019C4B7DE004A8876 /* UIViewController+BeeUITemplate.m in Sources */,
-				D8A54E8119EB82320029858F /* HTableViewCell.m in Sources */,
 				E117D34019B4B8CC00411512 /* ActivityRemoteServiceImpl.m in Sources */,
 				E1A5A73819C4B7DE004A8876 /* Bee.mm in Sources */,
+				D88439D71A0BAC11007C3BB2 /* ListCollectionViewCell.m in Sources */,
 				E1A5A78119C4B7DE004A8876 /* CXHTMLDocument.m in Sources */,
 				E1A5A6F119C4B7DE004A8876 /* Bee_UIPickerView.m in Sources */,
 				E1A5A77C19C4B7DE004A8876 /* FMResultSet.m in Sources */,
@@ -3179,6 +3179,7 @@
 			files = (
 				D8CC312D19FFA190003F2693 /* ColorList.m in Sources */,
 				E161265919A7E5F90012834A /* LinkMeTests.m in Sources */,
+				D88439D81A0BAC11007C3BB2 /* ListCollectionViewCell.m in Sources */,
 				D8B1FA0619FB9E8000234823 /* AddActivityVC.m in Sources */,
 				D87DF00F19ACE1BB0010BEE9 /* LoginPageViewController.m in Sources */,
 				D8C5781619BFFCC1008476DE /* MJRefreshHeaderView.m in Sources */,
@@ -3206,7 +3207,6 @@
 				D8A4FCC31A00F0A5008C6DEF /* ActivityManager.m in Sources */,
 				D897331519B5AB0300133321 /* RNFrostedSidebar.m in Sources */,
 				D8A6AC1819F5F6AF00B41D58 /* DetailRemoteServiceImpl.m in Sources */,
-				D8A54E8219EB82320029858F /* HTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,7 +16,7 @@
 #import "CoreService.h"
 #import "ImageDownloader.h"
 #import "UserModel.h"
-#import "HTableViewCell.h"
+#import "ListCollectionViewCell.h"
 #import "TimeUtil.h"
 @interface HomeDetailViewController ()
 {
@@ -120,6 +120,9 @@ ON_SIGNAL2(BeeUIBoard, signal)
 -(void)setupAcitityView{
 //    [_activityView removeAllSubviews];
     
+    UINib *nib = [UINib nibWithNibName:@"ListCollectionViewCell" bundle:nil];
+    [self.collectionView registerNib:nib forCellWithReuseIdentifier:@"ListCollectionViewCell"];
+    
     [_activityView setBackgroundColor:[UIColor colorWithRed:253/255.f green:253/255.f blue:253/255.f alpha:0.9]];
     
     //加圆角
@@ -209,44 +212,18 @@ ON_NOTIFICATION3(DetailEvent, LOAD_DETAIL_ACTIVITY_FAILED, notification)
 }
 
 
-#pragma mark - TableViewDelegate
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    [tableView setBackgroundColor:[UIColor clearColor]];
-     UIView *view = [self getTableViewCellWithDef:@"HTableViewCell" WithTableView:tableView];
-    HTableViewCell *cell = (HTableViewCell *)view;
-    
-    NSInteger index = indexPath.row;
-    [cell updateCell:[self.sampleActivityModel.approveList objectAtIndex:index]];
-    return cell;
-}
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectio{
-#ifdef DEBUG
-    return 10;
-#endif
-    return [self.sampleActivityModel.approveList count];
-    
-}
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+#pragma mark - CollectionViewDelegate
+//每个section的item个数
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 70.0f; 
-}
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    
-    return 1;
+    return 10;
 }
 
--(UITableViewCell *)getTableViewCellWithDef:(NSString*)nibName WithTableView:(UITableView *)tableView {
-    
-    NSString *CustomCellIdentifier = nibName;
-    HTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CustomCellIdentifier];
-    //cell
-    if (cell == nil){
-        //类名
-        UINib *nib = [UINib nibWithNibName:CustomCellIdentifier bundle:nil];
-        [tableView registerNib:nib forCellReuseIdentifier:CustomCellIdentifier];
-        cell = [tableView dequeueReusableCellWithIdentifier:CustomCellIdentifier];
-    }
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    ListCollectionViewCell *cell = (ListCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"ListCollectionViewCell" forIndexPath:indexPath];
+    // [cell updateCell:indexPath.row];
+//    [cell updatecellByActivityModel:[activityList objectAtIndex:indexPath.row]];
     return cell;
 }
 
