@@ -222,8 +222,7 @@ ON_NOTIFICATION3(DetailEvent, LOAD_DETAIL_ACTIVITY_FAILED, notification)
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ListCollectionViewCell *cell = (ListCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"ListCollectionViewCell" forIndexPath:indexPath];
-    // [cell updateCell:indexPath.row];
-//    [cell updatecellByActivityModel:[activityList objectAtIndex:indexPath.row]];
+    [cell updateCell];
     return cell;
 }
 

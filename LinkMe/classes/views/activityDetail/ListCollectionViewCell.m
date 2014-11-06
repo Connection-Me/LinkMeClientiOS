@@ -8,6 +8,7 @@
 
 #import "ListCollectionViewCell.h"
 #import "summer_extend.h"
+#import "UIImageView+UIImageViewExt.h"
 
 @implementation ListCollectionViewCell
 
@@ -22,6 +23,13 @@
         // Initialization code
     }
     return self;
+}
+
+-(void)updateCell{
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+    [imageView setImage:[UIImage imageNamed:@"user2.jpg"]];
+    [imageView setCircle];
+    [self addSubview:imageView];
 }
 
 @end

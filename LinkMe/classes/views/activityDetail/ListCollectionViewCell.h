@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ListCollectionViewCell : UICollectionViewCell
-
+-(void)updateCell;
 @end
