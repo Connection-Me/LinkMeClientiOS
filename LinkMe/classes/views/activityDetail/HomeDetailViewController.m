@@ -39,8 +39,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
     
     if([signal isKindOf:BeeUIBoard.CREATE_VIEWS])
     {
-        //load 数据
-      //  [self loadDetailData];
+        
         [_scrollerView setContentSize:CGSizeMake(320,600)];
         [self initializeObserveEvents];
         //设置 头导航栏
@@ -50,8 +49,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
 
         [self.approveUserList setBackgroundColor:[UIColor redColor]];
         
-        [self insertDataFromSampleActivityView];
-        [self insertUserInfo];
+      
         
         
     }
@@ -64,11 +62,15 @@ ON_SIGNAL2(BeeUIBoard, signal)
     }
     else if ( [signal is:BeeUIBoard.WILL_APPEAR] )
 	{
+        //load 数据
+        [self loadDetailData];
         
+       
 	}
 	else if ( [signal is:BeeUIBoard.DID_APPEAR] )
 	{
-        
+        [self insertDataFromSampleActivityView];
+        [self insertUserInfo];
 	}
 	else if ( [signal is:BeeUIBoard.WILL_DISAPPEAR] )
 	{
@@ -139,8 +141,8 @@ ON_SIGNAL2(BeeUIBoard, signal)
     
    
     
-    UIImage *backgroundImage = [UIImage imageFromString:_sampleActivityModel.imageURL];
-    [_activityImageView setImage:backgroundImage];
+//    UIImage *backgroundImage = [UIImage imageFromString:_sampleActivityModel.imageURL];
+//    [_activityImageView setImage:backgroundImage];
     
 }
 
@@ -233,32 +235,38 @@ ON_NOTIFICATION3(DetailEvent, LOAD_DETAIL_ACTIVITY_FAILED, notification)
         NSLog(@"activity is nil ");
         return;
     }
-    self.activityStartDateLabel.text = [TimeUtil stringFromDate:self.sampleActivityModel.openTime];
-    [self.activityStartDateLabel bringSubviewToFront:self.activityView];
     
-    self.activityEndingDateLabel.text = [TimeUtil stringFromDate:self.sampleActivityModel.closeTime];
+    
+    self.activityStartDateLabel.text = [NSString stringWithFormat:@"%d",self.sampleActivityModel.openTime];
+    
+      self.activityStartDateLabel.text = [NSString stringWithFormat:@"%d",self.sampleActivityModel.closeTime];
+    
     self.activityLessPeopleLabel.text = [NSString stringWithFormat:@"%d",self.sampleActivityModel.lowerLimit];
-    self.activityCompareCurrentyTime.text = [TimeUtil compareCurrentTime:[NSDate date]];
-    self.activityImageView.image = [UIImage imageNamed:self.sampleActivityModel.imageURL];
+    self.activityMaxCountLabel.text = [NSString stringWithFormat:@"%d",self.sampleActivityModel.upperLimit];
     
-#ifdef DEBUG
-    self.activityStartDateLabel.text = @"test";
-    self.activityEndingDateLabel.text = @"test";
-    self.activityLessPeopleLabel.text = @"test";
-    self.activityCompareCurrentyTime.text = @"test";
-    self.activityImageView.image = [UIImage imageNamed:@"testImage.jpg"];
-#endif
+    self.signInEndingTime.text =[NSString stringWithFormat:@"%d",self.sampleActivityModel.startTime];
+     self.signInEndingTime.text =[NSString stringWithFormat:@"%d",self.sampleActivityModel.stopTime];
+    self.activityType.text = self.sampleActivityModel.type;
+    
+    self.approveCount.text = [NSString stringWithFormat:@"%d",self.sampleActivityModel.approveCount];
+    self.rejectCount.text = [NSString stringWithFormat:@"%d",self.sampleActivityModel.rejectCount];
+    
+    self.activityName.text = self.sampleActivityModel.name;
+    self.activityDesc.text = self.sampleActivityModel.description;
+    
 }
 
 -(void)insertUserInfo{
-    //TODO sampleActivityModel add userInfo
-#ifdef DEBUG
+
+    if(self.sampleActivityModel == nil){
+        NSLog(@"activity is nil ");
+        return;
+    }
     self.founderImageView.image = [UIImage imageNamed:@"user1.jpg"];
     
     self.founderNameLabel.text = @"test";
-    self.founderTime.text =[TimeUtil stringFromDate:[NSDate date]];
+    self.founderTime.text =[TimeUtil stringFromDate:self.sampleActivityModel.activityInitTime];
     [_founderImageView setCircle];
-#endif
     
     
 }

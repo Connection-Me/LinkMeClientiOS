@@ -33,19 +33,28 @@ DEF_SINGLETON(DetailRemoteServiceImpl)
         //TODO
         //        NSString *urlString = [[CoreModel sharedInstance].serverURL stringByAppendingString:@""];//拼接请求路径
         
-        NSString *urlString = TEST_URL;
+        NSString *urlString = [[CoreModel sharedInstance].serverURL stringByAppendingString:@""];
         NSURL *url = [NSURL URLWithString:urlString];
         
-        ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
-        NSMutableDictionary * postParams = [[NSMutableDictionary alloc] init];
-        //请求的json
-        //        [postParams setObject:username forKey:@"userName"];
-        //        [postParams setObject:c forKey:@"controller"];
-        //        [postParams setObject:methodName forKey:@"methodName"];
-        NSString * jsonString = [postParams JSONString];
-        NSLog(@"the request jsonString == %@",jsonString);
+//        ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+//        NSMutableDictionary * postParams = [[NSMutableDictionary alloc] init];
+//        //请求的json
+//        [postParams setObject:@"showDetail" forKey:@"a"];
+//        [postParams setObject:@"activity" forKey:@"c"];
+//        [postParams setObject:activityId forKey:@"aid"];
+//        [postParams setObject:[CoreModel sharedInstance].token forKey:@"sessionId"];
+//        NSString * jsonString = [postParams JSONString];
+//        NSLog(@"the request jsonString == %@",jsonString);
         
-        [request appendPostData:[jsonString dataUsingEncoding:NSUTF8StringEncoding]];
+        ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+        request.timeOutSeconds = 30.0;
+        
+        [request setPostValue:[CoreModel sharedInstance].token forKey:@"sessionId"];
+        [request setPostValue:@"activity" forKey:@"c"];
+        [request setPostValue:@"showDetail" forKey:@"a"];
+        [request setPostValue:activityId forKey:@"aid"];
+        
+//        [request appendPostData:[jsonString dataUsingEncoding:NSUTF8StringEncoding]];
         request.requestMethod = RequestMethod.POST;
         __block ASIHTTPRequest * blockRequest = request;
         request.delegate = self;

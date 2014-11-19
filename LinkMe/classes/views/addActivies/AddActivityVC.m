@@ -208,10 +208,13 @@ ON_SIGNAL2(BeeUIBoard, signal)
     _activityModel.type = @"";
     _activityModel.desc = _descriptionTf.text;
     _activityModel.imageURL = @"";
-    _activityModel.openTime = [self StringToDate:[NSString stringWithFormat:@"%@ %@",_openSignDateTextField.text,_openSignTimeTextField.text]];
-    _activityModel.closeTime = [self StringToDate:[NSString stringWithFormat:@"%@ %@",_closeSignDateTextField.text,_closeSignTimeTextField.text]];
-    _activityModel.startTime = [self StringToDate:[NSString stringWithFormat:@"%@ %@",_openDateTextField.text,_openTimeTextField.text]];
-    _activityModel.endTime = [self StringToDate:[NSString stringWithFormat:@"%@ %@",_closeDateTextField.text,_closeTimeTextField.text]];
+//    _activityModel.openTime = [self StringToDate:[NSString stringWithFormat:@"%@ %@",_openSignDateTextField.text,_openSignTimeTextField.text]];
+//    _activityModel.closeTime = [self StringToDate:[NSString stringWithFormat:@"%@ %@",_closeSignDateTextField.text,_closeSignTimeTextField.text]];
+//    _activityModel.startTime = [self StringToDate:[NSString stringWithFormat:@"%@ %@",_openDateTextField.text,_openTimeTextField.text]];
+//    _activityModel.stopTime = [self StringToDate:[NSString stringWithFormat:@"%@ %@",_closeDateTextField.text,_closeTimeTextField.text]];
+    
+    
+    
     _activityModel.lowerLimit = [_lowerLimitCountTf.text intValue];
     _activityModel.upperLimit = [_ceilingCountTf.text intValue];
     //todo:新创建的活动的时间应该只能是todo，用户添加活动时，要加条件限制。

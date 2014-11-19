@@ -18,12 +18,12 @@
 @property (nonatomic,strong) NSString* desc;
 @property (nonatomic,strong) NSString* imageURL;
 @property (nonatomic,strong) NSDate * activityInitTime; 
-@property (nonatomic,strong) NSDate *openTime;
-@property (nonatomic,strong) NSDate *closeTime;
-@property (nonatomic,strong) NSDate *startTime;
-@property (nonatomic,strong) NSDate *endTime;
-@property  NSInteger lowerLimit;
-@property  NSInteger upperLimit;
+@property NSInteger openTime;
+@property NSInteger closeTime;
+@property NSInteger startTime;
+@property NSInteger stopTime;
+@property NSInteger lowerLimit;
+@property NSInteger upperLimit;
 @property NSInteger approveCount;
 @property NSInteger rejectCount;
 

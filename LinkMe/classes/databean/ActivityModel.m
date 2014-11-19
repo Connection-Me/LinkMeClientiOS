@@ -22,7 +22,7 @@
             @"openTime",
             @"closeTime",
             @"startTime",
-            @"endTime",
+            @"stopTime",
             @"lowerLimit",
             @"upperLimit",
             @"approveCount",

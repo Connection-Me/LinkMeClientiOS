@@ -27,9 +27,16 @@ AS_SIGNAL(CLOSE_CELL_DETAIL)
 @property (weak, nonatomic) IBOutlet UILabel *activityStartDateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *activityEndingDateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *activityLessPeopleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *activityCompareCurrentyTime;
+@property (weak, nonatomic) IBOutlet UILabel *activityMaxCountLabel;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollerView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UILabel *signInStartTime;
+@property (weak, nonatomic) IBOutlet UILabel *signInEndingTime;
+@property (weak, nonatomic) IBOutlet UILabel *activityType;
+@property (weak, nonatomic) IBOutlet UILabel *approveCount;
+@property (weak, nonatomic) IBOutlet UILabel *rejectCount;
+@property (weak, nonatomic) IBOutlet UILabel *activityName;
+@property (weak, nonatomic) IBOutlet UITextView *activityDesc;
 
 @property (nonatomic,strong)  ActivityModel    *sampleActivityModel;
 
