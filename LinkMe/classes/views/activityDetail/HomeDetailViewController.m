@@ -237,15 +237,15 @@ ON_NOTIFICATION3(DetailEvent, LOAD_DETAIL_ACTIVITY_FAILED, notification)
     }
     
     
-    self.activityStartDateLabel.text = [NSString stringWithFormat:@"%d",self.sampleActivityModel.openTime];
+    self.activityStartDateLabel.text = [self DateToString:[NSDate dateWithTimeIntervalSince1970:self.sampleActivityModel.startTime]];
     
-      self.activityStartDateLabel.text = [NSString stringWithFormat:@"%d",self.sampleActivityModel.closeTime];
+      self.activityEndingDateLabel.text = [self DateToString:[NSDate dateWithTimeIntervalSince1970:self.sampleActivityModel.stopTime]];
     
     self.activityLessPeopleLabel.text = [NSString stringWithFormat:@"%d",self.sampleActivityModel.lowerLimit];
     self.activityMaxCountLabel.text = [NSString stringWithFormat:@"%d",self.sampleActivityModel.upperLimit];
     
-    self.signInEndingTime.text =[NSString stringWithFormat:@"%d",self.sampleActivityModel.startTime];
-     self.signInEndingTime.text =[NSString stringWithFormat:@"%d",self.sampleActivityModel.stopTime];
+    self.signInStartTime.text =[self DateToString:[NSDate dateWithTimeIntervalSince1970:self.sampleActivityModel.openTime]];
+     self.signInEndingTime.text =[self DateToString:[NSDate dateWithTimeIntervalSince1970:self.sampleActivityModel.closeTime]];
     self.activityType.text = self.sampleActivityModel.type;
     
     self.approveCount.text = [NSString stringWithFormat:@"%d",self.sampleActivityModel.approveCount];
@@ -254,6 +254,14 @@ ON_NOTIFICATION3(DetailEvent, LOAD_DETAIL_ACTIVITY_FAILED, notification)
     self.activityName.text = self.sampleActivityModel.name;
     self.activityDesc.text = self.sampleActivityModel.description;
     
+}
+
+-(NSString*)DateToString:(NSDate*)date
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    NSDate *dateString = [dateFormatter stringFromDate:date];
+    return dateString;
 }
 
 -(void)insertUserInfo{
