@@ -208,6 +208,16 @@ ON_SIGNAL2(BeeUIBoard, signal)
     _activityModel.type = @"";
     _activityModel.desc = _descriptionTf.text;
     _activityModel.imageURL = @"";
+    
+    NSLog(@"link me  ＝＝＝＝＝%@ %@",_openSignDateTextField.text,_openSignTimeTextField.text);
+    
+    _activityModel.openTime = (long)[[self StringToDate:[NSString stringWithFormat:@"%@ %@",_openSignDateTextField.text,_openSignTimeTextField.text]] timeIntervalSince1970];
+     _activityModel.closeTime = (long)[[self StringToDate:[NSString stringWithFormat:@"%@ %@",_closeSignDateTextField.text,_closeSignTimeTextField.text]] timeIntervalSince1970];
+    
+     _activityModel.startTime = (long)[[self StringToDate:[NSString stringWithFormat:@"%@ %@",_openDateTextField.text,_openTimeTextField.text]] timeIntervalSince1970];
+     _activityModel.stopTime = (long)[[self StringToDate:[NSString stringWithFormat:@"%@ %@",_closeDateTextField.text,_closeTimeTextField.text]] timeIntervalSince1970];
+    
+    
 //    _activityModel.openTime = [self StringToDate:[NSString stringWithFormat:@"%@ %@",_openSignDateTextField.text,_openSignTimeTextField.text]];
 //    _activityModel.closeTime = [self StringToDate:[NSString stringWithFormat:@"%@ %@",_closeSignDateTextField.text,_closeSignTimeTextField.text]];
 //    _activityModel.startTime = [self StringToDate:[NSString stringWithFormat:@"%@ %@",_openDateTextField.text,_openTimeTextField.text]];

@@ -44,7 +44,7 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
         NSURL *url = [NSURL URLWithString:urlString];
         
         ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-       request.timeOutSeconds = 30.0;
+       request.timeOutSeconds = 10.0;
        
        [request setPostValue:[CoreModel sharedInstance].token forKey:@"sessionId"];
        [request setPostValue:[NSNumber numberWithInt:offset] forKey:@"offset"];
@@ -131,7 +131,7 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
         ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
         
         request.showAccurateProgress = YES;
-        request.timeOutSeconds = 30.0;
+        request.timeOutSeconds = 10.0;
         
         [request setPostValue:[CoreModel sharedInstance].token forKey:@"sessionId"];
         [request setPostValue:activityModel.name forKey:@"name"];
