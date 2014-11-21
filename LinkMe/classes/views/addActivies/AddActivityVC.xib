@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddActivityVC">
             <connections>
+                <outlet property="activityImgView" destination="3IV-h7-V5X" id="HQM-mA-UPY"/>
+                <outlet property="addPicBtn" destination="4sz-sd-rOp" id="ABi-AH-DHU"/>
                 <outlet property="approveTime" destination="kmN-VM-nIF" id="5Tl-kd-zHX"/>
                 <outlet property="ceilingCountTf" destination="Muu-3c-ED8" id="h5l-N7-qXM"/>
                 <outlet property="closeDateTextField" destination="qAa-sr-eKF" id="2mu-TV-giW"/>
@@ -299,10 +301,22 @@
                             <rect key="frame" x="0.0" y="35" width="320" height="95"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView.jpg" id="3IV-h7-V5X">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="galleryImage.jpg" id="3IV-h7-V5X">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4sz-sd-rOp">
+                                    <rect key="frame" x="104" y="33" width="112" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.1529411765" green="0.1529411765" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                    <state key="normal" title="添加图片">
+                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="clickAddPicBtn:" destination="-1" eventType="touchUpInside" id="nEV-Q6-OtT"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
@@ -353,7 +367,7 @@
         </view>
     </objects>
     <resources>
-        <image name="imageView.jpg" width="4912" height="2760"/>
+        <image name="galleryImage.jpg" width="640" height="237"/>
         <image name="p_activityTime.png" width="64" height="64"/>
         <image name="p_peopleLimit.png" width="64" height="64"/>
     </resources>
