@@ -9,3 +9,5 @@ OffScreen_new/
 clean.sh
 tags
 dump.rdb
+
+LinkMe/classes/views/activityDetail/HomeDetailViewController.xib

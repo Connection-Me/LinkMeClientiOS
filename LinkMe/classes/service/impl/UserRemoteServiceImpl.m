@@ -43,6 +43,7 @@ DEF_SINGLETON(UserRemoteServiceImpl)
         NSURL *url = [NSURL URLWithString:urlString];
         
         ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+       request.shouldAttemptPersistentConnection   = NO;
        request.showAccurateProgress = YES;
        request.timeOutSeconds = 60.0;
        [request setPostValue:username forKey:@"userName"];
@@ -51,7 +52,7 @@ DEF_SINGLETON(UserRemoteServiceImpl)
        [request setPostValue:methodName forKey:@"a"];
         //请求的json
         request.requestMethod = RequestMethod.POST;
-     //  [request addRequestHeader:@"Content-Type" value:@"application/json; charset=utf-8"];
+      // [request addRequestHeader:@"Content-Type" value:@"application/json; charset=utf-8"];
         __block ASIFormDataRequest * blockRequest = request;
         request.delegate = self;
         [request setCompletionBlock:^{

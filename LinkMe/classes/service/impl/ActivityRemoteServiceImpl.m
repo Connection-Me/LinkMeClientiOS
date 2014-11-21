@@ -140,10 +140,10 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
         [request setPostValue:activityModel.imageURL forKey:@"picture"];
         [request setPostValue:[NSNumber numberWithInt: activityModel.lowerLimit]forKey:@"lowerLimit"];
         [request setPostValue:[NSNumber numberWithInt: activityModel.upperLimit] forKey:@"upperLimit"];
-        [request setPostValue:[NSNumber numberWithLong:activityModel.openTime] forKey:@"openTime"];
-        [request setPostValue:[NSNumber numberWithLong:activityModel.closeTime] forKey:@"closeTime"];
-        [request setPostValue:[NSNumber numberWithLong:activityModel.startTime] forKey:@"startTime"];
-        [request setPostValue:[NSNumber numberWithLong:activityModel.stopTime] forKey:@"endTime"];
+        [request setPostValue:[NSNumber numberWithDouble:activityModel.openTime] forKey:@"openTime"];
+        [request setPostValue:[NSNumber numberWithDouble:activityModel.closeTime] forKey:@"closeTime"];
+        [request setPostValue:[NSNumber numberWithDouble:activityModel.startTime] forKey:@"startTime"];
+        [request setPostValue:[NSNumber numberWithDouble:activityModel.stopTime] forKey:@"endTime"];
         [request setPostValue:@"activity" forKey:@"c"];
         [request setPostValue:@"create" forKey:@"a"];
         request.requestMethod = RequestMethod.POST;
