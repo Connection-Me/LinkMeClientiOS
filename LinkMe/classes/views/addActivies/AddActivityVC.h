@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Bee.h"
 
-@interface AddActivityVC : BeeUIBoard<UITextViewDelegate>
+@interface AddActivityVC : BeeUIBoard<UITextViewDelegate,UIAlertViewDelegate,UIActionSheetDelegate>
 
 AS_SIGNAL(CLOSE_ADDVC)
 
@@ -28,6 +28,7 @@ AS_SIGNAL(CLOSE_ADDVC)
 
 #pragma mark textField
 @property (weak, nonatomic) IBOutlet UITextField *nameTf;
+@property (weak, nonatomic) IBOutlet UITextField *type;
 @property (weak, nonatomic) IBOutlet UITextField *ceilingCountTf;
 @property (weak, nonatomic) IBOutlet UITextField *lowerLimitCountTf;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTf;
@@ -44,5 +45,7 @@ AS_SIGNAL(CLOSE_ADDVC)
 @property (weak, nonatomic) IBOutlet UILabel *textViewPlaceHolder;
 
 @property (weak, nonatomic) IBOutlet UIScrollView  *scrollView;
+
+
 
 @end

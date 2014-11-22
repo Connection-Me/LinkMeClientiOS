@@ -202,6 +202,17 @@
 		E17AC7C619A7F0E1008CF3FC /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = E17AC6CE19A7F0E0008CF3FC /* unzip.c */; };
 		E17AC7C719A7F0E1008CF3FC /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = E17AC6D019A7F0E0008CF3FC /* zip.c */; };
 		E17AC7C819A7F0E1008CF3FC /* ZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = E17AC6D519A7F0E0008CF3FC /* ZipArchive.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E17B29631A1F401B0013893E /* ActivityTypeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E17B29611A1F401B0013893E /* ActivityTypeVC.m */; };
+		E17B29641A1F401B0013893E /* ActivityTypeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E17B29621A1F401B0013893E /* ActivityTypeVC.xib */; };
+		E17B296C1A1F8E960013893E /* HobbyService.m in Sources */ = {isa = PBXBuildFile; fileRef = E17B296B1A1F8E960013893E /* HobbyService.m */; };
+		E17B296F1A1F8FB90013893E /* HobbyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E17B296E1A1F8FB90013893E /* HobbyModel.m */; };
+		E17B29731A1FCB2B0013893E /* CommendRemoteServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E17B29721A1FCB2B0013893E /* CommendRemoteServiceImpl.m */; };
+		E17B29761A1FD2E50013893E /* CommendEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E17B29751A1FD2E50013893E /* CommendEvent.m */; };
+		E17B297A1A1FE6CA0013893E /* AppCommendCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E17B29781A1FE6CA0013893E /* AppCommendCollectionViewCell.m */; };
+		E17B297B1A1FE6CA0013893E /* AppCommendCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E17B29791A1FE6CA0013893E /* AppCommendCollectionViewCell.xib */; };
+		E18807781A1E485A009F0965 /* AppCommendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E18807761A1E485A009F0965 /* AppCommendVC.m */; };
+		E18807791A1E485A009F0965 /* AppCommendVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E18807771A1E485A009F0965 /* AppCommendVC.xib */; };
+		E188077D1A1EF689009F0965 /* hobby.json in Resources */ = {isa = PBXBuildFile; fileRef = E188077C1A1EF689009F0965 /* hobby.json */; };
 		E1A5A6A619C4B7DE004A8876 /* Bee_MVC.mm in Sources */ = {isa = PBXBuildFile; fileRef = E1A5A49B19C4B7DD004A8876 /* Bee_MVC.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E1A5A6A719C4B7DE004A8876 /* Bee_Controller.mm in Sources */ = {isa = PBXBuildFile; fileRef = E1A5A49E19C4B7DD004A8876 /* Bee_Controller.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E1A5A6A819C4B7DE004A8876 /* Bee_Message.mm in Sources */ = {isa = PBXBuildFile; fileRef = E1A5A4A019C4B7DD004A8876 /* Bee_Message.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -640,6 +651,25 @@
 		E17AC6D119A7F0E0008CF3FC /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
 		E17AC6D419A7F0E0008CF3FC /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
 		E17AC6D519A7F0E0008CF3FC /* ZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipArchive.m; sourceTree = "<group>"; };
+		E17B29601A1F401B0013893E /* ActivityTypeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTypeVC.h; sourceTree = "<group>"; };
+		E17B29611A1F401B0013893E /* ActivityTypeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTypeVC.m; sourceTree = "<group>"; };
+		E17B29621A1F401B0013893E /* ActivityTypeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTypeVC.xib; sourceTree = "<group>"; };
+		E17B296A1A1F8E960013893E /* HobbyService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HobbyService.h; sourceTree = "<group>"; };
+		E17B296B1A1F8E960013893E /* HobbyService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HobbyService.m; sourceTree = "<group>"; };
+		E17B296D1A1F8FB90013893E /* HobbyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HobbyModel.h; sourceTree = "<group>"; };
+		E17B296E1A1F8FB90013893E /* HobbyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HobbyModel.m; sourceTree = "<group>"; };
+		E17B29701A1FC9500013893E /* ICommendRemoteService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICommendRemoteService.h; sourceTree = "<group>"; };
+		E17B29711A1FCB2B0013893E /* CommendRemoteServiceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommendRemoteServiceImpl.h; sourceTree = "<group>"; };
+		E17B29721A1FCB2B0013893E /* CommendRemoteServiceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommendRemoteServiceImpl.m; sourceTree = "<group>"; };
+		E17B29741A1FD2E50013893E /* CommendEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommendEvent.h; sourceTree = "<group>"; };
+		E17B29751A1FD2E50013893E /* CommendEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommendEvent.m; sourceTree = "<group>"; };
+		E17B29771A1FE6CA0013893E /* AppCommendCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppCommendCollectionViewCell.h; sourceTree = "<group>"; };
+		E17B29781A1FE6CA0013893E /* AppCommendCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppCommendCollectionViewCell.m; sourceTree = "<group>"; };
+		E17B29791A1FE6CA0013893E /* AppCommendCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppCommendCollectionViewCell.xib; sourceTree = "<group>"; };
+		E18807751A1E485A009F0965 /* AppCommendVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppCommendVC.h; sourceTree = "<group>"; };
+		E18807761A1E485A009F0965 /* AppCommendVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppCommendVC.m; sourceTree = "<group>"; };
+		E18807771A1E485A009F0965 /* AppCommendVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppCommendVC.xib; sourceTree = "<group>"; };
+		E188077C1A1EF689009F0965 /* hobby.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hobby.json; sourceTree = "<group>"; };
 		E1A5A49719C4B7DD004A8876 /* Bee_Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bee_Application.h; sourceTree = "<group>"; };
 		E1A5A49819C4B7DD004A8876 /* Bee_ApplicationConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bee_ApplicationConfig.h; sourceTree = "<group>"; };
 		E1A5A49A19C4B7DD004A8876 /* Bee_MVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bee_MVC.h; sourceTree = "<group>"; };
@@ -1210,6 +1240,7 @@
 		D87D710819C726E800C313FD /* addActivies */ = {
 			isa = PBXGroup;
 			children = (
+				E17B295F1A1F3FEB0013893E /* activityType */,
 				E12B08A719FF471700CDF3FA /* datePicker */,
 				E12B08A819FF471700CDF3FA /* timePicker */,
 				D8B1FA0219FB9E8000234823 /* AddActivityVC.h */,
@@ -1329,6 +1360,8 @@
 				E165887D19E90F6E002ABFFE /* GroupModel.m */,
 				E165887F19E91CFC002ABFFE /* ImageModel.h */,
 				E165888019E91CFC002ABFFE /* ImageModel.m */,
+				E17B296D1A1F8FB90013893E /* HobbyModel.h */,
+				E17B296E1A1F8FB90013893E /* HobbyModel.m */,
 			);
 			path = databean;
 			sourceTree = "<group>";
@@ -1375,6 +1408,7 @@
 		E11A0D2D19C2217F000C6E02 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				E18807741A1E4804009F0965 /* commendFriend */,
 				D8AF2EA819E6858700BDCDF8 /* header */,
 				D85D76A819E5758500B2A9B9 /* manager */,
 				D86F9E8D19C878A600F8F75D /* activityDetail */,
@@ -1594,6 +1628,7 @@
 		E17AC6D619A7F0E0008CF3FC /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				E188077B1A1EF689009F0965 /* interest */,
 				E11A0D0D19C04742000C6E02 /* dbchg */,
 				E17AC6D719A7F0E0008CF3FC /* icons */,
 				E17AC6D819A7F0E0008CF3FC /* images */,
@@ -1650,6 +1685,46 @@
 				D86791A419B42B9200630891 /* pic4.jpg */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		E17B295F1A1F3FEB0013893E /* activityType */ = {
+			isa = PBXGroup;
+			children = (
+				E17B29601A1F401B0013893E /* ActivityTypeVC.h */,
+				E17B29611A1F401B0013893E /* ActivityTypeVC.m */,
+				E17B29621A1F401B0013893E /* ActivityTypeVC.xib */,
+			);
+			path = activityType;
+			sourceTree = "<group>";
+		};
+		E17B29691A1F8D1D0013893E /* getHobby */ = {
+			isa = PBXGroup;
+			children = (
+				E17B296A1A1F8E960013893E /* HobbyService.h */,
+				E17B296B1A1F8E960013893E /* HobbyService.m */,
+			);
+			path = getHobby;
+			sourceTree = "<group>";
+		};
+		E18807741A1E4804009F0965 /* commendFriend */ = {
+			isa = PBXGroup;
+			children = (
+				E18807751A1E485A009F0965 /* AppCommendVC.h */,
+				E18807761A1E485A009F0965 /* AppCommendVC.m */,
+				E18807771A1E485A009F0965 /* AppCommendVC.xib */,
+				E17B29771A1FE6CA0013893E /* AppCommendCollectionViewCell.h */,
+				E17B29781A1FE6CA0013893E /* AppCommendCollectionViewCell.m */,
+				E17B29791A1FE6CA0013893E /* AppCommendCollectionViewCell.xib */,
+			);
+			path = commendFriend;
+			sourceTree = "<group>";
+		};
+		E188077B1A1EF689009F0965 /* interest */ = {
+			isa = PBXGroup;
+			children = (
+				E188077C1A1EF689009F0965 /* hobby.json */,
+			);
+			path = interest;
 			sourceTree = "<group>";
 		};
 		E1A5A49519C4B7DD004A8876 /* bee */ = {
@@ -2601,6 +2676,8 @@
 				E117D34219B4B93A00411512 /* ActivityEvent.m */,
 				E165888519E9265A002ABFFE /* DetailEvent.h */,
 				E165888619E9265A002ABFFE /* DetailEvent.m */,
+				E17B29741A1FD2E50013893E /* CommendEvent.h */,
+				E17B29751A1FD2E50013893E /* CommendEvent.m */,
 			);
 			path = event;
 			sourceTree = "<group>";
@@ -2621,6 +2698,7 @@
 				E1E2C3F219AC740C004C3F57 /* IUserRemoteService.h */,
 				E117D33919B4B38E00411512 /* IActivityRemoteService.h */,
 				E165887719E82E55002ABFFE /* IDetailRemoteService.h */,
+				E17B29701A1FC9500013893E /* ICommendRemoteService.h */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -2640,6 +2718,8 @@
 				E11A0D1419C04C90000C6E02 /* LinkMeStartupService.m */,
 				E165888219E92589002ABFFE /* DetailRemoteServiceImpl.h */,
 				E165888319E92589002ABFFE /* DetailRemoteServiceImpl.m */,
+				E17B29711A1FCB2B0013893E /* CommendRemoteServiceImpl.h */,
+				E17B29721A1FCB2B0013893E /* CommendRemoteServiceImpl.m */,
 			);
 			path = impl;
 			sourceTree = "<group>";
@@ -2647,6 +2727,7 @@
 		E1F3503819AC912000317104 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				E17B29691A1F8D1D0013893E /* getHobby */,
 				D8A4FCA11A007CD6008C6DEF /* UIColor+UIColorExt.m */,
 				D8A4FCA21A007CD6008C6DEF /* UIColor+UIColorExt.h */,
 				D8C577FC19BFFCC1008476DE /* MJRefresh */,
@@ -2776,6 +2857,8 @@
 				D8A4FCBA1A00E9C0008C6DEF /* p_name@2x.png in Resources */,
 				D8A54E8619EBCA380029858F /* user1.jpg in Resources */,
 				D8C3F68419B607FB000697A3 /* join@2x.png in Resources */,
+				E18807791A1E485A009F0965 /* AppCommendVC.xib in Resources */,
+				E188077D1A1EF689009F0965 /* hobby.json in Resources */,
 				D8C3F68A19B607FB000697A3 /* join.png in Resources */,
 				D8A4FCBC1A00E9C0008C6DEF /* p_peopleLimit.png in Resources */,
 				E12B08AF19FF489C00CDF3FA /* DatePopupPickerVC.xib in Resources */,
@@ -2801,8 +2884,10 @@
 				E11A0D0F19C04742000C6E02 /* DBCHG_1.xml in Resources */,
 				E17AC6DC19A7F0E0008CF3FC /* right_arrow.png in Resources */,
 				E17AC6DB19A7F0E0008CF3FC /* left_arrow@2x.png in Resources */,
+				E17B29641A1F401B0013893E /* ActivityTypeVC.xib in Resources */,
 				D8C3F68019B607FB000697A3 /* reject.png in Resources */,
 				E11A0D3219C22404000C6E02 /* MainVC.xib in Resources */,
+				E17B297B1A1FE6CA0013893E /* AppCommendCollectionViewCell.xib in Resources */,
 				D8C3F69519B617AD000697A3 /* add@2x.png in Resources */,
 				D8A4FCB61A00E9C0008C6DEF /* p_description@2x.png in Resources */,
 				D88439D91A0BAC11007C3BB2 /* ListCollectionViewCell.xib in Resources */,
@@ -2878,6 +2963,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1A5A73519C4B7DE004A8876 /* UIFont+Theme.m in Sources */,
+				E17B29731A1FCB2B0013893E /* CommendRemoteServiceImpl.m in Sources */,
 				E1A5A71419C4B7DE004A8876 /* Bee_UISignal.m in Sources */,
 				E1A5A77119C4B7DE004A8876 /* ASIDataCompressor.m in Sources */,
 				E1A5A75819C4B7DE004A8876 /* Bee_Ticker.mm in Sources */,
@@ -2889,6 +2975,7 @@
 				D8AF2EAC19E6858700BDCDF8 /* HeaderVC.m in Sources */,
 				E1A5A6F719C4B7DE004A8876 /* Bee_UISwitch.m in Sources */,
 				E1A5A6C219C4B7DE004A8876 /* UIViewController+Metrics.m in Sources */,
+				E18807781A1E485A009F0965 /* AppCommendVC.m in Sources */,
 				E1A5A6E519C4B7DE004A8876 /* Bee_UIActivityIndicatorView.m in Sources */,
 				D8B1FA0519FB9E8000234823 /* AddActivityVC.m in Sources */,
 				E1E2C3D919AC39CB004C3F57 /* LoginVC.m in Sources */,
@@ -2904,6 +2991,7 @@
 				E1A5A6E819C4B7DE004A8876 /* Bee_UIDatePicker.m in Sources */,
 				E1A5A6FB19C4B7DE004A8876 /* Bee_UITextView.m in Sources */,
 				E12B08B319FF704400CDF3FA /* TimePopupPickerVC.m in Sources */,
+				E17B29631A1F401B0013893E /* ActivityTypeVC.m in Sources */,
 				E1A5A6BC19C4B7DE004A8876 /* BeeUIBoard+Popover.m in Sources */,
 				E1A5A76319C4B7DE004A8876 /* NSObject+BeeTicker.mm in Sources */,
 				E1A5A6DD19C4B7DE004A8876 /* UILabel+UIDataBinding.m in Sources */,
@@ -3010,6 +3098,7 @@
 				E1A5A73219C4B7DE004A8876 /* Bee_UITemplateHTML.m in Sources */,
 				E1A5A6A719C4B7DE004A8876 /* Bee_Controller.mm in Sources */,
 				E1A5A6FE19C4B7DE004A8876 /* Bee_UIView.m in Sources */,
+				E17B297A1A1FE6CA0013893E /* AppCommendCollectionViewCell.m in Sources */,
 				E1A5A70619C4B7DE004A8876 /* UIView+SwipeGesture.m in Sources */,
 				E1A5A75419C4B7DE004A8876 /* Bee_Sandbox.mm in Sources */,
 				E1A5A77E19C4B7DE004A8876 /* OpenUDID.m in Sources */,
@@ -3107,6 +3196,7 @@
 				E1A5A76B19C4B7DE004A8876 /* Bee_HTTPRequestQueue.m in Sources */,
 				E1A5A78819C4B7DE004A8876 /* CXMLNamespaceNode.m in Sources */,
 				E1A5A6B419C4B7DE004A8876 /* Bee_UIMetrics.m in Sources */,
+				E17B296F1A1F8FB90013893E /* HobbyModel.m in Sources */,
 				E1A5A6B719C4B7DE004A8876 /* Bee_UIStack.m in Sources */,
 				E1A5A6ED19C4B7DE004A8876 /* Bee_UIMenuController.m in Sources */,
 				E17AC7C819A7F0E1008CF3FC /* ZipArchive.m in Sources */,
@@ -3129,7 +3219,9 @@
 				E1A5A75619C4B7DE004A8876 /* Bee_SystemInfo.mm in Sources */,
 				E1A5A75C19C4B7DE004A8876 /* NSData+BeeExtension.mm in Sources */,
 				E1A5A70819C4B7DE004A8876 /* UIView+TapGesture.m in Sources */,
+				E17B296C1A1F8E960013893E /* HobbyService.m in Sources */,
 				E1A5A6D619C4B7DE004A8876 /* Bee_UIAnimationZoom.m in Sources */,
+				E17B29761A1FD2E50013893E /* CommendEvent.m in Sources */,
 				D87D60991A0233A100E6F549 /* UIImageView+UIImageViewExt.m in Sources */,
 				D85DE5BC19B3609000A906E7 /* HomeCollectionVCCell.m in Sources */,
 				E12B08AE19FF489C00CDF3FA /* DatePopupPickerVC.m in Sources */,

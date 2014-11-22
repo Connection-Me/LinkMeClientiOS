@@ -115,7 +115,16 @@
             [button setImageEdgeInsets:UIEdgeInsetsMake(5, 10, 5, 65)];
         }
             break;
-            
+        case CommonHeaderInvite:
+        {
+            [button setTitle:@"邀请" forState:UIControlStateNormal];
+            [button.titleLabel setFont:[UIFont boldSystemFontOfSize:15]];
+            button.titleLabel.textColor = [UIColor whiteColor];
+            button.backgroundColor = [UIColor blackColor];
+            button.layer.cornerRadius = 5;
+            button.frame = CGRectMake(button.frame.size.width-55, (HEAD_VIEW_HEIGHT-STATUSBAR_DELTA-30)/2.0f + STATUSBAR_DELTA, 50, 35);
+         //   [button setImageEdgeInsets:UIEdgeInsetsMake(5, 10, 5, 65)];
+        }
         default:
             break;
     }

@@ -17,6 +17,9 @@
 #import "TCMessageBox.h"
 #import "CoreService.h"
 #import "ActivityModel.h"
+#import "AppCommendVC.h"
+#import "ActivityTypeVC.h"
+#import "HobbyModel.h"
 
 @interface AddActivityVC ()
 {
@@ -25,6 +28,12 @@
     DatePopupPickerVC          *_datePopupPickerVC;
     TimePopupPickerVC          *_timePopupPickerVC;
     ActivityModel              *_activityModel;
+    BOOL                        _isAddSuccess;
+    
+    UIActionSheet              *_selectFansActionSheet;
+    
+    ActivityTypeVC             *_activityTypeVC;
+    HobbyModel                 *_hobbyModel;
 }
 
 @end
@@ -40,7 +49,9 @@ ON_SIGNAL2(BeeUIBoard, signal)
     
     if([signal isKindOf:BeeUIBoard.CREATE_VIEWS])
     {
+       
         _scrollView.contentSize = CGSizeMake(320,600);
+        _isAddSuccess = NO;
         [self observeNotification];
         [self setupHeader];
         [self setTextFieldUI];
@@ -65,7 +76,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
     }
     else if ( [signal is:BeeUIBoard.WILL_DISAPPEAR] )
     {
-        [self unobserveAllNotifications];
+       // [self unobserveAllNotifications];
         [self clearMemory];
     }
     else if ( [signal is:BeeUIBoard.DID_DISAPPEAR] )
@@ -168,6 +179,13 @@ ON_SIGNAL2(BeeUIBoard, signal)
     [view addSubview:textField];
 }
 
+-(IBAction)typeTouchUpInside:(id)sender
+{
+    _activityTypeVC = [[ActivityTypeVC alloc] init];
+    _activityTypeVC.parentBoard = self;
+    _activityTypeVC.modalPresentationStyle = UIModalPresentationCustom;
+    [self presentViewController:_activityTypeVC animated:YES completion:nil];
+}
 
 -(IBAction)openDateTouchUpInside:(id)sender
 {
@@ -200,9 +218,21 @@ ON_SIGNAL2(BeeUIBoard, signal)
     [tf setText:dataString];
 }
 
+-(BOOL)checkActivity
+{
+    if (_type==nil||[_type.text isEqualToString:@""]) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请填写活动类型 ！" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+        return NO;
+    }
+    return YES;
+}
 
 -(IBAction)saveActivityTouchUpInside:(id)sender
 {
+    if (![self checkActivity]) {
+        return;
+    }
     _activityModel = [[ActivityModel alloc] init];
     _activityModel.name = _nameTf.text;
     _activityModel.type = @"";
@@ -239,8 +269,39 @@ ON_SIGNAL2(BeeUIBoard, signal)
     return dateAndTime;
 }
 
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (_isAddSuccess) {
+        
+        _isAddSuccess = NO;
+        _selectFansActionSheet = [[UIActionSheet alloc] initWithTitle:@"选择好友推荐方式" delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles: nil];
+        NSArray *selectFans = [NSArray arrayWithObjects:@"app用户",@"微信好友",@"微博好友", nil];
+        for(NSString *fan in selectFans) {
+            [_selectFansActionSheet addButtonWithTitle:fan];
+        }
+        [_selectFansActionSheet setCancelButtonIndex:[_selectFansActionSheet addButtonWithTitle:@"Cancel"]];
+        [_selectFansActionSheet showInView:self.view];
+    }
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    _selectFansActionSheet = nil;
+    if (buttonIndex == 0) {
+        AppCommendVC *appCommendVC = [[AppCommendVC alloc]init];
+        appCommendVC.parentBoard = self;
+        appCommendVC.hobbyModel = _hobbyModel;
+        appCommendVC.activityModel = _activityModel;
+        [self.navigationController pushViewController:appCommendVC animated:YES];
+    }
+}
 
 #pragma mark - receive signal
+
+ON_SIGNAL3(AppCommendVC, CLOSE_APPCOMMENDVC, signal)
+{
+    [self.navigationController popViewControllerAnimated:YES ];
+}
 
 ON_SIGNAL3(DatePopupPickerVC, OPEN_DATE, signal)
 {
@@ -282,6 +343,16 @@ ON_SIGNAL3(TimePopupPickerVC, OPEN_TIME, signal)
         _timePopupPickerVC = nil;
     }];
 }
+
+ON_SIGNAL3(ActivityTypeVC, CLOSE_ACTIVITY_TYPE_VC, signal)
+{
+    _hobbyModel = (HobbyModel*)signal.object;
+    self.type.text = _hobbyModel.name;
+    [self dismissViewControllerAnimated:YES completion:^{
+        _activityTypeVC = nil;
+    }];
+}
+
 //ON_SIGNAL3(TimePopupPickerVC, CLOSE_TIME, signal)
 //{
 //    NSString  *timeString = (NSString*)signal.object;
@@ -303,6 +374,7 @@ ON_SIGNAL3(TimePopupPickerVC, DISMISS_OPEN_TIME, signal)
 
 -(void)setPlaceHolderSytle{
     [_nameTf setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
+    [_type setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
     [_ceilingCountTf setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
     [_lowerLimitCountTf setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
     
@@ -330,20 +402,24 @@ ON_SIGNAL3(TimePopupPickerVC, DISMISS_OPEN_TIME, signal)
 #pragma mark - receive notification
 ON_NOTIFICATION3(ActivityEvent, ADD_ACTIVITY_START, notification)
 {
+    _isAddSuccess = NO;
     [TCMessageBox showMessage:@"Adding..." hideByTouch:NO withActivityIndicator:YES];
 }
 
 ON_NOTIFICATION3(ActivityEvent, ADD_ACTIVITY_SUCCESS, notification)
 {
+    _activityModel = (ActivityModel*)notification.object;
+    _isAddSuccess = YES;
     [TCMessageBox hide];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"添加成功 ！" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"添加成功 ！" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
 }
 
 ON_NOTIFICATION3(ActivityEvent, ADD_ACTIVITY_FAILED, notification)
 {
+    _isAddSuccess = NO;
     [TCMessageBox hide];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"服务器异常，请稍后添加 ！" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"服务器异常，请稍后添加 ！" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
 }
 
