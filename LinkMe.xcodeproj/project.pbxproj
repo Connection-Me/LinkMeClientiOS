@@ -108,6 +108,8 @@
 		D8B1FA0619FB9E8000234823 /* AddActivityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B1FA0319FB9E8000234823 /* AddActivityVC.m */; };
 		D8B1FA0719FB9E8000234823 /* AddActivityVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8B1FA0419FB9E8000234823 /* AddActivityVC.xib */; };
 		D8B1FA0819FB9E8000234823 /* AddActivityVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8B1FA0419FB9E8000234823 /* AddActivityVC.xib */; };
+		D8B771271A1E24080048A909 /* AddPicFromAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B771261A1E24080048A909 /* AddPicFromAlbumViewController.m */; };
+		D8B771281A1E24080048A909 /* AddPicFromAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B771261A1E24080048A909 /* AddPicFromAlbumViewController.m */; };
 		D8BA864819EE571C00CE9BCD /* StaticVar.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BA864719EE571C00CE9BCD /* StaticVar.m */; };
 		D8BA864919EE571C00CE9BCD /* StaticVar.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BA864719EE571C00CE9BCD /* StaticVar.m */; };
 		D8C3F67E19B607FB000697A3 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C3F67519B607FB000697A3 /* menu@2x.png */; };
@@ -538,6 +540,8 @@
 		D8B1FA0219FB9E8000234823 /* AddActivityVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddActivityVC.h; sourceTree = "<group>"; };
 		D8B1FA0319FB9E8000234823 /* AddActivityVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddActivityVC.m; sourceTree = "<group>"; };
 		D8B1FA0419FB9E8000234823 /* AddActivityVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddActivityVC.xib; sourceTree = "<group>"; };
+		D8B771251A1E24080048A909 /* AddPicFromAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPicFromAlbumViewController.h; sourceTree = "<group>"; };
+		D8B771261A1E24080048A909 /* AddPicFromAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPicFromAlbumViewController.m; sourceTree = "<group>"; };
 		D8BA864619EE571C00CE9BCD /* StaticVar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticVar.h; sourceTree = "<group>"; };
 		D8BA864719EE571C00CE9BCD /* StaticVar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticVar.m; sourceTree = "<group>"; };
 		D8C3F67519B607FB000697A3 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
@@ -1302,6 +1306,15 @@
 			path = header;
 			sourceTree = "<group>";
 		};
+		D8B771241A1E23470048A909 /* imagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				D8B771251A1E24080048A909 /* AddPicFromAlbumViewController.h */,
+				D8B771261A1E24080048A909 /* AddPicFromAlbumViewController.m */,
+			);
+			path = imagePicker;
+			sourceTree = "<group>";
+		};
 		D8C577FC19BFFCC1008476DE /* MJRefresh */ = {
 			isa = PBXGroup;
 			children = (
@@ -1409,6 +1422,7 @@
 			isa = PBXGroup;
 			children = (
 				E18807741A1E4804009F0965 /* commendFriend */,
+				D8B771241A1E23470048A909 /* imagePicker */,
 				D8AF2EA819E6858700BDCDF8 /* header */,
 				D85D76A819E5758500B2A9B9 /* manager */,
 				D86F9E8D19C878A600F8F75D /* activityDetail */,
@@ -3234,6 +3248,7 @@
 				E1A5A75B19C4B7DE004A8876 /* NSBundle+BeeExtension.m in Sources */,
 				E1A5A76619C4B7DE004A8876 /* NSString+BeeExtension.mm in Sources */,
 				E1A5A75019C4B7DE004A8876 /* Bee_Foundation.mm in Sources */,
+				D8B771271A1E24080048A909 /* AddPicFromAlbumViewController.m in Sources */,
 				E1A5A75F19C4B7DE004A8876 /* NSNumber+BeeExtension.mm in Sources */,
 				E117D33C19B4B43100411512 /* ActivityModel.m in Sources */,
 				E11A0D3D19C28F7D000C6E02 /* FooterVC.m in Sources */,
@@ -3271,6 +3286,7 @@
 			files = (
 				D8CC312D19FFA190003F2693 /* ColorList.m in Sources */,
 				E161265919A7E5F90012834A /* LinkMeTests.m in Sources */,
+				D8B771281A1E24080048A909 /* AddPicFromAlbumViewController.m in Sources */,
 				D88439D81A0BAC11007C3BB2 /* ListCollectionViewCell.m in Sources */,
 				D8B1FA0619FB9E8000234823 /* AddActivityVC.m in Sources */,
 				D87DF00F19ACE1BB0010BEE9 /* LoginPageViewController.m in Sources */,

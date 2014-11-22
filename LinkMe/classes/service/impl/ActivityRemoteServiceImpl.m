@@ -137,7 +137,7 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
         [request setPostValue:activityModel.name forKey:@"name"];
         [request setPostValue:@"" forKey:@"type"];
         [request setPostValue:activityModel.desc forKey:@"description"];
-        [request setPostValue:@"" forKey:@"picture"];
+        [request setPostValue:activityModel.imageURL forKey:@"picture"];
         [request setPostValue:[NSNumber numberWithInt: activityModel.lowerLimit]forKey:@"lowerLimit"];
         [request setPostValue:[NSNumber numberWithInt: activityModel.upperLimit] forKey:@"upperLimit"];
         [request setPostValue:[NSNumber numberWithDouble:activityModel.openTime] forKey:@"openTime"];

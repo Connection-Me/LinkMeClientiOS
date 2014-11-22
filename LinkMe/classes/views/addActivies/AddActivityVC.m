@@ -423,5 +423,119 @@ ON_NOTIFICATION3(ActivityEvent, ADD_ACTIVITY_FAILED, notification)
     [alertView show];
 }
 
+#pragma mark -
+#pragma mark ImagePickerControllerDelegate
 
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [picker dismissModalViewControllerAnimated:YES];
+    
+    NSLog(@"info = %@",info);
+    
+    NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
+    
+    if([mediaType isEqualToString:@"public.movie"])			//被选中的是视频
+    {
+       
+    }
+    else if([mediaType isEqualToString:@"public.image"])	//被选中的是图片
+    {
+        //获取照片实例
+        UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+        
+        NSString *fileName = [[NSString alloc] init];
+        
+        if ([info objectForKey:UIImagePickerControllerReferenceURL]) {
+            fileName = [[info objectForKey:UIImagePickerControllerReferenceURL] absoluteString];
+            //ReferenceURL的类型为NSURL 无法直接使用  必须用absoluteString 转换，照相机返回的没有UIImagePickerControllerReferenceURL，会报错
+            
+            _activityModel.imageURL = fileName ;
+            
+            
+            fileName = [self getFileName:fileName];
+        }
+        else
+        {
+            fileName = [self timeStampAsString];
+        }
+        
+        NSUserDefaults *myDefault = [NSUserDefaults standardUserDefaults];
+        
+        [myDefault setValue:fileName forKey:@"fileName"];
+        //保存到相册
+//        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+//        [library writeImageToSavedPhotosAlbum:[image CGImage]
+//                                  orientation:(ALAssetOrientation)[image imageOrientation]
+//                              completionBlock:nil];
+        
+        
+        [self performSelector:@selector(saveImg:) withObject:image afterDelay:0.0];
+    }
+    else
+    {
+        NSLog(@"Error media type");
+        return;
+    }
+
+
+
+}
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    NSLog(@"Cancle it");
+//    isCamera = FALSE;
+    [picker dismissModalViewControllerAnimated:YES];
+    
+}
+
+#pragma mark -
+#pragma mark userFunc
+
+
+
+-(NSString *)getFileName:(NSString *)fileName
+{
+    NSArray *temp = [fileName componentsSeparatedByString:@"&ext="];
+    NSString *suffix = [temp lastObject];
+    
+    temp = [[temp objectAtIndex:0] componentsSeparatedByString:@"?id="];
+    
+    NSString *name = [temp lastObject];
+    
+    name = [name stringByAppendingFormat:@".%@",suffix];
+    return name;
+}
+
+-(void)saveImg:(UIImage *) image
+{
+    NSLog(@"Review Image");
+    self.activityImgView.image = image;
+}
+
+-(NSString *)timeStampAsString
+{
+    NSDate *nowDate = [NSDate date];
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"EEE-MMM-d"];
+    NSString *locationString = [df stringFromDate:nowDate];
+    return [locationString stringByAppendingFormat:@".png"];
+}
+
+
+
+- (IBAction)clickAddPicBtn:(id)sender {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    
+    picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
+        //混合类型 photo + movie
+        picker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];
+    }
+    [self presentModalViewController:picker animated:YES];
+
+    
+}
 @end
