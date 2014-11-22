@@ -41,7 +41,7 @@ DEF_SIGNAL(CLOSE_ACTIVITY_TYPE_VC)
 {
     self.view.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.3];
     self.mainView.backgroundColor = [UIColor colorWithRed:40/255.0f green:44/255.0f blue:49/255.0f alpha:1];
-    self.mainView.layer.cornerRadius = 8;
+    self.mainView.layer.cornerRadius = 20;
 }
 
 -(void)setUpUI
@@ -49,23 +49,28 @@ DEF_SIGNAL(CLOSE_ACTIVITY_TYPE_VC)
     HobbyService *hobbyService = [[HobbyService alloc]init];
     hobbyList = [hobbyService getHobbies];
     int i=-1;
-    float x = 15,y=-40;
+    float x = 5,y=-40;
     NSInteger tag = 100;
+//    NSInteger hobbySum = hobbyList.count-12;
+//    if (hobbySum>0) {
+//        self.mainView.frame.size.height = self.mainView.frame.size.height+ (hobbySum/4 + 1)*40;
+//    }
+    
     for (HobbyModel *hobbyModel in hobbyList) {
         i++;
-        if (i%3 == 0) {
-            x = 15;
+        if (i%4 == 0) {
+            x = 5;
             y = y + 40;
         }
         CGSize size = [self sizeOfContent:hobbyModel.name];
         UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(x+10, y+10, size.width+20, 30)];
         x = x+size.width + 20 + 10;
-        [btn.titleLabel setFont:[UIFont boldSystemFontOfSize:18]];
+        [btn.titleLabel setFont:[UIFont boldSystemFontOfSize:16]];
         btn.backgroundColor = [UIColor blackColor];
         //btn.titleLabel.textColor = [UIColor blackColor];
         [btn setTitle:hobbyModel.name forState:UIControlStateNormal];
        // btn.titleLabel.text = hobbyModel.name;
-        btn.layer.cornerRadius = 5.0;
+        btn.layer.cornerRadius = 6.0;
         btn.tag = tag++;
         [btn addTarget:self action:@selector(hobbyTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
         [self.mainView addSubview:btn];
