@@ -72,6 +72,7 @@ SUMMER_DEF_XIB(AppCommendVC, YES, NO);
     //设置title
     // [self setHeaderView];
     self.collectionView.alwaysBounceVertical = YES;
+    self.collectionView.backgroundColor = [UIColor colorWithRed:39/255.0f green:39/255.0f blue:39/255.0f alpha:1];
     //指定xib文件
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;

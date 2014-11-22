@@ -51,6 +51,7 @@ ON_SIGNAL2(BeeUIBoard, signal)
     {
        
         _scrollView.contentSize = CGSizeMake(320,600);
+        _addButton.layer.cornerRadius = 20;
         _isAddSuccess = NO;
         [self observeNotification];
         [self setupHeader];

@@ -27,6 +27,8 @@
 -(void)updateCellByUser:(UserModel *)userModel
 {
     ImageDownloader * imageDownloader = [[ImageDownloader alloc]init];
+    //todo:还没有图像url,注册的时候，每个用户应该有默认图片;
+    return;
     [imageDownloader startDownloadImage:userModel.profile andLoadImage:^(id data) {
         self.userImage.image = data;
     }];
