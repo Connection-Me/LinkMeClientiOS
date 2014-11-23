@@ -10,6 +10,7 @@
 #import "UserRemoteServiceImpl.h"
 #import "ActivityRemoteServiceImpl.h"
 #import "DetailRemoteServiceImpl.h"
+#import "CommendRemoteServiceImpl.h"
 
 
 @implementation CoreService
@@ -23,6 +24,7 @@ DEF_SINGLETON(CoreService)
         _userRemoteService = [UserRemoteServiceImpl sharedInstance];
         _activityRemoteService = [ActivityRemoteServiceImpl sharedInstance];
         _detailRemoteService = [DetailRemoteServiceImpl sharedInstance];
+        _commendRemoteService = [CommendRemoteServiceImpl sharedInstance];
     }
     return self;
 }

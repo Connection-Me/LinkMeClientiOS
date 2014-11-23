@@ -163,6 +163,9 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
                 }
                 else if([[dic objectForKey:@"result_code"] longValue] == 0)
                 {
+                    NSDictionary *aidDic = [[dic objectForKey:@"data"] objectFromJSONString];
+                    NSNumber *aid = [aidDic objectForKey:@"aid"];
+                    activityModel.activityId = [NSString stringWithFormat:@"%d",[aid integerValue]];
                     [self postNotification:ActivityEvent.ADD_ACTIVITY_SUCCESS withObject:activityModel];
                 }
                 FOREGROUND_COMMIT

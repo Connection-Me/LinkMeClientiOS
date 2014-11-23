@@ -5,9 +5,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppCommendVC">
             <connections>
-                <outlet property="mainView" destination="1xH-pT-uso" id="fpT-11-3uK"/>
+                <outlet property="collectionView" destination="4sc-Yd-7vs" id="3Yv-XS-Ixg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,31 +16,24 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" id="1xH-pT-uso">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" id="4sc-Yd-7vs">
+                    <rect key="frame" x="0.0" y="35" width="320" height="533"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
-                    <inset key="contentInset" minX="0.0" minY="3" maxX="0.0" maxY="10"/>
-                    <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="10"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="3" id="eHc-t8-ZD0">
-                        <size key="itemSize" width="155" height="155"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="96Q-ft-Yoa">
+                        <size key="itemSize" width="320" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="3" minY="3" maxX="3" maxY="3"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
-                    <cells/>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="VGL-Ky-r73"/>
-                        <outlet property="delegate" destination="-1" id="ohS-Kz-HsQ"/>
+                        <outlet property="dataSource" destination="-1" id="tiX-28-VY9"/>
+                        <outlet property="delegate" destination="-1" id="FAX-BD-HwQ"/>
                     </connections>
                 </collectionView>
-                <view hidden="YES" contentMode="scaleToFill" id="t2d-NB-F0C" userLabel="HeaderView" customClass="CommonHeaderView">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139" y="154"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

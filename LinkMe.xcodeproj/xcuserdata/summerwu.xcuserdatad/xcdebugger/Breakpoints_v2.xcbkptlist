@@ -54,7 +54,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
@@ -478,22 +478,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LinkMe/classes/views/home/HomeVC.m"
-            timestampString = "436870032.715003"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "283"
-            endingLineNumber = "283"
-            landmarkName = "ON_NOTIFICATION3()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -784,11 +768,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/common/CommonHeaderView.m"
-            timestampString = "434555648.826388"
+            timestampString = "438364337.940358"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
             landmarkName = "@implementation CommonHeaderView"
             landmarkType = "3">
          </BreakpointContent>
@@ -1152,11 +1136,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/addActivies/AddActivityVC.m"
-            timestampString = "436789545.300453"
+            timestampString = "438374993.613286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
             landmarkName = "-openDateTouchUpInside:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1184,13 +1168,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/addActivies/AddActivityVC.m"
-            timestampString = "436890604.041026"
+            timestampString = "438374993.613286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "241"
-            endingLineNumber = "241"
-            landmarkName = "@implementation AddActivityVC"
-            landmarkType = "3">
+            startingLineNumber = "273"
+            endingLineNumber = "273"
+            landmarkName = "-alertView:clickedButtonAtIndex:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1216,11 +1200,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/addActivies/AddActivityVC.m"
-            timestampString = "436890604.041026"
+            timestampString = "438374993.613286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "216"
-            endingLineNumber = "216"
+            startingLineNumber = "247"
+            endingLineNumber = "247"
             landmarkName = "-saveActivityTouchUpInside:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1264,11 +1248,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/service/impl/ActivityRemoteServiceImpl.m"
-            timestampString = "436864803.050824"
+            timestampString = "438343649.031309"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
             landmarkName = "-addActivityByActivityModel:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1296,11 +1280,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/addActivies/AddActivityVC.m"
-            timestampString = "436789545.300453"
+            timestampString = "438374993.613286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
+            startingLineNumber = "234"
+            endingLineNumber = "234"
             landmarkName = "-saveActivityTouchUpInside:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1312,11 +1296,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/addActivies/AddActivityVC.m"
-            timestampString = "436890604.041026"
+            timestampString = "438374993.613286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "222"
-            endingLineNumber = "222"
+            startingLineNumber = "253"
+            endingLineNumber = "253"
             landmarkName = "-saveActivityTouchUpInside:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1356,7 +1340,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/service/impl/ActivityRemoteServiceImpl.m"
@@ -1367,36 +1351,6 @@
             endingLineNumber = "68"
             landmarkName = "-queryHomeActivity:andLimit:andWay:andWhen:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__71-[ActivityRemoteServiceImpl queryHomeActivity:andLimit:andWay:andWhen:]_block_invoke82"
-                  moduleName = "LinkMe"
-                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/ActivityRemoteServiceImpl.m"
-                  timestampString = "436850208.872251"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "208">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__71-[ActivityRemoteServiceImpl queryHomeActivity:andLimit:andWay:andWhen:]_block_invoke_2"
-                  moduleName = "LinkMe"
-                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/ActivityRemoteServiceImpl.m"
-                  timestampString = "436850208.872645"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "41">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1482,11 +1436,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/service/impl/ActivityRemoteServiceImpl.m"
-            timestampString = "436864803.050824"
+            timestampString = "438343649.031309"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "165"
@@ -1550,11 +1504,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/addActivies/AddActivityVC.m"
-            timestampString = "436890604.041026"
+            timestampString = "438374993.613286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "300"
-            endingLineNumber = "300"
+            startingLineNumber = "372"
+            endingLineNumber = "372"
             landmarkName = "-setImageToTextField"
             landmarkType = "5">
          </BreakpointContent>
@@ -1693,28 +1647,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LinkMe/classes/views/home/HomeVC.m"
-            timestampString = "436864326.407145"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "@implementation HomeVC"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/addActivies/AddActivityVC.m"
-            timestampString = "436890604.041026"
+            timestampString = "438374993.613286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "324"
-            endingLineNumber = "324"
+            startingLineNumber = "397"
+            endingLineNumber = "397"
             landmarkName = "-textView:shouldChangeTextInRange:replacementText:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1726,28 +1664,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/addActivies/AddActivityVC.m"
-            timestampString = "436858891.053734"
+            timestampString = "438374993.613286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "@implementation AddActivityVC"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LinkMe/classes/views/home/HomeVC.m"
-            timestampString = "436864326.407145"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "@implementation HomeVC"
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1853,7 +1775,7 @@
                   symbolName = "-[UserRemoteServiceImpl queryRegisterByUserName:andPassWord:andController:andMethodName:]"
                   moduleName = "LinkMe"
                   urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
-                  timestampString = "438188695.377312"
+                  timestampString = "438373389.921034"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "147"
@@ -1867,7 +1789,7 @@
                   symbolName = "__89-[UserRemoteServiceImpl queryRegisterByUserName:andPassWord:andController:andMethodName:]_block_invoke146"
                   moduleName = "LinkMe"
                   urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
-                  timestampString = "438188695.377614"
+                  timestampString = "438373389.921413"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "147"
@@ -1970,6 +1892,420 @@
             startingLineNumber = "240"
             endingLineNumber = "240"
             landmarkName = "-insertDataFromSampleActivityView"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/views/addActivies/AddActivityVC.m"
+            timestampString = "438374993.613286"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "275"
+            endingLineNumber = "275"
+            landmarkName = "-alertView:clickedButtonAtIndex:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/views/addActivies/AddActivityVC.m"
+            timestampString = "438374993.613286"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "297"
+            endingLineNumber = "297"
+            landmarkName = "-actionSheet:clickedButtonAtIndex:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/views/home/HomeVC.m"
+            timestampString = "438227861.207083"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "281"
+            endingLineNumber = "281"
+            landmarkName = "ON_NOTIFICATION3()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/views/addActivies/AddActivityVC.m"
+            timestampString = "438374993.613286"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "262"
+            endingLineNumber = "262"
+            landmarkName = "-saveActivityTouchUpInside:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/views/addActivies/AddActivityVC.m"
+            timestampString = "438374993.613286"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "412"
+            endingLineNumber = "412"
+            landmarkName = "ON_NOTIFICATION3()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/views/addActivies/AddActivityVC.m"
+            timestampString = "438374993.613286"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
+            landmarkName = "-typeTouchUpInside:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/views/addActivies/activityType/ActivityTypeVC.m"
+            timestampString = "438287511.589069"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "-setUpUI"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/views/addActivies/activityType/ActivityTypeVC.m"
+            timestampString = "438289398.629076"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "-setUpUI"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/views/common/getHobby/HobbyService.m"
+            timestampString = "438285581.810779"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "-getHobbies"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/views/addActivies/AddActivityVC.m"
+            timestampString = "438374993.613286"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "350"
+            endingLineNumber = "350"
+            landmarkName = "ON_SIGNAL3()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
+            timestampString = "438296433.583634"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "-queryLoginByUsername:andPassWord:andController:andMethodName:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/views/login/LoginPageViewController.m"
+            timestampString = "438296440.338189"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "239"
+            endingLineNumber = "239"
+            landmarkName = "-loginEventUserName:pwd:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/lib/bee/system/foundation/Bee_Singleton.h"
+            timestampString = "438296545.103822"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/service/CoreService.m"
+            timestampString = "438296646.255037"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "-init"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/views/main/commendFriend/AppCommendVC.m"
+            timestampString = "438343066.753472"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/views/main/commendFriend/AppCommendVC.m"
+            timestampString = "438373287.839283"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
+            landmarkName = "-startQueryCommendUsers"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/views/addActivies/AddActivityVC.m"
+            timestampString = "438374993.613286"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "290"
+            endingLineNumber = "290"
+            landmarkName = "-actionSheet:clickedButtonAtIndex:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/service/impl/CommendRemoteServiceImpl.m"
+            timestampString = "438346008.036092"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "-queryCommendUsersBy:andOffset:andLimit:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/service/impl/CommendRemoteServiceImpl.m"
+            timestampString = "438346008.036092"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "-queryCommendUsersBy:andOffset:andLimit:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/service/impl/CommendRemoteServiceImpl.m"
+            timestampString = "438346008.036092"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "-queryCommendUsersBy:andOffset:andLimit:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/views/main/commendFriend/AppCommendVC.m"
+            timestampString = "438373287.839283"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "201"
+            endingLineNumber = "201"
+            landmarkName = "ON_NOTIFICATION3()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/service/impl/CommendRemoteServiceImpl.m"
+            timestampString = "438346008.036092"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "-queryCommendUsersBy:andOffset:andLimit:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/views/main/commendFriend/AppCommendVC.m"
+            timestampString = "438373287.839283"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "-collectionView:cellForItemAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/views/main/commendFriend/AppCommendVC.m"
+            timestampString = "438373287.839283"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "-collectionView:numberOfItemsInSection:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/views/common/CommonHeaderView.m"
+            timestampString = "438365396.26961"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "+initHeader:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LinkMe/classes/views/main/commendFriend/AppCommendCollectionViewCell.m"
+            timestampString = "438373554.335792"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "-updateCellByUser:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

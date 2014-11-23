@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddActivityVC">
             <connections>
                 <outlet property="activityImgView" destination="3IV-h7-V5X" id="HQM-mA-UPY"/>
+                <outlet property="addButton" destination="6P8-Z1-mOU" id="a4L-W4-IeP"/>
                 <outlet property="addPicBtn" destination="4sz-sd-rOp" id="ABi-AH-DHU"/>
                 <outlet property="approveTime" destination="kmN-VM-nIF" id="5Tl-kd-zHX"/>
                 <outlet property="ceilingCountTf" destination="Muu-3c-ED8" id="h5l-N7-qXM"/>
@@ -31,6 +32,7 @@
                 <outlet property="openTimeView" destination="9rB-Ns-hyu" id="nr8-kp-azJ"/>
                 <outlet property="scrollView" destination="Qkq-92-Jvi" id="3NN-nB-EkH"/>
                 <outlet property="textViewPlaceHolder" destination="VNu-Nw-H3j" id="ha8-uA-C97"/>
+                <outlet property="type" destination="vna-Ck-f65" id="4nI-y2-EEZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -41,11 +43,11 @@
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Qkq-92-Jvi">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <view tag="4" contentMode="scaleToFill" id="xi0-19-CKH" userLabel="limitCount">
                             <rect key="frame" x="0.0" y="274" width="320" height="42"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="上限人数" minimumFontSize="17" id="Muu-3c-ED8">
                                     <rect key="frame" x="8" y="8" width="304" height="30"/>
@@ -60,7 +62,7 @@
                         </view>
                         <view tag="5" contentMode="scaleToFill" id="nxf-w2-UBF" userLabel="downCount">
                             <rect key="frame" x="0.0" y="316" width="320" height="43"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="至少人数" minimumFontSize="17" id="Zuh-4s-tJK">
                                     <rect key="frame" x="8" y="5" width="304" height="30"/>
@@ -75,12 +77,13 @@
                         </view>
                         <view tag="7" contentMode="scaleToFill" id="2do-ag-aD2" userLabel="活动报名结束时间">
                             <rect key="frame" x="0.0" y="418" width="320" height="36"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <textField opaque="NO" clipsSubviews="YES" tag="54" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="YbG-9e-9Yi">
                                     <rect key="frame" x="30" y="3" width="120" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.30588235289999999" green="0.35294117650000001" blue="0.41176470590000003" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
@@ -88,6 +91,7 @@
                                     <rect key="frame" x="180" y="3" width="120" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.30588235289999999" green="0.35294117650000001" blue="0.41176470590000003" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
@@ -118,12 +122,13 @@
                         </view>
                         <view tag="3" contentMode="scaleToFill" id="Fhr-9z-yOy" userLabel="活动结束时间">
                             <rect key="frame" x="0.0" y="237" width="320" height="36"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <textField opaque="NO" clipsSubviews="YES" tag="52" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="qAa-sr-eKF">
-                                    <rect key="frame" x="31" y="3" width="120" height="30"/>
+                                    <rect key="frame" x="25" y="3" width="120" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.30588235289999999" green="0.35294117650000001" blue="0.41176470590000003" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
@@ -131,6 +136,7 @@
                                     <rect key="frame" x="180" y="3" width="120" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.30588235289999999" green="0.35294117650000001" blue="0.41176470590000003" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
@@ -146,7 +152,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gsS-e0-bLU">
-                                    <rect key="frame" x="31" y="3" width="120" height="30"/>
+                                    <rect key="frame" x="25" y="3" width="120" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <state key="normal">
@@ -161,12 +167,13 @@
                         </view>
                         <view tag="6" contentMode="scaleToFill" id="kmN-VM-nIF" userLabel="活动报名开始时间">
                             <rect key="frame" x="0.0" y="386" width="320" height="32"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <textField opaque="NO" clipsSubviews="YES" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="P2I-xX-Wet">
                                     <rect key="frame" x="180" y="1" width="120" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.30588235289999999" green="0.35294117650000001" blue="0.41176470590000003" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
@@ -174,6 +181,7 @@
                                     <rect key="frame" x="30" y="1" width="120" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.30588235289999999" green="0.35294117650000001" blue="0.41176470590000003" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
@@ -204,16 +212,34 @@
                         </view>
                         <view tag="1" contentMode="scaleToFill" id="rJw-1n-08M" userLabel="name" colorLabel="IBBuiltInLabel-Orange">
                             <rect key="frame" x="0.0" y="130" width="320" height="45"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="名字" minimumFontSize="17" id="Wfn-kJ-luS">
-                                    <rect key="frame" x="8" y="7" width="304" height="30"/>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="名字" textAlignment="center" minimumFontSize="17" id="Wfn-kJ-luS">
+                                    <rect key="frame" x="9" y="7" width="149" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.30588235289999999" green="0.35294117650000001" blue="0.41176470590000003" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="类型" textAlignment="center" minimumFontSize="17" id="vna-Ck-f65">
+                                    <rect key="frame" x="166" y="7" width="149" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.30588235289999999" green="0.35294117650000001" blue="0.41176470590000003" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eVO-yQ-3Qf">
+                                    <rect key="frame" x="166" y="7" width="149" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="typeTouchUpInside:" destination="-1" eventType="touchUpInside" id="UTQ-Cq-ZBJ"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -238,12 +264,13 @@
                         </view>
                         <view tag="2" contentMode="scaleToFill" id="9rB-Ns-hyu" userLabel="活动开始时间">
                             <rect key="frame" x="0.0" y="201" width="320" height="36"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <textField opaque="NO" clipsSubviews="YES" tag="51" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="nMe-1d-PpJ">
-                                    <rect key="frame" x="30" y="4" width="120" height="30"/>
+                                    <rect key="frame" x="25" y="4" width="120" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.30588235289999999" green="0.35294117650000001" blue="0.41176470590000003" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
@@ -251,11 +278,12 @@
                                     <rect key="frame" x="180" y="4" width="120" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.30588235289999999" green="0.35294117650000001" blue="0.41176470590000003" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RLI-6o-WRt">
-                                    <rect key="frame" x="30" y="4" width="120" height="30"/>
+                                    <rect key="frame" x="25" y="4" width="120" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <state key="normal">
@@ -322,7 +350,7 @@
                         </view>
                         <view tag="8" contentMode="scaleToFill" id="sQf-FF-ckN" userLabel="description">
                             <rect key="frame" x="0.0" y="455" width="320" height="161"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Hb5-Cx-9SJ">
                                     <rect key="frame" x="8" y="8" width="304" height="75"/>

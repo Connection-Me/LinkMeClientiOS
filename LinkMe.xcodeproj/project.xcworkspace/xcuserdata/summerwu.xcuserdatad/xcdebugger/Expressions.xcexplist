@@ -3,28 +3,46 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[MainVC setupRouter]:MainVC.m">
+         contextName = "-[HomeVC collectionView:numberOfItemsInSection:]:HomeVC.m">
          <PersistentStrings>
             <PersistentString
-               value = "_router.view.frame">
+               value = "activityList">
+            </PersistentString>
+            <PersistentString
+               value = "_whenActivities">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "+[CommonHeaderView setBackButtonBlock:]:CommonHeaderView.m">
+         contextName = "-[HobbyService getHobbies]:HobbyService.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[AppCommendVC handleNotification_CommendEvent_LOAD_APP_COMMEND_SUCCESS:]:AppCommendVC.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.backButtonBlock">
+               value = "notification.object">
+            </PersistentString>
+            <PersistentString
+               value = "_userArray">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[AddActivityVC setupHeader]:AddActivityVC.m">
+         contextName = "-[HomeVC handleNotification_ActivityEvent_ADD_ACTIVITY_SUCCESS:]:HomeVC.m">
          <PersistentStrings>
             <PersistentString
-               value = "rect.size.width">
+               value = "[CoreModel sharedInstance].whenActivities]">
+            </PersistentString>
+            <PersistentString
+               value = "_whenActivities">
+            </PersistentString>
+            <PersistentString
+               value = "[CoreModel sharedInstance]">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__67-[CommendRemoteServiceImpl queryCommendUsersBy:andOffset:andLimit:]_block_invoke_2:CommendRemoteServiceImpl.m">
       </ContextState>
       <ContextState
          contextName = "-[MainVC testOpenScreen:]:MainVC.m">
@@ -35,13 +53,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[HomeVC collectionView:numberOfItemsInSection:]:HomeVC.m">
+         contextName = "+[CommonHeaderView setBackButtonBlock:]:CommonHeaderView.m">
          <PersistentStrings>
             <PersistentString
-               value = "activityList">
-            </PersistentString>
-            <PersistentString
-               value = "_whenActivities">
+               value = "self.backButtonBlock">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -63,6 +78,28 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "__67-[CommendRemoteServiceImpl queryCommendUsersBy:andOffset:andLimit:]_block_invoke75:CommendRemoteServiceImpl.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[responseDic objectForKey:@&quot;result_code&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[HomeDetailViewController insertDataFromSampleActivityView]:HomeDetailViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.sampleActivityModel">
+            </PersistentString>
+            <PersistentString
+               value = "self.activityStartDateLabel.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__71-[ActivityRemoteServiceImpl queryHomeActivity:andLimit:andWay:andWhen:]_block_invoke_2:ActivityRemoteServiceImpl.m">
+      </ContextState>
+      <ContextState
          contextName = "-[DatePopupPickerVC okTouchUpInside:]:DatePopupPickerVC.m">
          <PersistentStrings>
             <PersistentString
@@ -71,28 +108,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[FooterVC activityBtnTouchUpInside:]:FooterVC.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "btn.tag">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[AddActivityVC StringToDate:]:AddActivityVC.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "_openSignDateTextField.text">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[MainVC setupFooter]:MainVC.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "_router.view.frame.origin.y+_router.view.frame.size.height">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "-[UIViewController(BeeUISignal) sendUISignal:withObject:from:]:UIViewController+BeeUISignal.m">
       </ContextState>
       <ContextState
          contextName = "-[ActivityRemoteServiceImpl addActivityByActivityModel:]:ActivityRemoteServiceImpl.m">
@@ -106,6 +122,44 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[AddActivityVC saveActivityTouchUpInside:]:AddActivityVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_openSignDateTextField.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LibModel loadFromJson:]:LibModel.m">
+      </ContextState>
+      <ContextState
+         contextName = "__56-[ActivityRemoteServiceImpl addActivityByActivityModel:]_block_invoke_2:ActivityRemoteServiceImpl.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[FooterVC activityBtnTouchUpInside:]:FooterVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "btn.tag">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AddActivityVC handleUISignal_ActivityTypeVC_CLOSE_ACTIVITY_TYPE_VC:]:AddActivityVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_hobbyModel">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AddActivityVC handleNotification_ActivityEvent_ADD_ACTIVITY_SUCCESS:]:AddActivityVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_activityModel">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "__71-[ActivityRemoteServiceImpl queryHomeActivity:andLimit:andWay:andWhen:]_block_invoke127:ActivityRemoteServiceImpl.m">
          <PersistentStrings>
             <PersistentString
@@ -114,7 +168,20 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[UIViewController(BeeUISignal) sendUISignal:withObject:from:]:UIViewController+BeeUISignal.m">
+         contextName = "-[AddActivityVC setupHeader]:AddActivityVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "rect.size.width">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ActivityTypeVC setUpUI]:ActivityTypeVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "btn.frame">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "-[HomeVC handleNotification_ActivityEvent_LOAD_ACTIVITY_SUCCESS:]:HomeVC.m">
@@ -128,10 +195,42 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[AddActivityVC saveActivityTouchUpInside:]:AddActivityVC.m">
+         contextName = "-[LoginPageViewController loginEventUserName:pwd:]:LoginPageViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "CoreService">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MainVC setupRouter]:MainVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_router.view.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AddActivityVC StringToDate:]:AddActivityVC.m">
          <PersistentStrings>
             <PersistentString
                value = "_openSignDateTextField.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AppCommendVC collectionView:numberOfItemsInSection:]:AppCommendVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_userArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MainVC setupFooter]:MainVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_router.view.frame.origin.y+_router.view.frame.size.height">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

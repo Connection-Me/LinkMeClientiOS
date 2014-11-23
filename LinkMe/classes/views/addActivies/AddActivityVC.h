@@ -10,7 +10,7 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "Bee.h"
 
-@interface AddActivityVC : BeeUIBoard<UITextViewDelegate,UIImagePickerControllerDelegate>
+@interface AddActivityVC : BeeUIBoard<UITextViewDelegate,UIImagePickerControllerDelegate,UIAlertViewDelegate,UIActionSheetDelegate>
 
 AS_SIGNAL(CLOSE_ADDVC)
 
@@ -29,6 +29,7 @@ AS_SIGNAL(CLOSE_ADDVC)
 
 #pragma mark textField
 @property (weak, nonatomic) IBOutlet UITextField *nameTf;
+@property (weak, nonatomic) IBOutlet UITextField *type;
 @property (weak, nonatomic) IBOutlet UITextField *ceilingCountTf;
 @property (weak, nonatomic) IBOutlet UITextField *lowerLimitCountTf;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTf;
@@ -48,5 +49,7 @@ AS_SIGNAL(CLOSE_ADDVC)
 @property (weak, nonatomic) IBOutlet UIImageView *activityImgView;
 
 @property (weak, nonatomic) IBOutlet UIScrollView  *scrollView;
+
+@property (weak,nonatomic) IBOutlet UIButton  *addButton;
 
 @end

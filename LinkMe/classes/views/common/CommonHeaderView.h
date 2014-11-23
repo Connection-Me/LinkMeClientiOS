@@ -16,6 +16,7 @@ typedef NS_ENUM(NSInteger, CommonHeaderButtonSytle) {
     CommonHeaderBack,
     CommonHeaderMenu,
     CommonHeaderAdd,
+    CommonHeaderInvite,
     CommonHeaderNone,
 };
 
