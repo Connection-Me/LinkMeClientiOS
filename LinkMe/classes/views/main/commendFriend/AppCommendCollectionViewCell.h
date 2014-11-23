@@ -12,6 +12,8 @@
 
 @property(weak,nonatomic) IBOutlet UIImageView   *userImage;
 
+@property(weak,nonatomic) IBOutlet UIButton      *selectBtn;
+
 -(void)updateCellByUser:(UserModel*)userModel;
 
 @end
