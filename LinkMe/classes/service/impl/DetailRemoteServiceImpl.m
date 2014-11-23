@@ -47,7 +47,7 @@ DEF_SINGLETON(DetailRemoteServiceImpl)
 //        NSLog(@"the request jsonString == %@",jsonString);
         
         ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-        request.timeOutSeconds = 30.0;
+        request.timeOutSeconds = 10.0;
         
         [request setPostValue:[CoreModel sharedInstance].token forKey:@"sessionId"];
         [request setPostValue:@"activity" forKey:@"c"];

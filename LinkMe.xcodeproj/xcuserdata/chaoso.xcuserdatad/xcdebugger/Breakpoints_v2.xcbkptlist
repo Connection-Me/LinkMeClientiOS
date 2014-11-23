@@ -17,6 +17,36 @@
             endingLineNumber = "177"
             landmarkName = "-queryRegisterByUserName:andPassWord:andController:andMethodName:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[UserRemoteServiceImpl queryRegisterByUserName:andPassWord:andController:andMethodName:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/chaoso/Desktop/gitdata/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
+                  timestampString = "438268668.861361"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "177"
+                  endingLineNumber = "177"
+                  offsetFromSymbolStart = "1397">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__89-[UserRemoteServiceImpl queryRegisterByUserName:andPassWord:andController:andMethodName:]_block_invoke165"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/chaoso/Desktop/gitdata/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
+                  timestampString = "438268668.861611"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "177"
+                  endingLineNumber = "177"
+                  offsetFromSymbolStart = "21">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -33,6 +63,36 @@
             endingLineNumber = "147"
             landmarkName = "-queryRegisterByUserName:andPassWord:andController:andMethodName:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[UserRemoteServiceImpl queryRegisterByUserName:andPassWord:andController:andMethodName:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/chaoso/Desktop/gitdata/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
+                  timestampString = "438268668.864486"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147"
+                  offsetFromSymbolStart = "1240">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__89-[UserRemoteServiceImpl queryRegisterByUserName:andPassWord:andController:andMethodName:]_block_invoke146"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/chaoso/Desktop/gitdata/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
+                  timestampString = "438268668.864725"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -48,22 +108,6 @@
             startingLineNumber = "155"
             endingLineNumber = "155"
             landmarkName = "-addActivityByActivityModel:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LinkMe/classes/views/activityDetail/HomeDetailViewController.m"
-            timestampString = "438181303.929982"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "240"
-            endingLineNumber = "240"
-            landmarkName = "-insertDataFromSampleActivityView"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

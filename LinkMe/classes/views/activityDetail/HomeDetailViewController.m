@@ -252,7 +252,7 @@ ON_NOTIFICATION3(DetailEvent, LOAD_DETAIL_ACTIVITY_FAILED, notification)
     self.rejectCount.text = [NSString stringWithFormat:@"%d",self.sampleActivityModel.rejectCount];
     
     self.activityName.text = self.sampleActivityModel.name;
-    self.activityDesc.text = self.sampleActivityModel.description;
+    self.activityDesc.text = self.sampleActivityModel.desc;
     
 }
 
