@@ -62,4 +62,13 @@ DEF_SIGNAL(TESTVC)
     [self sendUISignal:self.TESTVC withObject:nil];
 }
 
+-(void)longPressCell:(UILongPressGestureRecognizer *)gesture{
+    
+    if(gesture.state == UIGestureRecognizerStateBegan){
+        
+        
+    }
+    
+}
+
 @end
