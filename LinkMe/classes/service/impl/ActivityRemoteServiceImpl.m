@@ -45,7 +45,7 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
         
         ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
        request.timeOutSeconds = 10.0;
-       
+       request.shouldAttemptPersistentConnection   = NO;
        [request setPostValue:[CoreModel sharedInstance].token forKey:@"sessionId"];
        [request setPostValue:[NSNumber numberWithInt:offset] forKey:@"offset"];
        [request setPostValue:[NSNumber numberWithInt:limit] forKey:@"limit"];
@@ -129,7 +129,7 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
         NSURL *url = [NSURL URLWithString:urlString];
         
         ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-        
+        request.shouldAttemptPersistentConnection   = NO;
         request.showAccurateProgress = YES;
         request.timeOutSeconds = 10.0;
         

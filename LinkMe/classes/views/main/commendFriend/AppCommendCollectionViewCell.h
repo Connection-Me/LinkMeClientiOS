@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "UserModel.h"
+#import "Bee.h"
 @interface AppCommendCollectionViewCell : UICollectionViewCell
+
+AS_SIGNAL(TOUCH_Y_BUTTON)
 
 @property(weak,nonatomic) IBOutlet UIImageView   *userImage;
 

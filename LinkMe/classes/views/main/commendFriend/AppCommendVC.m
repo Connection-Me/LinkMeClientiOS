@@ -15,6 +15,8 @@
 #import "AppCommendCollectionViewCell.h"
 
 #import "MJRefresh.h"
+#import "UserModel.h"
+#import "CommendCheckItems.h"
 
 @interface AppCommendVC ()
 {
@@ -63,6 +65,9 @@ SUMMER_DEF_XIB(AppCommendVC, YES, NO);
     [self observeNotification:CommendEvent.LOAD_APP_COMMEND_START];
     [self observeNotification:CommendEvent.LOAD_APP_COMMEND_SUCCESS];
     [self observeNotification:CommendEvent.LOAD_APP_COMMEND_FAILED];
+    [self observeNotification:CommendEvent.SEND_INVITE_START];
+    [self observeNotification:CommendEvent.SEND_INVITE_SUCCESS];
+    [self observeNotification:CommendEvent.SEND_INVITE_FAILED];
 }
 
 -(void)setupCollectionView{
@@ -121,7 +126,7 @@ SUMMER_DEF_XIB(AppCommendVC, YES, NO);
 
 -(void)inviteFriends
 {
-    
+    [[CoreService sharedInstance].commendRemoteService sendInviteToFriendsByUsers:[CommendCheckItems sharedInstance].checkedItems andActivity:_activityModel andWay:@"id"];
 }
 
 
@@ -215,6 +220,35 @@ ON_NOTIFICATION3(CommendEvent, LOAD_APP_COMMEND_SUCCESS, notification)
 ON_NOTIFICATION3(CommendEvent, LOAD_APP_COMMEND_FAILED, notification)
 {
     [TCMessageBox hide];
+}
+
+ON_NOTIFICATION3(CommendEvent, SEND_INVITE_START, notification)
+{
+    [TCMessageBox showMessage:@"正在发送邀请..." hideByTouch:NO withActivityIndicator:YES];
+}
+ON_NOTIFICATION3(CommendEvent, SEND_INVITE_SUCCESS, notification)
+{
+    [TCMessageBox hide];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"邀请成功！" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+}
+ON_NOTIFICATION3(CommendEvent, SEND_INVITE_FAILED, notification)
+{
+    [TCMessageBox hide];
+}
+
+
+ON_SIGNAL3(AppCommendCollectionViewCell, TOUCH_Y_BUTTON, signal)
+{
+    UserModel *userModel = (UserModel *)signal.object;
+    if (![[CommendCheckItems sharedInstance] isCheckItems:userModel]) {
+        [[CommendCheckItems sharedInstance] addToCheckItems:userModel];
+    }
+    else
+    {
+        [[CommendCheckItems sharedInstance] addToUnCheckItems:userModel];
+    }
+    [self.collectionView reloadData];
 }
 
 @end

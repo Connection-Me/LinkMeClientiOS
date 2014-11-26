@@ -8,8 +8,18 @@
 
 #import "AppCommendCollectionViewCell.h"
 #import "ImageDownloader.h"
+#import "CommendCheckItems.h"
+
+@interface AppCommendCollectionViewCell()
+{
+    UserModel           *_userModel;
+}
+
+@end
 
 @implementation AppCommendCollectionViewCell
+
+DEF_SIGNAL(TOUCH_Y_BUTTON)
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -27,7 +37,13 @@
 
 -(void)updateCellByUser:(UserModel *)userModel
 {
-    [self setBtn:self.selectBtn withImage:nil AndTitle:@"Y"];
+    _userModel = userModel;
+    if ([[CommendCheckItems sharedInstance] isCheckItems:userModel]) {
+        [self setBtn:self.selectBtn withImage:[UIImage imageNamed:@"join.png"] AndTitle:@""];
+    }
+    else{
+        [self setBtn:self.selectBtn withImage:nil AndTitle:@"Y"];
+    }
     ImageDownloader * imageDownloader = [[ImageDownloader alloc]init];
     //todo:还没有图像url,注册的时候，每个用户应该有默认图片;
     return;
@@ -52,6 +68,11 @@
     [btn.layer setBorderColor:colorref];
     btn.backgroundColor = [UIColor colorWithWhite:1 alpha:0.8];
     btn.titleLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:22];
+}
+
+-(IBAction)yesButtonTouchUpInside:(id)sender
+{
+    [self sendUISignal:self.TOUCH_Y_BUTTON withObject:_userModel];
 }
 
 @end

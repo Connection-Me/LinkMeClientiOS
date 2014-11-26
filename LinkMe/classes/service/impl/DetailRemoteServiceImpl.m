@@ -48,7 +48,7 @@ DEF_SINGLETON(DetailRemoteServiceImpl)
         
         ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
         request.timeOutSeconds = 10.0;
-        
+        request.shouldAttemptPersistentConnection   = NO;
         [request setPostValue:[CoreModel sharedInstance].token forKey:@"sessionId"];
         [request setPostValue:@"activity" forKey:@"c"];
         [request setPostValue:@"showDetail" forKey:@"a"];

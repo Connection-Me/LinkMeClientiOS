@@ -876,7 +876,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
@@ -887,12 +887,42 @@
             endingLineNumber = "53"
             landmarkName = "-queryLoginByUsername:andPassWord:andController:andMethodName:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[UserRemoteServiceImpl queryLoginByUsername:andPassWord:andController:andMethodName:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
+                  timestampString = "438630033.623855"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "1010">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[UserRemoteServiceImpl queryLoginByUsername:andPassWord:andController:andMethodName:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
+                  timestampString = "438630033.318616"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "1010">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
@@ -903,6 +933,36 @@
             endingLineNumber = "141"
             landmarkName = "-queryRegisterByUserName:andPassWord:andController:andMethodName:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[UserRemoteServiceImpl queryRegisterByUserName:andPassWord:andController:andMethodName:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
+                  timestampString = "438630033.624187"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "141"
+                  endingLineNumber = "141"
+                  offsetFromSymbolStart = "924">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[UserRemoteServiceImpl queryRegisterByUserName:andPassWord:andController:andMethodName:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
+                  timestampString = "438630033.337511"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "141"
+                  endingLineNumber = "141"
+                  offsetFromSymbolStart = "924">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1015,6 +1075,36 @@
             endingLineNumber = "63"
             landmarkName = "-queryLoginByUsername:andPassWord:andController:andMethodName:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__86-[UserRemoteServiceImpl queryLoginByUsername:andPassWord:andController:andMethodName:]_block_invoke62"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
+                  timestampString = "438630033.624482"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__86-[UserRemoteServiceImpl queryLoginByUsername:andPassWord:andController:andMethodName:]_block_invoke62"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
+                  timestampString = "438630033.339862"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "112">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1351,6 +1441,36 @@
             endingLineNumber = "68"
             landmarkName = "-queryHomeActivity:andLimit:andWay:andWhen:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__71-[ActivityRemoteServiceImpl queryHomeActivity:andLimit:andWay:andWhen:]_block_invoke86"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/ActivityRemoteServiceImpl.m"
+                  timestampString = "438630033.624779"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "171">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__71-[ActivityRemoteServiceImpl queryHomeActivity:andLimit:andWay:andWhen:]_block_invoke86"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/ActivityRemoteServiceImpl.m"
+                  timestampString = "438630033.342039"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "171">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1447,6 +1567,36 @@
             endingLineNumber = "165"
             landmarkName = "-addActivityByActivityModel:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__56-[ActivityRemoteServiceImpl addActivityByActivityModel:]_block_invoke_2"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/ActivityRemoteServiceImpl.m"
+                  timestampString = "438630033.625935"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "166"
+                  endingLineNumber = "166"
+                  offsetFromSymbolStart = "323">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__56-[ActivityRemoteServiceImpl addActivityByActivityModel:]_block_invoke_2"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/ActivityRemoteServiceImpl.m"
+                  timestampString = "438630033.346399"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "166"
+                  endingLineNumber = "166"
+                  offsetFromSymbolStart = "323">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1479,6 +1629,36 @@
             endingLineNumber = "71"
             landmarkName = "@implementation HomeVC"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HomeVC handleUISignal_BeeUIBoard:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/home/HomeVC.m"
+                  timestampString = "438630033.626492"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "852">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HomeVC handleUISignal_BeeUIBoard:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/home/HomeVC.m"
+                  timestampString = "438630033.353544"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "852">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1527,6 +1707,36 @@
             endingLineNumber = "46"
             landmarkName = "@implementation HomeVC"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HomeVC handleUISignal_BeeUIBoard:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/home/HomeVC.m"
+                  timestampString = "438630033.627109"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "201">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HomeVC handleUISignal_BeeUIBoard:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/home/HomeVC.m"
+                  timestampString = "438630033.357462"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "201">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1559,6 +1769,36 @@
             endingLineNumber = "137"
             landmarkName = "-collectionView:numberOfItemsInSection:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HomeVC collectionView:numberOfItemsInSection:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/home/HomeVC.m"
+                  timestampString = "438630033.627394"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HomeVC collectionView:numberOfItemsInSection:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/home/HomeVC.m"
+                  timestampString = "438630033.360691"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1655,6 +1895,36 @@
             endingLineNumber = "397"
             landmarkName = "-textView:shouldChangeTextInRange:replacementText:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AddActivityVC textView:shouldChangeTextInRange:replacementText:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/AddActivityVC.m"
+                  timestampString = "438630033.62766"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "397"
+                  endingLineNumber = "397"
+                  offsetFromSymbolStart = "296">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AddActivityVC textView:shouldChangeTextInRange:replacementText:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/AddActivityVC.m"
+                  timestampString = "438630033.366148"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "397"
+                  endingLineNumber = "397"
+                  offsetFromSymbolStart = "296">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1671,6 +1941,36 @@
             endingLineNumber = "53"
             landmarkName = "@implementation AddActivityVC"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AddActivityVC handleUISignal_BeeUIBoard:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/AddActivityVC.m"
+                  timestampString = "438630033.630646"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "200">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AddActivityVC handleUISignal_BeeUIBoard:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/AddActivityVC.m"
+                  timestampString = "438630033.370115"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "200">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1687,6 +1987,36 @@
             endingLineNumber = "105"
             landmarkName = "-initializeRouterObserveEvents"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HomeVC initializeRouterObserveEvents]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/home/HomeVC.m"
+                  timestampString = "438630033.632054"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HomeVC initializeRouterObserveEvents]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/home/HomeVC.m"
+                  timestampString = "438630033.373249"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "25">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1703,6 +2033,36 @@
             endingLineNumber = "123"
             landmarkName = "-startDownloadHomeActivity"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HomeVC startDownloadHomeActivity]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/home/HomeVC.m"
+                  timestampString = "438630033.632427"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "115">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HomeVC startDownloadHomeActivity]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/home/HomeVC.m"
+                  timestampString = "438630033.375844"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "115">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1719,6 +2079,36 @@
             endingLineNumber = "86"
             landmarkName = "-queryLoginByUsername:andPassWord:andController:andMethodName:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__86-[UserRemoteServiceImpl queryLoginByUsername:andPassWord:andController:andMethodName:]_block_invoke88"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
+                  timestampString = "438630033.63278"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__86-[UserRemoteServiceImpl queryLoginByUsername:andPassWord:andController:andMethodName:]_block_invoke88"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
+                  timestampString = "438630033.378192"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1735,6 +2125,36 @@
             endingLineNumber = "94"
             landmarkName = "-queryLoginByUsername:andPassWord:andController:andMethodName:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__86-[UserRemoteServiceImpl queryLoginByUsername:andPassWord:andController:andMethodName:]_block_invoke_2102"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
+                  timestampString = "438630033.633763"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__86-[UserRemoteServiceImpl queryLoginByUsername:andPassWord:andController:andMethodName:]_block_invoke_2102"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
+                  timestampString = "438630033.381003"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1751,6 +2171,36 @@
             endingLineNumber = "132"
             landmarkName = "-queryRegisterByUserName:andPassWord:andController:andMethodName:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[UserRemoteServiceImpl queryRegisterByUserName:andPassWord:andController:andMethodName:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
+                  timestampString = "438630033.634505"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "524">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[UserRemoteServiceImpl queryRegisterByUserName:andPassWord:andController:andMethodName:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
+                  timestampString = "438630033.382809"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "524">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1775,26 +2225,26 @@
                   symbolName = "-[UserRemoteServiceImpl queryRegisterByUserName:andPassWord:andController:andMethodName:]"
                   moduleName = "LinkMe"
                   urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
-                  timestampString = "438373389.921034"
+                  timestampString = "438630033.635546"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "147"
                   endingLineNumber = "147"
-                  offsetFromSymbolStart = "1240">
+                  offsetFromSymbolStart = "1236">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__89-[UserRemoteServiceImpl queryRegisterByUserName:andPassWord:andController:andMethodName:]_block_invoke146"
+                  symbolName = "-[UserRemoteServiceImpl queryRegisterByUserName:andPassWord:andController:andMethodName:]"
                   moduleName = "LinkMe"
                   urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
-                  timestampString = "438373389.921413"
+                  timestampString = "438630033.385746"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "147"
                   endingLineNumber = "147"
-                  offsetFromSymbolStart = "24">
+                  offsetFromSymbolStart = "1236">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1813,6 +2263,64 @@
             endingLineNumber = "178"
             landmarkName = "-queryRegisterByUserName:andPassWord:andController:andMethodName:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[UserRemoteServiceImpl queryRegisterByUserName:andPassWord:andController:andMethodName:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
+                  timestampString = "438630033.636498"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "178"
+                  endingLineNumber = "178"
+                  offsetFromSymbolStart = "1431">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__89-[UserRemoteServiceImpl queryRegisterByUserName:andPassWord:andController:andMethodName:]_block_invoke165"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
+                  timestampString = "438630033.636997"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "178"
+                  endingLineNumber = "178"
+                  offsetFromSymbolStart = "21">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[UserRemoteServiceImpl queryRegisterByUserName:andPassWord:andController:andMethodName:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
+                  timestampString = "438630033.388079"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "178"
+                  endingLineNumber = "178"
+                  offsetFromSymbolStart = "1431">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__89-[UserRemoteServiceImpl queryRegisterByUserName:andPassWord:andController:andMethodName:]_block_invoke165"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
+                  timestampString = "438630033.388357"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "178"
+                  endingLineNumber = "178"
+                  offsetFromSymbolStart = "21">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1829,6 +2337,36 @@
             endingLineNumber = "41"
             landmarkName = "-queryLoginByUsername:andPassWord:andController:andMethodName:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[UserRemoteServiceImpl queryLoginByUsername:andPassWord:andController:andMethodName:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
+                  timestampString = "438630033.637313"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "518">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[UserRemoteServiceImpl queryLoginByUsername:andPassWord:andController:andMethodName:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
+                  timestampString = "438630033.391741"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "518">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1845,6 +2383,36 @@
             endingLineNumber = "144"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HomeVC collectionView:cellForItemAtIndexPath:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/home/HomeVC.m"
+                  timestampString = "438630033.637621"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "144"
+                  endingLineNumber = "144"
+                  offsetFromSymbolStart = "95">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HomeVC collectionView:cellForItemAtIndexPath:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/home/HomeVC.m"
+                  timestampString = "438630033.394787"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "144"
+                  endingLineNumber = "144"
+                  offsetFromSymbolStart = "95">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1861,6 +2429,36 @@
             endingLineNumber = "51"
             landmarkName = "-updatecellByActivityModel:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HomeCollectionVCCell updatecellByActivityModel:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/home/HomeCollectionVCCell.m"
+                  timestampString = "438630033.639292"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "58">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HomeCollectionVCCell updatecellByActivityModel:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/home/HomeCollectionVCCell.m"
+                  timestampString = "438630033.397687"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "58">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1877,6 +2475,36 @@
             endingLineNumber = "75"
             landmarkName = "-queryHomeActivity:andLimit:andWay:andWhen:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__71-[ActivityRemoteServiceImpl queryHomeActivity:andLimit:andWay:andWhen:]_block_invoke_2"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/ActivityRemoteServiceImpl.m"
+                  timestampString = "438630033.639669"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "406">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__71-[ActivityRemoteServiceImpl queryHomeActivity:andLimit:andWay:andWhen:]_block_invoke_2"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/ActivityRemoteServiceImpl.m"
+                  timestampString = "438630033.401139"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "406">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1893,6 +2521,36 @@
             endingLineNumber = "240"
             landmarkName = "-insertDataFromSampleActivityView"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HomeDetailViewController insertDataFromSampleActivityView]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/activityDetail/HomeDetailViewController.m"
+                  timestampString = "438630033.639949"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "240"
+                  endingLineNumber = "240"
+                  offsetFromSymbolStart = "111">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HomeDetailViewController insertDataFromSampleActivityView]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/activityDetail/HomeDetailViewController.m"
+                  timestampString = "438630033.412119"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "240"
+                  endingLineNumber = "240"
+                  offsetFromSymbolStart = "111">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1909,6 +2567,36 @@
             endingLineNumber = "275"
             landmarkName = "-alertView:clickedButtonAtIndex:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AddActivityVC alertView:clickedButtonAtIndex:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/AddActivityVC.m"
+                  timestampString = "438630033.641481"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "275"
+                  endingLineNumber = "275"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AddActivityVC alertView:clickedButtonAtIndex:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/AddActivityVC.m"
+                  timestampString = "438630033.415016"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "275"
+                  endingLineNumber = "275"
+                  offsetFromSymbolStart = "90">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1925,6 +2613,36 @@
             endingLineNumber = "297"
             landmarkName = "-actionSheet:clickedButtonAtIndex:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AddActivityVC actionSheet:clickedButtonAtIndex:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/AddActivityVC.m"
+                  timestampString = "438630033.641945"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "297"
+                  endingLineNumber = "297"
+                  offsetFromSymbolStart = "380">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AddActivityVC actionSheet:clickedButtonAtIndex:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/AddActivityVC.m"
+                  timestampString = "438630033.425276"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "297"
+                  endingLineNumber = "297"
+                  offsetFromSymbolStart = "380">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1941,6 +2659,36 @@
             endingLineNumber = "281"
             landmarkName = "ON_NOTIFICATION3()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HomeVC handleNotification_ActivityEvent_ADD_ACTIVITY_SUCCESS:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/home/HomeVC.m"
+                  timestampString = "438630033.642363"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "283"
+                  endingLineNumber = "283"
+                  offsetFromSymbolStart = "54">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HomeVC handleNotification_ActivityEvent_ADD_ACTIVITY_SUCCESS:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/home/HomeVC.m"
+                  timestampString = "438630033.430341"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "283"
+                  endingLineNumber = "283"
+                  offsetFromSymbolStart = "54">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1957,6 +2705,36 @@
             endingLineNumber = "262"
             landmarkName = "-saveActivityTouchUpInside:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AddActivityVC saveActivityTouchUpInside:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/AddActivityVC.m"
+                  timestampString = "438630033.642854"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "262"
+                  endingLineNumber = "262"
+                  offsetFromSymbolStart = "2705">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AddActivityVC saveActivityTouchUpInside:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/AddActivityVC.m"
+                  timestampString = "438630033.437564"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "262"
+                  endingLineNumber = "262"
+                  offsetFromSymbolStart = "2705">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1973,6 +2751,36 @@
             endingLineNumber = "412"
             landmarkName = "ON_NOTIFICATION3()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AddActivityVC handleNotification_ActivityEvent_ADD_ACTIVITY_SUCCESS:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/AddActivityVC.m"
+                  timestampString = "438630033.644174"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "412"
+                  endingLineNumber = "412"
+                  offsetFromSymbolStart = "55">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AddActivityVC handleNotification_ActivityEvent_ADD_ACTIVITY_SUCCESS:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/AddActivityVC.m"
+                  timestampString = "438630033.44199"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "412"
+                  endingLineNumber = "412"
+                  offsetFromSymbolStart = "55">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1989,6 +2797,36 @@
             endingLineNumber = "184"
             landmarkName = "-typeTouchUpInside:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AddActivityVC typeTouchUpInside:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/AddActivityVC.m"
+                  timestampString = "438630033.644527"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "185"
+                  endingLineNumber = "185"
+                  offsetFromSymbolStart = "55">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AddActivityVC typeTouchUpInside:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/AddActivityVC.m"
+                  timestampString = "438630033.444758"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "185"
+                  endingLineNumber = "185"
+                  offsetFromSymbolStart = "55">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2005,6 +2843,36 @@
             endingLineNumber = "50"
             landmarkName = "-setUpUI"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ActivityTypeVC setUpUI]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/activityType/ActivityTypeVC.m"
+                  timestampString = "438630033.644858"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "98">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ActivityTypeVC setUpUI]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/activityType/ActivityTypeVC.m"
+                  timestampString = "438630033.446112"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "98">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2021,6 +2889,36 @@
             endingLineNumber = "59"
             landmarkName = "-setUpUI"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ActivityTypeVC setUpUI]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/activityType/ActivityTypeVC.m"
+                  timestampString = "438630033.645613"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "220">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ActivityTypeVC setUpUI]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/activityType/ActivityTypeVC.m"
+                  timestampString = "438630033.448606"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "220">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2037,6 +2935,36 @@
             endingLineNumber = "27"
             landmarkName = "-getHobbies"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HobbyService getHobbies]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/common/getHobby/HobbyService.m"
+                  timestampString = "438630033.646005"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "465">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HobbyService getHobbies]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/common/getHobby/HobbyService.m"
+                  timestampString = "438630033.452334"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "465">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2053,6 +2981,36 @@
             endingLineNumber = "350"
             landmarkName = "ON_SIGNAL3()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AddActivityVC handleUISignal_ActivityTypeVC_CLOSE_ACTIVITY_TYPE_VC:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/AddActivityVC.m"
+                  timestampString = "438630033.646309"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "350"
+                  endingLineNumber = "350"
+                  offsetFromSymbolStart = "55">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AddActivityVC handleUISignal_ActivityTypeVC_CLOSE_ACTIVITY_TYPE_VC:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/AddActivityVC.m"
+                  timestampString = "438630033.457016"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "350"
+                  endingLineNumber = "350"
+                  offsetFromSymbolStart = "55">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2069,6 +3027,36 @@
             endingLineNumber = "30"
             landmarkName = "-queryLoginByUsername:andPassWord:andController:andMethodName:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[UserRemoteServiceImpl queryLoginByUsername:andPassWord:andController:andMethodName:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
+                  timestampString = "438630033.6466"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[UserRemoteServiceImpl queryLoginByUsername:andPassWord:andController:andMethodName:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
+                  timestampString = "438630033.530513"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "196">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2085,6 +3073,36 @@
             endingLineNumber = "239"
             landmarkName = "-loginEventUserName:pwd:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[LoginPageViewController loginEventUserName:pwd:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/login/LoginPageViewController.m"
+                  timestampString = "438630033.647005"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "239"
+                  endingLineNumber = "239"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[LoginPageViewController loginEventUserName:pwd:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/login/LoginPageViewController.m"
+                  timestampString = "438630033.535913"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "239"
+                  endingLineNumber = "239"
+                  offsetFromSymbolStart = "86">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2115,6 +3133,36 @@
             endingLineNumber = "27"
             landmarkName = "-init"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CoreService init]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/CoreService.m"
+                  timestampString = "438630033.650415"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "294">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CoreService init]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/CoreService.m"
+                  timestampString = "438630033.537674"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "294">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2124,13 +3172,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/main/commendFriend/AppCommendVC.m"
-            timestampString = "438343066.753472"
+            timestampString = "438715930.493737"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppCommendVC viewDidLoad]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/main/commendFriend/AppCommendVC.m"
+                  timestampString = "438630033.652902"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppCommendVC viewDidLoad]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/main/commendFriend/AppCommendVC.m"
+                  timestampString = "438630033.539175"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2140,13 +3218,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/main/commendFriend/AppCommendVC.m"
-            timestampString = "438373287.839283"
+            timestampString = "438715930.493737"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
             landmarkName = "-startQueryCommendUsers"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppCommendVC startQueryCommendUsers]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/main/commendFriend/AppCommendVC.m"
+                  timestampString = "438630033.653262"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "183"
+                  endingLineNumber = "183"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppCommendVC startQueryCommendUsers]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/main/commendFriend/AppCommendVC.m"
+                  timestampString = "438630033.540884"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "183"
+                  endingLineNumber = "183"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2163,6 +3271,36 @@
             endingLineNumber = "290"
             landmarkName = "-actionSheet:clickedButtonAtIndex:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AddActivityVC actionSheet:clickedButtonAtIndex:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/AddActivityVC.m"
+                  timestampString = "438630033.653563"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "290"
+                  endingLineNumber = "290"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AddActivityVC actionSheet:clickedButtonAtIndex:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/addActivies/AddActivityVC.m"
+                  timestampString = "438630033.543659"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "290"
+                  endingLineNumber = "290"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2179,6 +3317,36 @@
             endingLineNumber = "22"
             landmarkName = "-queryCommendUsersBy:andOffset:andLimit:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CommendRemoteServiceImpl queryCommendUsersBy:andOffset:andLimit:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/CommendRemoteServiceImpl.m"
+                  timestampString = "438630033.653835"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "127">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CommendRemoteServiceImpl queryCommendUsersBy:andOffset:andLimit:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/CommendRemoteServiceImpl.m"
+                  timestampString = "438630033.550788"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "127">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2195,6 +3363,36 @@
             endingLineNumber = "59"
             landmarkName = "-queryCommendUsersBy:andOffset:andLimit:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__67-[CommendRemoteServiceImpl queryCommendUsersBy:andOffset:andLimit:]_block_invoke77"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/CommendRemoteServiceImpl.m"
+                  timestampString = "438630033.655639"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__67-[CommendRemoteServiceImpl queryCommendUsersBy:andOffset:andLimit:]_block_invoke77"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/CommendRemoteServiceImpl.m"
+                  timestampString = "438630033.554047"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "136">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2211,6 +3409,36 @@
             endingLineNumber = "63"
             landmarkName = "-queryCommendUsersBy:andOffset:andLimit:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__67-[CommendRemoteServiceImpl queryCommendUsersBy:andOffset:andLimit:]_block_invoke_2"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/CommendRemoteServiceImpl.m"
+                  timestampString = "438630033.656008"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "131">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__67-[CommendRemoteServiceImpl queryCommendUsersBy:andOffset:andLimit:]_block_invoke_2"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/CommendRemoteServiceImpl.m"
+                  timestampString = "438630033.555879"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "131">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2220,13 +3448,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/main/commendFriend/AppCommendVC.m"
-            timestampString = "438373287.839283"
+            timestampString = "438715930.493737"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "201"
-            endingLineNumber = "201"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
             landmarkName = "ON_NOTIFICATION3()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppCommendVC handleNotification_CommendEvent_LOAD_APP_COMMEND_SUCCESS:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/main/commendFriend/AppCommendVC.m"
+                  timestampString = "438630033.657145"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "201"
+                  endingLineNumber = "201"
+                  offsetFromSymbolStart = "109">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppCommendVC handleNotification_CommendEvent_LOAD_APP_COMMEND_SUCCESS:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/main/commendFriend/AppCommendVC.m"
+                  timestampString = "438630033.56113"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "201"
+                  endingLineNumber = "201"
+                  offsetFromSymbolStart = "109">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2243,6 +3501,36 @@
             endingLineNumber = "62"
             landmarkName = "-queryCommendUsersBy:andOffset:andLimit:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__67-[CommendRemoteServiceImpl queryCommendUsersBy:andOffset:andLimit:]_block_invoke_2"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/CommendRemoteServiceImpl.m"
+                  timestampString = "438630033.657488"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "31">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__67-[CommendRemoteServiceImpl queryCommendUsersBy:andOffset:andLimit:]_block_invoke_2"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/CommendRemoteServiceImpl.m"
+                  timestampString = "438630033.564343"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2252,13 +3540,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/main/commendFriend/AppCommendVC.m"
-            timestampString = "438373287.839283"
+            timestampString = "438715930.493737"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppCommendVC collectionView:cellForItemAtIndexPath:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/main/commendFriend/AppCommendVC.m"
+                  timestampString = "438630033.657818"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "95">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppCommendVC collectionView:cellForItemAtIndexPath:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/main/commendFriend/AppCommendVC.m"
+                  timestampString = "438630033.568643"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "95">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2268,13 +3586,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/main/commendFriend/AppCommendVC.m"
-            timestampString = "438373287.839283"
+            timestampString = "438715930.493737"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "-collectionView:numberOfItemsInSection:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppCommendVC collectionView:numberOfItemsInSection:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/main/commendFriend/AppCommendVC.m"
+                  timestampString = "438630033.658092"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "111">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppCommendVC collectionView:numberOfItemsInSection:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/main/commendFriend/AppCommendVC.m"
+                  timestampString = "438630033.573009"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "111">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2291,6 +3639,36 @@
             endingLineNumber = "54"
             landmarkName = "+initHeader:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[CommonHeaderView initHeader:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/common/CommonHeaderView.m"
+                  timestampString = "438630033.65856"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "61">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[CommonHeaderView initHeader:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/common/CommonHeaderView.m"
+                  timestampString = "438630033.57662"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "61">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2300,13 +3678,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LinkMe/classes/views/main/commendFriend/AppCommendCollectionViewCell.m"
-            timestampString = "438430673.284292"
+            timestampString = "438715930.493737"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "-updateCellByUser:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppCommendCollectionViewCell updateCellByUser:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/main/commendFriend/AppCommendCollectionViewCell.m"
+                  timestampString = "438630033.658941"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "169">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AppCommendCollectionViewCell updateCellByUser:]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/views/main/commendFriend/AppCommendCollectionViewCell.m"
+                  timestampString = "438630033.583121"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "169">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

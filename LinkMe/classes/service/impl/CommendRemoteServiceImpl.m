@@ -12,6 +12,7 @@
 #import "CommendEvent.h"
 #import "HobbyModel.h"
 #import "UserModel.h"
+#import "ActivityModel.h"
 
 @implementation CommendRemoteServiceImpl
 DEF_SINGLETON(CommendRemoteServiceImpl)
@@ -38,7 +39,7 @@ DEF_SINGLETON(CommendRemoteServiceImpl)
         
         ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
         request.timeOutSeconds = 30.0;
-        
+        request.shouldAttemptPersistentConnection   = NO;
         [request setPostValue:[CoreModel sharedInstance].token forKey:@"sessionId"];
         [request setPostValue:@"user" forKey:@"c"];
         [request setPostValue:@"recommend" forKey:@"a"];
@@ -87,6 +88,91 @@ DEF_SINGLETON(CommendRemoteServiceImpl)
         }];
         [request startAsynchronous];
     }
+}
+
+-(void)sendInviteToFriendsByUsers:(NSArray *)users andActivity:(ActivityModel *)activity andWay:(NSString *)way
+{
+    BOOL isConnectAvailable = [self isConnectionAvailable];
+    if (!isConnectAvailable)
+    {
+        FOREGROUND_BEGIN
+        [self postNotification:NetWorkEvent.NEWWORK_UNREACHABLE];
+        FOREGROUND_COMMIT
+    }else
+    {
+        FOREGROUND_BEGIN
+        [self postNotification:CommendEvent.SEND_INVITE_START withObject:nil];
+        FOREGROUND_COMMIT
+        //TODO
+        //        NSString *urlString = [[CoreModel sharedInstance].serverURL stringByAppendingString:@""];//拼接请求路径
+        
+        NSString *urlString = [[CoreModel sharedInstance].serverURL stringByAppendingString:@""];
+        NSURL *url = [NSURL URLWithString:urlString];
+        
+        
+        ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+        request.timeOutSeconds = 30.0;
+        request.shouldAttemptPersistentConnection   = NO;
+        [request setPostValue:[CoreModel sharedInstance].token forKey:@"sessionId"];
+        [request setPostValue:@"activity" forKey:@"c"];
+        [request setPostValue:@"invite" forKey:@"a"];
+        [request setPostValue:[self parseUsers:users] forKey:@"inviteUser"];
+        [request setPostValue:way forKey:@"way"];
+        [request setPostValue:activity.activityId forKey:@"aid"];
+        
+        request.requestMethod = RequestMethod.POST;
+        __block ASIHTTPRequest * blockRequest = request;
+        request.delegate = self;
+        [request setCompletionBlock:^{
+            //tips:use [request responseString] and [request responseData] to fetch the responseString/responseData
+            NSInteger code = blockRequest.responseStatusCode;
+            //responseString 是服务器返回的数据
+            NSString * responseString = blockRequest.responseString;
+            NSLog(@"<DetailRemoteServiceImpl> responeString is %@",responseString);
+            
+            NSDictionary *responseDic = [responseString objectFromJSONString];
+            NSString *result_msg = [responseDic objectForKey:@"result_msg"];
+            if (code == 200) {
+                FOREGROUND_BEGIN
+                if ([[responseDic objectForKey:@"result_code"] longValue] == 0) {
+                    [self postNotification:CommendEvent.SEND_INVITE_SUCCESS withObject:result_msg];
+                }
+                else
+                {
+                    [self postNotification:CommendEvent.SEND_INVITE_FAILED];
+                }
+                FOREGROUND_COMMIT
+            }
+            else
+            {
+                FOREGROUND_BEGIN
+                [self postNotification:CommendEvent.SEND_INVITE_FAILED];
+                FOREGROUND_COMMIT
+            }
+            
+        }];
+        [request setFailedBlock:^{
+            NSError *error = [blockRequest error];
+            FOREGROUND_BEGIN
+            [self postNotification:CommendEvent.SEND_INVITE_FAILED];
+            FOREGROUND_COMMIT
+            NSLog(@"error = %@",error);
+        }];
+        [request startAsynchronous];
+    }
+}
+-(NSString*)parseUsers:(NSArray*)users
+{
+    NSString *returnUsers = @"";
+    int i;
+    for (i=0; i<users.count-1;i++) {
+        UserModel *userModel =(UserModel*)[users objectAtIndex:i];
+        [returnUsers stringByAppendingString:userModel.uid];
+        [returnUsers stringByAppendingString:@","];
+    }
+    UserModel *userModel =(UserModel*)[users objectAtIndex:i];
+    [returnUsers stringByAppendingString:userModel.uid];
+    return returnUsers;
 }
 
 @end

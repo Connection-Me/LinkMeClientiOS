@@ -212,6 +212,9 @@
 		E17B29761A1FD2E50013893E /* CommendEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E17B29751A1FD2E50013893E /* CommendEvent.m */; };
 		E17B297A1A1FE6CA0013893E /* AppCommendCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E17B29781A1FE6CA0013893E /* AppCommendCollectionViewCell.m */; };
 		E17B297B1A1FE6CA0013893E /* AppCommendCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E17B29791A1FE6CA0013893E /* AppCommendCollectionViewCell.xib */; };
+		E17B297E1A223B0E0013893E /* boy_200x200.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E17B297C1A223B0E0013893E /* boy_200x200.jpg */; };
+		E17B297F1A223B0E0013893E /* girl_180x180.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E17B297D1A223B0E0013893E /* girl_180x180.jpg */; };
+		E1856D821A25A15D00BF9476 /* CommendCheckItems.m in Sources */ = {isa = PBXBuildFile; fileRef = E1856D811A25A15D00BF9476 /* CommendCheckItems.m */; };
 		E18807781A1E485A009F0965 /* AppCommendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E18807761A1E485A009F0965 /* AppCommendVC.m */; };
 		E18807791A1E485A009F0965 /* AppCommendVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E18807771A1E485A009F0965 /* AppCommendVC.xib */; };
 		E188077D1A1EF689009F0965 /* hobby.json in Resources */ = {isa = PBXBuildFile; fileRef = E188077C1A1EF689009F0965 /* hobby.json */; };
@@ -670,6 +673,10 @@
 		E17B29771A1FE6CA0013893E /* AppCommendCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppCommendCollectionViewCell.h; sourceTree = "<group>"; };
 		E17B29781A1FE6CA0013893E /* AppCommendCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppCommendCollectionViewCell.m; sourceTree = "<group>"; };
 		E17B29791A1FE6CA0013893E /* AppCommendCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppCommendCollectionViewCell.xib; sourceTree = "<group>"; };
+		E17B297C1A223B0E0013893E /* boy_200x200.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = boy_200x200.jpg; sourceTree = "<group>"; };
+		E17B297D1A223B0E0013893E /* girl_180x180.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = girl_180x180.jpg; sourceTree = "<group>"; };
+		E1856D801A25A15D00BF9476 /* CommendCheckItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommendCheckItems.h; sourceTree = "<group>"; };
+		E1856D811A25A15D00BF9476 /* CommendCheckItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommendCheckItems.m; sourceTree = "<group>"; };
 		E18807751A1E485A009F0965 /* AppCommendVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppCommendVC.h; sourceTree = "<group>"; };
 		E18807761A1E485A009F0965 /* AppCommendVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppCommendVC.m; sourceTree = "<group>"; };
 		E18807771A1E485A009F0965 /* AppCommendVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppCommendVC.xib; sourceTree = "<group>"; };
@@ -1682,6 +1689,8 @@
 		E17AC6D819A7F0E0008CF3FC /* images */ = {
 			isa = PBXGroup;
 			children = (
+				E17B297C1A223B0E0013893E /* boy_200x200.jpg */,
+				E17B297D1A223B0E0013893E /* girl_180x180.jpg */,
 				D8F3313E1A0A740900F9F5E5 /* testImage.jpg */,
 				D87D60941A01EBB000E6F549 /* imageView.jpg */,
 				D8A54E8819EBCB8A0029858F /* user2.jpg */,
@@ -1729,6 +1738,8 @@
 				E17B29771A1FE6CA0013893E /* AppCommendCollectionViewCell.h */,
 				E17B29781A1FE6CA0013893E /* AppCommendCollectionViewCell.m */,
 				E17B29791A1FE6CA0013893E /* AppCommendCollectionViewCell.xib */,
+				E1856D801A25A15D00BF9476 /* CommendCheckItems.h */,
+				E1856D811A25A15D00BF9476 /* CommendCheckItems.m */,
 			);
 			path = commendFriend;
 			sourceTree = "<group>";
@@ -2852,6 +2863,7 @@
 				D86791A719B42B9200630891 /* pic5.jpg in Resources */,
 				D86791A919B42B9200630891 /* pic1.jpg in Resources */,
 				D8F3313F1A0A740900F9F5E5 /* testImage.jpg in Resources */,
+				E17B297E1A223B0E0013893E /* boy_200x200.jpg in Resources */,
 				E11A0D3E19C28F7D000C6E02 /* FooterVC.xib in Resources */,
 				D8AF2EAE19E6858700BDCDF8 /* HeaderVC.xib in Resources */,
 				D87D60951A01EBB000E6F549 /* imageView.jpg in Resources */,
@@ -2861,6 +2873,7 @@
 				E1E2C3E019AC3A11004C3F57 /* RootVC.xib in Resources */,
 				E12B08B419FF704400CDF3FA /* TimePopupPickerVC.xib in Resources */,
 				D897332019B5B0CC00133321 /* profile.png in Resources */,
+				E17B297F1A223B0E0013893E /* girl_180x180.jpg in Resources */,
 				D8C3F69319B617AC000697A3 /* add.png in Resources */,
 				D897331C19B5B0CC00133321 /* globe.png in Resources */,
 				E1E2C3DA19AC39CB004C3F57 /* LoginVC.xib in Resources */,
@@ -3157,6 +3170,7 @@
 				E117D34319B4B93A00411512 /* ActivityEvent.m in Sources */,
 				E1A5A6DA19C4B7DE004A8876 /* Bee_UIDataBinding.m in Sources */,
 				E1A5A6D719C4B7DE004A8876 /* UIView+Animation.m in Sources */,
+				E1856D821A25A15D00BF9476 /* CommendCheckItems.m in Sources */,
 				E1A5A6BE19C4B7DE004A8876 /* BeeUIStack+BackwardCompatible.m in Sources */,
 				E1A5A72319C4B7DE004A8876 /* BeeUIQuery+AJAX.m in Sources */,
 				E1A5A6C019C4B7DE004A8876 /* UIView+UIViewController.m in Sources */,

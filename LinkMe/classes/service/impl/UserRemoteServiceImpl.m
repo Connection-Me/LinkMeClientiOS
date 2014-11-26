@@ -34,7 +34,7 @@ DEF_SINGLETON(UserRemoteServiceImpl)
         [self postNotification:NetWorkEvent.NEWWORK_UNREACHABLE];
         FOREGROUND_COMMIT
     }else
-   {
+    {
        FOREGROUND_BEGIN
        [self postNotification:UserEvent.LOGIN withObject:nil];
        FOREGROUND_COMMIT
@@ -134,6 +134,7 @@ DEF_SINGLETON(UserRemoteServiceImpl)
         
         ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
        
+        request.shouldAttemptPersistentConnection   = NO;
         request.showAccurateProgress = YES;
         request.timeOutSeconds = 60.0;
         [request setPostValue:username forKey:@"userName"];
