@@ -55,6 +55,7 @@ SUMMER_DEF_XIB(AppCommendVC, YES, NO);
 }
 -(void)initData
 {
+    [[CommendCheckItems sharedInstance] clear];
     _offset = 1;
     _limit = 10;
     _isAllRefresh = NO;

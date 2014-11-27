@@ -72,7 +72,7 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
                 }
                 else if([[dic objectForKey:@"result_code"] longValue] == 0)
                 {
-                    NSDictionary *data = [[dic objectForKey:@"data"] objectFromJSONString];
+                    NSDictionary *data = [dic objectForKey:@"data"];
                     NSArray * activityList = [data objectForKey:@"activityList"];
                     NSArray * activityArray = [ActivityModel modelWithJsonArray:activityList];
                     for(ActivityModel *activity in activityArray)
@@ -80,6 +80,7 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
                         [[CoreDao sharedInstance].homeDao insertActivity:activity];
                     }
                     [self postNotification:ActivityEvent.LOAD_ACTIVITY_SUCCESS withObject:activityArray];
+                    
                 }
                 FOREGROUND_COMMIT
             }
@@ -163,7 +164,7 @@ DEF_SINGLETON(ActivityRemoteServiceImpl)
                 }
                 else if([[dic objectForKey:@"result_code"] longValue] == 0)
                 {
-                    NSDictionary *aidDic = [[dic objectForKey:@"data"] objectFromJSONString];
+                    NSDictionary *aidDic = [dic objectForKey:@"data"];
                     NSNumber *aid = [aidDic objectForKey:@"aid"];
                     activityModel.activityId = [NSString stringWithFormat:@"%d",[aid integerValue]];
                     [self postNotification:ActivityEvent.ADD_ACTIVITY_SUCCESS withObject:activityModel];

@@ -214,7 +214,7 @@ DEF_SINGLETON(UserRemoteServiceImpl)
         NSLog(@"the dic has not the data key");
         return ;
     }
-    NSDictionary *data = [[dic objectForKey:@"data"] objectFromJSONString];
+    NSDictionary *data = [dic objectForKey:@"data"];
     //存储token
     CoreModel *coreModel = [CoreModel sharedInstance];
     [coreModel setToken:[data objectForKey:@"session_id"]];

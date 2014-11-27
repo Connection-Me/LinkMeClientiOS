@@ -14,9 +14,6 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[HobbyService getHobbies]:HobbyService.m">
-      </ContextState>
-      <ContextState
          contextName = "-[AppCommendVC handleNotification_CommendEvent_LOAD_APP_COMMEND_SUCCESS:]:AppCommendVC.m">
          <PersistentStrings>
             <PersistentString
@@ -28,16 +25,22 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[HobbyService getHobbies]:HobbyService.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[CommendRemoteServiceImpl parseUsers:]:CommendRemoteServiceImpl.m">
+      </ContextState>
+      <ContextState
          contextName = "-[HomeVC handleNotification_ActivityEvent_ADD_ACTIVITY_SUCCESS:]:HomeVC.m">
          <PersistentStrings>
             <PersistentString
-               value = "[CoreModel sharedInstance].whenActivities]">
+               value = "[CoreModel sharedInstance]">
             </PersistentString>
             <PersistentString
                value = "_whenActivities">
             </PersistentString>
             <PersistentString
-               value = "[CoreModel sharedInstance]">
+               value = "[CoreModel sharedInstance].whenActivities]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -100,15 +103,20 @@
          contextName = "__71-[ActivityRemoteServiceImpl queryHomeActivity:andLimit:andWay:andWhen:]_block_invoke_2:ActivityRemoteServiceImpl.m">
       </ContextState>
       <ContextState
+         contextName = "-[AddActivityVC saveActivityTouchUpInside:]:AddActivityVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_openSignDateTextField.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[DatePopupPickerVC okTouchUpInside:]:DatePopupPickerVC.m">
          <PersistentStrings>
             <PersistentString
                value = "self.sendSignal">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[UIViewController(BeeUISignal) sendUISignal:withObject:from:]:UIViewController+BeeUISignal.m">
       </ContextState>
       <ContextState
          contextName = "-[ActivityRemoteServiceImpl addActivityByActivityModel:]:ActivityRemoteServiceImpl.m">
@@ -122,18 +130,13 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[AddActivityVC saveActivityTouchUpInside:]:AddActivityVC.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "_openSignDateTextField.text">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[LibModel loadFromJson:]:LibModel.m">
+         contextName = "-[UIViewController(BeeUISignal) sendUISignal:withObject:from:]:UIViewController+BeeUISignal.m">
       </ContextState>
       <ContextState
          contextName = "__56-[ActivityRemoteServiceImpl addActivityByActivityModel:]_block_invoke_2:ActivityRemoteServiceImpl.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[LibModel loadFromJson:]:LibModel.m">
       </ContextState>
       <ContextState
          contextName = "-[FooterVC activityBtnTouchUpInside:]:FooterVC.m">
@@ -215,6 +218,14 @@
          <PersistentStrings>
             <PersistentString
                value = "_openSignDateTextField.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AppCommendCollectionViewCell yesButtonTouchUpInside:]:AppCommendCollectionViewCell.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_userModel">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
