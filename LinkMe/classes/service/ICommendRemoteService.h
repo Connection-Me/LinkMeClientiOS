@@ -17,4 +17,8 @@
 
 -(void)sendInviteToFriendsByUsers:(NSArray*)users andActivity:(ActivityModel*)activity andWay:(NSString*)way;
 
+-(void)checkIsHaveBeInvite;
+
+-(void)receiveInviteByActivity:(ActivityModel*)activityModel;
+
 @end
