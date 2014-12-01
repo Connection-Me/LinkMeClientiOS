@@ -7,10 +7,12 @@
 //
 
 #import "HeaderVC.h"
+
 #import "summer_extend.h"
+#import "PersonalSettingVC.h"
 @interface HeaderVC ()
 {
-    
+    RNFrostedSidebar *_callout;
 }
 @property (nonatomic, strong) NSMutableIndexSet *optionIndices;
 @end
@@ -18,6 +20,7 @@
 @implementation HeaderVC
 DEF_SINGLETON(HeaderVC)
 DEF_SIGNAL(ADD_VC)
+DEF_SIGNAL(PERSONAL_SETTING)
 SUMMER_DEF_XIB(HeaderVC, YES, NO);
 ON_SIGNAL2(BeeUIBoard, signal)
 {
@@ -75,11 +78,11 @@ ON_SIGNAL2(BeeUIBoard, signal)
                         [UIColor colorWithRed:255/255.f green:137/255.f blue:167/255.f alpha:1],
                         ];
     
-    RNFrostedSidebar *callout = [[RNFrostedSidebar alloc] initWithImages:images selectedIndices:self.optionIndices borderColors:colors];
+    _callout = [[RNFrostedSidebar alloc] initWithImages:images selectedIndices:self.optionIndices borderColors:colors];
     //    RNFrostedSidebar *callout = [[RNFrostedSidebar alloc] initWithImages:images];
-    callout.delegate = self;
+    _callout.delegate = self;
     //    callout.showFromRight = YES;
-    [callout show];
+    [_callout show];
 }
 - (IBAction)clickAdd:(id)sender {
     NSLog(@"click ADD button");
@@ -89,7 +92,12 @@ ON_SIGNAL2(BeeUIBoard, signal)
 #pragma mark - DELEGATE
 -(void)sidebar:(RNFrostedSidebar *)sidebar didTapItemAtIndex:(NSUInteger)index{
     if(index == 0){
-    
+        
+    }
+    else if(index == 1){
+        [_callout dismiss];
+        [self sendUISignal:self.PERSONAL_SETTING withObject:nil];
+        
     }
     
 }

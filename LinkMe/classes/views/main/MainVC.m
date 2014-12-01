@@ -14,6 +14,7 @@
 #import "LoginVC.h"
 #import "HomeDetailViewController.h"
 #import "AddActivityVC.h"
+#import "PersonalSettingVC.h"
 
 @interface MainVC ()
 {
@@ -215,6 +216,17 @@ ON_SIGNAL3(AddActivityVC, CLOSE_ADDVC, signal)
     _footerVC.view.userInteractionEnabled = YES;
     _headerVC.view.userInteractionEnabled = YES;
     _router.view.userInteractionEnabled = YES;
+}
+
+ON_SIGNAL3(HeaderVC, PERSONAL_SETTING, signal)
+{
+    
+    PersonalSettingVC *personalSettingVC = [[PersonalSettingVC alloc] init];
+    
+    
+    
+    [self.navigationController pushViewController:personalSettingVC animated:YES];
+    
 }
 
 
