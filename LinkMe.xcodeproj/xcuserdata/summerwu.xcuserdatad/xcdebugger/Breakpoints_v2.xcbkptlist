@@ -1745,12 +1745,12 @@
                   symbolName = "-[UserRemoteServiceImpl queryRegisterByUserName:andPassWord:andController:andMethodName:]"
                   moduleName = "LinkMe"
                   urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
-                  timestampString = "438759984.206565"
+                  timestampString = "438842220.345674"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "178"
                   endingLineNumber = "178"
-                  offsetFromSymbolStart = "1431">
+                  offsetFromSymbolStart = "1270">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1759,12 +1759,12 @@
                   symbolName = "__89-[UserRemoteServiceImpl queryRegisterByUserName:andPassWord:andController:andMethodName:]_block_invoke165"
                   moduleName = "LinkMe"
                   urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/UserRemoteServiceImpl.m"
-                  timestampString = "438759984.206903"
+                  timestampString = "438842220.345943"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "178"
                   endingLineNumber = "178"
-                  offsetFromSymbolStart = "21">
+                  offsetFromSymbolStart = "30">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2189,12 +2189,12 @@
                   symbolName = "__67-[CommendRemoteServiceImpl queryCommendUsersBy:andOffset:andLimit:]_block_invoke77"
                   moduleName = "LinkMe"
                   urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/CommendRemoteServiceImpl.m"
-                  timestampString = "438759984.256309"
+                  timestampString = "438842220.364894"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "62"
                   endingLineNumber = "62"
-                  offsetFromSymbolStart = "208">
+                  offsetFromSymbolStart = "246">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -2203,12 +2203,12 @@
                   symbolName = "__67-[CommendRemoteServiceImpl queryCommendUsersBy:andOffset:andLimit:]_block_invoke_2"
                   moduleName = "LinkMe"
                   urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/CommendRemoteServiceImpl.m"
-                  timestampString = "438759984.256625"
+                  timestampString = "438842220.365167"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "62"
                   endingLineNumber = "62"
-                  offsetFromSymbolStart = "26">
+                  offsetFromSymbolStart = "40">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2337,8 +2337,38 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "174"
             endingLineNumber = "174"
-            landmarkName = "-parseUsers:"
+            landmarkName = "-checkIsHaveBeInvite"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CommendRemoteServiceImpl checkIsHaveBeInvite]"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/CommendRemoteServiceImpl.m"
+                  timestampString = "438842220.371593"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "175"
+                  endingLineNumber = "175"
+                  offsetFromSymbolStart = "328">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__47-[CommendRemoteServiceImpl checkIsHaveBeInvite]_block_invoke180"
+                  moduleName = "LinkMe"
+                  urlString = "file:///Users/summerwu/LinkMeClientiOS/LinkMe/classes/service/impl/CommendRemoteServiceImpl.m"
+                  timestampString = "438842220.371866"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "175"
+                  endingLineNumber = "175"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
