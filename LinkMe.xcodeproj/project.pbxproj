@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D80C7E8E1A2996C500385208 /* PersonalSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D80C7E8C1A2996C500385208 /* PersonalSettingVC.m */; };
+		D80C7E8F1A2996C500385208 /* PersonalSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D80C7E8C1A2996C500385208 /* PersonalSettingVC.m */; };
+		D80C7E901A2996C500385208 /* PersonalSettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D80C7E8D1A2996C500385208 /* PersonalSettingVC.xib */; };
+		D80C7E911A2996C500385208 /* PersonalSettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D80C7E8D1A2996C500385208 /* PersonalSettingVC.xib */; };
 		D85D76AC19E585DD00B2A9B9 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D85D76AA19E585DD00B2A9B9 /* back@2x.png */; };
 		D85D76AD19E585DD00B2A9B9 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D85D76AA19E585DD00B2A9B9 /* back@2x.png */; };
 		D85D76AE19E585DD00B2A9B9 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = D85D76AB19E585DD00B2A9B9 /* back.png */; };
@@ -476,6 +480,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D80C7E8B1A2996C500385208 /* PersonalSettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalSettingVC.h; sourceTree = "<group>"; };
+		D80C7E8C1A2996C500385208 /* PersonalSettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalSettingVC.m; sourceTree = "<group>"; };
+		D80C7E8D1A2996C500385208 /* PersonalSettingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalSettingVC.xib; sourceTree = "<group>"; };
 		D85D76AA19E585DD00B2A9B9 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
 		D85D76AB19E585DD00B2A9B9 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		D85DE5B319B3604C00A906E7 /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
@@ -1213,6 +1220,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D80C7E8A1A2996A600385208 /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				D80C7E8B1A2996C500385208 /* PersonalSettingVC.h */,
+				D80C7E8C1A2996C500385208 /* PersonalSettingVC.m */,
+				D80C7E8D1A2996C500385208 /* PersonalSettingVC.xib */,
+			);
+			path = setting;
+			sourceTree = "<group>";
+		};
 		D85D76A819E5758500B2A9B9 /* manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -1428,6 +1445,7 @@
 		E11A0D2D19C2217F000C6E02 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				D80C7E8A1A2996A600385208 /* setting */,
 				E18807741A1E4804009F0965 /* commendFriend */,
 				D8B771241A1E23470048A909 /* imagePicker */,
 				D8AF2EA819E6858700BDCDF8 /* header */,
@@ -2891,6 +2909,7 @@
 				E12B08AF19FF489C00CDF3FA /* DatePopupPickerVC.xib in Resources */,
 				D897332419B5B0CC00133321 /* star.png in Resources */,
 				D85D76AC19E585DD00B2A9B9 /* back@2x.png in Resources */,
+				D80C7E901A2996C500385208 /* PersonalSettingVC.xib in Resources */,
 				D897331E19B5B0CC00133321 /* globe@2x.png in Resources */,
 				D8A4FCBE1A00E9C0008C6DEF /* p_signUp@2x.png in Resources */,
 				E17AC6DA19A7F0E0008CF3FC /* left_arrow.png in Resources */,
@@ -2933,6 +2952,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8A54E8719EBCA380029858F /* user1.jpg in Resources */,
+				D80C7E911A2996C500385208 /* PersonalSettingVC.xib in Resources */,
 				D8C3F68519B607FB000697A3 /* join@2x.png in Resources */,
 				D897332119B5B0CC00133321 /* profile.png in Resources */,
 				D867F4B919FE50D400D02FB8 /* addActivityPic.png in Resources */,
@@ -3161,6 +3181,7 @@
 				E1A5A6C519C4B7DE004A8876 /* UIViewController+UINavigationBar.m in Sources */,
 				E1A5A73F19C4B7DE004A8876 /* Bee_UserDefaults.mm in Sources */,
 				E1A5A73D19C4B7DE004A8876 /* Bee_Keychain.mm in Sources */,
+				D80C7E8E1A2996C500385208 /* PersonalSettingVC.m in Sources */,
 				E1A5A6C119C4B7DE004A8876 /* UIViewController+LifeCycle.m in Sources */,
 				E1A5A76D19C4B7DE004A8876 /* NSObject+BeeHTTPRequest.m in Sources */,
 				E1A5A72919C4B7DE004A8876 /* BeeUIQuery+Miscellaneous.m in Sources */,
@@ -3307,6 +3328,7 @@
 				D8C5781619BFFCC1008476DE /* MJRefreshHeaderView.m in Sources */,
 				D8F6C48219BEFA940018BD29 /* ActivityRemoteServiceImpl.m in Sources */,
 				D8C5781419BFFCC1008476DE /* MJRefreshFooterView.m in Sources */,
+				D80C7E8F1A2996C500385208 /* PersonalSettingVC.m in Sources */,
 				D8A4FCA41A007CD6008C6DEF /* UIColor+UIColorExt.m in Sources */,
 				D8D5511E19B4BD3F0020DB8B /* CommonHeaderView.m in Sources */,
 				D85DE5BD19B3609000A906E7 /* HomeCollectionVCCell.m in Sources */,
@@ -3378,6 +3400,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Stefan Chiu (3R4MB4S7A5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -3416,6 +3439,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Stefan Chiu (3R4MB4S7A5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -3438,6 +3462,7 @@
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib/tts_msg_0.0.4",
@@ -3469,6 +3494,7 @@
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib/tts_msg_0.0.4",

@@ -12,11 +12,14 @@
 
 @end
 
+#define TITLE_FONT [UIFont fontWithName:@"TrebuchetMS-Bold" size:22]
 @implementation LinkMeViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     // Do any additional setup after loading the view.
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

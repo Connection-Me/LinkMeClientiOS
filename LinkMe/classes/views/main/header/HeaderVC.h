@@ -17,5 +17,6 @@ AS_SINGLETON(HeaderVC)
 AS_SIGNAL(ADD_VC)
 AS_SIGNAL(ADD_INVITE_STATUS)
 AS_SIGNAL(REMOVE_INVITE_STATUS)
+AS_SIGNAL(PERSONAL_SETTING)
 @property (strong,nonatomic) IBOutlet CommonHeaderView *headerView;
 @end
