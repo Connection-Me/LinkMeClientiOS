@@ -162,6 +162,76 @@ DEF_SINGLETON(CommendRemoteServiceImpl)
     }
 }
 
+-(void)checkInviteNum
+{
+    BOOL isConnectAvailable = [self isConnectionAvailable];
+    if (!isConnectAvailable)
+    {
+        FOREGROUND_BEGIN
+        [self postNotification:NetWorkEvent.NEWWORK_UNREACHABLE];
+        FOREGROUND_COMMIT
+    }else
+    {
+        FOREGROUND_BEGIN
+        [self postNotification:CommendEvent.CHECK_BE_INVITE_NUM_START withObject:nil];
+        FOREGROUND_COMMIT
+        //TODO
+        //        NSString *urlString = [[CoreModel sharedInstance].serverURL stringByAppendingString:@""];//拼接请求路径
+        
+        NSString *urlString = [[CoreModel sharedInstance].serverURL stringByAppendingString:@""];
+        NSURL *url = [NSURL URLWithString:urlString];
+        
+        
+        ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+        request.timeOutSeconds = 30.0;
+        request.shouldAttemptPersistentConnection   = NO;
+        [request setPostValue:[CoreModel sharedInstance].token forKey:@"sessionId"];
+        [request setPostValue:@"activity" forKey:@"c"];
+        [request setPostValue:@"checkInviteNum" forKey:@"a"];
+        
+        request.requestMethod = RequestMethod.POST;
+        __block ASIHTTPRequest * blockRequest = request;
+        request.delegate = self;
+        [request setCompletionBlock:^{
+            //tips:use [request responseString] and [request responseData] to fetch the responseString/responseData
+            NSInteger code = blockRequest.responseStatusCode;
+            //responseString 是服务器返回的数据
+            NSString * responseString = blockRequest.responseString;
+            NSLog(@"<DetailRemoteServiceImpl> responeString is %@",responseString);
+            
+            NSDictionary *responseDic = [responseString objectFromJSONString];
+            NSString *result_msg = [responseDic objectForKey:@"result_msg"];
+            if (code == 200) {
+                FOREGROUND_BEGIN
+                if ([[responseDic objectForKey:@"result_code"] longValue] == 0) {
+                    NSDictionary *dataDic = [responseDic objectForKey:@"data"];
+                    [self postNotification:CommendEvent.CHECK_BE_INVITE_NUM_SUCCESS withObject:[dataDic objectForKey:@"num"]];
+                }
+                else
+                {
+                    [self postNotification:CommendEvent.CHECK_BE_INVITE_NUM_FAILED];
+                }
+                FOREGROUND_COMMIT
+            }
+            else
+            {
+                FOREGROUND_BEGIN
+                [self postNotification:CommendEvent.CHECK_BE_INVITE_NUM_FAILED];
+                FOREGROUND_COMMIT
+            }
+            
+        }];
+        [request setFailedBlock:^{
+            NSError *error = [blockRequest error];
+            FOREGROUND_BEGIN
+            [self postNotification:CommendEvent.CHECK_BE_INVITE_NUM_FAILED];
+            FOREGROUND_COMMIT
+            NSLog(@"error = %@",error);
+        }];
+        [request startAsynchronous];
+    }
+}
+
 -(void)checkIsHaveBeInvite
 {
     BOOL isConnectAvailable = [self isConnectionAvailable];
@@ -173,7 +243,7 @@ DEF_SINGLETON(CommendRemoteServiceImpl)
     }else
     {
         FOREGROUND_BEGIN
-        [self postNotification:CommendEvent.CHECK_IS_BE_INVITE_START withObject:nil];
+        [self postNotification:CommendEvent.LOAD_INVITE_START withObject:nil];
         FOREGROUND_COMMIT
         //TODO
         //        NSString *urlString = [[CoreModel sharedInstance].serverURL stringByAppendingString:@""];//拼接请求路径
@@ -204,19 +274,19 @@ DEF_SINGLETON(CommendRemoteServiceImpl)
             if (code == 200) {
                 FOREGROUND_BEGIN
                 if ([[responseDic objectForKey:@"result_code"] longValue] == 0) {
-                    NSArray *activityArray = [UserModel modelWithJsonArray:(NSArray*)[responseDic objectForKey:@"result_code"]];
-                    [self postNotification:CommendEvent.CHECK_IS_BE_INVITE_SUCCESS withObject:activityArray];
+                    NSArray *activityArray = [UserModel modelWithJsonArray:(NSArray*)[responseDic objectForKey:@"data"]];
+                    [self postNotification:CommendEvent.LOAD_INVITE_SUCCESS withObject:activityArray];
                 }
                 else
                 {
-                    [self postNotification:CommendEvent.CHECK_IS_BE_INVITE_FAILED];
+                    [self postNotification:CommendEvent.LOAD_INVITE_FAILED];
                 }
                 FOREGROUND_COMMIT
             }
             else
             {
                 FOREGROUND_BEGIN
-                [self postNotification:CommendEvent.CHECK_IS_BE_INVITE_FAILED];
+                [self postNotification:CommendEvent.LOAD_INVITE_FAILED];
                 FOREGROUND_COMMIT
             }
             
@@ -224,7 +294,7 @@ DEF_SINGLETON(CommendRemoteServiceImpl)
         [request setFailedBlock:^{
             NSError *error = [blockRequest error];
             FOREGROUND_BEGIN
-            [self postNotification:CommendEvent.CHECK_IS_BE_INVITE_FAILED];
+            [self postNotification:CommendEvent.LOAD_INVITE_FAILED];
             FOREGROUND_COMMIT
             NSLog(@"error = %@",error);
         }];

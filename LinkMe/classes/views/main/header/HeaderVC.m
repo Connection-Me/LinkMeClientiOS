@@ -8,9 +8,13 @@
 
 #import "HeaderVC.h"
 #import "summer_extend.h"
+#import "CommendEvent.h"
+#import "CoreService.h"
+
 @interface HeaderVC ()
 {
-    
+    NSTimer          *_checkInviteTimer;
+    NSInteger        _beInviteSum;
 }
 @property (nonatomic, strong) NSMutableIndexSet *optionIndices;
 @end
@@ -18,6 +22,8 @@
 @implementation HeaderVC
 DEF_SINGLETON(HeaderVC)
 DEF_SIGNAL(ADD_VC)
+DEF_SIGNAL(ADD_INVITE_STATUS)
+DEF_SIGNAL(REMOVE_INVITE_STATUS)
 SUMMER_DEF_XIB(HeaderVC, YES, NO);
 ON_SIGNAL2(BeeUIBoard, signal)
 {
@@ -25,7 +31,10 @@ ON_SIGNAL2(BeeUIBoard, signal)
     
     if([signal isKindOf:BeeUIBoard.CREATE_VIEWS])
     {
+        _beInviteSum = 0;
+        [self observeNotifications];
         [self setHeaderView];
+       // [self startCheckBeInviteNum];
     }
     else if([signal isKindOf:BeeUIBoard.LAYOUT_VIEWS])
     {
@@ -51,6 +60,18 @@ ON_SIGNAL2(BeeUIBoard, signal)
 	}
 }
 
+-(void)observeNotifications
+{
+    [self observeNotification:CommendEvent.CHECK_BE_INVITE_NUM_START];
+    [self observeNotification:CommendEvent.CHECK_BE_INVITE_NUM_SUCCESS];
+    [self observeNotification:CommendEvent.CHECK_BE_INVITE_NUM_FAILED];
+}
+
+-(void)startCheckBeInviteNum
+{
+    [[CoreService sharedInstance].commendRemoteService checkInviteNum];
+}
+
 -(void)setHeaderView{
     self.headerView = [CommonHeaderView createHeader:self.view WithTitle:@"首页" LeftButtonType:CommonHeaderMenu RightButtonType:CommonHeaderAdd];
     
@@ -63,6 +84,9 @@ ON_SIGNAL2(BeeUIBoard, signal)
 #pragma mark - click button
 - (IBAction)onBurger:(id)sender {
     NSLog(@"click Menu button");
+    if(_beInviteSum>0){
+        
+    }
     NSArray *images = @[
                         [UIImage imageNamed:@"globe"],
                         [UIImage imageNamed:@"profile"],
@@ -94,6 +118,30 @@ ON_SIGNAL2(BeeUIBoard, signal)
     
 }
 
+
+ON_NOTIFICATION3(CommendEvent, CHECK_BE_INVITE_NUM_START, notification)
+{
+    
+}
+
+ON_NOTIFICATION3(CommendEvent, CHECK_BE_INVITE_NUM_SUCCESS, notification)
+{
+    NSNumber *inviteSum = notification.object;
+    _beInviteSum = [inviteSum integerValue];
+    if (_beInviteSum>0) {
+        [self sendUISignal:self.ADD_INVITE_STATUS withObject:@(_beInviteSum)];
+    }
+    else if (_beInviteSum == 0){
+        [self sendUISignal:self.REMOVE_INVITE_STATUS withObject:@(_beInviteSum)];
+    }
+    
+    _checkInviteTimer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(startCheckBeInviteNum) userInfo:nil repeats:NO];
+}
+
+ON_NOTIFICATION3(CommendEvent, CHECK_BE_INVITE_NUM_FAILED, notification)
+{
+    _checkInviteTimer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(startCheckBeInviteNum) userInfo:nil repeats:NO];
+}
 
 
 @end

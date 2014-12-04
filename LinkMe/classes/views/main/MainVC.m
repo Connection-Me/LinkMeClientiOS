@@ -26,6 +26,8 @@
     HomeVC                     *_homeVCtodo;
     HomeVC                     *_homeVCdoing;
     HomeVC                     *_homeVCdone;
+    
+    UIImageView                *_pickedColorImageView;
 }
 
 @end
@@ -88,6 +90,22 @@ ON_SIGNAL2(BeeUIBoard, signal)
     CGRect rect = [[UIScreen mainScreen] bounds];
     _headerVC.view.frame = CGRectMake(0, 0, rect.size.width, 55);
     [self.view addSubview:_headerVC.view];
+    
+    UIGraphicsBeginImageContext(CGSizeMake(5, 5));
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    CGContextMoveToPoint(ctx, 20, 20);
+    CGContextSetFillColorWithColor(ctx, [UIColor redColor].CGColor);
+    //画圆
+    CGContextAddArc(ctx, 1/2, 1/2, 14.5, 0, 6.3, 0);
+    CGContextFillPath(ctx);
+    //取得图片
+    _pickedColorImageView = [[UIImageView alloc] initWithFrame:CGRectMake(30, 30, 10, 10)];
+    _pickedColorImageView.image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    _pickedColorImageView.layer.masksToBounds = YES;
+    _pickedColorImageView.layer.cornerRadius = 5;
+    [self.view addSubview:_pickedColorImageView];
+    _pickedColorImageView.hidden = YES;
 }
 #pragma mark 中间界面
 -(void)setupRouter
@@ -217,5 +235,13 @@ ON_SIGNAL3(AddActivityVC, CLOSE_ADDVC, signal)
     _router.view.userInteractionEnabled = YES;
 }
 
+ON_SIGNAL3(HeaderVC, ADD_INVITE_STATUS, signal)
+{
+    _pickedColorImageView.hidden = NO;
+}
 
+ON_SIGNAL3(HeaderVC, REMOVE_INVITE_STATUS, signal)
+{
+    _pickedColorImageView.hidden = YES;
+}
 @end

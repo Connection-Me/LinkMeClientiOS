@@ -15,5 +15,7 @@
 @interface HeaderVC : LinkMeViewController<RNFrostedSidebarDelegate>
 AS_SINGLETON(HeaderVC)
 AS_SIGNAL(ADD_VC)
+AS_SIGNAL(ADD_INVITE_STATUS)
+AS_SIGNAL(REMOVE_INVITE_STATUS)
 @property (strong,nonatomic) IBOutlet CommonHeaderView *headerView;
 @end
